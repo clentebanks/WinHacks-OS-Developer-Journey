@@ -2,6 +2,18 @@
 
 All notable changes are documented here.
 
+## [0.5.0] - 2026-07-18
+
+### Added
+
+- Dependency-free core logger
+- Log levels and filtering
+- Namespaces and child loggers
+- Injectable output and clock
+- Logger unit tests
+- CLI `demo-log` command
+- Logger documentation and Lab 01
+
 ## [0.4.0] - 2026-07-18
 
 ### Added

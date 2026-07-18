@@ -7,6 +7,8 @@ const required = [
   "ROADMAP.md",
   "package.json",
   "packages/core/src/index.js",
+  "packages/core/src/logger.js",
+  "packages/core/tests/logger.test.js",
   "packages/cli/src/index.js",
   "docs/product/PROJECT_CHARTER.md",
   "docs/product/PRD.md",

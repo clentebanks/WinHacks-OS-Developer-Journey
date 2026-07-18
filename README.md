@@ -9,12 +9,12 @@ The public WinHacks website remains separate and stable. This repository is the 
 ## Project status
 
 ![Status](https://img.shields.io/badge/status-foundation-blue)
-![Version](https://img.shields.io/badge/version-0.4.0-informational)
+![Version](https://img.shields.io/badge/version-0.5.0-informational)
 ![Node](https://img.shields.io/badge/node-%3E%3D22-green)
 ![License](https://img.shields.io/badge/license-MIT-yellow)
 
-**Current milestone:** Foundation and development environment  
-**Current focus:** Repository setup, architecture baseline, and legacy-engine inventory
+**Current milestone:** Core services  
+**Current focus:** Reusable logger and CLI integration
 
 ## Why this project exists
 
@@ -188,8 +188,8 @@ See [Developer Roadmap](Developer-Roadmap.md) and [Learning Guide](Learning-Guid
 
 | Version | Milestone | Status |
 |---|---|---|
-| 0.4 | Professional repository foundation | Current |
-| 0.5 | Working Node.js and TypeScript CLI | Planned |
+| 0.4 | Professional repository foundation | Complete |
+| 0.5 | Core logger and CLI integration | Current |
 | 0.6 | Core package and configuration service | Planned |
 | 0.7 | First migrated engine module | Planned |
 | 0.8 | Tests, reports, and internal API baseline | Planned |

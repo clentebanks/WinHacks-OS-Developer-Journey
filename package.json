@@ -1,6 +1,6 @@
 {
   "name": "winhacks-os-developer-journey",
-  "version": "0.4.0",
+  "version": "0.5.0",
   "private": true,
   "description": "Build WinHacks OS while documenting a complete Full Stack engineering journey.",
   "type": "module",
@@ -18,7 +18,8 @@
     "dev:cli": "node packages/cli/src/index.js",
     "build": "npm run check",
     "test": "node --test",
-    "legacy:inventory": "node scripts/inventory-legacy.mjs"
+    "legacy:inventory": "node scripts/inventory-legacy.mjs",
+    "test:logger": "node --test packages/core/tests/logger.test.js"
   },
   "keywords": [
     "winhacks",
