@@ -1,0 +1,16 @@
+WINHACKS ARTICLE GENERATOR v1
+
+Qué hace:
+- Usa templates/article-template.html
+- Crea el HTML en la categoría seleccionada
+- Completa título, SEO, canonical, Open Graph, JSON-LD, fechas y video
+- Crea la carpeta para capturas del artículo
+- Evita sobrescribir artículos existentes
+
+Instalación:
+1. Extraiga este ZIP.
+2. Abra PowerShell dentro de la carpeta extraída.
+3. Ejecute: Set-ExecutionPolicy -Scope Process Bypass
+4. Ejecute: .\install.ps1
+5. Escriba la ruta de su proyecto WinHacks.
+6. Dentro del proyecto ejecute: npm run article
