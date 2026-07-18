@@ -1,0 +1,37 @@
+{
+  "id": "Q-NET-001",
+  "text": "¿Cuál describe mejor el problema de conexión?",
+  "type": "single",
+  "answers": [
+    {
+      "value": "no-access",
+      "label": "Este equipo no tiene Internet, pero otros dispositivos sí",
+      "addsEvidence": [
+        "localNetworkNoAccess"
+      ]
+    },
+    {
+      "value": "dns-error",
+      "label": "Internet parece conectado, pero las páginas no abren o muestran error DNS",
+      "addsEvidence": [
+        "dnsResolutionFailure"
+      ]
+    },
+    {
+      "value": "connected-no-internet",
+      "label": "Windows muestra “Conectado, sin Internet”",
+      "addsEvidence": [
+        "connectedWithoutInternet"
+      ]
+    },
+    {
+      "value": "slow-intermittent",
+      "label": "Internet funciona lento o se desconecta por momentos",
+      "addsEvidence": [
+        "networkIntermittent"
+      ]
+    }
+  ],
+  "status": "active",
+  "version": "1.0.0"
+}

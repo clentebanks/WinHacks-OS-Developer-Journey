@@ -1,0 +1,201 @@
+{
+  "id": "WHPRS-20260715053322602-96b8c9",
+  "version": "1.0.0",
+  "status": "finished",
+  "createdAt": "2026-07-15T05:33:22.601Z",
+  "updatedAt": "2026-07-15T05:33:22.615Z",
+  "device": {
+    "os": "Windows 11"
+  },
+  "symptom": {
+    "id": "SYM-PERF-001",
+    "slug": "pc-lenta",
+    "name": "PC lenta"
+  },
+  "answers": [
+    {
+      "questionId": "Q-PERF-001",
+      "value": "disk-high",
+      "label": "Disco al 90 % o más",
+      "at": "2026-07-15T05:33:22.606Z"
+    }
+  ],
+  "evidence": [
+    "diskUsageHigh"
+  ],
+  "matchedRules": [
+    {
+      "id": "RULE-PERF-001",
+      "name": "PC lenta con uso elevado del disco",
+      "priority": 100
+    }
+  ],
+  "plan": {
+    "status": "plan-generated",
+    "procedures": [
+      {
+        "id": "WHPRS-DIA-001",
+        "slug": "systeminfo",
+        "name": "Información completa del sistema",
+        "phase": "Diagnóstico",
+        "risk": 1,
+        "weight": 0.75,
+        "commands": [
+          {
+            "command": "systeminfo",
+            "requiresAdmin": false,
+            "shell": "cmd",
+            "purpose": "Mostrar información detallada del sistema."
+          }
+        ],
+        "steps": [
+          {
+            "order": 1,
+            "title": "Abrir la terminal",
+            "instruction": "Abre CMD o PowerShell."
+          },
+          {
+            "order": 2,
+            "title": "Ejecutar SystemInfo",
+            "instruction": "Escribe systeminfo y presiona Enter."
+          },
+          {
+            "order": 3,
+            "title": "Guardar los datos",
+            "instruction": "Revisa y registra la información necesaria para el diagnóstico."
+          }
+        ],
+        "order": 1,
+        "state": "completed",
+        "startedAt": null,
+        "completedAt": "2026-07-15T05:33:22.612Z",
+        "validatedAt": null,
+        "notes": "Prueba automática completada."
+      },
+      {
+        "id": "WHPRS-REP-003",
+        "slug": "chkdsk",
+        "name": "Comprobación y reparación del disco con CHKDSK",
+        "phase": "Reparación",
+        "risk": 3,
+        "weight": 0.9,
+        "commands": [
+          {
+            "command": "chkdsk C: /scan",
+            "requiresAdmin": true,
+            "shell": "cmd",
+            "purpose": "Realizar un análisis en línea del sistema de archivos."
+          },
+          {
+            "command": "chkdsk C: /f",
+            "requiresAdmin": true,
+            "shell": "cmd",
+            "purpose": "Corregir errores lógicos del sistema de archivos."
+          }
+        ],
+        "steps": [
+          {
+            "order": 1,
+            "title": "Abrir la terminal como administrador",
+            "instruction": "Abre CMD o PowerShell con permisos de administrador."
+          },
+          {
+            "order": 2,
+            "title": "Realizar un análisis en línea",
+            "instruction": "Ejecuta chkdsk C: /scan."
+          },
+          {
+            "order": 3,
+            "title": "Programar reparación si es necesaria",
+            "instruction": "Si se detectan errores, ejecuta chkdsk C: /f."
+          },
+          {
+            "order": 4,
+            "title": "Reiniciar",
+            "instruction": "Acepta programar el análisis para el siguiente reinicio si Windows lo solicita."
+          },
+          {
+            "order": 5,
+            "title": "Validar el resultado",
+            "instruction": "Revisa el resultado de CHKDSK y comprueba si continúan los errores."
+          }
+        ],
+        "order": 2,
+        "state": "completed",
+        "startedAt": null,
+        "completedAt": "2026-07-15T05:33:22.613Z",
+        "validatedAt": null,
+        "notes": "Prueba automática completada."
+      }
+    ],
+    "validations": [
+      {
+        "id": "VAL-PERF-001",
+        "name": "Validar reducción del uso del disco",
+        "type": "metric",
+        "expected": "El uso del disco se mantiene por debajo del 90 % durante al menos cinco minutos sin tareas intensivas.",
+        "failureMessage": "El uso del disco continúa elevado. Revisa procesos activos, estado SMART y errores del sistema de archivos.",
+        "successNext": "rescue-plan-complete",
+        "failureNext": "WHPRS-REP-003",
+        "status": "active",
+        "version": "1.0.0",
+        "order": 3,
+        "state": "completed",
+        "completedAt": "2026-07-15T05:33:22.614Z",
+        "notes": "Prueba automática completada."
+      }
+    ],
+    "blocked": []
+  },
+  "progress": {
+    "currentStep": 3,
+    "completedSteps": 3,
+    "totalSteps": 3
+  },
+  "history": [
+    {
+      "at": "2026-07-15T05:33:22.601Z",
+      "type": "session-created",
+      "message": "Sesión de rescate creada."
+    },
+    {
+      "at": "2026-07-15T05:33:22.606Z",
+      "type": "answer-recorded",
+      "message": "Respuesta registrada para Q-PERF-001."
+    },
+    {
+      "at": "2026-07-15T05:33:22.610Z",
+      "type": "plan-generated",
+      "message": "Plan generado con 3 pasos."
+    },
+    {
+      "at": "2026-07-15T05:33:22.612Z",
+      "type": "step-updated",
+      "message": "WHPRS-DIA-001 cambió a completed."
+    },
+    {
+      "at": "2026-07-15T05:33:22.613Z",
+      "type": "step-updated",
+      "message": "WHPRS-REP-003 cambió a completed."
+    },
+    {
+      "at": "2026-07-15T05:33:22.614Z",
+      "type": "step-updated",
+      "message": "VAL-PERF-001 cambió a completed."
+    },
+    {
+      "at": "2026-07-15T05:33:22.615Z",
+      "type": "session-finished",
+      "message": "Sesión de rescate finalizada."
+    }
+  ],
+  "result": {
+    "completedAt": "2026-07-15T05:33:22.615Z",
+    "healthScore": 82,
+    "statusLabel": "Bueno",
+    "summary": "Flujo inicial completado correctamente.",
+    "recommendations": [
+      "Continuar monitoreando el uso del disco."
+    ]
+  }
+}

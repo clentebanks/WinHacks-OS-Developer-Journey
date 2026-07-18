@@ -1,0 +1,555 @@
+<!DOCTYPE html><html lang="es"><head>
+
+  <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EL9JRMGJPS"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-EL9JRMGJPS');
+  </script>
+
+  <script>
+    (function(c,l,a,r,i,t,y){
+      c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+      t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+      y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "xey9wuiqr4");
+  </script>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>whoami | Ver Usuario Actual en Windows desde CMD | WinHacks</title>
+  <meta name="description" content="Aprende a usar el comando whoami en Windows 10 y Windows 11 para ver el usuario actual, dominio, equipo y contexto de sesión desde CMD o PowerShell.">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <link rel="canonical" href="https://winhacks.dev/comandos/whoami">
+
+  <link rel="icon" href="/assets/icons/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png">
+  <link rel="apple-touch-icon" href="/assets/icons/apple-touch-icon.png">
+
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="WinHacks">
+  <meta property="og:title" content="whoami | Ver Usuario Actual en Windows desde CMD">
+  <meta property="og:description" content="Consulta rápidamente qué usuario está activo en Windows usando el comando whoami.">
+  <meta property="og:url" content="https://winhacks.dev/comandos/whoami">
+  <meta property="og:image" content="https://winhacks.dev/assets/img/og/og-whoami.webp">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="whoami | Ver Usuario Actual en Windows desde CMD">
+  <meta name="twitter:description" content="Comando CMD para identificar el usuario actual de Windows.">
+  <meta name="twitter:image" content="https://winhacks.dev/assets/img/og/og-whoami.webp">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=Montserrat:wght@800;900&amp;display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/css/style.css">
+
+
+  <meta property="og:locale" content="es_ES"></head>
+
+<body>
+
+<header class="site-header">
+  <div id="navbar-container"></div>
+</header>
+
+<main>
+
+<nav id="breadcrumb" class="breadcrumb" aria-label="Breadcrumb"></nav>
+
+<article class="article">
+
+<header class="article-hero article-hero--panel">
+
+<p class="eyebrow">Comandos de Windows</p>
+
+<h1>whoami: descubre qué usuario está activo en Windows</h1>
+
+<p>
+  El comando <strong>whoami</strong> muestra el usuario actual con el que estás usando Windows.
+  Es útil para soporte técnico, scripts, permisos, redes, dominios y administración del sistema.
+</p>
+
+<div class="hero-buttons">
+  <a href="#video" class="btn btn-primary">Ver video</a>
+  <a href="#pasos" class="btn btn-outline">Ir al tutorial</a>
+</div>
+
+</header>
+
+<div class="article-content">
+
+<div class="meta-grid">
+
+  <div class="meta-card">
+    <span>Dificultad</span>
+    <strong>Muy fácil</strong>
+  </div>
+
+  <div class="meta-card">
+    <span>Tiempo</span>
+    <strong>15 segundos</strong>
+  </div>
+
+  <div class="meta-card">
+    <span>Compatible</span>
+    <strong>Windows 10 / 11</strong>
+  </div>
+
+  <div class="meta-card">
+    <span>Comando</span>
+    <strong>whoami</strong>
+  </div>
+
+</div>
+
+<section id="video" class="video-box">
+
+  <div class="section-header">
+    <p class="eyebrow">Video rápido</p>
+    <h2>Mira cómo usar whoami</h2>
+    <p>
+      En este Short puedes mostrar cómo identificar el usuario actual de Windows
+      desde CMD o PowerShell.
+    </p>
+  </div>
+
+  <div class="youtube-short">
+    <!-- Sustituye VIDEO_ID por el ID del Short -->
+    <iframe src="https://www.youtube.com/embed/VIDEO_ID" title="whoami | WinHacks" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="">
+    </iframe>
+  </div>
+
+</section>
+
+<section class="info-box">
+
+  <h3>Qué aprenderás</h3>
+
+  <ul>
+    <li>Qué hace el comando <strong>whoami</strong>.</li>
+    <li>Cómo ver el usuario actual de Windows.</li>
+    <li>Cómo identificar dominio o nombre del equipo.</li>
+    <li>Cómo combinar whoami con hostname.</li>
+    <li>Cuándo usarlo en soporte técnico o scripts.</li>
+  </ul>
+
+</section>
+
+<h2>¿Qué hace whoami?</h2>
+
+<p>
+  <strong>whoami</strong> muestra el contexto de usuario actual. Normalmente devuelve
+  el nombre del equipo o dominio seguido del usuario activo.
+</p>
+
+<p>
+  Es útil cuando necesitas confirmar si estás usando una cuenta local, una cuenta de dominio,
+  una sesión administrativa o un usuario específico dentro de Windows.
+</p>
+
+<div class="tip-box">
+
+  <h3>💡 Consejo WinHacks</h3>
+
+  <p>
+    Combina <strong>whoami</strong> con <strong>hostname</strong> para saber rápidamente
+    en qué equipo estás trabajando y con qué usuario.
+  </p>
+
+</div>
+
+<div class="warning-box">
+
+  <span>⚠️</span>
+
+  <h3>Importante</h3>
+
+  <p>
+    Este comando solo muestra información. No cambia permisos, no modifica usuarios
+    y no requiere privilegios de administrador.
+  </p>
+
+</div>
+
+<h2 id="pasos">Paso a paso</h2>
+
+<div class="step-box">
+
+  <span class="step-number">1</span>
+
+  <h3>Abre CMD</h3>
+
+  <p>
+    Presiona <strong>Win</strong>, escribe <strong>CMD</strong> y abre el Símbolo del sistema.
+  </p>
+
+  <div class="screenshot-placeholder">
+    <figure class="article-image">
+      <img src="../assets/images/whoami-01.webp" alt="Abrir CMD en Windows para ejecutar whoami" loading="lazy" decoding="async">
+      <figcaption>
+        Abre el Símbolo del sistema.
+      </figcaption>
+    </figure>
+  </div>
+
+</div>
+
+<div class="step-box">
+
+  <span class="step-number">2</span>
+
+  <h3>Ejecuta el comando</h3>
+
+  <p>
+    Escribe este comando y presiona <strong>Enter</strong>.
+  </p>
+
+  <div class="command-box">
+    <code>whoami</code>
+    <button class="copy-btn" data-copy="whoami">Copiar</button>
+  </div>
+
+  <div class="screenshot-placeholder">
+    <figure class="article-image">
+      <img src="../assets/images/whoami-02.webp" alt="Ejecutar comando whoami en CMD" loading="lazy" decoding="async">
+      <figcaption>
+        Ejecuta <strong>whoami</strong> para ver el usuario actual.
+      </figcaption>
+    </figure>
+  </div>
+
+</div>
+
+<div class="step-box">
+
+  <span class="step-number">3</span>
+
+  <h3>Interpreta el resultado</h3>
+
+  <p>
+    Verás un formato parecido a <strong>equipo\usuario</strong> o <strong>dominio\usuario</strong>.
+  </p>
+
+  <div class="screenshot-placeholder">
+    <figure class="article-image">
+      <img src="../assets/images/whoami-03.webp" alt="Resultado del comando whoami mostrando equipo y usuario" loading="lazy" decoding="async">
+      <figcaption>
+        El resultado muestra el contexto del usuario activo.
+      </figcaption>
+    </figure>
+  </div>
+
+</div>
+
+<div class="step-box">
+
+  <span class="step-number">4</span>
+
+  <h3>Usa whoami en PowerShell</h3>
+
+  <p>
+    El mismo comando también funciona desde <strong>PowerShell</strong> y Terminal de Windows.
+  </p>
+
+  <div class="command-box">
+    <code>whoami</code>
+    <button class="copy-btn" data-copy="whoami">Copiar</button>
+  </div>
+
+  <div class="screenshot-placeholder">
+    <figure class="article-image">
+      <img src="../assets/images/whoami-04.webp" alt="Ejecutar whoami desde PowerShell" loading="lazy" decoding="async">
+      <figcaption>
+        Puedes usarlo desde CMD, PowerShell o Windows Terminal.
+      </figcaption>
+    </figure>
+  </div>
+
+</div>
+
+<div class="step-box">
+
+  <span class="step-number">5</span>
+
+  <h3>Combínalo con hostname</h3>
+
+  <p>
+    Para identificar equipo y usuario al mismo tiempo, usa:
+  </p>
+
+  <div class="command-box">
+    <code>hostname &amp;&amp; whoami</code>
+    <button class="copy-btn" data-copy="hostname &amp;&amp; whoami">Copiar</button>
+  </div>
+
+  <div class="screenshot-placeholder">
+    <figure class="article-image">
+      <img src="../assets/images/whoami-05.webp" alt="Combinar hostname y whoami en CMD" loading="lazy" decoding="async">
+      <figcaption>
+        Muestra nombre del equipo y usuario actual en una sola ejecución.
+      </figcaption>
+    </figure>
+  </div>
+
+</div>
+
+<div class="step-box">
+
+  <span class="step-number">6</span>
+
+  <h3>Consulta información completa</h3>
+
+  <p>
+    Para obtener más contexto del equipo, puedes combinarlo con:
+  </p>
+
+  <div class="command-box">
+    <code>systeminfo</code>
+    <button class="copy-btn" data-copy="systeminfo">Copiar</button>
+  </div>
+
+  <div class="screenshot-placeholder">
+    <figure class="article-image">
+      <img src="../assets/images/whoami-06.webp" alt="Usar systeminfo después de whoami para más información" loading="lazy" decoding="async">
+      <figcaption>
+        Usa <strong>systeminfo</strong> si necesitas un informe más completo.
+      </figcaption>
+    </figure>
+  </div>
+
+</div>
+
+<h2>Comandos relacionados</h2>
+
+<div class="info-box">
+  <h3>Mostrar usuario actual</h3>
+  <div class="command-box">
+    <code>whoami</code>
+    <button class="copy-btn" data-copy="whoami">Copiar</button>
+  </div>
+</div>
+
+<div class="info-box">
+  <h3>Mostrar equipo y usuario</h3>
+  <div class="command-box">
+    <code>hostname &amp;&amp; whoami</code>
+    <button class="copy-btn" data-copy="hostname &amp;&amp; whoami">Copiar</button>
+  </div>
+</div>
+
+<div class="info-box">
+  <h3>Mostrar nombre del equipo</h3>
+  <div class="command-box">
+    <code>hostname</code>
+    <button class="copy-btn" data-copy="hostname">Copiar</button>
+  </div>
+</div>
+
+<div class="info-box">
+  <h3>Mostrar información del sistema</h3>
+  <div class="command-box">
+    <code>systeminfo</code>
+    <button class="copy-btn" data-copy="systeminfo">Copiar</button>
+  </div>
+</div>
+
+<h2>¿Cuándo utilizar whoami?</h2>
+
+<ul>
+  <li>Confirmar qué usuario está activo.</li>
+  <li>Verificar sesiones en soporte remoto.</li>
+  <li>Identificar cuentas locales o de dominio.</li>
+  <li>Usarlo en scripts de CMD o PowerShell.</li>
+  <li>Diagnosticar permisos de usuario.</li>
+  <li>Comprobar contexto antes de ejecutar comandos técnicos.</li>
+</ul>
+
+<div class="result-box">
+
+  <h3>✅ Resultado esperado</h3>
+
+  <p>
+    Windows mostrará el usuario actual y su contexto, normalmente con el formato
+    <strong>equipo\usuario</strong> o <strong>dominio\usuario</strong>.
+  </p>
+
+</div>
+
+<h2>Errores comunes</h2>
+
+<div class="info-box">
+
+  <h3>El comando no se reconoce</h3>
+
+  <p>
+    Verifica que escribiste correctamente <strong>whoami</strong>. Está disponible
+    por defecto en Windows.
+  </p>
+
+</div>
+
+<div class="info-box">
+
+  <h3>El usuario no es el esperado</h3>
+
+  <p>
+    Puede que estés usando otra cuenta, sesión remota o usuario administrador diferente.
+    Revisa el perfil activo en Windows.
+  </p>
+
+</div>
+
+<div class="info-box">
+
+  <h3>No muestra el nombre completo</h3>
+
+  <p>
+    El comando muestra el identificador de usuario, no necesariamente el nombre visible
+    completo de la cuenta.
+  </p>
+
+</div>
+
+<div class="info-box">
+
+  <h3>No sé si es cuenta local o dominio</h3>
+
+  <p>
+    Si aparece el nombre del equipo antes de la barra invertida, suele ser cuenta local.
+    Si aparece un dominio, estás en un entorno administrado.
+  </p>
+
+</div>
+
+<h2>Preguntas frecuentes</h2>
+
+<div class="faq-box">
+
+  <h3>¿whoami cambia algo en Windows?</h3>
+
+  <p>
+    No. Solo muestra información del usuario actual.
+  </p>
+
+</div>
+
+<div class="faq-box">
+
+  <h3>¿Funciona en Windows 11?</h3>
+
+  <p>
+    Sí. También funciona en Windows 10 y Windows Server.
+  </p>
+
+</div>
+
+<div class="faq-box">
+
+  <h3>¿Necesito permisos de administrador?</h3>
+
+  <p>
+    No. Cualquier usuario puede ejecutarlo.
+  </p>
+
+</div>
+
+<div class="faq-box">
+
+  <h3>¿Cuál es la diferencia entre whoami y hostname?</h3>
+
+  <p>
+    <strong>whoami</strong> muestra el usuario actual. <strong>hostname</strong>
+    muestra el nombre del equipo.
+  </p>
+
+</div>
+
+<section class="section cta-section" id="descarga">
+
+  <p class="eyebrow">Recurso gratuito</p>
+
+  <h2>Descarga la guía completa de comandos CMD</h2>
+
+  <p>
+    Aprende comandos de Windows para diagnóstico, redes, usuarios, seguridad y administración.
+  </p>
+
+  <form name="comandos-cmd" method="POST" data-netlify="true" class="email-form netlify-form" id="comandosForm" data-redirect="/recursos/gracias-comandos.html">
+
+    <input type="hidden" name="form-name" value="comandos-cmd">
+    <input type="text" name="nombre" placeholder="Tu nombre" required="">
+    <input type="email" name="email" placeholder="Tu correo electrónico" required="">
+
+    <button type="submit">Descargar PDF</button>
+
+  </form>
+
+</section>
+
+<h2>Artículos relacionados</h2>
+
+<div class="related-grid">
+
+  <a href="/redes/hostname.html" class="related-card">
+    <h3>hostname</h3>
+    <p>Consulta el nombre real del equipo en Windows.</p>
+  </a>
+
+  <a href="/comandos/systeminfo.html" class="related-card">
+    <h3>systeminfo</h3>
+    <p>Obtén información completa del sistema desde CMD.</p>
+  </a>
+
+  <a href="/redes/getmac.html" class="related-card">
+    <h3>getmac</h3>
+    <p>Consulta la dirección MAC de los adaptadores de red.</p>
+  </a>
+
+  <a href="/redes/ipconfig.html" class="related-card">
+    <h3>ipconfig</h3>
+    <p>Consulta la configuración IP de Windows.</p>
+  </a>
+
+</div>
+
+<div class="next-box">
+
+  <h3>🚀 Siguiente paso recomendado</h3>
+
+  <p>
+    Después de identificar el usuario con <strong>whoami</strong>, usa
+    <strong>hostname</strong> para confirmar el nombre del equipo.
+  </p>
+
+  <a href="/redes/hostname.html" class="btn btn-primary">
+    Ver hostname
+  </a>
+
+</div>
+
+</div>
+
+</article>
+
+</main>
+
+<footer>
+  <div id="footer-container"></div>
+</footer>
+
+<a href="#" class="to-top" aria-label="Volver arriba">
+  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round">
+    <polyline points="18 15 12 9 6 15"></polyline>
+  </svg>
+</a>
+
+<script src="/js/components.js"></script>
+<script src="/js/core/engine.js?v=20260626-03" defer=""></script>
+
+
+
+</body></html>

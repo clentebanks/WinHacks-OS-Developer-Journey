@@ -1,0 +1,37 @@
+{
+  "id": "Q-BSOD-001",
+  "text": "¿Cuál describe mejor cuándo aparece la pantalla azul?",
+  "type": "single",
+  "answers": [
+    {
+      "value": "after-driver",
+      "label": "Comenzó después de actualizar o instalar un controlador",
+      "addsEvidence": [
+        "bsodAfterDriverUpdate"
+      ]
+    },
+    {
+      "value": "random",
+      "label": "Aparece de forma aleatoria, incluso sin hacer nada específico",
+      "addsEvidence": [
+        "bsodRandom"
+      ]
+    },
+    {
+      "value": "under-load",
+      "label": "Aparece jugando, renderizando o bajo carga intensa",
+      "addsEvidence": [
+        "bsodUnderLoad"
+      ]
+    },
+    {
+      "value": "recent-change",
+      "label": "Comenzó después de instalar software o realizar un cambio",
+      "addsEvidence": [
+        "bsodAfterRecentChange"
+      ]
+    }
+  ],
+  "status": "active",
+  "version": "1.0.0"
+}

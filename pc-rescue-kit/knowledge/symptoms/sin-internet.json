@@ -1,0 +1,19 @@
+{
+  "id": "SYM-NET-001",
+  "slug": "sin-internet",
+  "name": "Sin Internet",
+  "category": "Red",
+  "severity": "high",
+  "description": "El equipo no puede navegar, presenta errores DNS o sufre cortes y lentitud de conexión.",
+  "relatedCauses": [
+    "configuracion-ip-invalida",
+    "fallo-dns",
+    "conectividad-local",
+    "perdida-paquetes"
+  ],
+  "questions": [
+    "Q-NET-001"
+  ],
+  "status": "active",
+  "version": "1.0.0"
+}

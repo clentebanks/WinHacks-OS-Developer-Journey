@@ -1,0 +1,49 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "text",
+    "type",
+    "answers",
+    "status",
+    "version"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^Q-[A-Z]{3,5}-[0-9]{3}$"
+    },
+    "text": {
+      "type": "string"
+    },
+    "type": {
+      "type": "string",
+      "enum": [
+        "single",
+        "multiple",
+        "boolean",
+        "number",
+        "text"
+      ]
+    },
+    "answers": {
+      "type": "array"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "draft",
+        "review",
+        "active",
+        "deprecated",
+        "archived"
+      ]
+    },
+    "version": {
+      "type": "string",
+      "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$"
+    }
+  }
+}

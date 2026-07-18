@@ -1,0 +1,191 @@
+<!-- ========================================================= -->
+<!-- WINHACKS ENGINE v1.0                                      -->
+<!-- FILE: engine/resource/resource-blueprint.html             -->
+<!-- PURPOSE: Base ensamblada para páginas de recursos          -->
+<!-- ========================================================= -->
+
+<main>
+
+  <!-- HERO DEL RECURSO -->
+  <section class="hero-small">
+
+    <div class="hero-small-content">
+
+      <p class="eyebrow">Recurso gratuito WinHacks</p>
+
+      <h1>TÍTULO DEL RECURSO</h1>
+
+      <p>
+        Descripción breve del recurso. Explica qué problema resuelve,
+        qué contiene y por qué vale la pena descargarlo.
+      </p>
+
+      <div class="hero-buttons">
+        <a href="#descarga" class="btn btn-primary">Descargar recurso</a>
+        <a href="/recursos/index.html" class="btn btn-outline">Ver recursos</a>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- BENEFICIOS -->
+  <section class="section">
+
+    <div class="section-header">
+
+      <p class="eyebrow">Qué incluye</p>
+
+      <h2>Lo que obtienes con este recurso</h2>
+
+      <p>
+        Este recurso está diseñado para ayudarte a aplicar el conocimiento
+        de forma rápida, práctica y segura.
+      </p>
+
+    </div>
+
+    <div class="grid">
+
+      <article class="card">
+        <span class="card-icon">✅</span>
+        <h3>Beneficio principal</h3>
+        <p>Explica el primer beneficio importante del recurso.</p>
+      </article>
+
+      <article class="card">
+        <span class="card-icon">⚡</span>
+        <h3>Aplicación rápida</h3>
+        <p>Explica cómo el usuario podrá aplicar el contenido rápidamente.</p>
+      </article>
+
+      <article class="card">
+        <span class="card-icon">🛡️</span>
+        <h3>Uso seguro</h3>
+        <p>Explica por qué el recurso es práctico y seguro para Windows.</p>
+      </article>
+
+    </div>
+
+  </section>
+
+  <!-- DESCARGA -->
+  <section class="section cta-section" id="descarga">
+
+    <p class="eyebrow">Descarga gratis</p>
+
+    <h2>Recibe el recurso en segundos</h2>
+
+    <p>
+      Ingresa tu nombre y correo para acceder al recurso gratuito de WinHacks.
+    </p>
+
+    <form
+      name="NOMBRE-DEL-FORMULARIO"
+      method="POST"
+      data-netlify="true"
+      class="email-form netlify-form"
+      id="resourceForm">
+
+      <input type="hidden" name="form-name" value="NOMBRE-DEL-FORMULARIO">
+
+      <input
+        type="text"
+        name="nombre"
+        placeholder="Tu nombre"
+        required>
+
+      <input
+        type="email"
+        name="email"
+        placeholder="Tu correo electrónico"
+        required>
+
+      <button type="submit">Descargar recurso</button>
+
+    </form>
+
+  </section>
+
+  <!-- CÓMO USARLO -->
+  <section class="section">
+
+    <div class="section-header">
+
+      <p class="eyebrow">Guía rápida</p>
+
+      <h2>Cómo aprovechar este recurso</h2>
+
+      <p>
+        Sigue estos pasos para utilizarlo correctamente y obtener el máximo beneficio.
+      </p>
+
+    </div>
+
+    <div class="grid">
+
+      <article class="card">
+        <span class="card-icon">1️⃣</span>
+        <h3>Descarga</h3>
+        <p>Completa el formulario y accede al recurso.</p>
+      </article>
+
+      <article class="card">
+        <span class="card-icon">2️⃣</span>
+        <h3>Revisa</h3>
+        <p>Lee las instrucciones antes de aplicar cualquier cambio en Windows.</p>
+      </article>
+
+      <article class="card">
+        <span class="card-icon">3️⃣</span>
+        <h3>Aplica</h3>
+        <p>Utiliza el recurso paso a paso siguiendo las recomendaciones.</p>
+      </article>
+
+    </div>
+
+  </section>
+
+  <!-- RELACIONADOS -->
+  <section class="section">
+
+    <div class="section-header">
+
+      <p class="eyebrow">También te puede interesar</p>
+
+      <h2>Recursos relacionados</h2>
+
+      <p>
+        Continúa aprendiendo Windows con otros recursos gratuitos de WinHacks.
+      </p>
+
+    </div>
+
+    <div class="grid">
+
+      <article class="card">
+        <span class="card-icon">⌨️</span>
+        <h3>50 Atajos de Teclado</h3>
+        <p>Aprende atajos esenciales para trabajar más rápido en Windows.</p>
+        <a href="/recursos/atajos-teclado.html">Ver recurso →</a>
+      </article>
+
+      <article class="card">
+        <span class="card-icon">🧠</span>
+        <h3>50 Secretos de Windows</h3>
+        <p>Descubre funciones ocultas que la mayoría no utiliza.</p>
+        <a href="/recursos/guia-50-secretos.html">Ver recurso →</a>
+      </article>
+
+      <article class="card">
+        <span class="card-icon">🛡️</span>
+        <h3>Checklist Seguridad</h3>
+        <p>Revisa configuraciones básicas para proteger mejor tu PC.</p>
+        <a href="/recursos/checklist-seguridad.html">Ver recurso →</a>
+      </article>
+
+    </div>
+
+  </section>
+
+</main>

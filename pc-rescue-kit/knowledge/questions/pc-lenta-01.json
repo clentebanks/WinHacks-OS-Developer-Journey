@@ -1,0 +1,37 @@
+{
+  "id": "Q-PERF-001",
+  "text": "¿Qué recurso aparece con uso elevado en el Administrador de tareas?",
+  "type": "single",
+  "answers": [
+    {
+      "value": "disk-high",
+      "label": "Disco al 90 % o más",
+      "addsEvidence": [
+        "diskUsageHigh"
+      ]
+    },
+    {
+      "value": "memory-high",
+      "label": "Memoria RAM al 85 % o más",
+      "addsEvidence": [
+        "memoryUsageHigh"
+      ]
+    },
+    {
+      "value": "cpu-high",
+      "label": "CPU al 85 % o más",
+      "addsEvidence": [
+        "cpuUsageHigh"
+      ]
+    },
+    {
+      "value": "unknown",
+      "label": "No lo sé",
+      "addsEvidence": [
+        "resourceUsageUnknown"
+      ]
+    }
+  ],
+  "status": "active",
+  "version": "1.0.0"
+}

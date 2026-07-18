@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-EL9JRMGJPS"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-EL9JRMGJPS');
+  </script>
+
+  <!-- Clarity code Puedes ver grabaciones reales (anónimas) de cómo navegan los usuarios.-->
+  <script type="text/javascript">
+    (function (c, l, a, r, i, t, y) {
+      c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) };
+      t = l.createElement(r); t.async = 1; t.src = "https://www.clarity.ms/tag/" + i;
+      y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
+    })(window, document, "clarity", "script", "xey9wuiqr4");
+  </script>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Comparar Dos Archivos con PowerShell en Windows | WinHacks</title>
+
+  <meta name="description"
+    content="Aprende a comparar dos archivos línea por línea en Windows usando PowerShell, Compare-Object y Get-Content para ver exactamente qué cambió.">
+
+  <meta name="robots" content="index, follow">
+
+  <link rel="canonical" href="https://winhacks.dev/comandos/comparar-archivos-powershell">
+
+  <link rel="icon" href="/assets/icons/favicon.ico">
+
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="WinHacks">
+  <meta property="og:title" content="Comparar Dos Archivos con PowerShell en Windows | WinHacks">
+  <meta property="og:description"
+    content="Usa Compare-Object y Get-Content en PowerShell para comparar archivos y detectar cambios línea por línea.">
+  <meta property="og:url" content="https://winhacks.dev/comandos/comparar-archivos-powershell">
+  <meta property="og:image" content="https://winhacks.dev/assets/img/og/og-comparar-archivos-powershell.webp">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Comparar Dos Archivos con PowerShell en Windows | WinHacks">
+  <meta name="twitter:description" content="Compara dos archivos desde PowerShell y descubre qué líneas cambiaron.">
+  <meta name="twitter:image" content="https://winhacks.dev/assets/img/og/og-comparar-archivos-powershell.webp">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Montserrat:wght@800;900&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+
+  <header class="site-header">
+    <div id="navbar-container"></div>
+  </header>
+
+  <main>
+
+    <nav id="breadcrumb" class="breadcrumb" aria-label="Breadcrumb"></nav>
+
+    <article class="article">
+
+      <header class="article-hero article-hero--panel">
+
+        <p class="eyebrow">Comandos de Windows</p>
+
+        <h1>Windows guarda este truco para comparar archivos con PowerShell</h1>
+
+        <p>
+          PowerShell puede comparar dos archivos línea por línea usando <strong>Compare-Object</strong>
+          y <strong>Get-Content</strong>. Es ideal para técnicos, programadores, estudiantes y cualquier usuario
+          que quiera ver exactamente qué cambió entre dos versiones de un archivo.
+        </p>
+
+        <div class="hero-buttons">
+          <a href="#video" class="btn btn-primary">Ver video</a>
+          <a href="#pasos" class="btn btn-outline">Ir al tutorial</a>
+        </div>
+
+      </header>
+
+      <div class="article-content">
+
+        <div class="meta-grid">
+
+          <div class="meta-card">
+            <span>Dificultad</span>
+            <strong>Fácil</strong>
+          </div>
+
+          <div class="meta-card">
+            <span>Tiempo</span>
+            <strong>1 minuto</strong>
+          </div>
+
+          <div class="meta-card">
+            <span>Compatible</span>
+            <strong>Windows 10/11</strong>
+          </div>
+
+          <div class="meta-card">
+            <span>Comando</span>
+            <strong>Compare-Object</strong>
+          </div>
+
+        </div>
+
+        <section id="video" class="video-box">
+
+          <div class="section-header">
+
+            <p class="eyebrow">Video rápido</p>
+
+            <h2>Mira cómo comparar archivos con PowerShell</h2>
+
+            <p>
+              En este Short te muestro cómo usar PowerShell para comparar dos archivos
+              y ver qué líneas fueron agregadas, eliminadas o modificadas.
+            </p>
+
+          </div>
+
+          <div class="youtube-short">
+            <iframe src="https://www.youtube.com/embed/i2z3KNDaRDk"
+              title="Comparar archivos con PowerShell en Windows | WinHacks" loading="lazy"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen>
+            </iframe>
+          </div>
+
+        </section>
+
+        <section class="info-box">
+
+          <h3>Qué aprenderás</h3>
+
+          <ul>
+            <li>Cómo comparar dos archivos usando PowerShell.</li>
+            <li>Qué hace <strong>Compare-Object</strong>.</li>
+            <li>Cómo leer archivos con <strong>Get-Content</strong>.</li>
+            <li>Cómo interpretar las diferencias que aparecen en pantalla.</li>
+          </ul>
+
+        </section>
+
+        <h2>¿Qué hace este comando?</h2>
+
+        <p>
+          <strong>Compare-Object</strong> compara dos conjuntos de datos. Cuando lo combinas con
+          <strong>Get-Content</strong>, PowerShell lee dos archivos de texto y compara su contenido línea por línea.
+        </p>
+
+        <p>
+          Esto sirve para revisar configuraciones, scripts, listas, notas, logs, archivos de código
+          o cualquier documento de texto plano donde necesites detectar diferencias rápidamente.
+        </p>
+
+        <div class="tip-box">
+
+          <h3>💡 Consejo WinHacks</h3>
+
+          <p>
+            Usa rutas con comillas cuando el archivo esté dentro de carpetas con espacios,
+            como <strong>C:\Users\Clent\Desktop\archivo1.txt</strong>.
+          </p>
+
+        </div>
+
+        <div class="warning-box">
+
+          <span>🚨</span>
+
+          <h3>Corrección importante del comando</h3>
+
+          <p>
+            La ruta correcta en Windows usa barras invertidas <strong>\</strong>, no barras verticales.
+            También debe haber un espacio entre <strong>Get-Content</strong> y la ruta del archivo.
+          </p>
+
+        </div>
+
+        <h2 id="pasos">Paso a paso</h2>
+
+        <div class="step-box">
+
+          <span class="step-number">1</span>
+
+          <h3>Prepara dos archivos de prueba</h3>
+
+          <p>
+            Crea dos archivos de texto en el escritorio. Por ejemplo:
+            <strong>archivo1.txt</strong> y <strong>archivo2.txt</strong>.
+          </p>
+
+          <div class="screenshot-placeholder">
+            <figure class="article-image">
+              <img height="1024" width="1536" src="../assets/images/comparar-powershell-01.png"
+                alt="Dos archivos de texto en el escritorio de Windows para comparar con PowerShell" loading="lazy"
+                decoding="async">
+              <figcaption>
+                Crea dos archivos de texto para comparar su contenido línea por línea.
+              </figcaption>
+            </figure>
+          </div>
+
+        </div>
+
+        <div class="step-box">
+
+          <span class="step-number">2</span>
+
+          <h3>Abre PowerShell</h3>
+
+          <p>
+            Presiona <strong>Win</strong>, busca <strong>PowerShell</strong> y abre la terminal.
+            No necesitas ejecutarlo como administrador para comparar archivos normales.
+          </p>
+
+          <div class="screenshot-placeholder">
+            <figure class="article-image">
+              <img height="1024" width="1536" src="../assets/images/comparar-powershell-02.png"
+                alt="PowerShell abierto en Windows para comparar dos archivos" loading="lazy" decoding="async">
+              <figcaption>
+                Abre <strong>PowerShell</strong> desde el menú Inicio de Windows.
+              </figcaption>
+            </figure>
+          </div>
+
+        </div>
+
+        <div class="step-box">
+
+          <span class="step-number">3</span>
+
+          <h3>Ejecuta el comando correcto</h3>
+
+          <p>
+            Copia este comando y ajusta las rutas si tus archivos están en otra ubicación:
+          </p>
+
+          <div class="command-box">
+            <code>Compare-Object (Get-Content "C:\Users\clent\Desktop\archivo1.txt") (Get-Content "C:\Users\clent\Desktop\archivo2.txt")</code>
+            <button class="copy-btn"
+              data-copy='Compare-Object (Get-Content "C:\Users\clent\Desktop\archivo1.txt") (Get-Content "C:\Users\clent\Desktop\archivo2.txt")'>Copiar</button>
+          </div>
+
+          <div class="screenshot-placeholder">
+            <figure class="article-image">
+              <img height="1024" width="1536" src="../assets/images/comparar-powershell-03.png"
+                alt="Comando Compare-Object ejecutado en PowerShell para comparar dos archivos" loading="lazy"
+                decoding="async">
+              <figcaption>
+                Ejecuta <strong>Compare-Object</strong> con <strong>Get-Content</strong> para comparar ambos archivos.
+              </figcaption>
+            </figure>
+          </div>
+
+        </div>
+
+        <div class="step-box">
+
+          <span class="step-number">4</span>
+
+          <h3>Interpreta las diferencias</h3>
+
+          <p>
+            PowerShell mostrará una columna llamada <strong>SideIndicator</strong>.
+            Esa columna indica de qué archivo viene cada línea diferente.
+          </p>
+
+          <div class="screenshot-placeholder">
+            <figure class="article-image">
+              <img height="1024" width="1536" src="../assets/images/comparar-powershell-04.png"
+                alt="Resultado de Compare-Object mostrando diferencias entre archivos en PowerShell" loading="lazy"
+                decoding="async">
+              <figcaption>
+                Revisa la columna <strong>SideIndicator</strong> para entender qué cambió.
+              </figcaption>
+            </figure>
+          </div>
+
+        </div>
+
+        <div class="step-box">
+
+          <span class="step-number">5</span>
+
+          <h3>Usa una versión más legible</h3>
+
+          <p>
+            Si quieres ver mejor el resultado, puedes agregar <strong>Format-Table</strong>:
+          </p>
+
+          <div class="command-box">
+            <code>Compare-Object (Get-Content "C:\Users\clent\Desktop\archivo1.txt") (Get-Content "C:\Users\clent\Desktop\archivo2.txt") | Format-Table</code>
+            <button class="copy-btn"
+              data-copy='Compare-Object (Get-Content "C:\Users\clent\Desktop\archivo1.txt") (Get-Content "C:\Users\clent\Desktop\archivo2.txt") | Format-Table'>Copiar</button>
+          </div>
+
+          <div class="screenshot-placeholder">
+            <figure class="article-image">
+              <img height="1024" width="1536" src="../assets/images/comparar-powershell-05.png"
+                alt="Resultado de Compare-Object con Format-Table en PowerShell" loading="lazy" decoding="async">
+              <figcaption>
+                Usa <strong>Format-Table</strong> para mostrar las diferencias de forma más ordenada.
+              </figcaption>
+            </figure>
+          </div>
+
+        </div>
+
+        <h2>Qué significa SideIndicator</h2>
+
+        <div class="info-box">
+
+          <h3>Indicador =&gt;</h3>
+
+          <p>
+            Significa que esa línea aparece en el segundo archivo, pero no en el primero.
+          </p>
+
+        </div>
+
+        <div class="info-box">
+
+          <h3>Indicador &lt;=</h3>
+
+          <p>
+            Significa que esa línea aparece en el primer archivo, pero no en el segundo.
+          </p>
+
+        </div>
+
+        <div class="info-box">
+
+          <h3>Sin salida en pantalla</h3>
+
+          <p>
+            Si PowerShell no muestra diferencias, normalmente significa que ambos archivos tienen el mismo contenido.
+          </p>
+
+        </div>
+
+        <h2>Ejemplo con rutas más simples</h2>
+
+        <p>
+          Si ya estás ubicado en el escritorio desde PowerShell, puedes usar una versión más corta:
+        </p>
+
+        <div class="command-box">
+          <code>Compare-Object (Get-Content ".\archivo1.txt") (Get-Content ".\archivo2.txt")</code>
+          <button class="copy-btn"
+            data-copy='Compare-Object (Get-Content ".\archivo1.txt") (Get-Content ".\archivo2.txt")'>Copiar</button>
+        </div>
+
+        <p>
+          Para moverte al escritorio, puedes usar:
+        </p>
+
+        <div class="command-box">
+          <code>cd "$env:USERPROFILE\Desktop"</code>
+          <button class="copy-btn" data-copy='cd "$env:USERPROFILE\Desktop"'>Copiar</button>
+        </div>
+
+        <div class="result-box">
+
+          <h3>✅ Resultado esperado</h3>
+
+          <p>
+            PowerShell mostrará las líneas que son diferentes entre ambos archivos.
+            Esto te permite saber qué se agregó, eliminó o cambió sin abrir programas externos.
+          </p>
+
+        </div>
+
+        <h2>Errores comunes</h2>
+
+        <div class="info-box">
+
+          <h3>El comando dice que no encuentra el archivo</h3>
+
+          <p>
+            Revisa que la ruta esté bien escrita. En Windows debe verse así:
+            <strong>C:\Users\clent\Desktop\archivo1.txt</strong>.
+          </p>
+
+        </div>
+
+        <div class="info-box">
+
+          <h3>Usé barras verticales y falló</h3>
+
+          <p>
+            Las rutas de Windows no usan <strong>|</strong>. Usa barras invertidas:
+            <strong>\</strong>.
+          </p>
+
+        </div>
+
+        <div class="info-box">
+
+          <h3>No aparece ninguna diferencia</h3>
+
+          <p>
+            Eso puede significar que los archivos son iguales. Agrega una línea diferente en uno de ellos
+            y vuelve a ejecutar el comando.
+          </p>
+
+        </div>
+
+        <h2>Preguntas frecuentes</h2>
+
+        <div class="faq-box">
+
+          <h3>¿Funciona en Windows 11?</h3>
+
+          <p>
+            Sí. También funciona en Windows 10 con PowerShell.
+          </p>
+
+        </div>
+
+        <div class="faq-box">
+
+          <h3>¿Sirve para archivos Word?</h3>
+
+          <p>
+            No es ideal para archivos <strong>.docx</strong>. Este método funciona mejor con archivos de texto,
+            scripts, listas, configuraciones, logs y código.
+          </p>
+
+        </div>
+
+        <div class="faq-box">
+
+          <h3>¿Necesito instalar algo?</h3>
+
+          <p>
+            No. PowerShell ya viene integrado en Windows.
+          </p>
+
+        </div>
+
+        <div class="faq-box">
+
+          <h3>¿Puedo comparar scripts?</h3>
+
+          <p>
+            Sí. Puedes comparar archivos <strong>.ps1</strong>, <strong>.bat</strong>, <strong>.cmd</strong>,
+            <strong>.txt</strong>, <strong>.csv</strong> y otros archivos de texto.
+          </p>
+
+        </div>
+
+        <section class="section cta-section" id="descarga">
+
+          <p class="eyebrow">Recurso gratuito</p>
+
+          <h2>Descarga comandos útiles para Windows</h2>
+
+          <p>
+            Aprende comandos CMD y PowerShell para comparar archivos, diagnosticar problemas,
+            revisar red, procesos y herramientas ocultas del sistema.
+          </p>
+
+          <form name="comandos-cmd" method="POST" data-netlify="true" class="email-form netlify-form"
+            id="comandosForm" data-redirect="/recursos/gracias-comandos.html">
+
+            <input type="hidden" name="form-name" value="comandos-cmd">
+
+            <input type="text" name="nombre" placeholder="Tu nombre" required>
+
+            <input type="email" name="email" placeholder="Tu correo electrónico" required>
+
+            <button type="submit">Descargar PDF</button>
+
+          </form>
+
+        </section>
+
+        <h2>Artículos relacionados</h2>
+
+        <div class="related-grid">
+
+          <a href="/comandos/powershell.html" class="related-card">
+            <h3>PowerShell básico</h3>
+            <p>Aprende comandos esenciales para usar PowerShell en Windows.</p>
+          </a>
+
+          <a href="/comandos/cmd.html" class="related-card">
+            <h3>Comandos CMD</h3>
+            <p>Domina comandos útiles para diagnóstico, productividad y soporte técnico.</p>
+          </a>
+
+          <a href="/comandos/crear-codigo-qr-curl-windows.html" class="related-card">
+            <h3>Crear QR con curl</h3>
+            <p>Genera códigos QR desde la terminal de Windows sin instalar programas.</p>
+          </a>
+
+          <a href="/comandos/taskkill-pid-windows.html" class="related-card">
+            <h3>Cerrar procesos con taskkill</h3>
+            <p>Finaliza procesos específicos usando su PID desde CMD.</p>
+          </a>
+
+        </div>
+
+        <div class="next-box">
+
+          <h3>🚀 Siguiente paso recomendado</h3>
+
+          <p>
+            Después de comparar archivos con PowerShell, aprende más comandos de automatización
+            para trabajar más rápido con Windows.
+          </p>
+
+          <a href="/comandos/powershell.html" class="btn btn-primary">
+            Ver PowerShell
+          </a>
+
+        </div>
+
+      </div>
+
+    </article>
+
+  </main>
+
+  <footer>
+    <div id="footer-container"></div>
+  </footer>
+
+  <a href="#" class="to-top" aria-label="Volver arriba">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8"
+      stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="18 15 12 9 6 15"></polyline>
+    </svg>
+  </a>
+
+  <script src="/js/components.js"></script>
+  <script src="/js/core/engine.js?v=20260626-03" defer></script>
+
+</body>
+
+</html>

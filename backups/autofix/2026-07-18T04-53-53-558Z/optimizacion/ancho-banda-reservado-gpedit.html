@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-EL9JRMGJPS"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-EL9JRMGJPS');
+  </script>
+
+  <!-- Microsoft Clarity -->
+  <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+      c[a]=c[a]||function(){c[a].q=c[a].q||[];c[a].q.push(arguments)};
+      t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+      y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "xey9wuiqr4");
+  </script>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Configurar ancho de banda reservable en Windows 11 | WinHacks</title>
+  <meta name="description" content="Aprende a revisar el límite de ancho de banda reservable en Windows 11 usando gpedit.msc y qué significa realmente este ajuste de red.">
+  <meta name="robots" content="index, follow">
+
+  <link rel="canonical" href="https://winhacks.dev/optimizacion/ancho-banda-reservado-gpedit">
+  <link rel="icon" href="/assets/images/favicon.ico">
+
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Configurar ancho de banda reservable en Windows 11 | WinHacks">
+  <meta property="og:description" content="Revisa el ajuste oculto de ancho de banda reservable en Windows usando gpedit.msc.">
+  <meta property="og:url" content="https://winhacks.dev/optimizacion/ancho-banda-reservado-gpedit">
+  <meta property="og:image" content="https://winhacks.dev/assets/images/og-image.jpg">
+  <meta property="og:site_name" content="WinHacks">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Configurar ancho de banda reservable en Windows 11 | WinHacks">
+  <meta name="twitter:description" content="Usa gpedit.msc para revisar el límite de ancho de banda reservable en Windows 10 y 11.">
+  <meta name="twitter:image" content="https://winhacks.dev/assets/images/og-image.jpg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+
+  <header class="site-header">
+    <div id="navbar-container"></div>
+  </header>
+
+  <main>
+
+    <nav id="breadcrumb" class="breadcrumb" aria-label="Breadcrumb"></nav>
+
+    <article class="article">
+
+      <header class="article-hero article-hero--panel">
+
+        <p class="eyebrow">Optimización Windows</p>
+
+        <h1>Cómo configurar el ancho de banda reservable en Windows 11</h1>
+
+        <p>
+          Windows incluye una política llamada <strong>Límite de ancho de banda reservable</strong>. Con <strong>gpedit.msc</strong> puedes revisar este ajuste y controlar cómo se comporta en tu equipo.
+        </p>
+
+        <div class="hero-buttons">
+          <a href="#pasos" class="btn btn-primary">Ver pasos</a>
+          <a href="#video" class="btn btn-outline">Ver Short</a>
+        </div>
+
+      </header>
+
+      <div class="article-content">
+
+        <div class="meta-grid">
+
+          <div class="meta-card">
+            <span>Herramienta</span>
+            <strong>gpedit.msc</strong>
+          </div>
+
+          <div class="meta-card">
+            <span>Tiempo</span>
+            <strong>2 minutos</strong>
+          </div>
+
+          <div class="meta-card">
+            <span>Nivel</span>
+            <strong>Intermedio</strong>
+          </div>
+
+          <div class="meta-card">
+            <span>Compatible</span>
+            <strong>Windows Pro</strong>
+          </div>
+
+        </div>
+
+        <section id="video" class="video-box">
+
+          <div class="section-header">
+
+            <p class="eyebrow">Video rápido</p>
+
+            <h2>Mira cómo revisar este ajuste</h2>
+
+            <p>
+              En este Short verás cómo entrar en gpedit y revisar la política de ancho de banda reservable en Windows 11.
+            </p>
+
+          </div>
+
+          <div class="youtube-short">
+            <iframe
+              src="https://www.youtube.com/embed/jR0u02N1xEQ"
+              title="Configurar ancho de banda reservable en Windows 11 | WinHacks"
+              loading="lazy"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen>
+            </iframe>
+          </div>
+
+        </section>
+
+        <section class="info-box">
+
+          <h2>Qué aprenderás</h2>
+
+          <ul>
+            <li>Cómo abrir el Editor de directivas de grupo local.</li>
+            <li>Dónde está el ajuste de ancho de banda reservable.</li>
+            <li>Qué significa realmente el famoso límite del 20%.</li>
+            <li>Cómo configurarlo sin dañar Windows.</li>
+          </ul>
+
+        </section>
+
+        <h2>Qué hace este ajuste</h2>
+
+        <p>
+          La política de <strong>Límite de ancho de banda reservable</strong> pertenece al Programador de paquetes QoS de Windows. Su función es controlar cuánto ancho de banda puede reservar el sistema para ciertos procesos que usan QoS.
+        </p>
+
+        <p>
+          Es importante aclarar algo: esto no significa que Windows siempre te robe el 20% de Internet. En la mayoría de equipos, Windows no mantiene ese porcentaje bloqueado todo el tiempo. Este ajuste solo afecta escenarios específicos donde una aplicación o servicio solicita reserva de ancho de banda.
+        </p>
+
+        <div class="tip-box">
+
+          <h3>Consejo WinHacks</h3>
+
+          <p>
+            Usa este ajuste como revisión avanzada, no como solución mágica. Para mejorar conexión también revisa DNS, drivers de red, apps en segundo plano y consumo de actualizaciones.
+          </p>
+
+        </div>
+
+        <div class="warning-box">
+
+          <h3>Importante</h3>
+
+          <p>
+            <strong>gpedit.msc</strong> normalmente está disponible en Windows Pro, Enterprise y Education. En Windows Home puede no aparecer de forma predeterminada.
+          </p>
+
+        </div>
+
+        <h2 id="pasos">Paso a paso para configurar el ancho de banda reservable</h2>
+
+        <div class="step-box">
+
+          <div class="step-number">1</div>
+
+          <div>
+            <h3>Abre Ejecutar</h3>
+            <p>
+              Presiona <strong>Win + R</strong> para abrir la ventana Ejecutar.
+            </p>
+          </div>
+
+        </div>
+
+        <div class="step-box">
+
+          <div class="step-number">2</div>
+
+          <div>
+            <h3>Abre gpedit</h3>
+            <p>
+              Escribe este comando y presiona Enter:
+            </p>
+
+            <div class="command-box">
+              <code>gpedit.msc</code>
+              <button class="copy-btn" data-copy="gpedit.msc">Copiar</button>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="step-box">
+
+          <div class="step-number">3</div>
+
+          <div>
+            <h3>Entra en Plantillas administrativas</h3>
+            <p>
+              Ve a <strong>Configuración del equipo</strong>, luego entra en <strong>Plantillas administrativas</strong>.
+            </p>
+          </div>
+
+        </div>
+
+        <div class="step-box">
+
+          <div class="step-number">4</div>
+
+          <div>
+            <h3>Busca Programador de paquetes QoS</h3>
+            <p>
+              Navega por esta ruta:
+            </p>
+
+            <div class="command-box">
+              <code>Configuración del equipo &gt; Plantillas administrativas &gt; Red &gt; Programador de paquetes QoS</code>
+              <button class="copy-btn" data-copy="Configuración del equipo > Plantillas administrativas > Red > Programador de paquetes QoS">Copiar</button>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="step-box">
+
+          <div class="step-number">5</div>
+
+          <div>
+            <h3>Abre Límite de ancho de banda reservable</h3>
+            <p>
+              Haz doble clic en <strong>Limitar ancho de banda reservable</strong> o <strong>Limit reservable bandwidth</strong>, según el idioma del sistema.
+            </p>
+          </div>
+
+        </div>
+
+        <div class="step-box">
+
+          <div class="step-number">6</div>
+
+          <div>
+            <h3>Configura el valor</h3>
+            <p>
+              Puedes habilitar la política y establecer el valor en <strong>0%</strong> si deseas evitar una reserva configurada por esta directiva.
+            </p>
+          </div>
+
+        </div>
+
+        <section class="info-box">
+
+          <h2>Configuración recomendada</h2>
+
+          <p>
+            Para la mayoría de usuarios, estas son las opciones más razonables:
+          </p>
+
+          <ul>
+            <li><strong>No configurada:</strong> estado predeterminado de Windows.</li>
+            <li><strong>Habilitada en 0%:</strong> fuerza el límite de reserva a cero desde la política.</li>
+            <li><strong>Deshabilitada:</strong> evita aplicar una configuración manual desde esa directiva.</li>
+          </ul>
+
+          <p>
+            Si no tienes problemas de red, puedes dejarla en <strong>No configurada</strong>. Si quieres probar el ajuste del Short, usa <strong>Habilitada</strong> y coloca <strong>0</strong>.
+          </p>
+
+        </section>
+
+        <div class="result-box">
+
+          <h2>Resultado esperado</h2>
+
+          <p>
+            Windows aplicará la política seleccionada para el ancho de banda reservable. Puede ayudar en escenarios específicos, pero no garantiza duplicar velocidad ni reducir ping por sí solo.
+          </p>
+
+        </div>
+
+        <h2>Errores comunes</h2>
+
+        <div class="faq-box">
+
+          <h3>No aparece gpedit.msc</h3>
+          <p>
+            Probablemente usas Windows Home. Esta herramienta viene principalmente en ediciones Pro, Enterprise y Education.
+          </p>
+
+        </div>
+
+        <div class="faq-box">
+
+          <h3>No noto más velocidad</h3>
+          <p>
+            Es normal. Este ajuste no aumenta la velocidad contratada con tu proveedor. Solo controla una política específica de reserva de ancho de banda.
+          </p>
+
+        </div>
+
+        <div class="faq-box">
+
+          <h3>No encuentro Programador de paquetes QoS</h3>
+          <p>
+            Revisa que estés dentro de <strong>Configuración del equipo</strong>, no en Configuración de usuario.
+          </p>
+
+        </div>
+
+        <h2>Preguntas frecuentes</h2>
+
+        <div class="faq-box">
+
+          <h3>¿Windows reserva siempre el 20% de Internet?</h3>
+          <p>
+            No necesariamente. Ese porcentaje se relaciona con reservas QoS bajo condiciones específicas, no con una pérdida permanente de velocidad para todo usuario.
+          </p>
+
+        </div>
+
+        <div class="faq-box">
+
+          <h3>¿Esto mejora el ping en juegos?</h3>
+          <p>
+            Puede no cambiar nada. Para gaming conviene revisar latencia, WiFi, DNS, cable Ethernet, apps en segundo plano y estabilidad del router.
+          </p>
+
+        </div>
+
+        <div class="faq-box">
+
+          <h3>¿Funciona en Windows 11?</h3>
+          <p>
+            Sí, en ediciones que incluyen el Editor de directivas de grupo local.
+          </p>
+
+        </div>
+
+        <section class="section cta-section">
+
+          <div class="section-header">
+
+            <p class="eyebrow">Recurso gratis</p>
+
+            <h2>Descarga la checklist de optimización</h2>
+
+            <p>
+              Recibe una guía gratuita con ajustes seguros para mejorar Windows 10 y Windows 11 sin tocar configuraciones peligrosas.
+            </p>
+
+          </div>
+
+          <form
+            name="checklist-optimizacion"
+            method="POST"
+            data-netlify="true"
+            class="email-form netlify-form"
+            id="optimizacionForm"
+            data-redirect="/recursos/gracias-checklist-optimizacion.html">
+
+            <input type="hidden" name="form-name" value="checklist-optimizacion">
+
+            <input type="text" name="nombre" placeholder="Tu nombre" required>
+
+            <input type="email" name="email" placeholder="Tu correo electrónico" required>
+
+            <button type="submit">Descargar checklist</button>
+
+          </form>
+
+        </section>
+
+        <h2>Artículos relacionados</h2>
+
+        <div class="related-grid">
+
+          <a href="/redes/flushdns.html" class="related-card">
+            <span>Redes</span>
+            <strong>Limpiar caché DNS en Windows</strong>
+          </a>
+
+          <a href="/seguridad/netstat-conexiones-activas.html" class="related-card">
+            <span>Seguridad</span>
+            <strong>Ver conexiones activas con netstat</strong>
+          </a>
+
+          <a href="/optimizacion/inicio-rapido.html" class="related-card">
+            <span>Optimización</span>
+            <strong>Activar Inicio rápido en Windows</strong>
+          </a>
+
+        </div>
+
+        <div class="next-box">
+
+          <h2>Siguiente paso recomendado</h2>
+
+          <p>
+            Después de revisar el ancho de banda reservable, analiza qué procesos mantienen conexiones activas con <code>netstat -ano</code>.
+          </p>
+
+          <a href="/seguridad/netstat-conexiones-activas.html" class="btn btn-primary">Ver conexiones activas</a>
+
+        </div>
+
+      </div>
+
+    </article>
+
+  </main>
+
+  <footer>
+    <div id="footer-container"></div>
+  </footer>
+
+  <a href="#" class="to-top" aria-label="Volver arriba">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8"
+      stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="18 15 12 9 6 15"></polyline>
+    </svg>
+  </a>
+
+  <script src="/js/components.js"></script>
+  <script src="/js/core/engine.js?v=20260626-03" defer></script>
+
+</body>
+</html>

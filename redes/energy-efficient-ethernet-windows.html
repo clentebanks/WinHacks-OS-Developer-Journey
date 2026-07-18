@@ -1,0 +1,416 @@
+<!DOCTYPE html><html lang="es"><head>
+  <!-- Google Analytics -->
+  <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EL9JRMGJPS"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-EL9JRMGJPS');
+  </script>
+
+  <!-- Microsoft Clarity -->
+  <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+      c[a]=c[a]||function(){c[a].q=c[a].q||[];c[a].q.push(arguments)};
+      t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+      y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "xey9wuiqr4");
+  </script>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Desactivar Energy Efficient Ethernet en Windows | WinHacks</title>
+  <meta name="description" content="Aprende cómo desactivar Energy Efficient Ethernet en Windows 10 y 11 para mejorar estabilidad de red, reducir microcortes y evitar ahorro de energía agresivo en el adaptador.">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+
+  <link rel="canonical" href="https://winhacks.dev/redes/energy-efficient-ethernet-windows">
+  <link rel="icon" href="/assets/images/favicon.ico">
+
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Desactivar Energy Efficient Ethernet en Windows | WinHacks">
+  <meta property="og:description" content="Revisa esta opción oculta del adaptador de red para mejorar estabilidad y reducir cortes en Windows.">
+  <meta property="og:url" content="https://winhacks.dev/redes/energy-efficient-ethernet-windows">
+  <meta property="og:image" content="https://winhacks.dev/assets/images/og-image.jpg">
+  <meta property="og:site_name" content="WinHacks">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Desactivar Energy Efficient Ethernet en Windows | WinHacks">
+  <meta name="twitter:description" content="Ajuste oculto de red para evitar microcortes y mejorar estabilidad en Windows 10 y Windows 11.">
+  <meta name="twitter:image" content="https://winhacks.dev/assets/images/og-image.jpg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=Montserrat:wght@700;800;900&amp;display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/css/style.css">
+
+  <meta property="og:locale" content="es_ES"></head>
+
+<body>
+
+  <header class="site-header">
+    <div id="navbar-container"></div>
+  </header>
+
+  <main>
+
+    <nav id="breadcrumb" class="breadcrumb" aria-label="Breadcrumb"></nav>
+
+    <article class="article">
+
+      <header class="article-hero article-hero--panel">
+
+        <p class="eyebrow">Redes Windows</p>
+
+        <h1>Cómo desactivar Energy Efficient Ethernet en Windows</h1>
+
+        <p>
+          Algunos adaptadores de red usan una función de ahorro de energía llamada <strong>Energy Efficient Ethernet</strong>. En ciertos equipos puede causar microcortes, latencia irregular o pérdida de estabilidad.
+        </p>
+
+        <div class="hero-buttons">
+          <a href="#pasos" class="btn btn-primary">Ver pasos</a>
+          <a href="#video" class="btn btn-outline">Ver Short</a>
+        </div>
+
+      </header>
+
+      <div class="article-content">
+
+        <div class="meta-grid">
+
+          <div class="meta-card">
+            <span>Ajuste</span>
+            <strong>Energy Efficient Ethernet</strong>
+          </div>
+
+          <div class="meta-card">
+            <span>Tiempo</span>
+            <strong>2 minutos</strong>
+          </div>
+
+          <div class="meta-card">
+            <span>Nivel</span>
+            <strong>Básico</strong>
+          </div>
+
+          <div class="meta-card">
+            <span>Compatible</span>
+            <strong>Windows 10/11</strong>
+          </div>
+
+        </div>
+
+        <section id="video" class="video-box">
+
+          <div class="section-header">
+
+            <p class="eyebrow">Video rápido</p>
+
+            <h2>Mira cómo desactivar este ajuste</h2>
+
+            <p>
+              En este Short verás dónde encontrar Energy Efficient Ethernet y cómo desactivarlo desde las propiedades del adaptador de red.
+            </p>
+
+          </div>
+
+          <div class="youtube-short">
+            <iframe src="https://www.youtube.com/embed/sUnn4O1b1Mo" title="Desactivar Energy Efficient Ethernet en Windows | WinHacks" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="">
+            </iframe>
+          </div>
+
+        </section>
+
+        <section class="info-box">
+
+          <h2>Qué aprenderás</h2>
+
+          <ul>
+            <li>Qué es Energy Efficient Ethernet.</li>
+            <li>Cómo abrir las propiedades del adaptador de red.</li>
+            <li>Cómo desactivar esta opción en Windows.</li>
+            <li>Cuándo puede ayudar en gaming, streaming o uso diario.</li>
+          </ul>
+
+        </section>
+
+        <h2>Qué hace Energy Efficient Ethernet</h2>
+
+        <p>
+          <strong>Energy Efficient Ethernet</strong> es una función que intenta reducir el consumo de energía del adaptador de red cuando detecta poca actividad. En teoría ayuda a ahorrar energía.
+        </p>
+
+        <p>
+          El problema es que en algunos adaptadores puede provocar latencia irregular, cortes pequeños o reconexiones breves, especialmente en juegos online, videollamadas, streaming o descargas largas.
+        </p>
+
+        <div class="tip-box">
+
+          <h3>Consejo WinHacks</h3>
+
+          <p>
+            Este ajuste suele aplicar principalmente a conexiones por cable Ethernet. Si usas WiFi, busca opciones similares de ahorro de energía dentro del adaptador inalámbrico.
+          </p>
+
+        </div>
+
+        <div class="warning-box">
+
+          <h3>Importante</h3>
+
+          <p>
+            No todos los adaptadores muestran esta opción con el mismo nombre. Puede aparecer como <strong>Energy Efficient Ethernet</strong>, <strong>EEE</strong>, <strong>Green Ethernet</strong> o una opción similar.
+          </p>
+
+        </div>
+
+        <h2 id="pasos">Paso a paso para desactivar Energy Efficient Ethernet</h2>
+
+        <div class="step-box">
+
+          <div class="step-number">1</div>
+
+          <div>
+            <h3>Abre Ejecutar</h3>
+            <p>
+              Presiona <strong>Win + R</strong> para abrir la ventana Ejecutar.
+            </p>
+          </div>
+
+        </div>
+
+        <div class="step-box">
+
+          <div class="step-number">2</div>
+
+          <div>
+            <h3>Abre Conexiones de red</h3>
+            <p>
+              Escribe este comando y presiona Enter:
+            </p>
+
+            <div class="command-box">
+              <code>ncpa.cpl</code>
+              <button class="copy-btn" data-copy="ncpa.cpl">Copiar</button>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="step-box">
+
+          <div class="step-number">3</div>
+
+          <div>
+            <h3>Entra en propiedades del adaptador</h3>
+            <p>
+              Haz clic derecho sobre tu adaptador Ethernet y selecciona <strong>Propiedades</strong>.
+            </p>
+          </div>
+
+        </div>
+
+        <div class="step-box">
+
+          <div class="step-number">4</div>
+
+          <div>
+            <h3>Abre Configurar</h3>
+            <p>
+              En la ventana del adaptador, presiona el botón <strong>Configurar</strong>. Luego entra en la pestaña <strong>Opciones avanzadas</strong>.
+            </p>
+          </div>
+
+        </div>
+
+        <div class="step-box">
+
+          <div class="step-number">5</div>
+
+          <div>
+            <h3>Busca Energy Efficient Ethernet</h3>
+            <p>
+              En la lista de propiedades, busca <strong>Energy Efficient Ethernet</strong>, <strong>EEE</strong> o <strong>Green Ethernet</strong>.
+            </p>
+          </div>
+
+        </div>
+
+        <div class="step-box">
+
+          <div class="step-number">6</div>
+
+          <div>
+            <h3>Desactiva la opción</h3>
+            <p>
+              Cambia el valor a <strong>Disabled</strong>, <strong>Deshabilitado</strong> o <strong>Off</strong>. Luego presiona <strong>Aceptar</strong>.
+            </p>
+          </div>
+
+        </div>
+
+        <section class="info-box">
+
+          <h2>Opciones similares que puedes revisar</h2>
+
+          <ul>
+            <li><strong>Green Ethernet:</strong> ahorro de energía del adaptador.</li>
+            <li><strong>Power Saving Mode:</strong> modo de ahorro energético.</li>
+            <li><strong>Advanced EEE:</strong> variante avanzada de Energy Efficient Ethernet.</li>
+            <li><strong>Auto Disable Gigabit:</strong> puede reducir velocidad para ahorrar energía.</li>
+          </ul>
+
+        </section>
+
+        <div class="result-box">
+
+          <h2>Resultado esperado</h2>
+
+          <p>
+            Después de desactivar esta función, el adaptador debería mantener una conexión más estable. En algunos equipos puede reducir microcortes, mejorar la consistencia de la latencia y evitar pausas breves en la red.
+          </p>
+
+        </div>
+
+        <h2>Errores comunes</h2>
+
+        <div class="faq-box">
+
+          <h3>No aparece Energy Efficient Ethernet</h3>
+          <p>
+            Tu adaptador puede no tener esa función o puede mostrarla con otro nombre como <strong>EEE</strong>, <strong>Green Ethernet</strong> o <strong>Advanced EEE</strong>.
+          </p>
+
+        </div>
+
+        <div class="faq-box">
+
+          <h3>Uso WiFi y no encuentro la opción</h3>
+          <p>
+            Esta opción suele estar en adaptadores Ethernet. Para WiFi, revisa opciones de ahorro de energía del adaptador inalámbrico y la administración de energía del dispositivo.
+          </p>
+
+        </div>
+
+        <div class="faq-box">
+
+          <h3>No noto mejora en Internet</h3>
+          <p>
+            Es posible que tu problema venga del router, DNS, señal WiFi, cable Ethernet, proveedor de internet o apps consumiendo ancho de banda.
+          </p>
+
+        </div>
+
+        <h2>Preguntas frecuentes</h2>
+
+        <div class="faq-box">
+
+          <h3>¿Esto aumenta la velocidad contratada?</h3>
+          <p>
+            No. Este ajuste no aumenta los megas de tu plan. Puede mejorar estabilidad si el adaptador estaba entrando en ahorro de energía de forma agresiva.
+          </p>
+
+        </div>
+
+        <div class="faq-box">
+
+          <h3>¿Sirve para gaming?</h3>
+          <p>
+            Puede ayudar si sufrías microcortes o latencia irregular por ahorro de energía del adaptador. Para gaming competitivo, Ethernet suele ser mejor que WiFi.
+          </p>
+
+        </div>
+
+        <div class="faq-box">
+
+          <h3>¿Es seguro desactivarlo?</h3>
+          <p>
+            Sí. Solo reduce el ahorro energético del adaptador. Si no notas mejora, puedes volver a activarlo.
+          </p>
+
+        </div>
+
+        <section class="section cta-section">
+
+          <div class="section-header">
+
+            <p class="eyebrow">Recurso gratis</p>
+
+            <h2>Descarga comandos útiles para redes en Windows</h2>
+
+            <p>
+              Recibe una guía con comandos CMD para diagnosticar conexión, DNS, IP, procesos conectados y problemas comunes de red.
+            </p>
+
+          </div>
+
+          <form name="comandos-cmd" method="POST" data-netlify="true" class="email-form netlify-form" id="comandosForm" data-redirect="/recursos/gracias-comandos.html">
+
+            <input type="hidden" name="form-name" value="comandos-cmd">
+
+            <input type="text" name="nombre" placeholder="Tu nombre" required="">
+
+            <input type="email" name="email" placeholder="Tu correo electrónico" required="">
+
+            <button type="submit">Descargar comandos</button>
+
+          </form>
+
+        </section>
+
+        <h2>Artículos relacionados</h2>
+
+        <div class="related-grid">
+
+          <a href="/optimizacion/ancho-banda-reservado-gpedit.html" class="related-card">
+            <span>Red</span>
+            <strong>Configurar ancho de banda reservable</strong>
+          </a>
+
+          <a href="/redes/flushdns.html" class="related-card">
+            <span>Redes</span>
+            <strong>Limpiar caché DNS en Windows</strong>
+          </a>
+
+          <a href="/seguridad/netstat-conexiones-activas.html" class="related-card">
+            <span>Seguridad</span>
+            <strong>Ver conexiones activas con netstat</strong>
+          </a>
+
+        </div>
+
+        <div class="next-box">
+
+          <h2>Siguiente paso recomendado</h2>
+
+          <p>
+            Después de revisar Energy Efficient Ethernet, limpia la caché DNS y revisa procesos conectados para completar el diagnóstico de red.
+          </p>
+
+          <a href="/redes/flushdns.html" class="btn btn-primary">Ver flushdns</a>
+
+        </div>
+
+      </div>
+
+    </article>
+
+  </main>
+
+  <footer>
+    <div id="footer-container"></div>
+  </footer>
+
+  <a href="#" class="to-top" aria-label="Volver arriba">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="18 15 12 9 6 15"></polyline>
+    </svg>
+  </a>
+
+  <script src="/js/components.js"></script>
+  <script src="/js/core/engine.js?v=20260626-03" defer=""></script>
+
+
+</body></html>

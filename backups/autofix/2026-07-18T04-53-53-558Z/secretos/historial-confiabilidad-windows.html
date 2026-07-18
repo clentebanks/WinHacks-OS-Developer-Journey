@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-EL9JRMGJPS"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-EL9JRMGJPS');
+  </script>
+  <!-- Clarity code Puedes ver grabaciones reales (anónimas) de cómo navegan los usuarios.-->
+  <script type="text/javascript">
+    (function (c, l, a, r, i, t, y) {
+      c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) };
+      t = l.createElement(r); t.async = 1; t.src = "https://www.clarity.ms/tag/" + i;
+      y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
+    })(window, document, "clarity", "script", "xey9wuiqr4");
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Cómo Ver los Errores Ocultos de Windows | WinHacks</title>
+
+  <meta name="description"
+    content="Aprende a usar el Historial de Confiabilidad de Windows para ver errores ocultos, bloqueos, advertencias y programas que fallan.">
+
+  <meta name="robots" content="index, follow">
+
+  <link rel="canonical" href="https://winhacks.dev/secretos/historial-confiabilidad-windows">
+
+  <link rel="icon" href="/assets/icons/favicon.ico">
+
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="WinHacks">
+  <meta property="og:title" content="Cómo Ver los Errores Ocultos de Windows | WinHacks">
+  <meta property="og:description"
+    content="Antes de formatear tu PC, revisa el Historial de Confiabilidad de Windows y descubre errores críticos ocultos.">
+  <meta property="og:url" content="https://winhacks.dev/secretos/historial-confiabilidad-windows">
+  <meta property="og:image" content="https://winhacks.dev/assets/img/og/og-historial-confiabilidad.webp">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Cómo Ver los Errores Ocultos de Windows | WinHacks">
+  <meta name="twitter:description" content="Usa perfmon /rel para ver errores ocultos, bloqueos y fallos de Windows.">
+  <meta name="twitter:image" content="https://winhacks.dev/assets/img/og/og-historial-confiabilidad.webp">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Montserrat:wght@800;900&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+
+  <header class="site-header">
+    <div id="navbar-container"></div>
+  </header>
+
+  <main>
+
+    <nav id="breadcrumb" class="breadcrumb" aria-label="Breadcrumb"></nav>
+
+    <article class="article">
+
+      <header class="article-hero article-hero--panel">
+
+        <p class="eyebrow">Secreto de Windows</p>
+
+        <h1>Windows guarda un historial de errores que casi nadie revisa</h1>
+
+        <p>
+          Antes de formatear tu computadora, revisa el Historial de Confiabilidad.
+          Esta herramienta puede mostrarte bloqueos, errores críticos, advertencias
+          y programas que fallan sin instalar nada.
+        </p>
+
+        <div class="hero-buttons">
+          <a href="#video" class="btn btn-primary">Ver video</a>
+          <a href="#pasos" class="btn btn-outline">Ir al tutorial</a>
+        </div>
+
+      </header>
+
+      <div class="article-content">
+
+        <div class="meta-grid">
+
+          <div class="meta-card">
+            <span>Dificultad</span>
+            <strong>Fácil</strong>
+          </div>
+
+          <div class="meta-card">
+            <span>Tiempo</span>
+            <strong>1 minuto</strong>
+          </div>
+
+          <div class="meta-card">
+            <span>Compatible</span>
+            <strong>Windows 10/11</strong>
+          </div>
+
+          <div class="meta-card">
+            <span>Comando</span>
+            <strong>perfmon /rel</strong>
+          </div>
+
+        </div>
+
+        <section id="video" class="video-box">
+
+          <div class="section-header">
+
+            <p class="eyebrow">Video rápido</p>
+
+            <h2>Mira esta optimización en video</h2>
+
+            <p>
+              En este Short te muestro cómo revisar el Inicio rápido de Windows y cuándo conviene
+              activarlo o desactivarlo.
+            </p>
+
+          </div>
+
+          <div class="youtube-short">
+            <iframe src="https://www.youtube.com/embed/0LzF_up7rf0"
+              title="Short WinHacks sobre Inicio rápido en Windows" loading="lazy"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen>
+            </iframe>
+          </div>
+
+        </section>
+
+        <section class="info-box">
+
+          <h3>Qué aprenderás</h3>
+
+          <ul>
+            <li>Qué es el Historial de Confiabilidad de Windows.</li>
+            <li>Cómo abrirlo rápidamente con el comando <strong>perfmon /rel</strong>.</li>
+            <li>Qué significan las X rojas, advertencias e información del sistema.</li>
+            <li>Cuándo usar esta herramienta antes de formatear tu PC.</li>
+          </ul>
+
+        </section>
+
+        <h2>¿Qué es el Historial de Confiabilidad?</h2>
+
+        <p>
+          El Historial de Confiabilidad es una herramienta integrada en Windows 10 y Windows 11.
+          Sirve para ver problemas importantes del sistema en una línea de tiempo.
+        </p>
+
+        <p>
+          Aquí puedes encontrar cierres inesperados, actualizaciones fallidas,
+          errores críticos, advertencias y programas que se bloquean repetidamente.
+        </p>
+
+        <div class="tip-box">
+
+          <h3>💡 Consejo WinHacks</h3>
+
+          <p>
+            No formatees tu PC sin revisar esto primero. Muchas veces Windows ya tiene registrada
+            la causa del problema y solo necesitas identificar qué programa o actualización falló.
+          </p>
+
+        </div>
+
+        <div class="warning-box">
+
+          <span>🚨</span>
+
+          <h3>Antes de sacar conclusiones</h3>
+
+          <p>
+            Una X roja no siempre significa que tu PC esté dañada. Puede ser un programa que se cerró,
+            una actualización fallida o un error puntual. Revisa si el problema se repite varios días.
+          </p>
+
+        </div>
+
+        <h2 id="pasos">Paso a paso</h2>
+
+        <div class="step-box">
+
+          <span class="step-number">1</span>
+
+          <h3>Abre Ejecutar</h3>
+
+          <p>
+            Presiona <strong>Win + R</strong> para abrir la ventana Ejecutar de Windows.
+          </p>
+
+          <div class="screenshot-placeholder">
+            <figure class="article-image">
+              <img height="1024" width="1536" src="../assets/images/win-r-ejecutar.png"
+                alt="Ventana Ejecutar de Windows 11 abierta mediante el atajo Win + R" loading="lazy" decoding="async">
+              <figcaption>
+                Ventana <strong>Ejecutar</strong> abierta con el atajo de teclado <kbd>Win</kbd> + <kbd>R</kbd>.
+              </figcaption>
+            </figure>
+          </div>
+
+        </div>
+
+        <div class="step-box">
+
+          <span class="step-number">2</span>
+
+          <h3>Escribe el comando</h3>
+
+          <p>
+            Escribe este comando y presiona Enter:
+          </p>
+
+          <div class="command-box">
+            <code>perfmon /rel</code>
+            <button class="copy-btn" data-copy="perfmon /rel">Copiar</button>
+          </div>
+
+        </div>
+
+        <div class="step-box">
+
+          <span class="step-number">3</span>
+
+          <h3>Revisa la línea de tiempo</h3>
+
+          <p>
+            Windows abrirá el Historial de Confiabilidad. Ahí verás una línea de tiempo
+            con eventos importantes del sistema.
+          </p>
+
+          <div class="screenshot-placeholder">
+           <figure class="article-image">
+              <img height="1024" width="1536" src="/assets/images/línea de tiempo.png"
+                alt="Revisa la línea de tiempo" loading="lazy" decoding="async">
+              <figcaption>
+                <strong>Revisa</strong> la línea de tiempo.
+              </figcaption>
+            </figure>
+          </div>
+
+        </div>
+
+        <h2>Qué significan los iconos</h2>
+
+        <div class="info-box">
+
+          <h3>X roja</h3>
+
+          <p>
+            Indica un error crítico. Puede ser un cierre inesperado de una aplicación,
+            un bloqueo de Windows o un fallo importante del sistema.
+          </p>
+
+        </div>
+
+        <div class="info-box">
+
+          <h3>Triángulo amarillo</h3>
+
+          <p>
+            Indica una advertencia. Normalmente son problemas menos graves, pero conviene revisarlos
+            si aparecen repetidamente.
+          </p>
+
+        </div>
+
+        <div class="info-box">
+
+          <h3>Círculo azul</h3>
+
+          <p>
+            Indica información del sistema, como instalaciones, actualizaciones o cambios registrados por Windows.
+          </p>
+
+        </div>
+
+        <h2>Qué debes revisar primero</h2>
+
+        <p>
+          Mira las fechas donde aparecen varias X rojas. Haz clic en una fecha y revisa
+          la parte inferior de la ventana. Si el mismo programa aparece fallando varias veces,
+          probablemente ahí está el origen del problema.
+        </p>
+
+        <div class="result-box">
+
+          <h3>✅ Resultado esperado</h3>
+
+          <p>
+            Al usar esta herramienta deberías poder identificar qué programa, actualización
+            o componente está generando errores repetidos en Windows.
+          </p>
+
+        </div>
+
+        <h2>Cuándo usar esta herramienta</h2>
+
+        <ul>
+          <li>Cuando la PC está lenta.</li>
+          <li>Cuando un programa se cierra solo.</li>
+          <li>Después de una actualización problemática.</li>
+          <li>Antes de formatear Windows.</li>
+          <li>Cuando aparece un error y desaparece rápido.</li>
+        </ul>
+
+        <h2>Errores comunes</h2>
+
+        <div class="info-box">
+
+          <h3>No aparece nada importante</h3>
+
+          <p>
+            Puede ser normal si el sistema no ha registrado fallos recientes. Revisa varios días o semanas
+            en la línea de tiempo.
+          </p>
+
+        </div>
+
+        <div class="info-box">
+
+          <h3>Veo muchas X rojas</h3>
+
+          <p>
+            No entres en pánico. Busca patrones: el mismo programa, la misma fecha o errores repetidos
+            después de una actualización.
+          </p>
+
+        </div>
+
+        <div class="info-box">
+
+          <h3>El comando no abre nada</h3>
+
+          <p>
+            Verifica que escribiste exactamente <strong>perfmon /rel</strong>. También puedes buscar
+            “Historial de confiabilidad” desde el menú Inicio.
+          </p>
+
+        </div>
+
+        <h2>Preguntas frecuentes</h2>
+
+        <div class="faq-box">
+
+          <h3>¿Funciona en Windows 11?</h3>
+
+          <p>
+            Sí. El Historial de Confiabilidad está disponible en Windows 11.
+          </p>
+
+        </div>
+
+        <div class="faq-box">
+
+          <h3>¿Funciona en Windows 10?</h3>
+
+          <p>
+            Sí. También está disponible en Windows 10.
+          </p>
+
+        </div>
+
+        <div class="faq-box">
+
+          <h3>¿Necesito instalar programas?</h3>
+
+          <p>
+            No. Es una herramienta integrada de Windows.
+          </p>
+
+        </div>
+
+        <div class="faq-box">
+
+          <h3>¿Esto repara los errores automáticamente?</h3>
+
+          <p>
+            No. Esta herramienta sirve para diagnosticar. Te ayuda a identificar qué está fallando.
+          </p>
+
+        </div>
+
+        <div class="faq-box">
+
+          <h3>¿Puedo borrar los errores desde aquí?</h3>
+
+          <p>
+            No es necesario. Lo importante es usar la información para identificar la causa del problema.
+          </p>
+
+        </div>
+
+        <section class="section cta-section" id="descarga">
+
+          <p class="eyebrow">Guía gratis</p>
+
+          <h2>50 Secretos de Windows que la mayoría nunca descubre</h2>
+
+          <p>
+            Descarga una guía práctica con herramientas ocultas, comandos útiles y trucos seguros
+            para Windows 10 y Windows 11.
+          </p>
+
+          <form name="guia-50-secretos" method="POST" data-netlify="true" class="email-form netlify-form"
+            id="secretosForm" data-redirect="/recursos/gracias-50-secretos.html">
+
+            <input type="hidden" name="form-name" value="guia-50-secretos">
+
+            <input type="text" name="nombre" placeholder="Tu nombre" required>
+
+            <input type="email" name="email" placeholder="Tu correo electrónico" required>
+
+            <button type="submit">Descargar guía</button>
+
+          </form>
+
+        </section>
+
+        <h2>Artículos relacionados</h2>
+
+        <div class="related-grid">
+
+          <a href="/secretos/visor-eventos.html" class="related-card">
+            <h3>Visor de Eventos</h3>
+            <p>Revisa registros más avanzados de Windows.</p>
+          </a>
+
+          <a href="/secretos/monitor-recursos.html" class="related-card">
+            <h3>Monitor de Recursos</h3>
+            <p>Descubre qué programa consume CPU, RAM, disco o red.</p>
+          </a>
+
+          <a href="/secretos/god-mode-windows.html" class="related-card">
+            <h3>God Mode</h3>
+            <p>Accede a muchas configuraciones ocultas desde una sola carpeta.</p>
+          </a>
+
+          <a href="/comandos/perfmon-rel.html" class="related-card">
+            <h3>Comando perfmon /rel</h3>
+            <p>Aprende a abrir esta herramienta desde Ejecutar.</p>
+          </a>
+
+        </div>
+
+        <div class="next-box">
+
+          <h3>🚀 WinHacks Academy</h3>
+
+          <p>
+            Próximamente: cursos prácticos para dominar Windows, herramientas ocultas,
+            comandos, PowerShell, seguridad y optimización desde cero.
+          </p>
+
+          <a href="/academy/index.html" class="btn btn-primary">
+            Ver Academy
+          </a>
+
+        </div>
+
+      </div>
+
+    </article>
+
+  </main>
+
+  <footer>
+    <div id="footer-container"></div>
+  </footer>
+
+  <a href="#" class="to-top" aria-label="Volver arriba">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8"
+      stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="18 15 12 9 6 15"></polyline>
+    </svg>
+  </a>
+
+  <script src="/js/components.js"></script>
+  <script src="/js/core/engine.js?v=20260626-03" defer></script>
+
+</body>
+
+</html>

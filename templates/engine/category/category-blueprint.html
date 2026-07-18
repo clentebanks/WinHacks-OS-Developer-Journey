@@ -1,0 +1,147 @@
+<!-- ========================================================= -->
+<!-- WINHACKS ENGINE v1.0                                      -->
+<!-- FILE: engine/category/category-blueprint.html             -->
+<!-- PURPOSE: Base ensamblada para páginas de categoría         -->
+<!-- ========================================================= -->
+
+<main>
+
+  <!-- HERO DE CATEGORÍA -->
+  <section class="hero-small">
+
+    <div class="hero-small-content">
+
+      <p class="eyebrow">Biblioteca WinHacks</p>
+
+      <h1>NOMBRE DE LA CATEGORÍA</h1>
+
+      <p>
+        Descripción breve de la categoría. Explica qué encontrará el usuario,
+        qué tipo de guías contiene y por qué esta sección es útil.
+      </p>
+
+    </div>
+
+  </section>
+
+  <!-- LISTADO PRINCIPAL -->
+  <section class="section">
+
+    <div class="section-header">
+
+      <p class="eyebrow">Comienza aquí</p>
+
+      <h2>Guías más importantes</h2>
+
+      <p>
+        Estas guías están organizadas para que puedas aprender paso a paso,
+        desde lo más básico hasta funciones más avanzadas de Windows.
+      </p>
+
+    </div>
+
+    <div class="grid">
+
+      <!-- CARD ACTIVA -->
+      <article class="card">
+
+        <span class="card-icon">⚙️</span>
+
+        <h3>Título de la guía</h3>
+
+        <p>
+          Descripción corta de la guía. Explica el beneficio principal en una frase clara.
+        </p>
+
+        <a href="nombre-del-articulo.html">Leer guía →</a>
+
+      </article>
+
+      <!-- CARD ACTIVA -->
+      <article class="card">
+
+        <span class="card-icon">🚀</span>
+
+        <h3>Título de la guía</h3>
+
+        <p>
+          Descripción corta de la guía. Explica qué aprenderá el usuario.
+        </p>
+
+        <a href="nombre-del-articulo.html">Leer guía →</a>
+
+      </article>
+
+      <!-- CARD PRÓXIMAMENTE -->
+      <article class="card soon">
+
+        <span class="card-icon">🔒</span>
+
+        <h3>Título futuro</h3>
+
+        <p>
+          Descripción corta del contenido que será publicado próximamente.
+        </p>
+
+        <span class="badge-soon">Próximamente</span>
+
+      </article>
+
+      <!-- CARD PRÓXIMAMENTE -->
+      <article class="card soon">
+
+        <span class="card-icon">🧠</span>
+
+        <h3>Título futuro</h3>
+
+        <p>
+          Descripción corta del contenido pendiente.
+        </p>
+
+        <span class="badge-soon">Próximamente</span>
+
+      </article>
+
+    </div>
+
+  </section>
+
+  <!-- CTA RECURSO GRATIS -->
+  <section class="section cta-section">
+
+    <p class="eyebrow">Guía gratis</p>
+
+    <h2>Título del recurso gratuito</h2>
+
+    <p>
+      Descripción breve del recurso. Explica qué obtendrá el usuario al descargarlo.
+    </p>
+
+    <form
+      name="guia-50-secretos"
+      method="POST"
+      data-netlify="true"
+      class="email-form netlify-form"
+      id="secretosForm">
+
+      <input type="hidden" name="form-name" value="guia-50-secretos">
+
+      <input
+        type="text"
+        name="nombre"
+        placeholder="Tu nombre"
+        required>
+
+      <input
+        type="email"
+        name="email"
+        placeholder="Tu correo electrónico"
+        required>
+
+      <button type="submit">Descargar guía</button>
+
+    </form>
+
+  </section>
+
+</main>

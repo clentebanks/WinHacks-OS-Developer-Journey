@@ -1,0 +1,651 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/">
+  <channel>
+    <title>WinHacks</title>
+    <link>https://winhacks.dev</link>
+    <atom:link href="https://winhacks.dev/feed.xml" rel="self" type="application/rss+xml" />
+    <description>Trucos, comandos y optimización extrema para Windows.</description>
+    <language>es</language>
+    <lastBuildDate>Sat, 18 Jul 2026 04:43:56 GMT</lastBuildDate>
+    <item>
+      <title>ping: Probar la Conexión de Red en Windows</title>
+      <link>https://winhacks.dev/redes/ping.html</link>
+      <guid isPermaLink="true">https://winhacks.dev/redes/ping.html</guid>
+      <description>Aprende a usar el comando ping para comprobar si tu PC tiene conexión, medir respuesta de red y diagnosticar fallos de Internet en Windows 10 y Windows 11.</description>
+      <pubDate>Thu, 16 Jul 2026 05:38:49 GMT</pubDate>
+      <media:content url="https://winhacks.dev/assets/img/og/og-ping.webp" medium="image" />
+    </item>
+    <item>
+      <title>ipconfig /release | Liberar Dirección IP en Windows</title>
+      <link>https://winhacks.dev/comandos/release</link>
+      <guid isPermaLink="true">https://winhacks.dev/comandos/release</guid>
+      <description>Aprende a usar ipconfig /release en Windows 10 y Windows 11 para liberar la dirección IP actual, solucionar problemas de red y renovar la conexión correctamente.</description>
+      <pubDate>Thu, 16 Jul 2026 05:38:49 GMT</pubDate>
+      <media:content url="https://winhacks.dev/assets/img/og/og-release.webp" medium="image" />
+    </item>
+    <item>
+      <title>ipconfig /renew | Renovar Dirección IP en Windows</title>
+      <link>https://winhacks.dev/comandos/renew</link>
+      <guid isPermaLink="true">https://winhacks.dev/comandos/renew</guid>
+      <description>Aprende a usar ipconfig /renew en Windows 10 y Windows 11 para renovar la dirección IP, recuperar conexión y solucionar problemas de DHCP desde CMD.</description>
+      <pubDate>Thu, 16 Jul 2026 05:38:49 GMT</pubDate>
+      <media:content url="https://winhacks.dev/assets/img/og/og-renew.webp" medium="image" />
+    </item>
+    <item>
+      <title>Seguridad Wi-Fi: Protege tu Red en Windows</title>
+      <link>https://winhacks.dev/redes/seguridad-wifi.html</link>
+      <guid isPermaLink="true">https://winhacks.dev/redes/seguridad-wifi.html</guid>
+      <description>Aprende consejos prácticos de seguridad Wi-Fi para proteger tu red, revisar dispositivos conectados y evitar accesos no autorizados desde Windows 10 y Windows 11.</description>
+      <pubDate>Thu, 16 Jul 2026 05:38:49 GMT</pubDate>
+      <media:content url="https://winhacks.dev/assets/img/og/og-seguridad-wifi.webp" medium="image" />
+    </item>
+    <item>
+      <title>tracert: Ver la Ruta de tu Conexión en Windows</title>
+      <link>https://winhacks.dev/redes/tracert.html</link>
+      <guid isPermaLink="true">https://winhacks.dev/redes/tracert.html</guid>
+      <description>Aprende a usar tracert para ver la ruta que sigue tu conexión, detectar saltos lentos y diagnosticar problemas de red en Windows 10 y Windows 11.</description>
+      <pubDate>Thu, 16 Jul 2026 05:38:49 GMT</pubDate>
+      <media:content url="https://winhacks.dev/assets/img/og/og-tracert.webp" medium="image" />
+    </item>
+    <item>
+      <title>Ver claves WiFi guardadas en Windows con CMD</title>
+      <link>https://winhacks.dev/redes/ver-clave-wifi-windows</link>
+      <guid isPermaLink="true">https://winhacks.dev/redes/ver-clave-wifi-windows</guid>
+      <description>Aprende cómo ver la contraseña de una red WiFi guardada en Windows usando CMD y el comando netsh wlan show profile key=clear.</description>
+      <pubDate>Thu, 16 Jul 2026 05:38:49 GMT</pubDate>
+      <media:content url="https://winhacks.dev/assets/images/og-image.jpg" medium="image" />
+    </item>
+    <item>
+      <title>Reducir Lag WiFi en Windows con Transmit Power</title>
+      <link>https://winhacks.dev/redes/wifi-transmit-power-preferred-band-windows</link>
+      <guid isPermaLink="true">https://winhacks.dev/redes/wifi-transmit-power-preferred-band-windows</guid>
+      <description>Aprende a optimizar tu adaptador WiFi en Windows 10 y Windows 11 ajustando Transmit Power y Preferred Band para mejorar estabilidad, reducir lag y evitar microcortes.</description>
+      <pubDate>Thu, 16 Jul 2026 05:38:49 GMT</pubDate>
+      <media:content url="https://winhacks.dev/assets/img/og/og-wifi-transmit-power.webp" medium="image" />
+    </item>
+    <item>
+      <title>Ver archivos recientes en Windows con Win + R</title>
+      <link>https://winhacks.dev/secretos/archivos-recientes-windows</link>
+      <guid isPermaLink="true">https://winhacks.dev/secretos/archivos-recientes-windows</guid>
+      <description>Aprende a abrir el historial de archivos recientes en Windows 10 y Windows 11 usando Win + R y el comando recent para encontrar documentos perdidos.</description>
+      <pubDate>Thu, 16 Jul 2026 05:38:49 GMT</pubDate>
+      <media:content url="https://winhacks.dev/assets/images/og-image.jpg" medium="image" />
+    </item>
+    <item>
+      <title>Cómo Activar God Mode en Windows</title>
+      <link>https://winhacks.dev/secretos/god-mode-windows</link>
+      <guid isPermaLink="true">https://winhacks.dev/secretos/god-mode-windows</guid>
+      <description>Aprende a activar God Mode en Windows 10 y Windows 11 para acceder a muchas configuraciones ocultas desde una sola carpeta.</description>
+      <pubDate>Thu, 16 Jul 2026 05:38:49 GMT</pubDate>
+      <media:content url="https://winhacks.dev/assets/img/og/og-god-mode-windows.webp" medium="image" />
+    </item>
+    <item>
+      <title>Cómo Ver los Errores Ocultos de Windows</title>
+      <link>https://winhacks.dev/secretos/historial-confiabilidad-windows</link>
+      <guid isPermaLink="true">https://winhacks.dev/secretos/historial-confiabilidad-windows</guid>
+      <description>Aprende a usar el Historial de Confiabilidad de Windows para ver errores ocultos, bloqueos, advertencias y programas que fallan.</description>
+      <pubDate>Thu, 16 Jul 2026 05:38:49 GMT</pubDate>
+      <media:content url="https://winhacks.dev/assets/img/og/og-historial-confiabilidad.webp" medium="image" />
+    </item>
+    <item>
+      <title>Cómo Poner un Mensaje Antes de Iniciar Sesión en Windows</title>
+      <link>https://winhacks.dev/personalizacion/mensaje-inicio-sesion</link>
+      <guid isPermaLink="true">https://winhacks.dev/personalizacion/mensaje-inicio-sesion</guid>
+      <description>Aprende a mostrar un mensaje personalizado antes de iniciar sesión en Windows 10 y Windows 11 usando el Registro de Windows.</description>
+      <pubDate>Thu, 16 Jul 2026 05:38:49 GMT</pubDate>
+      <media:content url="https://winhacks.dev/assets/img/og/og-mensaje-inicio-sesion.webp" medium="image" />
+    </item>
+    <item>
+      <title>Cómo Usar el Monitor de Recursos de Windows</title>
+      <link>https://winhacks.dev/secretos/monitor-recursos-windows</link>
+      <guid isPermaLink="true">https://winhacks.dev/secretos/monitor-recursos-windows</guid>
+      <description>Aprende a usar el Monitor de Recursos de Windows para ver qué programas consumen CPU, memoria, disco y red en Windows 10 y Windows 11.</description>
+      <pubDate>Thu, 16 Jul 2026 05:38:49 GMT</pubDate>
+      <media:content url="https://winhacks.dev/assets/img/og/og-monitor-recursos.webp" medium="image" />
+    </item>
+    <item>
+      <title>Qué es la Carpeta Prefetch de Windows</title>
+      <link>https://winhacks.dev/secretos/prefetch-rastros-actividad-windows</link>
+      <guid isPermaLink="true">https://winhacks.dev/secretos/prefetch-rastros-actividad-windows</guid>
+      <description>Aprende qué es la carpeta Prefetch de Windows, qué rastros internos genera, para qué sirve y qué precauciones tomar antes de borrar archivos PF.</description>
+      <pubDate>Thu, 16 Jul 2026 05:38:49 GMT</pubDate>
+      <media:content url="https://winhacks.dev/assets/img/og/og-prefetch-windows.webp" medium="image" />
+    </item>
+    <item>
+      <title>Ver el Historial de Ejecutar en Windows con RunMRU</title>
+      <link>https://winhacks.dev/secretos/runmru-registro-ejecutar-windows</link>
+      <guid isPermaLink="true">https://winhacks.dev/secretos/runmru-registro-ejecutar-windows</guid>
+      <description>Aprende a revisar el historial oculto de comandos ejecutados con Win + R en Windows usando el Registro y la clave RunMRU.</description>
+      <pubDate>Thu, 16 Jul 2026 05:38:49 GMT</pubDate>
+      <media:content url="https://winhacks.dev/assets/img/og/og-runmru-registro-windows.webp" medium="image" />
+    </item>
+    <item>
+      <title>Ver USB Conectados en el Registro de Windows</title>
+      <link>https://winhacks.dev/secretos/usb-conectados-registro-windows</link>
+      <guid isPermaLink="true">https://winhacks.dev/secretos/usb-conectados-registro-windows</guid>
+      <description>Aprende cómo Windows registra dispositivos USB conectados al sistema y cómo revisar la clave USBSTOR desde el Editor del Registro en Windows 10 y Windows 11.</description>
+      <pubDate>Thu, 16 Jul 2026 05:38:49 GMT</pubDate>
+      <media:content url="https://winhacks.dev/assets/img/og/og-usb-conectados-registro.webp" medium="image" />
+    </item>
+    <item>
+      <title>Cómo Usar el Visor de Eventos de Windows</title>
+      <link>https://winhacks.dev/secretos/visor-eventos-windows</link>
+      <guid isPermaLink="true">https://winhacks.dev/secretos/visor-eventos-windows</guid>
+      <description>Aprende a usar el Visor de Eventos de Windows para revisar errores críticos, advertencias y registros del sistema paso a paso.</description>
+      <pubDate>Thu, 16 Jul 2026 05:38:49 GMT</pubDate>
+      <media:content url="https://winhacks.dev/assets/img/og/og-visor-eventos.webp" medium="image" />
+    </item>
+    <item>
+      <title>Quitar Resultados de Internet de Windows Search</title>
+      <link>https://winhacks.dev/secretos/windows-search-sin-internet</link>
+      <guid isPermaLink="true">https://winhacks.dev/secretos/windows-search-sin-internet</guid>
+      <description>Aprende a quitar resultados web de Windows Search y hacer que la búsqueda de Windows 11 priorice aplicaciones, configuraciones y archivos locales.</description>
+      <pubDate>Thu, 16 Jul 2026 05:38:49 GMT</pubDate>
+      <media:content url="https://winhacks.dev/assets/img/og/og-windows-search-sin-internet.webp" medium="image" />
+    </item>
+    <item>
+      <title>Comandos Avanzados de Microsoft Defender en Windows 11</title>
+      <link>https://winhacks.dev/seguridad/defender-comandos-avanzados</link>
+      <guid isPermaLink="true">https://winhacks.dev/seguridad/defender-comandos-avanzados</guid>
+      <description>Aprende a revisar amenazas, actualizar firmas, activar protección avanzada y ejecutar análisis con Microsoft Defender usando PowerShell en Windows 11.</description>
+      <pubDate>Thu, 16 Jul 2026 05:38:49 GMT</pubDate>
+      <media:content url="https://winhacks.dev/assets/img/og/og-defender-comandos-avanzados.webp" medium="image" />
+    </item>
+    <item>
+      <title>Examen sin Conexión de Windows Defender</title>
+      <link>https://winhacks.dev/seguridad/examen-sin-conexion-windows-defender</link>
+      <guid isPermaLink="true">https://winhacks.dev/seguridad/examen-sin-conexion-windows-defender</guid>
+      <description>Aprende a usar el Examen sin conexión de Seguridad de Windows para escanear malware antes de que Windows cargue por completo.</description>
+      <pubDate>Thu, 16 Jul 2026 05:38:49 GMT</pubDate>
+      <media:content url="https://winhacks.dev/assets/img/og/og-examen-sin-conexion-defender.webp" medium="image" />
+    </item>
+    <item>
+      <title>Firewall Avanzado de Windows</title>
+      <link>https://winhacks.dev/seguridad/firewall-avanzado.html</link>
+      <guid isPermaLink="true">https://winhacks.dev/seguridad/firewall-avanzado.html</guid>
+      <description>Aprende a abrir y usar el Firewall avanzado de Windows para revisar reglas de entrada, reglas de salida, perfiles de red y protección básica en Windows 10 y Windows 11.</description>
+      <pubDate>Thu, 16 Jul 2026 05:38:49 GMT</pubDate>
+      <media:content url="https://winhacks.dev/assets/img/og/og-firewall-avanzado.webp" medium="image" />
+    </item>
+    <item>
+      <title>Historial de Protección de Windows Defender</title>
+      <link>https://winhacks.dev/seguridad/historial-proteccion.html</link>
+      <guid isPermaLink="true">https://winhacks.dev/seguridad/historial-proteccion.html</guid>
+      <description>Aprende a revisar el Historial de protección de Windows Defender para ver amenazas detectadas, cuarentenas, bloqueos y acciones realizadas en Windows 10 y Windows 11.</description>
+      <pubDate>Thu, 16 Jul 2026 05:38:49 GMT</pubDate>
+      <media:content url="https://winhacks.dev/assets/img/og/og-historial-proteccion.webp" medium="image" />
+    </item>
+    <item>
+      <title>MRT Windows: Herramienta de Eliminación de Malware</title>
+      <link>https://winhacks.dev/seguridad/mrt-windows.html</link>
+      <guid isPermaLink="true">https://winhacks.dev/seguridad/mrt-windows.html</guid>
+      <description>Aprende a usar MRT en Windows 10 y Windows 11 para ejecutar la herramienta de eliminación de software malintencionado y revisar amenazas comunes de forma segura.</description>
+      <pubDate>Thu, 16 Jul 2026 05:38:49 GMT</pubDate>
+      <media:content url="https://winhacks.dev/assets/img/og/og-mrt-windows.webp" medium="image" />
+    </item>
+    <item>
+      <title>Ver conexiones activas en Windows con netstat -ano</title>
+      <link>https://winhacks.dev/seguridad/netstat-conexiones-activas</link>
+      <guid isPermaLink="true">https://winhacks.dev/seguridad/netstat-conexiones-activas</guid>
+      <description>Aprende a usar netstat -ano en Windows 10 y Windows 11 para ver conexiones activas, puertos, direcciones IP y procesos asociados desde CMD.</description>
+      <pubDate>Thu, 16 Jul 2026 05:38:49 GMT</pubDate>
+      <media:content url="https://winhacks.dev/assets/images/og-image.jpg" medium="image" />
+    </item>
+    <item>
+      <title>Procesos de Windows que no debes cerrar</title>
+      <link>https://winhacks.dev/seguridad/procesos-criticos-windows</link>
+      <guid isPermaLink="true">https://winhacks.dev/seguridad/procesos-criticos-windows</guid>
+      <description>Aprende qué procesos críticos de Windows no debes finalizar, cuáles puedes cerrar con precaución y cómo evitar dañar tu sistema desde el Administrador de tareas.</description>
+      <pubDate>Thu, 16 Jul 2026 05:38:49 GMT</pubDate>
+      <media:content url="https://winhacks.dev/assets/images/og-image.jpg" medium="image" />
+    </item>
+    <item>
+      <title>Registro de Inicios de Sesión en Windows</title>
+      <link>https://winhacks.dev/seguridad/registro-inicios-sesion.html</link>
+      <guid isPermaLink="true">https://winhacks.dev/seguridad/registro-inicios-sesion.html</guid>
+      <description>Aprende a revisar el registro de inicios de sesión en Windows mediante el Visor de eventos para detectar accesos al equipo, intentos fallidos y actividad sospechosa.</description>
+      <pubDate>Thu, 16 Jul 2026 05:38:49 GMT</pubDate>
+      <media:content url="https://winhacks.dev/assets/img/og/og-registro-inicios-sesion.webp" medium="image" />
+    </item>
+    <item>
+      <title>Activar Restaurar Sistema en Windows 11</title>
+      <link>https://winhacks.dev/seguridad/restaurar-sistema-windows</link>
+      <guid isPermaLink="true">https://winhacks.dev/seguridad/restaurar-sistema-windows</guid>
+      <description>Aprende a activar Restaurar sistema en Windows 10 y Windows 11 para crear puntos de restauración y volver a un estado seguro si algo falla.</description>
+      <pubDate>Thu, 16 Jul 2026 05:38:49 GMT</pubDate>
+      <media:content url="https://winhacks.dev/assets/img/og/og-restaurar-sistema-windows.webp" medium="image" />
+    </item>
+    <item>
+      <title>Cerrar procesos en Windows con taskkill y PID</title>
+      <link>https://winhacks.dev/seguridad/taskkill-pid-windows</link>
+      <guid isPermaLink="true">https://winhacks.dev/seguridad/taskkill-pid-windows</guid>
+      <description>Aprende a cerrar procesos en Windows desde CMD usando taskkill /PID de forma segura, cómo identificar el PID correcto y cuándo evitar forzar el cierre.</description>
+      <pubDate>Thu, 16 Jul 2026 05:38:49 GMT</pubDate>
+      <media:content url="https://winhacks.dev/assets/images/og-image.jpg" medium="image" />
+    </item>
+    <item>
+      <title>Activar Protección Avanzada de Windows Defender</title>
+      <link>https://winhacks.dev/seguridad/windows-defender</link>
+      <guid isPermaLink="true">https://winhacks.dev/seguridad/windows-defender</guid>
+      <description>Aprende a reforzar Microsoft Defender en Windows 11 con protección avanzada, análisis sin conexión, actualización de firmas y revisión de seguridad del sistema.</description>
+      <pubDate>Thu, 16 Jul 2026 05:38:49 GMT</pubDate>
+      <media:content url="https://winhacks.dev/assets/img/og/og-windows-defender.webp" medium="image" />
+    </item>
+    <item>
+      <title>Cambiar Icono de una Carpeta en Windows</title>
+      <link>https://winhacks.dev/personalizacion/cambiar-icono-carpeta</link>
+      <guid isPermaLink="true">https://winhacks.dev/personalizacion/cambiar-icono-carpeta</guid>
+      <description>Aprende a cambiar el icono de una carpeta en Windows 10 y Windows 11 desde Propiedades, Personalizar y Cambiar icono.</description>
+      <pubDate>Thu, 16 Jul 2026 05:38:48 GMT</pubDate>
+      <media:content url="https://winhacks.dev/assets/img/og/og-cambiar-icono-carpeta.webp" medium="image" />
+    </item>
+    <item>
+      <title>Cómo Cambiar el Ícono del Disco C en Windows con Registro</title>
+      <link>https://winhacks.dev/personalizacion/cambiar-icono-disco</link>
+      <guid isPermaLink="true">https://winhacks.dev/personalizacion/cambiar-icono-disco</guid>
+      <description>Aprende a cambiar el ícono del disco C en Windows 10 y 11 usando el Registro con DriveIcons, advertencias de seguridad y pasos para revertirlo.</description>
+      <pubDate>Thu, 16 Jul 2026 05:38:48 GMT</pubDate>
+      <media:content url="https://winhacks.dev/assets/img/og/og-cambiar-icono-disco.webp" medium="image" />
+    </item>
+    <item>
+      <title>Cambiar Icono de una USB en Windows</title>
+      <link>https://winhacks.dev/personalizacion/cambiar-icono-usb.html</link>
+      <guid isPermaLink="true">https://winhacks.dev/personalizacion/cambiar-icono-usb.html</guid>
+      <description>Aprende a cambiar el icono de una memoria USB en Windows usando un archivo .ico y autorun.inf de forma sencilla y segura.</description>
+      <pubDate>Thu, 16 Jul 2026 05:38:48 GMT</pubDate>
+      <media:content url="https://winhacks.dev/assets/img/og/og-cambiar-icono-usb.webp" medium="image" />
+    </item>
+    <item>
+      <title>Cambiar Nombre de un Disco en Windows</title>
+      <link>https://winhacks.dev/personalizacion/cambiar-nombre-disco.html</link>
+      <guid isPermaLink="true">https://winhacks.dev/personalizacion/cambiar-nombre-disco.html</guid>
+      <description>Aprende a cambiar el nombre de un disco, unidad USB o partición en Windows 10 y Windows 11 desde el Explorador de archivos, Configuración o CMD.</description>
+      <pubDate>Thu, 16 Jul 2026 05:38:48 GMT</pubDate>
+      <media:content url="https://winhacks.dev/assets/img/og/og-cambiar-nombre-disco.webp" medium="image" />
+    </item>
+    <item>
+      <title>Escritorio hacker futurista en Windows 11 con Rainmeter</title>
+      <link>https://winhacks.dev/personalizacion/escritorio-hacker-rainmeter-lively-wallpaper</link>
+      <guid isPermaLink="true">https://winhacks.dev/personalizacion/escritorio-hacker-rainmeter-lively-wallpaper</guid>
+      <description>Convierte Windows 11 en un escritorio futurista estilo hacker usando Rainmeter y Lively Wallpaper con widgets, monitoreo en vivo, menús y fondos animados.</description>
+      <pubDate>Thu, 16 Jul 2026 05:38:48 GMT</pubDate>
+      <media:content url="https://winhacks.dev/assets/images/og-image.jpg" medium="image" />
+    </item>
+    <item>
+      <title>Menú Contextual Clásico en Windows 11</title>
+      <link>https://winhacks.dev/personalizacion/menu-contextual-clasico.html</link>
+      <guid isPermaLink="true">https://winhacks.dev/personalizacion/menu-contextual-clasico.html</guid>
+      <description>Aprende a activar el menú contextual clásico en Windows 11 para recuperar el clic derecho tradicional con más opciones visibles.</description>
+      <pubDate>Thu, 16 Jul 2026 05:38:48 GMT</pubDate>
+      <media:content url="https://winhacks.dev/assets/img/og/og-menu-contextual-clasico.webp" medium="image" />
+    </item>
+    <item>
+      <title>Crear menú personalizado con clic derecho en Windows</title>
+      <link>https://winhacks.dev/personalizacion/menu-secreto-clic-derecho-windows</link>
+      <guid isPermaLink="true">https://winhacks.dev/personalizacion/menu-secreto-clic-derecho-windows</guid>
+      <description>Aprende a crear un menú personalizado en el clic derecho de Windows para abrir comandos, aplicaciones y herramientas rápido desde el escritorio.</description>
+      <pubDate>Thu, 16 Jul 2026 05:38:48 GMT</pubDate>
+      <media:content url="https://winhacks.dev/assets/images/og-image.jpg" medium="image" />
+    </item>
+    <item>
+      <title>Activar Modo Oscuro en Windows 11</title>
+      <link>https://winhacks.dev/personalizacion/modo-oscuro</link>
+      <guid isPermaLink="true">https://winhacks.dev/personalizacion/modo-oscuro</guid>
+      <description>Aprende a activar el modo oscuro en Windows 10 y Windows 11 para cambiar la apariencia del sistema, aplicaciones compatibles y Explorador de archivos.</description>
+      <pubDate>Thu, 16 Jul 2026 05:38:48 GMT</pubDate>
+      <media:content url="https://winhacks.dev/assets/img/og/og-modo-oscuro.webp" medium="image" />
+    </item>
+    <item>
+      <title>Papelera Personalizada en Windows</title>
+      <link>https://winhacks.dev/personalizacion/papelera-personalizada.html</link>
+      <guid isPermaLink="true">https://winhacks.dev/personalizacion/papelera-personalizada.html</guid>
+      <description>Aprende a personalizar la Papelera de reciclaje en Windows 10 y Windows 11 cambiando sus iconos, nombre y apariencia desde la configuración del sistema.</description>
+      <pubDate>Thu, 16 Jul 2026 05:38:48 GMT</pubDate>
+      <media:content url="https://winhacks.dev/assets/img/og/og-papelera-personalizada.webp" medium="image" />
+    </item>
+    <item>
+      <title>Cómo Quitar las Flechas de los Accesos Directos</title>
+      <link>https://winhacks.dev/personalizacion/quitar-flechas-accesos-directos</link>
+      <guid isPermaLink="true">https://winhacks.dev/personalizacion/quitar-flechas-accesos-directos</guid>
+      <description>Aprende a quitar las flechas de los accesos directos en Windows 10 y Windows 11 usando el Registro de Windows de forma segura.</description>
+      <pubDate>Thu, 16 Jul 2026 05:38:48 GMT</pubDate>
+      <media:content url="https://winhacks.dev/assets/img/og/og-default.jpg" medium="image" />
+    </item>
+    <item>
+      <title>50 Atajos de Teclado para Windows</title>
+      <link>https://winhacks.dev/recursos/atajos-teclado</link>
+      <guid isPermaLink="true">https://winhacks.dev/recursos/atajos-teclado</guid>
+      <description>Descarga gratis la guía 50 Atajos de Teclado para Windows 10 y Windows 11. Aprende combinaciones útiles para trabajar más rápido y descubrir funciones ocultas.</description>
+      <pubDate>Thu, 16 Jul 2026 05:38:48 GMT</pubDate>
+      <media:content url="https://winhacks.dev/assets/img/og/og-atajos-teclado.webp" medium="image" />
+    </item>
+    <item>
+      <title>Checklist Gratis de Mantenimiento para Windows</title>
+      <link>https://winhacks.dev/recursos/checklist-mantenimiento</link>
+      <guid isPermaLink="true">https://winhacks.dev/recursos/checklist-mantenimiento</guid>
+      <description>Descarga gratis el checklist de mantenimiento para Windows 10 y 11: limpieza, rendimiento, seguridad y actualizaciones.</description>
+      <pubDate>Thu, 16 Jul 2026 05:38:48 GMT</pubDate>
+      <media:content url="https://winhacks.dev/assets/img/og/og-checklist-mantenimiento.webp" medium="image" />
+    </item>
+    <item>
+      <title>Checklist de Optimización Windows</title>
+      <link>https://winhacks.dev/recursos/checklist-optimizacion</link>
+      <guid isPermaLink="true">https://winhacks.dev/recursos/checklist-optimizacion</guid>
+      <description>Descarga gratis el Checklist de Optimización WinHacks para mejorar el rendimiento de Windows 10 y Windows 11 de forma segura usando herramientas integradas del sistema.</description>
+      <pubDate>Thu, 16 Jul 2026 05:38:48 GMT</pubDate>
+      <media:content url="https://winhacks.dev/assets/img/og/og-checklist-optimizacion.webp" medium="image" />
+    </item>
+    <item>
+      <title>Checklist de Seguridad para Windows</title>
+      <link>https://winhacks.dev/recursos/checklist-seguridad</link>
+      <guid isPermaLink="true">https://winhacks.dev/recursos/checklist-seguridad</guid>
+      <description>Descarga gratis el Checklist de Seguridad para Windows 10 y Windows 11. Revisa protección en tiempo real, Firewall, Windows Update, MRT y configuraciones básicas de seguridad.</description>
+      <pubDate>Thu, 16 Jul 2026 05:38:48 GMT</pubDate>
+      <media:content url="https://winhacks.dev/assets/img/og/og-checklist-seguridad.webp" medium="image" />
+    </item>
+    <item>
+      <title>PDF Gratis: 50 Comandos CMD Explicados</title>
+      <link>https://winhacks.dev/recursos/comandos-cmd</link>
+      <guid isPermaLink="true">https://winhacks.dev/recursos/comandos-cmd</guid>
+      <description>Descarga gratis la guía 50 Comandos CMD Explicados para Windows. Aprende comandos útiles, seguros y explicados paso a paso para diagnóstico, redes, mantenimiento y seguridad.</description>
+      <pubDate>Thu, 16 Jul 2026 05:38:48 GMT</pubDate>
+      <media:content url="https://winhacks.dev/assets/img/og/og-comandos-cmd.webp" medium="image" />
+    </item>
+    <item>
+      <title>Guía Gratis: 50 Secretos de Windows</title>
+      <link>https://winhacks.dev/recursos/guia-50-secretos</link>
+      <guid isPermaLink="true">https://winhacks.dev/recursos/guia-50-secretos</guid>
+      <description>Descarga gratis la guía 50 Secretos de Windows. Aprende herramientas ocultas, comandos útiles, seguridad, optimización y funciones poco conocidas de Windows 10 y Windows 11.</description>
+      <pubDate>Thu, 16 Jul 2026 05:38:48 GMT</pubDate>
+      <media:content url="https://winhacks.dev/assets/img/og/og-guia-50-secretos.webp" medium="image" />
+    </item>
+    <item>
+      <title>WinHacks PC Rescue Kit</title>
+      <link>https://winhacks.dev/recursos/pc-rescue-kit.html</link>
+      <guid isPermaLink="true">https://winhacks.dev/recursos/pc-rescue-kit.html</guid>
+      <description>Diagnostica problemas de Windows con planes guiados, historial de sesiones, reportes técnicos y procedimientos seguros. Abre gratis WinHacks PC Rescue Kit.</description>
+      <pubDate>Thu, 16 Jul 2026 05:38:48 GMT</pubDate>
+      <media:content url="https://winhacks.dev/assets/images/banner-winhacks.webp" medium="image" />
+    </item>
+    <item>
+      <title>WinHacks Quick Actions</title>
+      <link>https://winhacks.dev/recursos/quick-actions.html</link>
+      <guid isPermaLink="true">https://winhacks.dev/recursos/quick-actions.html</guid>
+      <description>Reúne accesos útiles de Windows 10 y 11 en un solo lugar. Compra la versión piloto de WinHacks Quick Actions en Gumroad.</description>
+      <pubDate>Thu, 16 Jul 2026 05:38:48 GMT</pubDate>
+      <media:content url="https://winhacks.dev/assets/images/banner-winhacks.webp" medium="image" />
+    </item>
+    <item>
+      <title>arp -a: Ver Dispositivos Conectados a tu Red en Windows</title>
+      <link>https://winhacks.dev/redes/arp-a.html</link>
+      <guid isPermaLink="true">https://winhacks.dev/redes/arp-a.html</guid>
+      <description>Aprende a usar arp -a para ver direcciones IP y MAC detectadas en tu red local desde Windows 10 y Windows 11.</description>
+      <pubDate>Thu, 16 Jul 2026 05:38:48 GMT</pubDate>
+      <media:content url="https://winhacks.dev/assets/img/og/og-arp-a.webp" medium="image" />
+    </item>
+    <item>
+      <title>Ver Dispositivos Conectados a tu Red con arp -a</title>
+      <link>https://winhacks.dev/redes/arp-ver-dispositivos-red-windows</link>
+      <guid isPermaLink="true">https://winhacks.dev/redes/arp-ver-dispositivos-red-windows</guid>
+      <description>Aprende a usar el comando arp -a en Windows 10 y Windows 11 para ver direcciones IP y MAC detectadas en tu red local desde CMD.</description>
+      <pubDate>Thu, 16 Jul 2026 05:38:48 GMT</pubDate>
+      <media:content url="https://winhacks.dev/assets/img/og/og-arp-dispositivos-red.webp" medium="image" />
+    </item>
+    <item>
+      <title>Desactivar Energy Efficient Ethernet en Windows</title>
+      <link>https://winhacks.dev/redes/energy-efficient-ethernet-windows</link>
+      <guid isPermaLink="true">https://winhacks.dev/redes/energy-efficient-ethernet-windows</guid>
+      <description>Aprende cómo desactivar Energy Efficient Ethernet en Windows 10 y 11 para mejorar estabilidad de red, reducir microcortes y evitar ahorro de energía agresivo en el adaptador.</description>
+      <pubDate>Thu, 16 Jul 2026 05:38:48 GMT</pubDate>
+      <media:content url="https://winhacks.dev/assets/images/og-image.jpg" medium="image" />
+    </item>
+    <item>
+      <title>flushdns | Limpiar Caché DNS en Windows</title>
+      <link>https://winhacks.dev/comandos/flushdns</link>
+      <guid isPermaLink="true">https://winhacks.dev/comandos/flushdns</guid>
+      <description>Aprende a usar ipconfig /flushdns en Windows 10 y Windows 11 para limpiar la caché DNS, resolver problemas de conexión y corregir errores al abrir páginas web.</description>
+      <pubDate>Thu, 16 Jul 2026 05:38:48 GMT</pubDate>
+      <media:content url="https://winhacks.dev/assets/img/og/og-flushdns.webp" medium="image" />
+    </item>
+    <item>
+      <title>getmac | Ver la Dirección MAC en Windows</title>
+      <link>https://winhacks.dev/comandos/getmac</link>
+      <guid isPermaLink="true">https://winhacks.dev/comandos/getmac</guid>
+      <description>Aprende a utilizar el comando getmac en Windows 10 y Windows 11 para conocer la dirección MAC de todos los adaptadores de red desde CMD de forma rápida y sencilla.</description>
+      <pubDate>Thu, 16 Jul 2026 05:38:48 GMT</pubDate>
+      <media:content url="https://winhacks.dev/assets/img/og/og-getmac.webp" medium="image" />
+    </item>
+    <item>
+      <title>hostname | Ver el Nombre del Equipo en Windows</title>
+      <link>https://winhacks.dev/comandos/hostname</link>
+      <guid isPermaLink="true">https://winhacks.dev/comandos/hostname</guid>
+      <description>Aprende a utilizar el comando hostname en Windows 10 y Windows 11 para conocer el nombre del equipo desde CMD, PowerShell y scripts de administración.</description>
+      <pubDate>Thu, 16 Jul 2026 05:38:48 GMT</pubDate>
+      <media:content url="https://winhacks.dev/assets/img/og/og-hostname.webp" medium="image" />
+    </item>
+    <item>
+      <title>ipconfig: Ver y Solucionar Problemas de Red en Windows</title>
+      <link>https://winhacks.dev/redes/ipconfig.html</link>
+      <guid isPermaLink="true">https://winhacks.dev/redes/ipconfig.html</guid>
+      <description>Aprende a usar ipconfig para ver tu dirección IP, renovar la conexión, limpiar la caché DNS y diagnosticar problemas de red en Windows 10 y Windows 11.</description>
+      <pubDate>Thu, 16 Jul 2026 05:38:48 GMT</pubDate>
+      <media:content url="https://winhacks.dev/assets/img/og/og-ipconfig.webp" medium="image" />
+    </item>
+    <item>
+      <title>netstat: Ver Conexiones y Puertos Abiertos en Windows</title>
+      <link>https://winhacks.dev/redes/netstat.html</link>
+      <guid isPermaLink="true">https://winhacks.dev/redes/netstat.html</guid>
+      <description>Aprende a usar netstat para ver conexiones activas, puertos abiertos, procesos conectados y actividad de red en Windows 10 y Windows 11.</description>
+      <pubDate>Thu, 16 Jul 2026 05:38:48 GMT</pubDate>
+      <media:content url="https://winhacks.dev/assets/img/og/og-netstat.webp" medium="image" />
+    </item>
+    <item>
+      <title>nslookup | Consultar DNS desde CMD en Windows</title>
+      <link>https://winhacks.dev/comandos/nslookup</link>
+      <guid isPermaLink="true">https://winhacks.dev/comandos/nslookup</guid>
+      <description>Aprende a usar nslookup en Windows 10 y Windows 11 para consultar DNS, resolver dominios, revisar direcciones IP y diagnosticar problemas de conexión desde CMD.</description>
+      <pubDate>Thu, 16 Jul 2026 05:38:48 GMT</pubDate>
+      <media:content url="https://winhacks.dev/assets/img/og/og-nslookup.webp" medium="image" />
+    </item>
+    <item>
+      <title>pathping | Diagnosticar Ruta y Pérdida de Paquetes en Windows</title>
+      <link>https://winhacks.dev/comandos/pathping</link>
+      <guid isPermaLink="true">https://winhacks.dev/comandos/pathping</guid>
+      <description>Aprende a usar pathping en Windows 10 y Windows 11 para diagnosticar rutas de red, pérdida de paquetes, latencia y problemas de conexión desde CMD.</description>
+      <pubDate>Thu, 16 Jul 2026 05:38:48 GMT</pubDate>
+      <media:content url="https://winhacks.dev/assets/img/og/og-pathping.webp" medium="image" />
+    </item>
+    <item>
+      <title>Ajuste de Rendimiento y ClearType en Windows 11</title>
+      <link>https://winhacks.dev/optimizacion/ajuste-rendimiento-cleartype</link>
+      <guid isPermaLink="true">https://winhacks.dev/optimizacion/ajuste-rendimiento-cleartype</guid>
+      <description>Aprende a activar ajustes de rendimiento en Windows 11 desde Configuración avanzada del sistema y mejora la nitidez del texto con ClearType.</description>
+      <pubDate>Thu, 16 Jul 2026 05:38:47 GMT</pubDate>
+      <media:content url="https://winhacks.dev/assets/img/og/og-rendimiento-cleartype.webp" medium="image" />
+    </item>
+    <item>
+      <title>Configurar ancho de banda reservable en Windows 11</title>
+      <link>https://winhacks.dev/optimizacion/ancho-banda-reservado-gpedit</link>
+      <guid isPermaLink="true">https://winhacks.dev/optimizacion/ancho-banda-reservado-gpedit</guid>
+      <description>Aprende a revisar el límite de ancho de banda reservable en Windows 11 usando gpedit.msc y qué significa realmente este ajuste de red.</description>
+      <pubDate>Thu, 16 Jul 2026 05:38:47 GMT</pubDate>
+      <media:content url="https://winhacks.dev/assets/images/og-image.jpg" medium="image" />
+    </item>
+    <item>
+      <title>Crear botón para apagar Windows con un clic</title>
+      <link>https://winhacks.dev/optimizacion/apagar-pc-acceso-directo</link>
+      <guid isPermaLink="true">https://winhacks.dev/optimizacion/apagar-pc-acceso-directo</guid>
+      <description>Aprende a crear un acceso directo para apagar tu PC con un solo clic usando el comando shutdown /s /t 0 en Windows 10 y Windows 11.</description>
+      <pubDate>Thu, 16 Jul 2026 05:38:47 GMT</pubDate>
+      <media:content url="https://winhacks.dev/assets/images/og-image.jpg" medium="image" />
+    </item>
+    <item>
+      <title>Ctrl + Shift + Esc: Acelera el Inicio de Windows</title>
+      <link>https://winhacks.dev/optimizacion/ctrl-shift-esc</link>
+      <guid isPermaLink="true">https://winhacks.dev/optimizacion/ctrl-shift-esc</guid>
+      <description>Aprende a usar Ctrl + Shift + Esc para abrir el Administrador de tareas y desactivar programas que arrancan solos en Windows 11.</description>
+      <pubDate>Thu, 16 Jul 2026 05:38:47 GMT</pubDate>
+      <media:content url="https://winhacks.dev/assets/img/og/og-ctrl-shift-esc.webp" medium="image" />
+    </item>
+    <item>
+      <title>Desactivar Indexado del Disco en Windows 11</title>
+      <link>https://winhacks.dev/optimizacion/desactivar-indexado-disco-windows</link>
+      <guid isPermaLink="true">https://winhacks.dev/optimizacion/desactivar-indexado-disco-windows</guid>
+      <description>Aprende a desactivar el indexado del disco en Windows 10 y Windows 11 para reducir actividad del disco y mejorar rendimiento en equipos lentos.</description>
+      <pubDate>Thu, 16 Jul 2026 05:38:47 GMT</pubDate>
+      <media:content url="https://winhacks.dev/assets/img/og/og-desactivar-indexado-disco.webp" medium="image" />
+    </item>
+    <item>
+      <title>Inicio Rápido en Windows: Cómo Revisarlo y Optimizarlo</title>
+      <link>https://winhacks.dev/optimizacion/inicio-rapido</link>
+      <guid isPermaLink="true">https://winhacks.dev/optimizacion/inicio-rapido</guid>
+      <description>Aprende qué es el Inicio rápido de Windows, cómo activarlo o desactivarlo y cuándo conviene revisarlo para mejorar el arranque y evitar problemas.</description>
+      <pubDate>Thu, 16 Jul 2026 05:38:47 GMT</pubDate>
+      <media:content url="https://winhacks.dev/assets/img/og/og-inicio-rapido.webp" medium="image" />
+    </item>
+    <item>
+      <title>Limpieza Segura de Windows</title>
+      <link>https://winhacks.dev/optimizacion/limpieza-segura-windows.html</link>
+      <guid isPermaLink="true">https://winhacks.dev/optimizacion/limpieza-segura-windows.html</guid>
+      <description>Aprende a hacer una limpieza segura en Windows 10 y Windows 11 eliminando archivos temporales, caché y basura del sistema sin borrar archivos importantes.</description>
+      <pubDate>Thu, 16 Jul 2026 05:38:47 GMT</pubDate>
+      <media:content url="https://winhacks.dev/assets/img/og/og-limpieza-windows.webp" medium="image" />
+    </item>
+    <item>
+      <title>Configurar número de procesadores en msconfig</title>
+      <link>https://winhacks.dev/optimizacion/msconfig-numero-procesadores</link>
+      <guid isPermaLink="true">https://winhacks.dev/optimizacion/msconfig-numero-procesadores</guid>
+      <description>Aprende qué hace realmente la opción Número de procesadores en msconfig, cómo revisarla en Windows 10 y 11, y cuándo conviene dejarla en automático.</description>
+      <pubDate>Thu, 16 Jul 2026 05:38:47 GMT</pubDate>
+      <media:content url="https://winhacks.dev/assets/images/og-image.jpg" medium="image" />
+    </item>
+    <item>
+      <title>Optimización Gaming en Windows</title>
+      <link>https://winhacks.dev/optimizacion/optimizacion-gaming.html</link>
+      <guid isPermaLink="true">https://winhacks.dev/optimizacion/optimizacion-gaming.html</guid>
+      <description>Aprende a optimizar Windows 10 y Windows 11 para gaming de forma segura: modo juego, programas de inicio, plan de energía, gráficos, SSD y ajustes recomendados.</description>
+      <pubDate>Thu, 16 Jul 2026 05:38:47 GMT</pubDate>
+      <media:content url="https://winhacks.dev/assets/img/og/og-optimizacion-gaming.webp" medium="image" />
+    </item>
+    <item>
+      <title>Optimización SSD en Windows</title>
+      <link>https://winhacks.dev/optimizacion/optimizacion-ssd.html</link>
+      <guid isPermaLink="true">https://winhacks.dev/optimizacion/optimizacion-ssd.html</guid>
+      <description>Aprende a optimizar un SSD en Windows 10 y Windows 11 de forma segura, revisar TRIM, evitar errores comunes y mantener buen rendimiento sin dañar la unidad.</description>
+      <pubDate>Thu, 16 Jul 2026 05:38:47 GMT</pubDate>
+      <media:content url="https://winhacks.dev/assets/img/og/og-optimizacion-ssd.webp" medium="image" />
+    </item>
+    <item>
+      <title>Planes de Energía en Windows</title>
+      <link>https://winhacks.dev/optimizacion/planes-energia.html</link>
+      <guid isPermaLink="true">https://winhacks.dev/optimizacion/planes-energia.html</guid>
+      <description>Aprende a configurar los planes de energía en Windows 10 y Windows 11 para mejorar el rendimiento, ahorrar batería o encontrar el equilibrio ideal según tu uso.</description>
+      <pubDate>Thu, 16 Jul 2026 05:38:47 GMT</pubDate>
+      <media:content url="https://winhacks.dev/assets/img/og/og-planes-energia.webp" medium="image" />
+    </item>
+    <item>
+      <title>Programas de Inicio en Windows</title>
+      <link>https://winhacks.dev/optimizacion/programas-inicio.html</link>
+      <guid isPermaLink="true">https://winhacks.dev/optimizacion/programas-inicio.html</guid>
+      <description>Aprende a desactivar programas de inicio en Windows 10 y Windows 11 para acelerar el arranque, reducir el consumo de memoria y mejorar el rendimiento del sistema.</description>
+      <pubDate>Thu, 16 Jul 2026 05:38:47 GMT</pubDate>
+      <media:content url="https://winhacks.dev/assets/img/og/og-programas-inicio.webp" medium="image" />
+    </item>
+    <item>
+      <title>Storage Sense en Windows</title>
+      <link>https://winhacks.dev/optimizacion/storage-sense.html</link>
+      <guid isPermaLink="true">https://winhacks.dev/optimizacion/storage-sense.html</guid>
+      <description>Aprende a configurar Storage Sense en Windows 10 y Windows 11 para eliminar archivos temporales automáticamente y liberar espacio de almacenamiento de forma segura.</description>
+      <pubDate>Thu, 16 Jul 2026 05:38:47 GMT</pubDate>
+      <media:content url="https://winhacks.dev/assets/img/og/og-storage-sense.webp" medium="image" />
+    </item>
+    <item>
+      <title>Plan Básico WinHacks Academy | Windows para Usuarios Normales</title>
+      <link>https://winhacks.dev/academy/plan-basico</link>
+      <guid isPermaLink="true">https://winhacks.dev/academy/plan-basico</guid>
+      <description>Plan Básico de WinHacks Academy. Aprende Windows 10 y Windows 11 desde cero con herramientas ocultas, comandos seguros, seguridad básica y optimización.</description>
+      <pubDate>Thu, 16 Jul 2026 05:38:46 GMT</pubDate>
+      <media:content url="https://winhacks.dev/assets/img/og/og-academy-plan-basico.webp" medium="image" />
+    </item>
+    <item>
+      <title>Roadmap WinHacks Academy</title>
+      <link>https://winhacks.dev/academy/roadmap.html</link>
+      <guid isPermaLink="true">https://winhacks.dev/academy/roadmap.html</guid>
+      <description>Conoce la ruta completa de WinHacks Academy para aprender Windows, comandos, PowerShell, seguridad, optimización, redes y automatización paso a paso.</description>
+      <pubDate>Thu, 16 Jul 2026 05:38:46 GMT</pubDate>
+      <media:content url="https://winhacks.dev/assets/images/og/roadmap-academy.webp" medium="image" />
+    </item>
+    <item>
+      <title>Actualizar PowerShell 7</title>
+      <link>https://winhacks.dev/comandos/actualizar-powershell-7</link>
+      <guid isPermaLink="true">https://winhacks.dev/comandos/actualizar-powershell-7</guid>
+      <description>Aprende cómo actualizar PowerShell 7 a la versión más reciente utilizando Winget o el instalador oficial de Microsoft de forma segura.</description>
+      <pubDate>Thu, 16 Jul 2026 05:38:46 GMT</pubDate>
+      <media:content url="https://winhacks.dev/assets/img/og/og-actualizar-powershell-7.webp" medium="image" />
+    </item>
+    <item>
+      <title>Cómo Saber si tu SSD o Disco Duro Tiene Errores con CHKDSK</title>
+      <link>https://winhacks.dev/comandos/chkdsk</link>
+      <guid isPermaLink="true">https://winhacks.dev/comandos/chkdsk</guid>
+      <description>Aprende a revisar errores en tu SSD o disco duro en Windows con CHKDSK. Detecta problemas del sistema de archivos, sectores dañados y señales críticas antes de perder datos.</description>
+      <pubDate>Thu, 16 Jul 2026 05:38:46 GMT</pubDate>
+      <media:content url="https://winhacks.dev/assets/img/og/og-chkdsk-ssd.webp" medium="image" />
+    </item>
+    <item>
+      <title>cleanmgr: Cómo Abrir la Limpieza de Disco en Windows</title>
+      <link>https://winhacks.dev/comandos/cleanmgr</link>
+      <guid isPermaLink="true">https://winhacks.dev/comandos/cleanmgr</guid>
+      <description>Aprende a usar cleanmgr para abrir la Limpieza de disco clásica de Windows y liberar espacio de forma segura.</description>
+      <pubDate>Thu, 16 Jul 2026 05:38:46 GMT</pubDate>
+      <media:content url="https://winhacks.dev/assets/img/og/og-cleanmgr.webp" medium="image" />
+    </item>
+    <item>
+      <title>CMD en Windows: Qué es y Cómo Usarlo</title>
+      <link>https://winhacks.dev/comandos/cmd</link>
+      <guid isPermaLink="true">https://winhacks.dev/comandos/cmd</guid>
+      <description>Aprende qué es CMD en Windows, cómo abrirlo y qué comandos seguros puedes usar para diagnosticar red, archivos, sistema y tareas básicas.</description>
+      <pubDate>Thu, 16 Jul 2026 05:38:46 GMT</pubDate>
+      <media:content url="https://winhacks.dev/assets/img/og/og-cmd.webp" medium="image" />
+    </item>
+    <item>
+      <title>Comparar Dos Archivos con PowerShell en Windows</title>
+      <link>https://winhacks.dev/comandos/comparar-archivos-powershell</link>
+      <guid isPermaLink="true">https://winhacks.dev/comandos/comparar-archivos-powershell</guid>
+      <description>Aprende a comparar dos archivos línea por línea en Windows usando PowerShell, Compare-Object y Get-Content para ver exactamente qué cambió.</description>
+      <pubDate>Thu, 16 Jul 2026 05:38:46 GMT</pubDate>
+      <media:content url="https://winhacks.dev/assets/img/og/og-comparar-archivos-powershell.webp" medium="image" />
+    </item>
+    <item>
+      <title>Crear un Código QR con curl en Windows</title>
+      <link>https://winhacks.dev/comandos/crear-codigo-qr-curl-windows</link>
+      <guid isPermaLink="true">https://winhacks.dev/comandos/crear-codigo-qr-curl-windows</guid>
+      <description>Aprende a crear códigos QR en Windows 10 y Windows 11 desde CMD o Terminal usando curl, sin instalar programas adicionales.</description>
+      <pubDate>Thu, 16 Jul 2026 05:38:46 GMT</pubDate>
+      <media:content url="https://winhacks.dev/assets/img/og/og-crear-qr-curl-windows.webp" medium="image" />
+    </item>
+    <item>
+      <title>DISM | Reparar Imagen de Windows con CMD</title>
+      <link>https://winhacks.dev/comandos/dism</link>
+      <guid isPermaLink="true">https://winhacks.dev/comandos/dism</guid>
+      <description>Aprende a usar DISM en Windows 10 y Windows 11 para reparar la imagen del sistema, solucionar archivos dañados y preparar Windows antes de ejecutar sfc /scannow.</description>
+      <pubDate>Thu, 16 Jul 2026 05:38:46 GMT</pubDate>
+      <media:content url="https://winhacks.dev/assets/img/og/og-dism.webp" medium="image" />
+    </item>
+    <item>
+      <title>Ver Historial de Comandos CMD con doskey /history</title>
+      <link>https://winhacks.dev/comandos/doskey-history-cmd-windows</link>
+      <guid isPermaLink="true">https://winhacks.dev/comandos/doskey-history-cmd-windows</guid>
+      <description>Aprende a ver el historial de comandos usados durante una sesión de CMD en Windows 10 y Windows 11 con doskey /history.</description>
+      <pubDate>Thu, 16 Jul 2026 05:38:46 GMT</pubDate>
+      <media:content url="https://winhacks.dev/assets/img/og/og-doskey-history-cmd.webp" medium="image" />
+    </item>
+    <item>
+      <title>Ver Drivers Activos en Windows con driverquery</title>
+      <link>https://winhacks.dev/comandos/driverquery-drivers-activos-windows</link>
+      <guid isPermaLink="true">https://winhacks.dev/comandos/driverquery-drivers-activos-windows</guid>
+      <description>Aprende a usar driverquery en Windows 10 y Windows 11 para ver drivers cargados, detectar conflictos y exportar información avanzada desde CMD.</description>
+      <pubDate>Thu, 16 Jul 2026 05:38:46 GMT</pubDate>
+      <media:content url="https://winhacks.dev/assets/img/og/og-driverquery-drivers-windows.webp" medium="image" />
+    </item>
+  </channel>
+</rss>

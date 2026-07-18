@@ -1,0 +1,11 @@
+{
+  "id": "VAL-BSOD-002",
+  "name": "Validar el resultado de la memoria y estabilidad",
+  "type": "manual",
+  "expected": "La prueba de memoria no informa errores y Windows permanece estable.",
+  "failureMessage": "Se detectaron errores o la pantalla azul continúa. Revisa físicamente la RAM y busca asistencia técnica.",
+  "successNext": "rescue-plan-complete",
+  "failureNext": "technical-escalation",
+  "status": "active",
+  "version": "1.0.0"
+}

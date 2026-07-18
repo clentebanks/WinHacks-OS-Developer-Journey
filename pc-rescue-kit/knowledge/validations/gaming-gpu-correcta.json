@@ -1,0 +1,11 @@
+{
+  "id": "VAL-GAM-001",
+  "name": "Validar que el juego utiliza la GPU correcta",
+  "type": "manual",
+  "expected": "El juego utiliza la GPU de alto rendimiento y muestra una mejora medible en uso gráfico o FPS.",
+  "failureMessage": "El juego continúa usando la GPU incorrecta. Revisa el ejecutable seleccionado y el controlador gráfico.",
+  "successNext": "rescue-plan-complete",
+  "failureNext": "WHPRS-GAM-001",
+  "status": "active",
+  "version": "1.0.0"
+}

@@ -1,0 +1,36 @@
+{
+  "id": "RULE-GAM-002",
+  "name": "FPS bajos de forma constante",
+  "priority": 115,
+  "conditions": [
+    {
+      "field": "evidence",
+      "operator": "contains",
+      "value": "gameLowFps"
+    }
+  ],
+  "actions": [
+    {
+      "type": "recommend",
+      "target": "WHPRS-GAM-001",
+      "weight": 0.9
+    },
+    {
+      "type": "recommend",
+      "target": "WHPRS-GAM-003",
+      "weight": 0.85
+    },
+    {
+      "type": "recommend",
+      "target": "WHPRS-GAM-004",
+      "weight": 1
+    },
+    {
+      "type": "validate",
+      "target": "VAL-GAM-002",
+      "weight": 1
+    }
+  ],
+  "status": "active",
+  "version": "1.0.0"
+}

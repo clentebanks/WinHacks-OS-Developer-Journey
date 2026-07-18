@@ -1,0 +1,74 @@
+{
+  "id": "WHPRS-SEC-002",
+  "slug": "defender-quick-scan",
+  "name": "Ejecutar un examen rápido con Microsoft Defender",
+  "shortName": "Examen rápido",
+  "category": "Seguridad",
+  "subcategory": "Análisis antivirus",
+  "phase": "Seguridad",
+  "risk": 1,
+  "estimatedTime": "5 a 15 minutos",
+  "description": "Analiza las ubicaciones donde el malware suele ejecutarse o persistir con mayor frecuencia.",
+  "goal": "Detectar amenazas comunes con una comprobación inicial rápida y oficial.",
+  "whenUse": [
+    "Cuando aparecen ventanas extrañas",
+    "Cuando el equipo se comporta de forma inusual",
+    "Como primera comprobación ante una sospecha leve"
+  ],
+  "whenNotUse": [
+    "Cuando existe una sospecha fuerte de rootkit o malware persistente",
+    "Cuando el equipo no puede iniciar"
+  ],
+  "requirements": [
+    "Microsoft Defender activo",
+    "Definiciones de seguridad actualizadas"
+  ],
+  "commands": [
+    {
+      "command": "Start-MpScan -ScanType QuickScan",
+      "requiresAdmin": true,
+      "shell": "powershell",
+      "purpose": "Iniciar un examen rápido de Microsoft Defender."
+    }
+  ],
+  "steps": [
+    {
+      "order": 1,
+      "title": "Actualizar Defender",
+      "instruction": "Abre Seguridad de Windows y comprueba que las actualizaciones de protección estén al día."
+    },
+    {
+      "order": 2,
+      "title": "Abrir PowerShell como administrador",
+      "instruction": "Abre PowerShell con permisos de administrador."
+    },
+    {
+      "order": 3,
+      "title": "Ejecutar el examen rápido",
+      "instruction": "Ejecuta Start-MpScan -ScanType QuickScan."
+    },
+    {
+      "order": 4,
+      "title": "Revisar el resultado",
+      "instruction": "Abre Historial de protección y confirma si se detectó alguna amenaza."
+    }
+  ],
+  "validation": [
+    {
+      "type": "manual",
+      "expected": "El examen termina y no quedan amenazas activas ni acciones pendientes."
+    }
+  ],
+  "failureActions": [],
+  "nextProcedures": [],
+  "related": [
+    "historial-proteccion-defender",
+    "defender-full-scan"
+  ],
+  "windows": [
+    "Windows 10",
+    "Windows 11"
+  ],
+  "status": "active",
+  "version": "1.0.0"
+}

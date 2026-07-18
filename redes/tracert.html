@@ -1,0 +1,565 @@
+<!DOCTYPE html><html lang="es"><head>
+  <!-- Google tag (gtag.js) -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EL9JRMGJPS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-EL9JRMGJPS');
+</script>
+<!-- Clarity code Puedes ver grabaciones reales (anónimas) de cómo navegan los usuarios.-->
+<script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "xey9wuiqr4");
+</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>tracert: Ver la Ruta de tu Conexión en Windows | WinHacks</title>
+
+  <meta name="description" content="Aprende a usar tracert para ver la ruta que sigue tu conexión, detectar saltos lentos y diagnosticar problemas de red en Windows 10 y Windows 11.">
+
+  <meta name="robots" content="index, follow, max-image-preview:large">
+
+  <link rel="canonical" href="https://winhacks.dev/redes/tracert.html">
+
+  <link rel="icon" href="/assets/images/favicon.ico">
+
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="WinHacks">
+  <meta property="og:title" content="tracert: Ver la Ruta de tu Conexión en Windows | WinHacks">
+  <meta property="og:description" content="Usa tracert para descubrir por dónde viajan tus paquetes y detectar dónde se retrasa tu conexión.">
+  <meta property="og:url" content="https://winhacks.dev/redes/tracert.html">
+  <meta property="og:image" content="https://winhacks.dev/assets/img/og/og-tracert.webp">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="tracert: Ver la Ruta de tu Conexión en Windows | WinHacks">
+  <meta name="twitter:description" content="Aprende a usar tracert para diagnosticar rutas, saltos y latencia de red en Windows.">
+  <meta name="twitter:image" content="https://winhacks.dev/assets/img/og/og-tracert.webp">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=Montserrat:wght@800;900&amp;display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/css/style.css">
+
+  <meta property="og:locale" content="es_ES"></head>
+
+<body>
+
+  <header class="site-header">
+    <div id="navbar-container"></div>
+  </header>
+
+  <main>
+
+    <nav id="breadcrumb" class="breadcrumb" aria-label="Breadcrumb"></nav>
+
+    <article class="article">
+
+      <header class="article-hero article-hero--panel">
+
+        <p class="eyebrow">Comando de red</p>
+
+        <h1>tracert muestra la ruta real de tu conexión en Windows</h1>
+
+        <p>
+          Aprende a usar <strong>tracert</strong> para ver los saltos que hace tu conexión
+          hasta llegar a un sitio web, detectar retrasos y entender dónde puede estar fallando
+          una ruta de red.
+        </p>
+
+        <div class="hero-buttons">
+          <a href="#video" class="btn btn-primary">Ver video</a>
+          <a href="#pasos" class="btn btn-outline">Ir al tutorial</a>
+        </div>
+
+      </header>
+
+      <div class="article-content">
+
+        <div class="meta-grid">
+
+          <div class="meta-card">
+            <span>Dificultad</span>
+            <strong>Media</strong>
+          </div>
+
+          <div class="meta-card">
+            <span>Tiempo</span>
+            <strong>5 minutos</strong>
+          </div>
+
+          <div class="meta-card">
+            <span>Compatible</span>
+            <strong>Windows 10/11</strong>
+          </div>
+
+          <div class="meta-card">
+            <span>Categoría</span>
+            <strong>Redes</strong>
+          </div>
+
+        </div>
+
+        <section id="video" class="video-box">
+
+          <div class="section-header">
+
+            <p class="eyebrow">Video rápido</p>
+
+            <h2>Mira este comando en video</h2>
+
+            <p>
+              Cuando publique el Short específico de tracert, aquí irá el video oficial.
+              Por ahora, puedes ver más comandos y trucos en el canal de WinHacks.
+            </p>
+
+          </div>
+
+          <div class="video-placeholder">
+            <a href="https://www.youtube.com/@WinHacksOficial" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+              Ver canal de WinHacks
+            </a>
+          </div>
+
+        </section>
+
+        <section class="info-box">
+
+          <h3>Qué aprenderás</h3>
+
+          <ul>
+            <li>Qué es el comando <strong>tracert</strong>.</li>
+            <li>Cómo ver la ruta hacia un dominio.</li>
+            <li>Cómo interpretar los saltos de red.</li>
+            <li>Cómo detectar retrasos en la conexión.</li>
+            <li>Qué significa un asterisco en el resultado.</li>
+          </ul>
+
+        </section>
+
+        <h2>¿Qué hace este comando?</h2>
+
+        <p>
+          <strong>tracert</strong> muestra la ruta que siguen los paquetes desde tu computadora
+          hasta un destino, como una página web o una dirección IP. Cada línea del resultado
+          representa un <strong>salto</strong> entre routers o nodos de red.
+        </p>
+
+        <p>
+          Este comando es útil cuando una página carga lento, un servidor no responde bien
+          o quieres saber en qué punto del camino se retrasa la conexión.
+        </p>
+
+        <div class="tip-box">
+
+          <h3>💡 Consejo WinHacks</h3>
+
+          <p>
+            Si <strong>ping</strong> te dice que hay latencia alta, usa <strong>tracert</strong>
+            para ver en qué salto empieza el retraso.
+          </p>
+
+        </div>
+
+        <div class="warning-box">
+
+          <span>⚠️</span>
+
+          <h3>Antes de continuar</h3>
+
+          <p>
+            Un asterisco en tracert no siempre significa error grave. Algunos routers bloquean
+            respuestas ICMP o no responden a pruebas de diagnóstico.
+          </p>
+
+        </div>
+
+        <h2 id="pasos">Paso a paso</h2>
+
+        <div class="step-box">
+
+          <span class="step-number">1</span>
+
+          <h3>Abre Windows Terminal o CMD</h3>
+
+          <p>
+            Haz clic derecho en el botón de Inicio y abre <strong>Terminal</strong>,
+            <strong>PowerShell</strong> o <strong>Símbolo del sistema</strong>.
+          </p>
+
+          <div class="screenshot-placeholder">
+            Captura pendiente: Windows Terminal abierto.
+          </div>
+
+        </div>
+
+        <div class="step-box">
+
+          <span class="step-number">2</span>
+
+          <h3>Ejecuta tracert hacia un dominio</h3>
+
+          <p>
+            Escribe este comando y presiona Enter:
+          </p>
+
+          <div class="command-box">
+            <code>tracert google.com</code>
+            <button class="copy-btn" data-copy="tracert google.com">Copiar</button>
+          </div>
+
+          <p>
+            Windows mostrará la ruta que sigue tu conexión hasta llegar al destino.
+          </p>
+
+          <div class="screenshot-placeholder">
+            Captura pendiente: resultado de tracert google.com.
+          </div>
+
+        </div>
+
+        <div class="step-box">
+
+          <span class="step-number">3</span>
+
+          <h3>Identifica los saltos</h3>
+
+          <p>
+            Cada número de la izquierda representa un salto. Normalmente el primer salto
+            suele ser tu router local.
+          </p>
+
+          <div class="screenshot-placeholder">
+            Captura pendiente: saltos de red resaltados.
+          </div>
+
+        </div>
+
+        <div class="step-box">
+
+          <span class="step-number">4</span>
+
+          <h3>Revisa los tiempos en ms</h3>
+
+          <p>
+            Los valores en <strong>ms</strong> indican cuánto tarda cada respuesta.
+            Si un salto muestra tiempos muy altos, ahí puede iniciar el retraso.
+          </p>
+
+          <div class="screenshot-placeholder">
+            Captura pendiente: tiempos en milisegundos resaltados.
+          </div>
+
+        </div>
+
+        <div class="step-box">
+
+          <span class="step-number">5</span>
+
+          <h3>Prueba una dirección IP</h3>
+
+          <p>
+            También puedes usar tracert con una IP pública:
+          </p>
+
+          <div class="command-box">
+            <code>tracert 8.8.8.8</code>
+            <button class="copy-btn" data-copy="tracert 8.8.8.8">Copiar</button>
+          </div>
+
+          <p>
+            Esto ayuda a comparar si el problema está en DNS o en la ruta de red.
+          </p>
+
+        </div>
+
+        <h2>Comandos básicos de tracert</h2>
+
+        <div class="info-box">
+          <h3>Rastrear un dominio</h3>
+          <p>
+            Usa este comando para ver la ruta hacia una página web.
+          </p>
+        </div>
+
+        <div class="command-box">
+          <code>tracert google.com</code>
+          <button class="copy-btn" data-copy="tracert google.com">Copiar</button>
+        </div>
+
+        <div class="info-box">
+          <h3>Rastrear una IP</h3>
+          <p>
+            Usa este comando para ver la ruta hacia una dirección IP específica.
+          </p>
+        </div>
+
+        <div class="command-box">
+          <code>tracert 8.8.8.8</code>
+          <button class="copy-btn" data-copy="tracert 8.8.8.8">Copiar</button>
+        </div>
+
+        <div class="info-box">
+          <h3>Evitar resolución de nombres</h3>
+          <p>
+            Usa <strong>-d</strong> para acelerar el resultado evitando que Windows resuelva nombres DNS.
+          </p>
+        </div>
+
+        <div class="command-box">
+          <code>tracert -d google.com</code>
+          <button class="copy-btn" data-copy="tracert -d google.com">Copiar</button>
+        </div>
+
+        <div class="info-box">
+          <h3>Limitar cantidad de saltos</h3>
+          <p>
+            Usa <strong>-h</strong> para definir el máximo de saltos que quieres analizar.
+          </p>
+        </div>
+
+        <div class="command-box">
+          <code>tracert -h 10 google.com</code>
+          <button class="copy-btn" data-copy="tracert -h 10 google.com">Copiar</button>
+        </div>
+
+        <h2>Qué debes revisar primero</h2>
+
+        <p>
+          Revisa dónde empiezan los tiempos altos, dónde aparecen asteriscos repetidos
+          y si la ruta se queda detenida antes de llegar al destino.
+        </p>
+
+        <p>
+          Si el problema empieza en el primer salto, puede estar en tu red local.
+          Si aparece después de varios saltos, puede estar en tu proveedor o en una ruta externa.
+        </p>
+
+        <div class="result-box">
+
+          <h3>✅ Resultado esperado</h3>
+
+          <p>
+            Al usar tracert correctamente podrás ver por dónde viaja tu conexión,
+            identificar saltos lentos y entender mejor si el fallo está en tu red,
+            en tu proveedor o cerca del servidor destino.
+          </p>
+
+        </div>
+
+        <h2>Cuándo usar tracert</h2>
+
+        <ul>
+          <li>Cuando una página carga demasiado lento.</li>
+          <li>Cuando ping muestra latencia alta.</li>
+          <li>Cuando quieres saber dónde se corta la ruta.</li>
+          <li>Cuando un servidor responde desde algunas redes, pero no desde otras.</li>
+          <li>Cuando necesitas comparar rutas hacia diferentes destinos.</li>
+          <li>Cuando investigas problemas de conexión intermitente.</li>
+        </ul>
+
+        <h2>Errores comunes</h2>
+
+        <div class="info-box">
+
+          <h3>Creer que un asterisco siempre es fallo</h3>
+
+          <p>
+            Algunos routers simplemente no responden a tracert. Si la ruta continúa después,
+            probablemente no sea un problema grave.
+          </p>
+
+        </div>
+
+        <div class="info-box">
+
+          <h3>Analizar solo el último salto</h3>
+
+          <p>
+            La clave está en ver desde qué salto empiezan los tiempos altos o los cortes,
+            no solo si el destino final responde.
+          </p>
+
+        </div>
+
+        <div class="info-box">
+
+          <h3>Confundir latencia externa con problema del PC</h3>
+
+          <p>
+            Si los primeros saltos están bien y el retraso aparece lejos de tu red,
+            el problema probablemente no está en tu computadora.
+          </p>
+
+        </div>
+
+        <h2>Preguntas frecuentes</h2>
+
+        <div class="faq-box">
+
+          <h3>¿Qué significa tracert?</h3>
+
+          <p>
+            Significa trace route. En Windows se usa como <strong>tracert</strong>
+            para mostrar la ruta que siguen los paquetes hacia un destino.
+          </p>
+
+        </div>
+
+        <div class="faq-box">
+
+          <h3>¿Tracert arregla Internet?</h3>
+
+          <p>
+            No. Tracert no repara la conexión. Sirve para diagnosticar por dónde viajan
+            los paquetes y dónde puede empezar el retraso.
+          </p>
+
+        </div>
+
+        <div class="faq-box">
+
+          <h3>¿Qué significa un salto?</h3>
+
+          <p>
+            Un salto es un router o nodo intermedio por el que pasa tu conexión antes
+            de llegar al destino.
+          </p>
+
+        </div>
+
+        <div class="faq-box">
+
+          <h3>¿Qué significan los asteriscos?</h3>
+
+          <p>
+            Significan que no hubo respuesta en ese intento. Puede ser por bloqueo,
+            pérdida, firewall o porque ese router no responde a pruebas ICMP.
+          </p>
+
+        </div>
+
+        <div class="faq-box">
+
+          <h3>¿Necesito permisos de administrador?</h3>
+
+          <p>
+            No. Normalmente puedes usar tracert desde Terminal, CMD o PowerShell
+            sin permisos de administrador.
+          </p>
+
+        </div>
+
+        <div class="faq-box">
+
+          <h3>¿Qué diferencia hay entre ping y tracert?</h3>
+
+          <p>
+            <strong>ping</strong> comprueba si un destino responde.
+            <strong>tracert</strong> muestra la ruta y los saltos que sigue la conexión.
+          </p>
+
+        </div>
+
+        <section class="section cta-section" id="descarga">
+
+          <p class="eyebrow">Guía gratis</p>
+
+          <h2>50 Secretos de Windows que la mayoría nunca descubre</h2>
+
+          <p>
+            Descarga una guía práctica con herramientas ocultas,
+            comandos útiles y trucos seguros para Windows 10 y Windows 11.
+          </p>
+
+          <form name="guia-50-secretos" method="POST" data-netlify="true" class="email-form netlify-form" id="secretosForm" data-redirect="/recursos/gracias-50-secretos.html">
+
+            <input type="hidden" name="form-name" value="guia-50-secretos">
+
+            <input type="text" name="nombre" placeholder="Tu nombre" required="">
+
+            <input type="email" name="email" placeholder="Tu correo electrónico" required="">
+
+            <button type="submit">
+              Descargar guía
+            </button>
+
+          </form>
+
+        </section>
+
+        <h2>Artículos relacionados</h2>
+
+        <div class="related-grid">
+
+          <a href="/redes/ipconfig.html" class="related-card">
+            <h3>ipconfig</h3>
+            <p>Revisa tu IP, puerta de enlace, DNS y datos principales de red.</p>
+          </a>
+
+          <a href="/redes/ping.html" class="related-card">
+            <h3>ping</h3>
+            <p>Comprueba si tu PC puede comunicarse con un sitio, router o servidor.</p>
+          </a>
+
+          <a href="/redes/arp-a.html" class="related-card">
+            <h3>arp -a</h3>
+            <p>Descubre dispositivos detectados en tu red local mediante la tabla ARP.</p>
+          </a>
+
+          <a href="/redes/netstat.html" class="related-card">
+            <h3>netstat</h3>
+            <p>Revisa conexiones activas, puertos abiertos y actividad de red.</p>
+          </a>
+
+        </div>
+
+        <div class="next-box">
+
+          <h3>🚀 WinHacks Academy</h3>
+
+          <p>
+            Próximamente aprenderás Windows desde cero con cursos prácticos sobre
+            comandos, PowerShell, optimización, seguridad, redes y herramientas ocultas.
+          </p>
+
+          <a href="/academy/index.html" class="btn btn-primary">
+            Ver Academy
+          </a>
+
+        </div>
+
+      </div>
+
+    </article>
+
+  </main>
+
+  <footer>
+    <div id="footer-container"></div>
+  </footer>
+
+  <a href="#" class="to-top" aria-label="Volver arriba">
+
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round">
+
+      <polyline points="18 15 12 9 6 15"></polyline>
+
+    </svg>
+
+  </a>
+
+  <script src="/js/components.js"></script>
+
+  <script src="/js/core/engine.js?v=20260626-03" defer=""></script>
+
+
+
+</body></html>

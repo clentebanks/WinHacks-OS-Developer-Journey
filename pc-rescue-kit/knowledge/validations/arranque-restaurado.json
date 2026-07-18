@@ -1,0 +1,11 @@
+{
+  "id": "VAL-BOOT-001",
+  "name": "Validar que Windows inicia normalmente",
+  "type": "restart",
+  "expected": "Windows llega al escritorio sin entrar en Reparación automática.",
+  "failureMessage": "Windows continúa sin iniciar. Prueba Restaurar sistema o recuperación avanzada.",
+  "successNext": "rescue-plan-complete",
+  "failureNext": "WHPRS-REC-004",
+  "status": "active",
+  "version": "1.0.0"
+}

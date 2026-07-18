@@ -1,0 +1,203 @@
+# WinHacks SEO Auditor
+
+Generado: 2026-07-18T04:43:57.799Z
+
+Versión: **1.5**
+
+Score: **28/100**
+
+Páginas analizadas: **116**
+
+Notas: reportes, docs, tools, scripts, components y templates se ignoran. SEO dinámico detectado: **sí**.
+
+## Resumen
+
+- Críticos: 0
+- Altos: 182
+- Medios: 0
+- Bajos: 0
+
+## Problemas
+
+- **HIGH** [image.file.missing] comandos/crear-codigo-qr-curl-windows.html:207 — Imagen referenciada no existe. → `../assets/images/qr-curl-windows-01.png`
+- **HIGH** [image.file.missing] comandos/crear-codigo-qr-curl-windows.html:230 — Imagen referenciada no existe. → `../assets/images/qr-curl-windows-02.png`
+- **HIGH** [image.file.missing] comandos/crear-codigo-qr-curl-windows.html:258 — Imagen referenciada no existe. → `../assets/images/qr-curl-windows-03.png`
+- **HIGH** [image.file.missing] comandos/crear-codigo-qr-curl-windows.html:282 — Imagen referenciada no existe. → `../assets/images/qr-curl-windows-04.png`
+- **HIGH** [image.file.missing] comandos/crear-codigo-qr-curl-windows.html:305 — Imagen referenciada no existe. → `../assets/images/qr-curl-windows-05.png`
+- **HIGH** [image.file.missing] comandos/crear-codigo-qr-curl-windows.html:328 — Imagen referenciada no existe. → `../assets/images/qr-curl-windows-06.png`
+- **HIGH** [image.file.missing] comandos/dism.html:217 — Imagen referenciada no existe. → `../assets/images/dism-01.webp`
+- **HIGH** [image.file.missing] comandos/dism.html:244 — Imagen referenciada no existe. → `../assets/images/dism-02.webp`
+- **HIGH** [image.file.missing] comandos/dism.html:271 — Imagen referenciada no existe. → `../assets/images/dism-03.webp`
+- **HIGH** [image.file.missing] comandos/dism.html:298 — Imagen referenciada no existe. → `../assets/images/dism-04.webp`
+- **HIGH** [image.file.missing] comandos/dism.html:321 — Imagen referenciada no existe. → `../assets/images/dism-05.webp`
+- **HIGH** [image.file.missing] comandos/dism.html:348 — Imagen referenciada no existe. → `../assets/images/dism-06.webp`
+- **HIGH** [image.file.missing] comandos/doskey-history-cmd-windows.html:194 — Imagen referenciada no existe. → `../assets/images/doskey-history-cmd-01.png`
+- **HIGH** [image.file.missing] comandos/doskey-history-cmd-windows.html:226 — Imagen referenciada no existe. → `../assets/images/doskey-history-cmd-02.png`
+- **HIGH** [image.file.missing] comandos/doskey-history-cmd-windows.html:253 — Imagen referenciada no existe. → `../assets/images/doskey-history-cmd-03.png`
+- **HIGH** [image.file.missing] comandos/doskey-history-cmd-windows.html:275 — Imagen referenciada no existe. → `../assets/images/doskey-history-cmd-04.png`
+- **HIGH** [image.file.missing] comandos/doskey-history-cmd-windows.html:303 — Imagen referenciada no existe. → `../assets/images/doskey-history-cmd-05.png`
+- **HIGH** [image.file.missing] comandos/driverquery-drivers-activos-windows.html:208 — Imagen referenciada no existe. → `../assets/images/driverquery-windows-01.png`
+- **HIGH** [image.file.missing] comandos/driverquery-drivers-activos-windows.html:235 — Imagen referenciada no existe. → `../assets/images/driverquery-windows-02.png`
+- **HIGH** [image.file.missing] comandos/driverquery-drivers-activos-windows.html:258 — Imagen referenciada no existe. → `../assets/images/driverquery-windows-03.png`
+- **HIGH** [image.file.missing] comandos/driverquery-drivers-activos-windows.html:285 — Imagen referenciada no existe. → `../assets/images/driverquery-windows-04.png`
+- **HIGH** [image.file.missing] comandos/driverquery-drivers-activos-windows.html:313 — Imagen referenciada no existe. → `../assets/images/driverquery-windows-05.png`
+- **HIGH** [image.file.missing] comandos/driverquery-drivers-activos-windows.html:340 — Imagen referenciada no existe. → `../assets/images/driverquery-windows-06.png`
+- **HIGH** [image.file.missing] comandos/dxdiag.html:211 — Imagen referenciada no existe. → `../assets/images/dxdiag-01.webp`
+- **HIGH** [image.file.missing] comandos/dxdiag.html:246 — Imagen referenciada no existe. → `../assets/images/dxdiag-02.webp`
+- **HIGH** [image.file.missing] comandos/dxdiag.html:270 — Imagen referenciada no existe. → `../assets/images/dxdiag-03.webp`
+- **HIGH** [image.file.missing] comandos/dxdiag.html:295 — Imagen referenciada no existe. → `../assets/images/dxdiag-04.webp`
+- **HIGH** [image.file.missing] comandos/dxdiag.html:320 — Imagen referenciada no existe. → `../assets/images/dxdiag-05.webp`
+- **HIGH** [image.file.missing] comandos/dxdiag.html:345 — Imagen referenciada no existe. → `../assets/images/dxdiag-06.webp`
+- **HIGH** [image.file.missing] comandos/eventvwr-msc.html:310 — Imagen referenciada no existe. → `../assets/images/eventvwr-msc-01.webp`
+- **HIGH** [image.file.missing] comandos/eventvwr-msc.html:346 — Imagen referenciada no existe. → `../assets/images/eventvwr-msc-02.webp`
+- **HIGH** [image.file.missing] comandos/eventvwr-msc.html:370 — Imagen referenciada no existe. → `../assets/images/eventvwr-msc-03.webp`
+- **HIGH** [image.file.missing] comandos/eventvwr-msc.html:395 — Imagen referenciada no existe. → `../assets/images/eventvwr-msc-04.webp`
+- **HIGH** [image.file.missing] comandos/eventvwr-msc.html:423 — Imagen referenciada no existe. → `../assets/images/eventvwr-msc-05.webp`
+- **HIGH** [image.file.missing] comandos/eventvwr-msc.html:448 — Imagen referenciada no existe. → `../assets/images/eventvwr-msc-06.webp`
+- **HIGH** [image.file.missing] comandos/msconfig.html:248 — Imagen referenciada no existe. → `../assets/images/ventana Configuración del sistema abierta.jpg`
+- **HIGH** [image.file.missing] comandos/msinfo32.html:211 — Imagen referenciada no existe. → `../assets/images/msinfo32-01.webp`
+- **HIGH** [image.file.missing] comandos/msinfo32.html:247 — Imagen referenciada no existe. → `../assets/images/msinfo32-02.webp`
+- **HIGH** [image.file.missing] comandos/msinfo32.html:271 — Imagen referenciada no existe. → `../assets/images/msinfo32-03.webp`
+- **HIGH** [image.file.missing] comandos/msinfo32.html:296 — Imagen referenciada no existe. → `../assets/images/msinfo32-04.webp`
+- **HIGH** [image.file.missing] comandos/msinfo32.html:321 — Imagen referenciada no existe. → `../assets/images/msinfo32-05.webp`
+- **HIGH** [image.file.missing] comandos/msinfo32.html:346 — Imagen referenciada no existe. → `../assets/images/msinfo32-06.webp`
+- **HIGH** [image.file.missing] comandos/perfmon-rel.html:246 — Imagen referenciada no existe. → `/assets/images/línea de tiempo.png`
+- **HIGH** [image.file.missing] comandos/powercfg-batteryreport-windows.html:209 — Imagen referenciada no existe. → `../assets/images/powercfg-batteryreport-01.png`
+- **HIGH** [image.file.missing] comandos/powercfg-batteryreport-windows.html:237 — Imagen referenciada no existe. → `../assets/images/powercfg-batteryreport-02.png`
+- **HIGH** [image.file.missing] comandos/powercfg-batteryreport-windows.html:264 — Imagen referenciada no existe. → `../assets/images/powercfg-batteryreport-03.png`
+- **HIGH** [image.file.missing] comandos/powercfg-batteryreport-windows.html:288 — Imagen referenciada no existe. → `../assets/images/powercfg-batteryreport-04.png`
+- **HIGH** [image.file.missing] comandos/powercfg-batteryreport-windows.html:312 — Imagen referenciada no existe. → `../assets/images/powercfg-batteryreport-05.png`
+- **HIGH** [image.file.missing] comandos/powercfg-batteryreport-windows.html:335 — Imagen referenciada no existe. → `../assets/images/powercfg-batteryreport-06.png`
+- **HIGH** [image.file.missing] comandos/regedit.html:166 — Imagen referenciada no existe. → `../assets/images/regedit-01.webp`
+- **HIGH** [image.file.missing] comandos/regedit.html:186 — Imagen referenciada no existe. → `../assets/images/regedit-02.webp`
+- **HIGH** [image.file.missing] comandos/regedit.html:201 — Imagen referenciada no existe. → `../assets/images/regedit-03.webp`
+- **HIGH** [image.file.missing] comandos/regedit.html:219 — Imagen referenciada no existe. → `../assets/images/regedit-04.webp`
+- **HIGH** [image.file.missing] comandos/regedit.html:237 — Imagen referenciada no existe. → `../assets/images/regedit-05.webp`
+- **HIGH** [image.file.missing] comandos/regedit.html:260 — Imagen referenciada no existe. → `../assets/images/regedit-06.webp`
+- **HIGH** [image.file.missing] comandos/sfc-scannow.html:205 — Imagen referenciada no existe. → `../assets/images/CMD en el menú Inicio.png`
+- **HIGH** [image.file.missing] comandos/sfc-scannow.html:268 — Imagen referenciada no existe. → `../assets/images/sfc scannow ejecutándose en CMD..jpg`
+- **HIGH** [image.file.missing] comandos/systeminfo.html:313 — Imagen referenciada no existe. → `../assets/images/systeminfo-01.webp`
+- **HIGH** [image.file.missing] comandos/systeminfo.html:351 — Imagen referenciada no existe. → `../assets/images/systeminfo-02.webp`
+- **HIGH** [image.file.missing] comandos/systeminfo.html:377 — Imagen referenciada no existe. → `../assets/images/systeminfo-03.webp`
+- **HIGH** [image.file.missing] comandos/systeminfo.html:405 — Imagen referenciada no existe. → `../assets/images/systeminfo-04.webp`
+- **HIGH** [image.file.missing] comandos/systeminfo.html:433 — Imagen referenciada no existe. → `../assets/images/systeminfo-05.webp`
+- **HIGH** [image.file.missing] comandos/systeminfo.html:473 — Imagen referenciada no existe. → `../assets/images/systeminfo-06.webp`
+- **HIGH** [image.file.missing] comandos/taskkill-pid-windows.html:216 — Imagen referenciada no existe. → `../assets/images/taskkill-pid-01.webp`
+- **HIGH** [image.file.missing] comandos/taskkill-pid-windows.html:243 — Imagen referenciada no existe. → `../assets/images/taskkill-pid-02.webp`
+- **HIGH** [image.file.missing] comandos/taskkill-pid-windows.html:266 — Imagen referenciada no existe. → `../assets/images/taskkill-pid-03.webp`
+- **HIGH** [image.file.missing] comandos/taskkill-pid-windows.html:293 — Imagen referenciada no existe. → `../assets/images/taskkill-pid-04.webp`
+- **HIGH** [image.file.missing] comandos/taskkill-pid-windows.html:320 — Imagen referenciada no existe. → `../assets/images/taskkill-pid-05.webp`
+- **HIGH** [image.file.missing] comandos/taskkill-pid-windows.html:347 — Imagen referenciada no existe. → `../assets/images/taskkill-pid-06.webp`
+- **HIGH** [image.file.missing] comandos/whoami.html:204 — Imagen referenciada no existe. → `../assets/images/whoami-01.webp`
+- **HIGH** [image.file.missing] comandos/whoami.html:233 — Imagen referenciada no existe. → `../assets/images/whoami-02.webp`
+- **HIGH** [image.file.missing] comandos/whoami.html:257 — Imagen referenciada no existe. → `../assets/images/whoami-03.webp`
+- **HIGH** [image.file.missing] comandos/whoami.html:286 — Imagen referenciada no existe. → `../assets/images/whoami-04.webp`
+- **HIGH** [image.file.missing] comandos/whoami.html:315 — Imagen referenciada no existe. → `../assets/images/whoami-05.webp`
+- **HIGH** [image.file.missing] comandos/whoami.html:344 — Imagen referenciada no existe. → `../assets/images/whoami-06.webp`
+- **HIGH** [image.file.missing] comandos/winget-upgrade-all.html:202 — Imagen referenciada no existe. → `../assets/images/winget-upgrade-all-01.webp`
+- **HIGH** [image.file.missing] comandos/winget-upgrade-all.html:229 — Imagen referenciada no existe. → `../assets/images/winget-upgrade-all-02.webp`
+- **HIGH** [image.file.missing] comandos/winget-upgrade-all.html:256 — Imagen referenciada no existe. → `../assets/images/winget-upgrade-all-03.webp`
+- **HIGH** [image.file.missing] comandos/winget-upgrade-all.html:283 — Imagen referenciada no existe. → `../assets/images/winget-upgrade-all-04.webp`
+- **HIGH** [image.file.missing] comandos/winget-upgrade-all.html:306 — Imagen referenciada no existe. → `../assets/images/winget-upgrade-all-05.webp`
+- **HIGH** [image.file.missing] personalizacion/cambiar-icono-carpeta.html:202 — Imagen referenciada no existe. → `../assets/images/cambiar-icono-carpeta-01.webp`
+- **HIGH** [image.file.missing] personalizacion/cambiar-icono-carpeta.html:226 — Imagen referenciada no existe. → `../assets/images/cambiar-icono-carpeta-02.webp`
+- **HIGH** [image.file.missing] personalizacion/cambiar-icono-carpeta.html:250 — Imagen referenciada no existe. → `../assets/images/cambiar-icono-carpeta-03.webp`
+- **HIGH** [image.file.missing] personalizacion/cambiar-icono-carpeta.html:274 — Imagen referenciada no existe. → `../assets/images/cambiar-icono-carpeta-04.webp`
+- **HIGH** [image.file.missing] personalizacion/cambiar-icono-carpeta.html:299 — Imagen referenciada no existe. → `../assets/images/cambiar-icono-carpeta-05.webp`
+- **HIGH** [image.file.missing] personalizacion/cambiar-icono-carpeta.html:324 — Imagen referenciada no existe. → `../assets/images/cambiar-icono-carpeta-06.webp`
+- **HIGH** [image.file.missing] personalizacion/modo-oscuro.html:206 — Imagen referenciada no existe. → `../assets/images/modo-oscuro-01.webp`
+- **HIGH** [image.file.missing] personalizacion/modo-oscuro.html:230 — Imagen referenciada no existe. → `../assets/images/modo-oscuro-02.webp`
+- **HIGH** [image.file.missing] personalizacion/modo-oscuro.html:254 — Imagen referenciada no existe. → `../assets/images/modo-oscuro-03.webp`
+- **HIGH** [image.file.missing] personalizacion/modo-oscuro.html:278 — Imagen referenciada no existe. → `../assets/images/modo-oscuro-04.webp`
+- **HIGH** [image.file.missing] personalizacion/modo-oscuro.html:303 — Imagen referenciada no existe. → `../assets/images/modo-oscuro-05.webp`
+- **HIGH** [image.file.missing] personalizacion/modo-oscuro.html:327 — Imagen referenciada no existe. → `../assets/images/modo-oscuro-06.webp`
+- **HIGH** [image.file.missing] redes/arp-ver-dispositivos-red-windows.html:208 — Imagen referenciada no existe. → `../assets/images/arp-red-windows-01.png`
+- **HIGH** [image.file.missing] redes/arp-ver-dispositivos-red-windows.html:235 — Imagen referenciada no existe. → `../assets/images/arp-red-windows-02.png`
+- **HIGH** [image.file.missing] redes/arp-ver-dispositivos-red-windows.html:258 — Imagen referenciada no existe. → `../assets/images/arp-red-windows-03.png`
+- **HIGH** [image.file.missing] redes/arp-ver-dispositivos-red-windows.html:282 — Imagen referenciada no existe. → `../assets/images/arp-red-windows-04.png`
+- **HIGH** [image.file.missing] redes/arp-ver-dispositivos-red-windows.html:305 — Imagen referenciada no existe. → `../assets/images/arp-red-windows-05.png`
+- **HIGH** [image.file.missing] redes/flushdns.html:214 — Imagen referenciada no existe. → `../assets/images/flushdns-01.webp`
+- **HIGH** [image.file.missing] redes/flushdns.html:253 — Imagen referenciada no existe. → `../assets/images/flushdns-02.webp`
+- **HIGH** [image.file.missing] redes/flushdns.html:281 — Imagen referenciada no existe. → `../assets/images/flushdns-03.webp`
+- **HIGH** [image.file.missing] redes/flushdns.html:309 — Imagen referenciada no existe. → `../assets/images/flushdns-04.webp`
+- **HIGH** [image.file.missing] redes/flushdns.html:348 — Imagen referenciada no existe. → `../assets/images/flushdns-05.webp`
+- **HIGH** [image.file.missing] redes/flushdns.html:387 — Imagen referenciada no existe. → `../assets/images/flushdns-06.webp`
+- **HIGH** [image.file.missing] redes/getmac.html:316 — Imagen referenciada no existe. → `../assets/images/getmac-01.webp`
+- **HIGH** [image.file.missing] redes/getmac.html:354 — Imagen referenciada no existe. → `../assets/images/getmac-02.webp`
+- **HIGH** [image.file.missing] redes/getmac.html:381 — Imagen referenciada no existe. → `../assets/images/getmac-03.webp`
+- **HIGH** [image.file.missing] redes/getmac.html:421 — Imagen referenciada no existe. → `../assets/images/getmac-04.webp`
+- **HIGH** [image.file.missing] redes/getmac.html:460 — Imagen referenciada no existe. → `../assets/images/getmac-05.webp`
+- **HIGH** [image.file.missing] redes/getmac.html:499 — Imagen referenciada no existe. → `../assets/images/getmac-06.webp`
+- **HIGH** [image.file.missing] redes/hostname.html:308 — Imagen referenciada no existe. → `../assets/images/hostname-01.webp`
+- **HIGH** [image.file.missing] redes/hostname.html:346 — Imagen referenciada no existe. → `../assets/images/hostname-02.webp`
+- **HIGH** [image.file.missing] redes/hostname.html:373 — Imagen referenciada no existe. → `../assets/images/hostname-03.webp`
+- **HIGH** [image.file.missing] redes/hostname.html:412 — Imagen referenciada no existe. → `../assets/images/hostname-04.webp`
+- **HIGH** [image.file.missing] redes/hostname.html:450 — Imagen referenciada no existe. → `../assets/images/hostname-05.webp`
+- **HIGH** [image.file.missing] redes/hostname.html:488 — Imagen referenciada no existe. → `../assets/images/hostname-06.webp`
+- **HIGH** [image.file.missing] redes/nslookup.html:212 — Imagen referenciada no existe. → `../assets/images/nslookup-01.webp`
+- **HIGH** [image.file.missing] redes/nslookup.html:240 — Imagen referenciada no existe. → `../assets/images/nslookup-02.webp`
+- **HIGH** [image.file.missing] redes/nslookup.html:264 — Imagen referenciada no existe. → `../assets/images/nslookup-03.webp`
+- **HIGH** [image.file.missing] redes/nslookup.html:288 — Imagen referenciada no existe. → `../assets/images/nslookup-04.webp`
+- **HIGH** [image.file.missing] redes/nslookup.html:321 — Imagen referenciada no existe. → `../assets/images/nslookup-05.webp`
+- **HIGH** [image.file.missing] redes/nslookup.html:349 — Imagen referenciada no existe. → `../assets/images/nslookup-06.webp`
+- **HIGH** [image.file.missing] redes/pathping.html:228 — Imagen referenciada no existe. → `../assets/images/pathping-01.webp`
+- **HIGH** [image.file.missing] redes/pathping.html:256 — Imagen referenciada no existe. → `../assets/images/pathping-02.webp`
+- **HIGH** [image.file.missing] redes/pathping.html:280 — Imagen referenciada no existe. → `../assets/images/pathping-03.webp`
+- **HIGH** [image.file.missing] redes/pathping.html:304 — Imagen referenciada no existe. → `../assets/images/pathping-04.webp`
+- **HIGH** [image.file.missing] redes/pathping.html:333 — Imagen referenciada no existe. → `../assets/images/pathping-05.webp`
+- **HIGH** [image.file.missing] redes/pathping.html:361 — Imagen referenciada no existe. → `../assets/images/pathping-06.webp`
+- **HIGH** [image.file.missing] redes/release.html:312 — Imagen referenciada no existe. → `../assets/images/release-01.webp`
+- **HIGH** [image.file.missing] redes/release.html:351 — Imagen referenciada no existe. → `../assets/images/release-02.webp`
+- **HIGH** [image.file.missing] redes/release.html:379 — Imagen referenciada no existe. → `../assets/images/release-03.webp`
+- **HIGH** [image.file.missing] redes/release.html:418 — Imagen referenciada no existe. → `../assets/images/release-04.webp`
+- **HIGH** [image.file.missing] redes/release.html:456 — Imagen referenciada no existe. → `../assets/images/release-05.webp`
+- **HIGH** [image.file.missing] redes/release.html:496 — Imagen referenciada no existe. → `../assets/images/release-06.webp`
+- **HIGH** [image.file.missing] redes/renew.html:215 — Imagen referenciada no existe. → `../assets/images/renew-01.webp`
+- **HIGH** [image.file.missing] redes/renew.html:254 — Imagen referenciada no existe. → `../assets/images/renew-02.webp`
+- **HIGH** [image.file.missing] redes/renew.html:281 — Imagen referenciada no existe. → `../assets/images/renew-03.webp`
+- **HIGH** [image.file.missing] redes/renew.html:321 — Imagen referenciada no existe. → `../assets/images/renew-04.webp`
+- **HIGH** [image.file.missing] redes/renew.html:360 — Imagen referenciada no existe. → `../assets/images/renew-05.webp`
+- **HIGH** [image.file.missing] redes/renew.html:411 — Imagen referenciada no existe. → `../assets/images/renew-06.webp`
+- **HIGH** [image.file.missing] redes/wifi-transmit-power-preferred-band-windows.html:208 — Imagen referenciada no existe. → `../assets/images/wifi-transmit-power-01.png`
+- **HIGH** [image.file.missing] redes/wifi-transmit-power-preferred-band-windows.html:235 — Imagen referenciada no existe. → `../assets/images/wifi-transmit-power-02.png`
+- **HIGH** [image.file.missing] redes/wifi-transmit-power-preferred-band-windows.html:258 — Imagen referenciada no existe. → `../assets/images/wifi-transmit-power-03.png`
+- **HIGH** [image.file.missing] redes/wifi-transmit-power-preferred-band-windows.html:281 — Imagen referenciada no existe. → `../assets/images/wifi-transmit-power-04.png`
+- **HIGH** [image.file.missing] redes/wifi-transmit-power-preferred-band-windows.html:305 — Imagen referenciada no existe. → `../assets/images/wifi-transmit-power-05.png`
+- **HIGH** [image.file.missing] redes/wifi-transmit-power-preferred-band-windows.html:329 — Imagen referenciada no existe. → `../assets/images/wifi-transmit-power-06.png`
+- **HIGH** [image.file.missing] optimizacion/desactivar-indexado-disco-windows.html:207 — Imagen referenciada no existe. → `../assets/images/indexado-disco-windows-01.png`
+- **HIGH** [image.file.missing] optimizacion/desactivar-indexado-disco-windows.html:230 — Imagen referenciada no existe. → `../assets/images/indexado-disco-windows-02.png`
+- **HIGH** [image.file.missing] optimizacion/desactivar-indexado-disco-windows.html:258 — Imagen referenciada no existe. → `../assets/images/indexado-disco-windows-03.png`
+- **HIGH** [image.file.missing] optimizacion/desactivar-indexado-disco-windows.html:282 — Imagen referenciada no existe. → `../assets/images/indexado-disco-windows-04.png`
+- **HIGH** [image.file.missing] optimizacion/desactivar-indexado-disco-windows.html:306 — Imagen referenciada no existe. → `../assets/images/indexado-disco-windows-05.png`
+- **HIGH** [image.file.missing] secretos/historial-confiabilidad-windows.html:244 — Imagen referenciada no existe. → `/assets/images/línea de tiempo.png`
+- **HIGH** [image.file.missing] secretos/monitor-recursos.html:250 — Imagen referenciada no existe. → `/assets/images/Monitor de Recursos en Información general.jpg`
+- **HIGH** [image.file.missing] secretos/prefetch-rastros-actividad-windows.html:206 — Imagen referenciada no existe. → `../assets/images/prefetch-windows-01.png`
+- **HIGH** [image.file.missing] secretos/prefetch-rastros-actividad-windows.html:233 — Imagen referenciada no existe. → `../assets/images/prefetch-windows-02.png`
+- **HIGH** [image.file.missing] secretos/prefetch-rastros-actividad-windows.html:256 — Imagen referenciada no existe. → `../assets/images/prefetch-windows-03.png`
+- **HIGH** [image.file.missing] secretos/prefetch-rastros-actividad-windows.html:279 — Imagen referenciada no existe. → `../assets/images/prefetch-windows-04.png`
+- **HIGH** [image.file.missing] secretos/prefetch-rastros-actividad-windows.html:302 — Imagen referenciada no existe. → `../assets/images/prefetch-windows-05.png`
+- **HIGH** [image.file.missing] secretos/runmru-registro-ejecutar-windows.html:207 — Imagen referenciada no existe. → `../assets/images/runmru-registro-windows-01.png`
+- **HIGH** [image.file.missing] secretos/runmru-registro-ejecutar-windows.html:234 — Imagen referenciada no existe. → `../assets/images/runmru-registro-windows-02.png`
+- **HIGH** [image.file.missing] secretos/runmru-registro-ejecutar-windows.html:263 — Imagen referenciada no existe. → `../assets/images/runmru-registro-windows-03.png`
+- **HIGH** [image.file.missing] secretos/runmru-registro-ejecutar-windows.html:286 — Imagen referenciada no existe. → `../assets/images/runmru-registro-windows-04.png`
+- **HIGH** [image.file.missing] secretos/runmru-registro-ejecutar-windows.html:310 — Imagen referenciada no existe. → `../assets/images/runmru-registro-windows-05.png`
+- **HIGH** [image.file.missing] secretos/usb-conectados-registro-windows.html:206 — Imagen referenciada no existe. → `../assets/images/usb-registro-windows-01.png`
+- **HIGH** [image.file.missing] secretos/usb-conectados-registro-windows.html:233 — Imagen referenciada no existe. → `../assets/images/usb-registro-windows-02.png`
+- **HIGH** [image.file.missing] secretos/usb-conectados-registro-windows.html:262 — Imagen referenciada no existe. → `../assets/images/usb-registro-windows-03.png`
+- **HIGH** [image.file.missing] secretos/usb-conectados-registro-windows.html:285 — Imagen referenciada no existe. → `../assets/images/usb-registro-windows-04.png`
+- **HIGH** [image.file.missing] secretos/usb-conectados-registro-windows.html:308 — Imagen referenciada no existe. → `../assets/images/usb-registro-windows-05.png`
+- **HIGH** [image.file.missing] secretos/usb-conectados-registro-windows.html:332 — Imagen referenciada no existe. → `../assets/images/usb-registro-windows-06.png`
+- **HIGH** [link.internal.broken] secretos/windows-search-sin-internet.html:928 — Enlace interno roto. → `/optimizacion/desactivar-indexado-windows.html`
+- **HIGH** [image.file.missing] seguridad/defender-comandos-avanzados.html:459 — Imagen referenciada no existe. → `/assets/screenshots/seguridad/defender-comandos-avanzados.webp`
+- **HIGH** [image.file.missing] seguridad/examen-sin-conexion-windows-defender.html:209 — Imagen referenciada no existe. → `../assets/images/examen-sin-conexion-defender-01.png`
+- **HIGH** [image.file.missing] seguridad/examen-sin-conexion-windows-defender.html:232 — Imagen referenciada no existe. → `../assets/images/examen-sin-conexion-defender-02.png`
+- **HIGH** [image.file.missing] seguridad/examen-sin-conexion-windows-defender.html:256 — Imagen referenciada no existe. → `../assets/images/examen-sin-conexion-defender-03.png`
+- **HIGH** [image.file.missing] seguridad/examen-sin-conexion-windows-defender.html:279 — Imagen referenciada no existe. → `../assets/images/examen-sin-conexion-defender-04.png`
+- **HIGH** [image.file.missing] seguridad/examen-sin-conexion-windows-defender.html:303 — Imagen referenciada no existe. → `../assets/images/examen-sin-conexion-defender-05.png`
+- **HIGH** [image.file.missing] seguridad/examen-sin-conexion-windows-defender.html:327 — Imagen referenciada no existe. → `../assets/images/examen-sin-conexion-defender-06.png`
+- **HIGH** [image.file.missing] seguridad/restaurar-sistema-windows.html:206 — Imagen referenciada no existe. → `../assets/images/restaurar-sistema-windows-01.png`
+- **HIGH** [image.file.missing] seguridad/restaurar-sistema-windows.html:229 — Imagen referenciada no existe. → `../assets/images/restaurar-sistema-windows-02.png`
+- **HIGH** [image.file.missing] seguridad/restaurar-sistema-windows.html:252 — Imagen referenciada no existe. → `../assets/images/restaurar-sistema-windows-03.png`
+- **HIGH** [image.file.missing] seguridad/restaurar-sistema-windows.html:275 — Imagen referenciada no existe. → `../assets/images/restaurar-sistema-windows-04.png`
+- **HIGH** [image.file.missing] seguridad/restaurar-sistema-windows.html:298 — Imagen referenciada no existe. → `../assets/images/restaurar-sistema-windows-05.png`
+- **HIGH** [image.file.missing] seguridad/restaurar-sistema-windows.html:321 — Imagen referenciada no existe. → `../assets/images/restaurar-sistema-windows-06.png`

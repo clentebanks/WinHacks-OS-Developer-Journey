@@ -1,0 +1,54 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "command",
+    "shell",
+    "requiresAdmin",
+    "risk",
+    "status",
+    "version"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^CMD-[A-Z]{3}-[0-9]{3}$"
+    },
+    "command": {
+      "type": "string"
+    },
+    "shell": {
+      "type": "string"
+    },
+    "requiresAdmin": {
+      "type": "boolean"
+    },
+    "risk": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 5
+    },
+    "purpose": {
+      "type": "string"
+    },
+    "expectedOutput": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "draft",
+        "review",
+        "active",
+        "deprecated",
+        "archived"
+      ]
+    },
+    "version": {
+      "type": "string",
+      "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$"
+    }
+  }
+}

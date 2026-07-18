@@ -1,0 +1,69 @@
+{
+  "id": "WHPRS-DIA-002",
+  "slug": "administrador-tareas",
+  "name": "Diagnóstico con el Administrador de tareas",
+  "shortName": "Task Manager",
+  "category": "Diagnóstico",
+  "subcategory": "Rendimiento",
+  "phase": "Diagnóstico",
+  "risk": 1,
+  "estimatedTime": "5 minutos",
+  "description": "Permite identificar qué procesos están consumiendo CPU, memoria, disco o red en tiempo real.",
+  "goal": "Detectar el recurso y el proceso responsables de la lentitud antes de realizar cambios.",
+  "whenUse": [
+    "Cuando la PC está lenta",
+    "Cuando CPU, RAM o disco muestran uso elevado",
+    "Antes de cerrar procesos o desactivar programas"
+  ],
+  "whenNotUse": [
+    "Cuando Windows no puede iniciar",
+    "Cuando el equipo está completamente bloqueado"
+  ],
+  "requirements": [
+    "Windows 10 o Windows 11",
+    "Acceso al escritorio"
+  ],
+  "commands": [
+    {
+      "command": "taskmgr",
+      "requiresAdmin": false,
+      "shell": "run",
+      "purpose": "Abrir el Administrador de tareas."
+    }
+  ],
+  "steps": [
+    {
+      "order": 1,
+      "title": "Abrir el Administrador de tareas",
+      "instruction": "Presiona Ctrl + Shift + Esc."
+    },
+    {
+      "order": 2,
+      "title": "Ordenar por consumo",
+      "instruction": "En Procesos, ordena las columnas CPU, Memoria y Disco de mayor a menor."
+    },
+    {
+      "order": 3,
+      "title": "Registrar el proceso principal",
+      "instruction": "Anota el proceso que permanece con uso elevado durante varios minutos."
+    }
+  ],
+  "validation": [
+    {
+      "type": "manual",
+      "expected": "Se identificó el recurso y el proceso con mayor consumo sostenido."
+    }
+  ],
+  "failureActions": [],
+  "nextProcedures": [],
+  "related": [
+    "resmon",
+    "programas-inicio"
+  ],
+  "windows": [
+    "Windows 10",
+    "Windows 11"
+  ],
+  "status": "active",
+  "version": "1.0.0"
+}

@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-EL9JRMGJPS"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-EL9JRMGJPS');
+  </script>
+
+  <!-- Clarity code Puedes ver grabaciones reales (anónimas) de cómo navegan los usuarios.-->
+  <script type="text/javascript">
+    (function (c, l, a, r, i, t, y) {
+      c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) };
+      t = l.createElement(r); t.async = 1; t.src = "https://www.clarity.ms/tag/" + i;
+      y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
+    })(window, document, "clarity", "script", "xey9wuiqr4");
+  </script>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Examen sin Conexión de Windows Defender | WinHacks</title>
+
+  <meta name="description"
+    content="Aprende a usar el Examen sin conexión de Seguridad de Windows para escanear malware antes de que Windows cargue por completo.">
+
+  <meta name="robots" content="index, follow">
+
+  <link rel="canonical" href="https://winhacks.dev/seguridad/examen-sin-conexion-windows-defender">
+
+  <link rel="icon" href="/assets/icons/favicon.ico">
+
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="WinHacks">
+  <meta property="og:title" content="Examen sin Conexión de Windows Defender | WinHacks">
+  <meta property="og:description"
+    content="Usa el examen sin conexión de Seguridad de Windows para detectar malware más difícil de eliminar.">
+  <meta property="og:url" content="https://winhacks.dev/seguridad/examen-sin-conexion-windows-defender">
+  <meta property="og:image" content="https://winhacks.dev/assets/img/og/og-examen-sin-conexion-defender.webp">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Examen sin Conexión de Windows Defender | WinHacks">
+  <meta name="twitter:description" content="Escaneo profundo de Windows Defender para detectar malware antes de iniciar Windows.">
+  <meta name="twitter:image" content="https://winhacks.dev/assets/img/og/og-examen-sin-conexion-defender.webp">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Montserrat:wght@800;900&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+
+  <header class="site-header">
+    <div id="navbar-container"></div>
+  </header>
+
+  <main>
+
+    <nav id="breadcrumb" class="breadcrumb" aria-label="Breadcrumb"></nav>
+
+    <article class="article">
+
+      <header class="article-hero article-hero--panel">
+
+        <p class="eyebrow">Seguridad Windows</p>
+
+        <h1>El escaneo secreto de Windows que elimina malware antes de iniciar el sistema</h1>
+
+        <p>
+          Windows incluye un modo avanzado llamado <strong>Examen sin conexión</strong>.
+          Este análisis reinicia tu PC y escanea el sistema antes de que Windows cargue por completo,
+          lo que puede ayudar contra amenazas difíciles de detectar en una sesión normal.
+        </p>
+
+        <div class="hero-buttons">
+          <a href="#video" class="btn btn-primary">Ver video</a>
+          <a href="#pasos" class="btn btn-outline">Ir al tutorial</a>
+        </div>
+
+      </header>
+
+      <div class="article-content">
+
+        <div class="meta-grid">
+
+          <div class="meta-card">
+            <span>Dificultad</span>
+            <strong>Fácil</strong>
+          </div>
+
+          <div class="meta-card">
+            <span>Tiempo</span>
+            <strong>15 minutos</strong>
+          </div>
+
+          <div class="meta-card">
+            <span>Compatible</span>
+            <strong>Windows 10/11</strong>
+          </div>
+
+          <div class="meta-card">
+            <span>Herramienta</span>
+            <strong>Defender</strong>
+          </div>
+
+        </div>
+
+        <section id="video" class="video-box">
+
+          <div class="section-header">
+
+            <p class="eyebrow">Video rápido</p>
+
+            <h2>Mira cómo activar el examen sin conexión</h2>
+
+            <p>
+              En este Short te muestro dónde está el escaneo avanzado de Seguridad de Windows
+              y cuándo conviene usarlo.
+            </p>
+
+          </div>
+
+          <div class="youtube-short">
+            <iframe src="https://www.youtube.com/embed/3zivfdsR2ic"
+              title="Examen sin conexión de Windows Defender | WinHacks" loading="lazy"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen>
+            </iframe>
+          </div>
+
+        </section>
+
+        <section class="info-box">
+
+          <h3>Qué aprenderás</h3>
+
+          <ul>
+            <li>Qué es el Examen sin conexión de Seguridad de Windows.</li>
+            <li>Cómo activarlo paso a paso.</li>
+            <li>Cuándo conviene usar este escaneo.</li>
+            <li>Qué hacer antes de reiniciar tu PC.</li>
+          </ul>
+
+        </section>
+
+        <h2>¿Qué es el Examen sin conexión?</h2>
+
+        <p>
+          El <strong>Examen sin conexión</strong> es un análisis avanzado de Microsoft Defender.
+          A diferencia de un examen rápido normal, este modo reinicia el equipo y analiza el sistema
+          en un entorno separado antes de cargar Windows completamente.
+        </p>
+
+        <p>
+          Esto puede ayudar cuando sospechas de malware persistente, procesos extraños,
+          ventanas raras, redirecciones del navegador o comportamiento anormal que no desaparece
+          con un análisis rápido.
+        </p>
+
+        <div class="tip-box">
+
+          <h3>💡 Consejo WinHacks</h3>
+
+          <p>
+            Antes de usar este modo, ejecuta primero un <strong>Examen rápido</strong>.
+            Si Windows sigue raro o detectas señales sospechosas, entonces pasa al
+            <strong>Examen sin conexión</strong>.
+          </p>
+
+        </div>
+
+        <div class="warning-box">
+
+          <span>🚨</span>
+
+          <h3>Antes de reiniciar</h3>
+
+          <p>
+            Guarda todos tus archivos abiertos. Este examen reinicia la PC y puede tardar varios minutos.
+            No lo hagas mientras estés editando, descargando archivos importantes o en una reunión.
+          </p>
+
+        </div>
+
+        <h2 id="pasos">Paso a paso</h2>
+
+        <div class="step-box">
+
+          <span class="step-number">1</span>
+
+          <h3>Abre Seguridad de Windows</h3>
+
+          <p>
+            Presiona <strong>Win</strong>, busca <strong>Seguridad de Windows</strong>
+            y abre la aplicación oficial del sistema.
+          </p>
+
+          <div class="screenshot-placeholder">
+            <figure class="article-image">
+              <img src="../assets/images/examen-sin-conexion-defender-01.png"
+                alt="Aplicación Seguridad de Windows abierta desde el menú Inicio" loading="lazy" decoding="async">
+              <figcaption>
+                Abre <strong>Seguridad de Windows</strong> desde el menú Inicio.
+              </figcaption>
+            </figure>
+          </div>
+
+        </div>
+
+        <div class="step-box">
+
+          <span class="step-number">2</span>
+
+          <h3>Entra en Protección antivirus</h3>
+
+          <p>
+            Haz clic en <strong>Protección antivirus y contra amenazas</strong>.
+            Esta sección controla los análisis de Microsoft Defender.
+          </p>
+
+          <div class="screenshot-placeholder">
+            <figure class="article-image">
+              <img src="../assets/images/examen-sin-conexion-defender-02.png"
+                alt="Protección antivirus y contra amenazas dentro de Seguridad de Windows" loading="lazy"
+                decoding="async">
+              <figcaption>
+                Entra en <strong>Protección antivirus y contra amenazas</strong>.
+              </figcaption>
+            </figure>
+          </div>
+
+        </div>
+
+        <div class="step-box">
+
+          <span class="step-number">3</span>
+
+          <h3>Abre Opciones de examen</h3>
+
+          <p>
+            Busca y selecciona <strong>Opciones de examen</strong>.
+            Ahí verás los modos de análisis disponibles.
+          </p>
+
+          <div class="screenshot-placeholder">
+            <figure class="article-image">
+              <img src="../assets/images/examen-sin-conexion-defender-03.png"
+                alt="Opciones de examen dentro de Seguridad de Windows" loading="lazy" decoding="async">
+              <figcaption>
+                Abre <strong>Opciones de examen</strong> para ver los análisis disponibles.
+              </figcaption>
+            </figure>
+          </div>
+
+        </div>
+
+        <div class="step-box">
+
+          <span class="step-number">4</span>
+
+          <h3>Selecciona Examen sin conexión</h3>
+
+          <p>
+            Marca la opción <strong>Examen sin conexión de Microsoft Defender</strong>.
+            Este modo reiniciará el equipo para escanear antes de cargar Windows.
+          </p>
+
+          <div class="screenshot-placeholder">
+            <figure class="article-image">
+              <img src="../assets/images/examen-sin-conexion-defender-04.png"
+                alt="Examen sin conexión de Microsoft Defender seleccionado en Windows" loading="lazy"
+                decoding="async">
+              <figcaption>
+                Selecciona <strong>Examen sin conexión de Microsoft Defender</strong>.
+              </figcaption>
+            </figure>
+          </div>
+
+        </div>
+
+        <div class="step-box">
+
+          <span class="step-number">5</span>
+
+          <h3>Inicia el examen</h3>
+
+          <p>
+            Presiona <strong>Examinar ahora</strong>. Windows te avisará que el equipo debe reiniciarse.
+            Guarda todo antes de continuar.
+          </p>
+
+          <div class="screenshot-placeholder">
+            <figure class="article-image">
+              <img src="../assets/images/examen-sin-conexion-defender-05.png"
+                alt="Botón Examinar ahora para iniciar el examen sin conexión de Microsoft Defender" loading="lazy"
+                decoding="async">
+              <figcaption>
+                Haz clic en <strong>Examinar ahora</strong> para iniciar el análisis avanzado.
+              </figcaption>
+            </figure>
+          </div>
+
+        </div>
+
+        <div class="step-box">
+
+          <span class="step-number">6</span>
+
+          <h3>Espera el reinicio y el análisis</h3>
+
+          <p>
+            La PC se reiniciará y Microsoft Defender ejecutará el examen sin conexión.
+            Cuando termine, Windows volverá a iniciar normalmente.
+          </p>
+
+          <div class="screenshot-placeholder">
+            <figure class="article-image">
+              <img src="../assets/images/examen-sin-conexion-defender-06.png"
+                alt="Windows reiniciando para ejecutar el examen sin conexión de Microsoft Defender" loading="lazy"
+                decoding="async">
+              <figcaption>
+                Espera a que Windows complete el análisis y vuelva a iniciar.
+              </figcaption>
+            </figure>
+          </div>
+
+        </div>
+
+        <h2>Cuándo conviene usar este escaneo</h2>
+
+        <div class="info-box">
+
+          <h3>Cuando el análisis normal no basta</h3>
+
+          <p>
+            Si el examen rápido no encuentra nada, pero tu PC sigue comportándose raro,
+            este modo puede ser el siguiente paso.
+          </p>
+
+        </div>
+
+        <div class="info-box">
+
+          <h3>Cuando hay procesos sospechosos</h3>
+
+          <p>
+            Si ves procesos extraños, alto consumo sin explicación o conexiones sospechosas,
+            combina este examen con una revisión básica del Administrador de tareas.
+          </p>
+
+        </div>
+
+        <div class="info-box">
+
+          <h3>Después de abrir un archivo dudoso</h3>
+
+          <p>
+            Si ejecutaste un archivo sospechoso o descargaste algo de una fuente no confiable,
+            este examen puede ayudarte a revisar el sistema más a fondo.
+          </p>
+
+        </div>
+
+        <div class="result-box">
+
+          <h3>✅ Resultado esperado</h3>
+
+          <p>
+            Windows reiniciará, ejecutará Microsoft Defender en modo sin conexión y luego volverá
+            al escritorio. Después podrás revisar el historial de protección para ver si detectó amenazas.
+          </p>
+
+        </div>
+
+        <h2>Errores comunes</h2>
+
+        <div class="info-box">
+
+          <h3>No encuentro Opciones de examen</h3>
+
+          <p>
+            Entra en <strong>Seguridad de Windows</strong>, luego en
+            <strong>Protección antivirus y contra amenazas</strong>. La opción puede aparecer más abajo
+            dependiendo del tamaño de la ventana.
+          </p>
+
+        </div>
+
+        <div class="info-box">
+
+          <h3>La PC se reinició de repente</h3>
+
+          <p>
+            Es normal. El Examen sin conexión necesita reiniciar para ejecutarse antes de que Windows
+            cargue completamente.
+          </p>
+
+        </div>
+
+        <div class="info-box">
+
+          <h3>No veo resultados al volver</h3>
+
+          <p>
+            Abre <strong>Seguridad de Windows</strong> y revisa el
+            <strong>Historial de protección</strong> para ver acciones recientes.
+          </p>
+
+        </div>
+
+        <h2>Preguntas frecuentes</h2>
+
+        <div class="faq-box">
+
+          <h3>¿Este examen elimina todos los virus?</h3>
+
+          <p>
+            No existe un método que garantice eliminar todo en todos los casos, pero este análisis
+            es más profundo que un examen rápido normal y puede detectar amenazas difíciles de ocultar.
+          </p>
+
+        </div>
+
+        <div class="faq-box">
+
+          <h3>¿Pierdo mis archivos?</h3>
+
+          <p>
+            No debería eliminar archivos personales normales. Si detecta malware, puede ponerlo en cuarentena
+            o eliminar archivos infectados.
+          </p>
+
+        </div>
+
+        <div class="faq-box">
+
+          <h3>¿Necesito Internet?</h3>
+
+          <p>
+            Conviene tener Windows actualizado antes de ejecutarlo para que Defender tenga definiciones recientes.
+          </p>
+
+        </div>
+
+        <div class="faq-box">
+
+          <h3>¿Funciona en Windows 11?</h3>
+
+          <p>
+            Sí. También está disponible en Windows 10.
+          </p>
+
+        </div>
+
+        <section class="section cta-section" id="descarga">
+
+          <p class="eyebrow">Recurso gratuito</p>
+
+          <h2>Descarga la checklist de seguridad</h2>
+
+          <p>
+            Aprende pasos prácticos para revisar malware, conexiones sospechosas, procesos extraños
+            y configuraciones básicas de protección en Windows.
+          </p>
+
+          <form name="checklist-seguridad" method="POST" data-netlify="true" class="email-form netlify-form"
+            id="seguridadForm" data-redirect="/recursos/gracias-checklist-seguridad.html">
+
+            <input type="hidden" name="form-name" value="checklist-seguridad">
+
+            <input type="text" name="nombre" placeholder="Tu nombre" required>
+
+            <input type="email" name="email" placeholder="Tu correo electrónico" required>
+
+            <button type="submit">Descargar checklist</button>
+
+          </form>
+
+        </section>
+
+        <h2>Artículos relacionados</h2>
+
+        <div class="related-grid">
+
+          <a href="/seguridad/netstat-conexiones-activas.html" class="related-card">
+            <h3>Conexiones activas</h3>
+            <p>Revisa conexiones y procesos conectados con netstat -ano.</p>
+          </a>
+
+          <a href="/seguridad/procesos-criticos-windows.html" class="related-card">
+            <h3>Procesos críticos</h3>
+            <p>Aprende qué procesos de Windows no debes cerrar jamás.</p>
+          </a>
+
+          <a href="/seguridad/taskkill-pid-windows.html" class="related-card">
+            <h3>taskkill por PID</h3>
+            <p>Cierra procesos específicos desde CMD de forma segura.</p>
+          </a>
+
+          <a href="/redes/arp-ver-dispositivos-red-windows.html" class="related-card">
+            <h3>Dispositivos en tu red</h3>
+            <p>Usa arp -a para ver IPs detectadas en tu red local.</p>
+          </a>
+
+        </div>
+
+        <div class="next-box">
+
+          <h3>🚀 Siguiente paso recomendado</h3>
+
+          <p>
+            Después del Examen sin conexión, revisa conexiones activas y procesos sospechosos
+            para completar una revisión básica de seguridad en Windows.
+          </p>
+
+          <a href="/seguridad/netstat-conexiones-activas.html" class="btn btn-primary">
+            Ver conexiones activas
+          </a>
+
+        </div>
+
+      </div>
+
+    </article>
+
+  </main>
+
+  <footer>
+    <div id="footer-container"></div>
+  </footer>
+
+  <a href="#" class="to-top" aria-label="Volver arriba">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8"
+      stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="18 15 12 9 6 15"></polyline>
+    </svg>
+  </a>
+
+  <script src="/js/components.js"></script>
+  <script src="/js/core/engine.js?v=20260626-03" defer></script>
+
+</body>
+
+</html>

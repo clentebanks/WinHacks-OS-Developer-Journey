@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Cómo reiniciar directamente al BIOS o UEFI desde Windows | WinHacks</title>
+
+  <meta name="description"
+    content="Aprende a reiniciar tu PC directamente al BIOS o UEFI usando el comando shutdown /r /fw /t 0 en Windows 10 y Windows 11.">
+
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://winhacks.dev/comandos/reiniciar-bios-uefi">
+
+  <link rel="icon" href="/assets/images/favicon.ico">
+
+  <meta property="og:title" content="Cómo reiniciar directamente al BIOS o UEFI desde Windows | WinHacks">
+  <meta property="og:description"
+    content="Evita probar F2, DEL, ESC o F10. Crea un acceso directo para reiniciar Windows y entrar directo al BIOS/UEFI.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://winhacks.dev/comandos/reiniciar-bios-uefi">
+  <meta property="og:image" content="https://winhacks.dev/assets/images/og-image.jpg">
+  <meta property="og:site_name" content="WinHacks">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Cómo reiniciar directamente al BIOS o UEFI desde Windows | WinHacks">
+  <meta name="twitter:description"
+    content="Usa shutdown /r /fw /t 0 para reiniciar tu PC y entrar directamente al firmware UEFI.">
+  <meta name="twitter:image" content="https://winhacks.dev/assets/images/og-image.jpg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Montserrat:wght@700;800;900&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="/css/style.css">
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-EL9JRMGJPS"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-EL9JRMGJPS');
+  </script>
+
+  <script type="text/javascript">
+    (function (c, l, a, r, i, t, y) {
+      c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) };
+      t = l.createElement(r); t.async = 1; t.src = "https://www.clarity.ms/tag/" + i;
+      y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
+    })(window, document, "clarity", "script", "xey9wuiqr4");
+  </script>
+</head>
+
+<body>
+
+  <header class="site-header">
+    <div id="navbar-container"></div>
+  </header>
+
+  <main>
+
+    <nav id="breadcrumb" class="breadcrumb" aria-label="Breadcrumb"></nav>
+
+    <article class="article">
+
+      <header class="article-hero article-hero--panel">
+        <p class="eyebrow">Comando avanzado de Windows</p>
+        <h1>Cómo reiniciar directamente al BIOS o UEFI desde Windows</h1>
+        <p>
+          Si estás cansado de probar F2, DEL, ESC o F10 para entrar al BIOS, este comando te permite
+          reiniciar Windows y abrir directamente el firmware UEFI sin adivinar teclas.
+        </p>
+
+        <div class="hero-buttons">
+          <a href="#pasos" class="btn btn-primary">Ver pasos</a>
+          <a href="#video" class="btn btn-outline">Ver Short</a>
+        </div>
+      </header>
+
+      <div class="article-content">
+
+        <section class="meta-grid">
+          <div class="meta-card">
+            <span>Comando</span>
+            <strong>shutdown /fw</strong>
+          </div>
+
+          <div class="meta-card">
+            <span>Tiempo</span>
+            <strong>2 minutos</strong>
+          </div>
+
+          <div class="meta-card">
+            <span>Nivel</span>
+            <strong>Intermedio</strong>
+          </div>
+
+          <div class="meta-card">
+            <span>Compatible</span>
+            <strong>Windows UEFI</strong>
+          </div>
+        </section>
+
+        <section id="video" class="video-box">
+
+          <div class="section-header">
+            <p class="eyebrow">Video rápido</p>
+
+            <h2>Mira este truco en video</h2>
+
+            <p>
+              En este Short te muestro cómo crear un acceso directo para reiniciar tu PC y entrar
+              directamente al BIOS o UEFI.
+            </p>
+          </div>
+
+          <div class="youtube-short">
+            <iframe
+              src="https://www.youtube.com/embed/Q-qtRA0uuNE"
+              title="El truco para entrar al BIOS que casi nadie conoce | WinHacks"
+              loading="lazy"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen>
+            </iframe>
+          </div>
+
+        </section>
+
+        <section class="info-box">
+          <h2>Qué aprenderás</h2>
+          <ul>
+            <li>Cómo entrar al BIOS o UEFI desde Windows.</li>
+            <li>Qué hace el comando <strong>shutdown /r /fw /t 0</strong>.</li>
+            <li>Cómo crear un acceso directo en el escritorio.</li>
+            <li>Cómo activar “Ejecutar como administrador”.</li>
+            <li>Cuándo usar este método de forma segura.</li>
+          </ul>
+        </section>
+
+        <h2>Qué hace este comando</h2>
+
+        <p>
+          El comando <strong>shutdown /r /fw /t 0</strong> reinicia el equipo y solicita que el siguiente
+          arranque entre directamente a la interfaz de firmware UEFI. Esto evita depender de teclas como
+          F2, DEL, ESC o F10, que cambian según la marca del equipo.
+        </p>
+
+        <p>
+          Es especialmente útil cuando necesitas cambiar el orden de arranque, activar TPM, revisar Secure Boot,
+          habilitar virtualización o entrar a opciones avanzadas del firmware.
+        </p>
+
+        <section class="tip-box">
+          <h2>Consejo WinHacks</h2>
+          <p>
+            Si vas a usar este acceso directo con frecuencia, cambia su icono por uno de chip, placa base
+            o herramienta técnica. Así lo identificas rápido en el escritorio.
+          </p>
+        </section>
+
+        <section class="warning-box">
+          <h2>Advertencia de seguridad</h2>
+          <p>
+            Este comando reinicia el equipo inmediatamente. Guarda tus archivos abiertos antes de usarlo.
+            El comando no modifica el BIOS por sí solo; cualquier cambio dentro del firmware depende de lo
+            que tú selecciones después del reinicio.
+          </p>
+        </section>
+
+        <h2>Qué significa cada parámetro</h2>
+
+        <section class="info-box">
+          <ul>
+            <li><strong>shutdown</strong>: ejecuta la herramienta de apagado o reinicio de Windows.</li>
+            <li><strong>/r</strong>: indica que el equipo debe reiniciarse.</li>
+            <li><strong>/fw</strong>: solicita que el próximo arranque entre al firmware UEFI.</li>
+            <li><strong>/t 0</strong>: reinicia inmediatamente, sin esperar segundos.</li>
+          </ul>
+        </section>
+
+        <h2 id="pasos">Paso a paso para crear el acceso directo</h2>
+
+        <section class="step-box">
+          <div class="step-number">1</div>
+          <div>
+            <h3>Haz clic derecho en el escritorio</h3>
+            <p>
+              En una zona vacía del escritorio, haz clic derecho y selecciona
+              <strong>Nuevo</strong> &gt; <strong>Acceso directo</strong>.
+            </p>
+          </div>
+        </section>
+
+        <section class="step-box">
+          <div class="step-number">2</div>
+          <div>
+            <h3>Escribe el comando</h3>
+            <p>
+              En el campo de ubicación del elemento, pega este comando:
+            </p>
+
+            <div class="command-box">
+              <code>shutdown /r /fw /t 0</code>
+              <button class="copy-btn" data-copy="shutdown /r /fw /t 0">Copiar</button>
+            </div>
+          </div>
+        </section>
+
+        <section class="step-box">
+          <div class="step-number">3</div>
+          <div>
+            <h3>Asigna un nombre</h3>
+            <p>
+              Puedes nombrarlo como <strong>Reiniciar al BIOS</strong>, <strong>Abrir UEFI</strong> o
+              <strong>Entrar al firmware</strong>.
+            </p>
+          </div>
+        </section>
+
+        <section class="step-box">
+          <div class="step-number">4</div>
+          <div>
+            <h3>Activa ejecutar como administrador</h3>
+            <p>
+              Haz clic derecho sobre el acceso directo, entra en <strong>Propiedades</strong>,
+              luego <strong>Avanzado</strong> y marca <strong>Ejecutar como administrador</strong>.
+            </p>
+          </div>
+        </section>
+
+        <section class="step-box">
+          <div class="step-number">5</div>
+          <div>
+            <h3>Cambia el icono</h3>
+            <p>
+              En las propiedades del acceso directo, usa la opción <strong>Cambiar icono</strong>.
+              Esto no es obligatorio, pero hace que el acceso directo se vea más profesional.
+            </p>
+          </div>
+        </section>
+
+        <section class="step-box">
+          <div class="step-number">6</div>
+          <div>
+            <h3>Ejecuta el acceso directo</h3>
+            <p>
+              Al abrirlo como administrador, Windows reiniciará el equipo y debería enviarte directamente
+              al BIOS o a la pantalla de configuración UEFI.
+            </p>
+          </div>
+        </section>
+
+        <section class="info-box">
+          <h2>Cuándo conviene usar este método</h2>
+          <p>
+            Este truco es útil cuando necesitas entrar al firmware para cambiar opciones que no están dentro
+            de Windows.
+          </p>
+
+          <ul>
+            <li>Cambiar el orden de arranque.</li>
+            <li>Activar TPM.</li>
+            <li>Activar o revisar Secure Boot.</li>
+            <li>Habilitar virtualización Intel VT-x o AMD-V.</li>
+            <li>Preparar una instalación de Windows desde USB.</li>
+            <li>Revisar configuración avanzada del equipo.</li>
+          </ul>
+        </section>
+
+        <section class="warning-box">
+          <h2>No funciona en todos los equipos</h2>
+          <p>
+            Este comando está pensado para equipos con firmware UEFI. Si tu PC usa BIOS Legacy, si el fabricante
+            bloquea el acceso o si Windows no tiene permisos suficientes, el reinicio puede ocurrir sin entrar
+            al firmware.
+          </p>
+        </section>
+
+        <section class="result-box">
+          <h2>Resultado esperado</h2>
+          <p>
+            Después de ejecutar el acceso directo como administrador, tu PC debe reiniciarse y abrir directamente
+            la configuración del BIOS o UEFI, sin presionar teclas durante el arranque.
+          </p>
+        </section>
+
+        <h2>Errores comunes</h2>
+
+        <section class="warning-box">
+          <h3>No se abre el BIOS después de reiniciar</h3>
+          <p>
+            Puede ocurrir si tu equipo no usa UEFI, si el comando no se ejecutó como administrador o si el firmware
+            del fabricante no acepta esta instrucción desde Windows.
+          </p>
+        </section>
+
+        <section class="warning-box">
+          <h3>El acceso directo pide permisos</h3>
+          <p>
+            Es normal. Este comando necesita permisos elevados porque reinicia el sistema y solicita entrada al
+            firmware. Activa <strong>Ejecutar como administrador</strong> en las propiedades del acceso directo.
+          </p>
+        </section>
+
+        <section class="warning-box">
+          <h3>Se reinició demasiado rápido</h3>
+          <p>
+            Eso pasa porque el parámetro <strong>/t 0</strong> indica reinicio inmediato. Si quieres unos segundos
+            para prepararte, puedes usar <strong>/t 10</strong> en lugar de <strong>/t 0</strong>.
+          </p>
+        </section>
+
+        <h2>Preguntas frecuentes</h2>
+
+        <section class="faq-box">
+          <h3>¿Este comando daña el BIOS?</h3>
+          <p>
+            No. El comando solo solicita reiniciar hacia el firmware UEFI. No cambia configuraciones por sí solo.
+          </p>
+        </section>
+
+        <section class="faq-box">
+          <h3>¿Funciona en Windows 10 y Windows 11?</h3>
+          <p>
+            Sí, puede funcionar en Windows 10 y Windows 11 cuando el equipo usa UEFI y el comando se ejecuta
+            con permisos adecuados.
+          </p>
+        </section>
+
+        <section class="faq-box">
+          <h3>¿Necesito presionar F2, DEL o ESC?</h3>
+          <p>
+            No debería ser necesario. La ventaja de este método es reiniciar directamente al firmware sin depender
+            de la tecla específica del fabricante.
+          </p>
+        </section>
+
+        <section class="faq-box">
+          <h3>¿Qué hago si mi PC no entra al BIOS?</h3>
+          <p>
+            Prueba ejecutarlo como administrador. Si sigue sin funcionar, revisa si tu equipo usa UEFI o entra desde
+            Configuración &gt; Sistema &gt; Recuperación &gt; Inicio avanzado.
+          </p>
+        </section>
+
+        <section class="section cta-section">
+          <div class="section-header">
+            <p class="eyebrow">Recurso gratis</p>
+            <h2>Descarga comandos útiles para Windows</h2>
+            <p>
+              Recibe una guía práctica con comandos seguros para diagnosticar, optimizar y controlar mejor
+              tu PC con Windows.
+            </p>
+          </div>
+
+          <form
+            name="comandos-cmd"
+            method="POST"
+            data-netlify="true"
+            class="email-form netlify-form"
+            id="comandosForm"
+            data-redirect="/recursos/gracias-comandos.html">
+
+            <input type="hidden" name="form-name" value="comandos-cmd">
+
+            <input type="text" name="nombre" placeholder="Tu nombre" required>
+
+            <input type="email" name="email" placeholder="Tu correo electrónico" required>
+
+            <button type="submit">Descargar guía</button>
+
+          </form>
+        </section>
+
+        <h2>Artículos relacionados</h2>
+
+        <section class="related-grid">
+
+          <a href="/comandos/cmd.html" class="related-card">
+            <h3>Comandos CMD útiles</h3>
+            <p>Aprende comandos seguros para controlar Windows desde consola.</p>
+          </a>
+
+          <a href="/comandos/powershell.html" class="related-card">
+            <h3>PowerShell básico</h3>
+            <p>Conoce comandos útiles para administración y diagnóstico.</p>
+          </a>
+
+          <a href="/comandos/psr.html" class="related-card">
+            <h3>Comando PSR</h3>
+            <p>Crea tutoriales y reportes paso a paso desde Windows.</p>
+          </a>
+
+        </section>
+
+        <section class="next-box">
+          <h2>Siguiente paso recomendado</h2>
+          <p>
+            Ahora que sabes entrar al BIOS o UEFI desde Windows, aprende más comandos seguros para controlar
+            tu sistema como un técnico.
+          </p>
+          <a href="/comandos/" class="btn btn-primary">Ver más comandos</a>
+        </section>
+
+      </div>
+
+    </article>
+
+  </main>
+
+  <footer>
+    <div id="footer-container"></div>
+  </footer>
+
+  <a href="#" class="to-top" aria-label="Volver arriba">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8"
+      stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="18 15 12 9 6 15"></polyline>
+    </svg>
+  </a>
+
+  <script src="/js/components.js"></script>
+  <script src="/js/core/engine.js?v=20260626-03" defer></script>
+
+</body>
+
+</html>

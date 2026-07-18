@@ -1,0 +1,998 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-EL9JRMGJPS"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+    gtag('config', 'G-EL9JRMGJPS');
+  </script>
+
+  <!-- Microsoft Clarity -->
+  <script>
+    (function (c, l, a, r, i, t, y) {
+      c[a] = c[a] || function () {
+        (c[a].q = c[a].q || []).push(arguments);
+      };
+
+      t = l.createElement(r);
+      t.async = 1;
+      t.src = "https://www.clarity.ms/tag/" + i;
+
+      y = l.getElementsByTagName(r)[0];
+      y.parentNode.insertBefore(t, y);
+
+    })(window, document, "clarity", "script", "xey9wuiqr4");
+  </script>
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Quitar Resultados de Internet de Windows Search | WinHacks</title>
+
+  <meta name="description"
+    content="Aprende a quitar resultados web de Windows Search y hacer que la búsqueda de Windows 11 priorice aplicaciones, configuraciones y archivos locales.">
+
+  <meta name="robots" content="index, follow, max-image-preview:large">
+
+  <link rel="canonical" href="https://winhacks.dev/secretos/windows-search-sin-internet">
+
+  <!-- Favicons -->
+  <link rel="icon" href="/assets/icons/favicon.ico" sizes="any">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png">
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png">
+
+  <link rel="apple-touch-icon" href="/assets/icons/apple-touch-icon.png">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article">
+
+  <meta property="og:site_name" content="WinHacks">
+
+  <meta property="og:title" content="Quitar Resultados de Internet de Windows Search">
+
+  <meta property="og:description"
+    content="Haz que Windows Search priorice tus archivos, aplicaciones y configuraciones locales en lugar de mostrar resultados de Internet.">
+
+  <meta property="og:url" content="https://winhacks.dev/secretos/windows-search-sin-internet">
+
+  <meta property="og:image" content="https://winhacks.dev/assets/img/og/og-windows-search-sin-internet.webp">
+
+  <meta property="og:image:width" content="1200">
+
+  <meta property="og:image:height" content="630">
+
+  <meta property="og:locale" content="es_ES">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+
+  <meta name="twitter:title" content="Quitar Resultados de Internet de Windows Search">
+
+  <meta name="twitter:description"
+    content="Convierte Windows Search en una búsqueda más local usando una directiva del Registro.">
+
+  <meta name="twitter:image" content="https://winhacks.dev/assets/img/og/og-windows-search-sin-internet.webp">
+
+  <!-- Fuentes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Montserrat:wght@800;900&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="/css/style.css">
+
+</head>
+
+<body>
+
+  <header class="site-header ">
+    <div id="navbar-container"></div>
+  </header>
+
+  <main>
+
+    <nav id="breadcrumb" class="breadcrumb" aria-label="Breadcrumb">
+    </nav>
+
+    <article class="article">
+
+      <header class="article-hero article-hero--panel">
+
+        <p class="eyebrow">
+          Secretos de Windows
+        </p>
+
+        <h1>
+          Haz que Windows 11 deje de buscar en Internet
+        </h1>
+
+        <p>
+          ¿Windows muestra páginas web, sugerencias de Bing y resultados de Internet
+          cuando solo quieres abrir un programa o encontrar un archivo?
+          Con este ajuste del Registro puedes hacer que
+          <strong>Windows Search priorice el contenido local</strong>
+          y reduzca las sugerencias web.
+        </p>
+
+        <div class="hero-buttons">
+
+          <a href="#video" class="btn btn-primary">
+            Ver video
+          </a>
+
+          <a href="#pasos" class="btn btn-outline">
+            Ir al tutorial
+          </a>
+
+        </div>
+
+      </header>
+
+      <div class="article-content">
+
+        <div class="meta-grid">
+
+          <div class="meta-card">
+            <span>Dificultad</span>
+            <strong>Intermedia</strong>
+          </div>
+
+          <div class="meta-card">
+            <span>Tiempo</span>
+            <strong>3 minutos</strong>
+          </div>
+
+          <div class="meta-card">
+            <span>Compatible</span>
+            <strong>Windows 11</strong>
+          </div>
+
+          <div class="meta-card">
+            <span>Herramienta</span>
+            <strong>Registro</strong>
+          </div>
+
+        </div>
+
+        <section id="video" class="video-box">
+
+          <div class="section-header">
+
+            <p class="eyebrow">
+              Video rápido
+            </p>
+
+            <h2>
+              Quita los resultados web de Windows Search
+            </h2>
+
+            <p>
+              En este Short se muestra cómo crear una directiva en el Registro
+              para reducir las sugerencias de Internet dentro de la búsqueda de Windows.
+            </p>
+
+          </div>
+
+          <div class="youtube-short">
+
+            <!-- Sustituye VIDEO_ID por el ID del Short correspondiente -->
+            <div class="youtube-short">
+
+              <iframe src="https://www.youtube.com/embed/uhrjWoIc8Ns"
+                title="Quitar resultados de Internet de Windows Search | WinHacks" loading="lazy"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+              </iframe>
+
+            </div>
+
+          </div>
+
+        </section>
+
+        <section class="info-box">
+
+          <h3>
+            Qué aprenderás
+          </h3>
+
+          <ul>
+            <li>Cómo abrir el Editor del Registro.</li>
+            <li>Cómo navegar a la directiva de Windows Search.</li>
+            <li>Cómo crear el valor <strong>DisableSearchBoxSuggestions</strong>.</li>
+            <li>Cómo configurar el valor correctamente.</li>
+            <li>Cómo restaurar el comportamiento original.</li>
+          </ul>
+
+        </section>
+
+        <h2>
+          ¿Qué cambia este ajuste?
+        </h2>
+
+        <p>
+          Windows Search puede mezclar aplicaciones, configuraciones y archivos locales
+          con sugerencias o resultados relacionados con Internet.
+          Esto puede hacer que encontrar un programa sea más lento o confuso.
+        </p>
+
+        <p>
+          El valor <strong>DisableSearchBoxSuggestions</strong> funciona como una directiva
+          del usuario actual y puede reducir la integración de sugerencias web dentro
+          del cuadro de búsqueda.
+        </p>
+
+        <div class="tip-box">
+
+          <h3>
+            💡 Consejo WinHacks
+          </h3>
+
+          <p>
+            Usa este ajuste si prefieres una búsqueda más limpia, enfocada en aplicaciones,
+            configuraciones y archivos almacenados en tu computadora.
+          </p>
+
+        </div>
+
+        <div class="warning-box">
+
+          <span>⚠️</span>
+
+          <h3>
+            Importante
+          </h3>
+
+          <p>
+            El comportamiento puede variar según la edición, compilación y políticas
+            instaladas en Windows 11. Microsoft también puede modificar el funcionamiento
+            de Windows Search mediante actualizaciones.
+          </p>
+
+        </div>
+
+        <div class="warning-box">
+
+          <span>🛡️</span>
+
+          <h3>
+            Crea una copia antes de modificar
+          </h3>
+
+          <p>
+            Antes de tocar el Registro, exporta la clave correspondiente o crea un
+            punto de restauración. No borres valores que no formen parte de esta guía.
+          </p>
+
+        </div>
+
+        <h2 id="pasos">
+          Paso a paso
+        </h2>
+
+        <div class="step-box">
+
+          <span class="step-number">
+            1
+          </span>
+
+          <h3>
+            Abre la ventana Ejecutar
+          </h3>
+
+          <p>
+            Presiona <strong>Win + R</strong> para abrir la ventana Ejecutar.
+          </p>
+
+          <div class="screenshot-placeholder">
+
+            <figure class="article-image">
+
+              <img src="../assets/images/win-r-ejecutar.png"
+                alt="Ventana Ejecutar de Windows abierta con el atajo Win más R" width="1280" height="720"
+                loading="lazy" decoding="async">
+
+              <figcaption>
+                Abre <strong>Ejecutar</strong> usando
+                <kbd>Win</kbd> + <kbd>R</kbd>.
+              </figcaption>
+
+            </figure>
+
+          </div>
+
+        </div>
+
+        <div class="step-box">
+
+          <span class="step-number">
+            2
+          </span>
+
+          <h3>
+            Abre el Editor del Registro
+          </h3>
+
+          <p>
+            Escribe el siguiente comando y presiona <strong>Enter</strong>.
+          </p>
+
+          <div class="command-box">
+
+            <code>regedit</code>
+
+            <button class="copy-btn" data-copy="regedit">
+              Copiar
+            </button>
+
+          </div>
+
+          <div class="screenshot-placeholder">
+
+            <figure class="article-image">
+
+              <img src="../assets/images/windows-search-sin-internet-02.png"
+                alt="Comando regedit escrito en la ventana Ejecutar de Windows" width="1280" height="720" loading="lazy"
+                decoding="async">
+
+              <figcaption>
+                Ejecuta <strong>regedit</strong> y acepta el aviso de seguridad.
+              </figcaption>
+
+            </figure>
+
+          </div>
+
+        </div>
+
+        <div class="step-box">
+
+          <span class="step-number">
+            3
+          </span>
+
+          <h3>
+            Abre la ruta correcta
+          </h3>
+
+          <p>
+            Copia esta ruta y pégala en la barra superior del Editor del Registro.
+          </p>
+
+          <div class="command-box">
+
+            <code>HKEY_CURRENT_USER\Software\Policies\Microsoft\Windows\Explorer</code>
+
+            <button class="copy-btn" data-copy="HKEY_CURRENT_USER\Software\Policies\Microsoft\Windows\Explorer">
+              Copiar
+            </button>
+
+          </div>
+
+          <div class="screenshot-placeholder">
+
+            <figure class="article-image">
+
+              <img src="../assets/images/windows-search-sin-internet-03.jpg"
+                alt="Ruta Explorer dentro de las directivas del Registro de Windows" width="1280" height="720"
+                loading="lazy" decoding="async">
+
+              <figcaption>
+                Navega hasta la clave
+                <strong>Windows\Explorer</strong>.
+              </figcaption>
+
+            </figure>
+
+          </div>
+
+        </div>
+
+        <div class="info-box">
+
+          <h3>
+            ¿No existe la clave Explorer?
+          </h3>
+
+          <p>
+            Haz clic derecho sobre la clave <strong>Windows</strong>,
+            selecciona <strong>Nuevo → Clave</strong> y escribe:
+          </p>
+
+          <div class="command-box">
+
+            <code>Explorer</code>
+
+            <button class="copy-btn" data-copy="Explorer">
+              Copiar
+            </button>
+
+          </div>
+
+        </div>
+
+        <div class="step-box">
+
+          <span class="step-number">
+            4
+          </span>
+
+          <h3>
+            Crea un valor DWORD
+          </h3>
+
+          <p>
+            Dentro de la clave <strong>Explorer</strong>, haz clic derecho en un espacio vacío
+            y selecciona:
+          </p>
+
+          <p>
+            <strong>Nuevo → Valor de DWORD (32 bits)</strong>
+          </p>
+
+          <div class="screenshot-placeholder">
+
+            <figure class="article-image">
+
+              <img src="../assets/images/windows-search-sin-internet-04.png"
+                alt="Crear un nuevo valor DWORD de 32 bits en el Registro de Windows" width="1280" height="720"
+                loading="lazy" decoding="async">
+
+              <figcaption>
+                Crea un nuevo valor <strong>DWORD de 32 bits</strong>.
+              </figcaption>
+
+            </figure>
+
+          </div>
+
+        </div>
+
+        <div class="step-box">
+
+          <span class="step-number">
+            5
+          </span>
+
+          <h3>
+            Escribe el nombre exacto
+          </h3>
+
+          <p>
+            Asigna al nuevo valor este nombre:
+          </p>
+
+          <div class="command-box">
+
+            <code>DisableSearchBoxSuggestions</code>
+
+            <button class="copy-btn" data-copy="DisableSearchBoxSuggestions">
+              Copiar
+            </button>
+
+          </div>
+
+          <div class="screenshot-placeholder">
+
+            <figure class="article-image">
+
+              <img src="../assets/images/windows-search-sin-internet-05.png"
+                alt="Valor DisableSearchBoxSuggestions creado en el Registro de Windows" width="1280" height="720"
+                loading="lazy" decoding="async">
+
+              <figcaption>
+                El nombre debe escribirse exactamente como aparece en la guía.
+              </figcaption>
+
+            </figure>
+
+          </div>
+
+        </div>
+
+        <div class="step-box">
+
+          <span class="step-number">
+            6
+          </span>
+
+          <h3>
+            Cambia el valor a 1
+          </h3>
+
+          <p>
+            Haz doble clic sobre <strong>DisableSearchBoxSuggestions</strong>
+            y configura:
+          </p>
+
+          <ul>
+            <li><strong>Información del valor:</strong> 1</li>
+            <li><strong>Base:</strong> Decimal</li>
+          </ul>
+
+          <div class="command-box">
+
+            <code>1</code>
+
+            <button class="copy-btn" data-copy="1">
+              Copiar
+            </button>
+
+          </div>
+
+          <div class="screenshot-placeholder">
+
+            <figure class="article-image">
+
+              <img src="../assets/images/windows-search-sin-internet-06.png"
+                alt="Valor DisableSearchBoxSuggestions configurado en 1 con base decimal" width="1280" height="720"
+                loading="lazy" decoding="async">
+
+              <figcaption>
+                Configura el valor en <strong>1</strong> y selecciona
+                <strong>Decimal</strong>.
+              </figcaption>
+
+            </figure>
+
+          </div>
+
+        </div>
+
+        <div class="step-box">
+
+          <span class="step-number">
+            7
+          </span>
+
+          <h3>
+            Reinicia el Explorador o Windows
+          </h3>
+
+          <p>
+            Cierra el Editor del Registro y reinicia Windows.
+            También puedes cerrar sesión para que la directiva se aplique.
+          </p>
+
+          <div class="screenshot-placeholder">
+
+            <figure class="article-image">
+
+              <img src="../assets/images/windows-search-sin-internet-07.png"
+                alt="Windows 11 reiniciándose para aplicar la nueva directiva de búsqueda" width="1280" height="720"
+                loading="lazy" decoding="async">
+
+              <figcaption>
+                Reinicia Windows para aplicar completamente el cambio.
+              </figcaption>
+
+            </figure>
+
+          </div>
+
+        </div>
+
+        <div class="step-box">
+
+          <span class="step-number">
+            8
+          </span>
+
+          <h3>
+            Prueba Windows Search
+          </h3>
+
+          <p>
+            Abre la búsqueda de Windows y escribe el nombre de una aplicación,
+            configuración o archivo local.
+          </p>
+
+          <div class="screenshot-placeholder">
+
+            <figure class="article-image">
+
+              <img src="../assets/images/windows-search-sin-internet-08.png"
+                alt="Windows Search mostrando aplicaciones y archivos locales sin sugerencias web" width="1280"
+                height="720" loading="lazy" decoding="async">
+
+              <figcaption>
+                Comprueba si Windows Search ahora prioriza resultados locales.
+              </figcaption>
+
+            </figure>
+
+          </div>
+
+        </div>
+
+        <h2>
+          Resumen de la configuración
+        </h2>
+
+        <div class="info-box">
+
+          <h3>
+            Ruta del Registro
+          </h3>
+
+          <div class="command-box">
+
+            <code>HKEY_CURRENT_USER\Software\Policies\Microsoft\Windows\Explorer</code>
+
+            <button class="copy-btn" data-copy="HKEY_CURRENT_USER\Software\Policies\Microsoft\Windows\Explorer">
+              Copiar
+            </button>
+
+          </div>
+
+        </div>
+
+        <div class="info-box">
+
+          <h3>
+            Tipo de valor
+          </h3>
+
+          <p>
+            <strong>DWORD (32 bits)</strong>
+          </p>
+
+        </div>
+
+        <div class="info-box">
+
+          <h3>
+            Nombre
+          </h3>
+
+          <div class="command-box">
+
+            <code>DisableSearchBoxSuggestions</code>
+
+            <button class="copy-btn" data-copy="DisableSearchBoxSuggestions">
+              Copiar
+            </button>
+
+          </div>
+
+        </div>
+
+        <div class="info-box">
+
+          <h3>
+            Valor
+          </h3>
+
+          <p>
+            <strong>1</strong> con base <strong>Decimal</strong>.
+          </p>
+
+        </div>
+
+        <h2>
+          Cómo deshacer el cambio
+        </h2>
+
+        <p>
+          Para restaurar el comportamiento anterior de Windows Search, vuelve a la misma ruta
+          y elimina el valor <strong>DisableSearchBoxSuggestions</strong>.
+        </p>
+
+        <p>
+          También puedes cambiar su información de valor de <strong>1</strong> a
+          <strong>0</strong> y reiniciar Windows.
+        </p>
+
+        <div class="command-box">
+
+          <code>DisableSearchBoxSuggestions = 0</code>
+
+          <button class="copy-btn" data-copy="DisableSearchBoxSuggestions = 0">
+            Copiar
+          </button>
+
+        </div>
+
+        <div class="result-box">
+
+          <h3>
+            ✅ Resultado esperado
+          </h3>
+
+          <p>
+            Windows Search debería mostrar una experiencia más enfocada en aplicaciones,
+            configuraciones y archivos locales, reduciendo las sugerencias y resultados
+            relacionados con Internet.
+          </p>
+
+        </div>
+
+        <h2>
+          Errores comunes
+        </h2>
+
+        <div class="info-box">
+
+          <h3>
+            No existe la clave Explorer
+          </h3>
+
+          <p>
+            Créala manualmente dentro de:
+            <strong>HKEY_CURRENT_USER\Software\Policies\Microsoft\Windows</strong>.
+          </p>
+
+        </div>
+
+        <div class="info-box">
+
+          <h3>
+            Creé el valor en otra ruta
+          </h3>
+
+          <p>
+            Verifica que el valor esté dentro de la clave
+            <strong>Policies\Microsoft\Windows\Explorer</strong>
+            del usuario actual.
+          </p>
+
+        </div>
+
+        <div class="info-box">
+
+          <h3>
+            El cambio no se aplica
+          </h3>
+
+          <p>
+            Reinicia Windows. Algunas directivas no se aplican inmediatamente
+            después de cerrar el Registro.
+          </p>
+
+        </div>
+
+        <div class="info-box">
+
+          <h3>
+            Windows todavía muestra contenido web
+          </h3>
+
+          <p>
+            El comportamiento puede variar según la compilación de Windows,
+            las políticas configuradas y las modificaciones realizadas por Microsoft.
+          </p>
+
+        </div>
+
+        <div class="info-box">
+
+          <h3>
+            La búsqueda local parece incompleta
+          </h3>
+
+          <p>
+            Este ajuste no controla directamente la indexación de archivos.
+            Revisa las opciones de búsqueda e indexación si Windows no encuentra
+            documentos almacenados en tu PC.
+          </p>
+
+        </div>
+
+        <h2>
+          Preguntas frecuentes
+        </h2>
+
+        <div class="faq-box">
+
+          <h3>
+            ¿Este ajuste desactiva Internet?
+          </h3>
+
+          <p>
+            No. Solo modifica el comportamiento de las sugerencias dentro de
+            Windows Search. Tu navegador y conexión siguen funcionando normalmente.
+          </p>
+
+        </div>
+
+        <div class="faq-box">
+
+          <h3>
+            ¿Funciona en Windows 10?
+          </h3>
+
+          <p>
+            Puede funcionar en determinadas versiones, pero esta guía está enfocada
+            principalmente en Windows 11.
+          </p>
+
+        </div>
+
+        <div class="faq-box">
+
+          <h3>
+            ¿Necesito crear un DWORD de 64 bits?
+          </h3>
+
+          <p>
+            No. Debes crear un <strong>DWORD de 32 bits</strong>, incluso si tu Windows
+            utiliza arquitectura de 64 bits.
+          </p>
+
+        </div>
+
+        <div class="faq-box">
+
+          <h3>
+            ¿Debo usar base hexadecimal o decimal?
+          </h3>
+
+          <p>
+            Para el valor <strong>1</strong>, ambas representan el mismo número.
+            En esta guía se utiliza base <strong>Decimal</strong> para mantener
+            el procedimiento claro y uniforme.
+          </p>
+
+        </div>
+
+        <div class="faq-box">
+
+          <h3>
+            ¿Puedo revertirlo?
+          </h3>
+
+          <p>
+            Sí. Elimina el valor creado o cambia su información de valor a
+            <strong>0</strong> y reinicia Windows.
+          </p>
+
+        </div>
+
+        <section class="section cta-section" id="descarga">
+
+          <p class="eyebrow">
+            Recurso gratuito
+          </p>
+
+          <h2>
+            Descarga 50 secretos de Windows
+          </h2>
+
+          <p>
+            Aprende funciones ocultas, comandos seguros y ajustes avanzados
+            para dominar Windows 10 y Windows 11.
+          </p>
+
+          <form name="guia-50-secretos" method="POST" data-netlify="true" class="email-form netlify-form"
+            id="secretosForm" data-redirect="/recursos/gracias-50-secretos.html">
+
+            <input type="hidden" name="form-name" value="guia-50-secretos">
+
+            <input type="text" name="nombre" placeholder="Tu nombre" required>
+
+            <input type="email" name="email" placeholder="Tu correo electrónico" required>
+
+            <button type="submit">
+              Descargar guía
+            </button>
+
+          </form>
+
+        </section>
+
+        <h2>
+          Artículos relacionados
+        </h2>
+
+        <div class="related-grid">
+
+          <a href="/comandos/regedit.html" class="related-card">
+
+            <h3>
+              Abrir regedit
+            </h3>
+
+            <p>
+              Aprende a usar el Editor del Registro sin modificar claves incorrectas.
+            </p>
+
+          </a>
+
+          <a href="/secretos/runmru-registro-ejecutar-windows.html" class="related-card">
+
+            <h3>
+              Historial RunMRU
+            </h3>
+
+            <p>
+              Descubre comandos ejecutados desde la ventana Win + R.
+            </p>
+
+          </a>
+
+          <a href="/optimizacion/desactivar-indexado-windows.html" class="related-card">
+
+            <h3>
+              Desactivar indexado
+            </h3>
+
+            <p>
+              Reduce actividad del disco desactivando la indexación cuando sea conveniente.
+            </p>
+
+          </a>
+
+          <a href="/secretos/archivos-recientes-windows.html" class="related-card">
+
+            <h3>
+              Archivos recientes
+            </h3>
+
+            <p>
+              Encuentra documentos abiertos recientemente con Win + R.
+            </p>
+
+          </a>
+
+        </div>
+
+        <div class="next-box">
+
+          <h3>
+            🚀 Siguiente paso recomendado
+          </h3>
+
+          <p>
+            Después de limpiar Windows Search, aprende a usar
+            <strong>recent</strong> para encontrar documentos abiertos
+            recientemente sin recordar dónde los guardaste.
+          </p>
+
+          <a href="/secretos/archivos-recientes-windows.html" class="btn btn-primary">
+            Ver archivos recientes
+          </a>
+
+        </div>
+
+      </div>
+
+    </article>
+
+  </main>
+
+  <footer>
+    <div id="footer-container"></div>
+  </footer>
+
+  <a href="#" class="to-top" aria-label="Volver arriba">
+
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8"
+      stroke-linecap="round" stroke-linejoin="round">
+
+      <polyline points="18 15 12 9 6 15"></polyline>
+
+    </svg>
+
+  </a>
+
+  <script src="/js/components.js"></script>
+  <script src="/js/core/engine.js?v=20260626-03" defer></script>
+
+</body>
+
+</html>

@@ -1,0 +1,67 @@
+{
+  "id": "WHPRS-REC-003",
+  "slug": "desinstalar-actualizacion",
+  "name": "Desinstalar una actualización desde Recuperación",
+  "shortName": "Desinstalar actualización",
+  "category": "Reparación",
+  "subcategory": "Actualizaciones",
+  "phase": "Reparación",
+  "risk": 2,
+  "estimatedTime": "10 a 30 minutos",
+  "description": "Elimina la actualización reciente desde el entorno de recuperación cuando coincide con el inicio del fallo.",
+  "goal": "Revertir un problema de arranque provocado por una actualización reciente.",
+  "whenUse": [
+    "El fallo comenzó justo después de actualizar",
+    "Reparación de inicio no resolvió"
+  ],
+  "whenNotUse": [
+    "No existe relación con una actualización",
+    "El disco presenta fallos físicos"
+  ],
+  "requirements": [
+    "Acceso a Opciones avanzadas",
+    "Equipo conectado a energía"
+  ],
+  "commands": [],
+  "steps": [
+    {
+      "order": 1,
+      "title": "Abrir Opciones avanzadas",
+      "instruction": "Entra en Solucionar problemas y Opciones avanzadas."
+    },
+    {
+      "order": 2,
+      "title": "Abrir Desinstalar actualizaciones",
+      "instruction": "Selecciona Desinstalar actualizaciones."
+    },
+    {
+      "order": 3,
+      "title": "Retirar la actualización de calidad",
+      "instruction": "Empieza por la última actualización de calidad."
+    },
+    {
+      "order": 4,
+      "title": "Reiniciar",
+      "instruction": "Comprueba si Windows inicia correctamente."
+    }
+  ],
+  "validation": [
+    {
+      "type": "restart",
+      "expected": "Windows inicia después de retirar la actualización problemática."
+    }
+  ],
+  "failureActions": [],
+  "nextProcedures": [],
+  "related": [
+    "reparacion-inicio",
+    "restaurar-sistema"
+  ],
+  "windows": [
+    "Windows 10",
+    "Windows 11",
+    "Windows Recovery Environment"
+  ],
+  "status": "active",
+  "version": "1.0.0"
+}

@@ -1,0 +1,74 @@
+{
+  "id": "WHPRS-DIA-006",
+  "slug": "visor-eventos-bsod",
+  "name": "Analizar una pantalla azul con el Visor de eventos",
+  "shortName": "Visor de eventos",
+  "category": "Diagnóstico",
+  "subcategory": "Pantalla azul",
+  "phase": "Diagnóstico",
+  "risk": 1,
+  "estimatedTime": "10 a 15 minutos",
+  "description": "Permite revisar eventos críticos y errores registrados alrededor del momento de una pantalla azul o reinicio inesperado.",
+  "goal": "Encontrar evidencia técnica adicional sin modificar la configuración del sistema.",
+  "whenUse": [
+    "Cuando el Historial de confiabilidad no ofrece suficiente detalle",
+    "Cuando existen reinicios inesperados",
+    "Cuando se conoce la hora aproximada del fallo"
+  ],
+  "whenNotUse": [
+    "Cuando Windows no inicia",
+    "Cuando se pretende asumir que Kernel-Power identifica por sí solo la causa"
+  ],
+  "requirements": [
+    "Windows 10 o Windows 11",
+    "Acceso al escritorio"
+  ],
+  "commands": [
+    {
+      "command": "eventvwr.msc",
+      "requiresAdmin": false,
+      "shell": "run",
+      "purpose": "Abrir el Visor de eventos."
+    }
+  ],
+  "steps": [
+    {
+      "order": 1,
+      "title": "Abrir el Visor de eventos",
+      "instruction": "Presiona Win + R, escribe eventvwr.msc y presiona Enter."
+    },
+    {
+      "order": 2,
+      "title": "Abrir el registro Sistema",
+      "instruction": "Ve a Registros de Windows y selecciona Sistema."
+    },
+    {
+      "order": 3,
+      "title": "Filtrar eventos",
+      "instruction": "Filtra por Crítico y Error alrededor de la hora de la pantalla azul."
+    },
+    {
+      "order": 4,
+      "title": "Registrar evidencia",
+      "instruction": "Anota el origen, identificador del evento y mensaje completo."
+    }
+  ],
+  "validation": [
+    {
+      "type": "manual",
+      "expected": "Se registraron los eventos relevantes alrededor del fallo sin atribuir la causa únicamente a Kernel-Power."
+    }
+  ],
+  "failureActions": [],
+  "nextProcedures": [],
+  "related": [
+    "historial-confiabilidad-bsod",
+    "diagnostico-memoria"
+  ],
+  "windows": [
+    "Windows 10",
+    "Windows 11"
+  ],
+  "status": "active",
+  "version": "1.0.0"
+}

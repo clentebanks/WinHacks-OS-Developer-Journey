@@ -1,0 +1,36 @@
+{
+  "id": "RULE-NET-002",
+  "name": "Fallo probable de resolución DNS",
+  "priority": 100,
+  "conditions": [
+    {
+      "field": "evidence",
+      "operator": "contains",
+      "value": "dnsResolutionFailure"
+    }
+  ],
+  "actions": [
+    {
+      "type": "recommend",
+      "target": "WHPRS-NET-002",
+      "weight": 0.8
+    },
+    {
+      "type": "recommend",
+      "target": "WHPRS-NET-003",
+      "weight": 1
+    },
+    {
+      "type": "recommend",
+      "target": "WHPRS-NET-004",
+      "weight": 0.9
+    },
+    {
+      "type": "validate",
+      "target": "VAL-NET-002",
+      "weight": 1
+    }
+  ],
+  "status": "active",
+  "version": "1.0.0"
+}

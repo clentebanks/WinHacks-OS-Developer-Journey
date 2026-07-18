@@ -1,0 +1,19 @@
+{
+  "id": "SYM-GAM-001",
+  "slug": "gaming-lento",
+  "name": "Gaming lento",
+  "category": "Juegos",
+  "severity": "medium",
+  "description": "Los juegos tienen FPS bajos, stutter, usan la GPU incorrecta o pierden rendimiento bajo carga.",
+  "relatedCauses": [
+    "gpu-incorrecta",
+    "modo-energia",
+    "procesos-segundo-plano",
+    "directx-controlador"
+  ],
+  "questions": [
+    "Q-GAM-001"
+  ],
+  "status": "active",
+  "version": "1.0.0"
+}

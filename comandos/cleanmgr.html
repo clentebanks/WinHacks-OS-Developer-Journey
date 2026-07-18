@@ -1,0 +1,483 @@
+<!DOCTYPE html><html lang="es"><head>
+  <!-- Google tag (gtag.js) -->
+  <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EL9JRMGJPS"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-EL9JRMGJPS');
+  </script>
+  <!-- Clarity code Puedes ver grabaciones reales (anónimas) de cómo navegan los usuarios.-->
+  <script type="text/javascript">
+    (function (c, l, a, r, i, t, y) {
+      c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) };
+      t = l.createElement(r); t.async = 1; t.src = "https://www.clarity.ms/tag/" + i;
+      y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
+    })(window, document, "clarity", "script", "xey9wuiqr4");
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>cleanmgr: Cómo Abrir la Limpieza de Disco en Windows | WinHacks</title>
+
+  <meta name="description" content="Aprende a usar cleanmgr para abrir la Limpieza de disco clásica de Windows y liberar espacio de forma segura.">
+
+  <meta name="robots" content="index, follow, max-image-preview:large">
+
+  <link rel="canonical" href="https://winhacks.dev/comandos/cleanmgr">
+
+  <link rel="icon" href="/assets/images/favicon.ico">
+
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="WinHacks">
+  <meta property="og:title" content="cleanmgr: Cómo Abrir la Limpieza de Disco en Windows | WinHacks">
+  <meta property="og:description" content="Usa cleanmgr para liberar espacio en Windows eliminando archivos temporales, miniaturas, caché y otros elementos seguros.">
+  <meta property="og:url" content="https://winhacks.dev/comandos/cleanmgr">
+  <meta property="og:image" content="https://winhacks.dev/assets/img/og/og-cleanmgr.webp">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="cleanmgr: Cómo Abrir la Limpieza de Disco en Windows | WinHacks">
+  <meta name="twitter:description" content="Aprende a abrir la Limpieza de disco clásica de Windows con cleanmgr.">
+  <meta name="twitter:image" content="https://winhacks.dev/assets/img/og/og-cleanmgr.webp">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=Montserrat:wght@800;900&amp;display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/css/style.css">
+
+  <meta property="og:locale" content="es_ES"></head>
+
+<body>
+
+  <header class="site-header">
+    <div id="navbar-container"></div>
+  </header>
+
+  <main>
+
+    <nav id="breadcrumb" class="breadcrumb" aria-label="Breadcrumb"></nav>
+
+    <article class="article">
+
+      <header class="article-hero article-hero--panel">
+
+        <p class="eyebrow">Comando de Windows</p>
+
+        <h1>cleanmgr abre la Limpieza de disco clásica de Windows</h1>
+
+        <p>
+          Aprende a usar el comando <strong>cleanmgr</strong> para abrir la herramienta clásica
+          de Limpieza de disco y liberar espacio eliminando archivos temporales de forma segura.
+        </p>
+
+        <div class="hero-buttons">
+          <a href="#video" class="btn btn-primary">Ver video</a>
+          <a href="#pasos" class="btn btn-outline">Ir al tutorial</a>
+        </div>
+
+      </header>
+
+      <div class="article-content">
+
+        <div class="meta-grid">
+
+          <div class="meta-card">
+            <span>Dificultad</span>
+            <strong>Fácil</strong>
+          </div>
+
+          <div class="meta-card">
+            <span>Tiempo</span>
+            <strong>2 minutos</strong>
+          </div>
+
+          <div class="meta-card">
+            <span>Compatible</span>
+            <strong>Windows 10/11</strong>
+          </div>
+
+          <div class="meta-card">
+            <span>Comando</span>
+            <strong>cleanmgr</strong>
+          </div>
+
+        </div>
+
+        <section id="video" class="video-box">
+
+          <div class="section-header">
+
+            <p class="eyebrow">Video rápido</p>
+
+            <h2>Mira este comando en video</h2>
+
+            <p>
+              Cuando publique el Short específico de cleanmgr, aquí irá el video oficial.
+              Por ahora, puedes ver más comandos y trucos en el canal de WinHacks.
+            </p>
+
+          </div>
+
+          <div class="video-placeholder">
+            <a href="https://www.youtube.com/@WinHacksOficial" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+              Ver canal de WinHacks
+            </a>
+          </div>
+
+        </section>
+
+        <section class="info-box">
+
+          <h3>Qué aprenderás</h3>
+
+          <ul>
+            <li>Qué es el comando <strong>cleanmgr</strong>.</li>
+            <li>Cómo abrir la Limpieza de disco clásica de Windows.</li>
+            <li>Qué archivos puedes eliminar con menos riesgo.</li>
+            <li>Qué opciones debes revisar antes de confirmar la limpieza.</li>
+          </ul>
+
+        </section>
+
+        <h2>¿Qué hace este comando?</h2>
+
+        <p>
+          El comando <strong>cleanmgr</strong> abre la herramienta clásica de Limpieza de disco.
+          Esta utilidad permite buscar archivos temporales, miniaturas, caché, archivos de papelera
+          y otros elementos que ocupan espacio en Windows.
+        </p>
+
+        <p>
+          Es una forma rápida de liberar almacenamiento sin instalar programas externos.
+          Aunque Windows 11 también tiene Sensor de almacenamiento, cleanmgr sigue siendo útil
+          para limpiezas manuales rápidas.
+        </p>
+
+        <div class="tip-box">
+
+          <h3>💡 Consejo WinHacks</h3>
+
+          <p>
+            Antes de borrar todo, revisa las categorías seleccionadas. Algunas opciones pueden eliminar
+            archivos que quizá quieras conservar, como elementos de la papelera o descargas.
+          </p>
+
+        </div>
+
+        <div class="warning-box">
+
+          <span>⚠️</span>
+
+          <h3>Antes de continuar</h3>
+
+          <p>
+            No marques opciones que no entiendas. Si tienes dudas, empieza limpiando archivos temporales,
+            miniaturas y caché, que normalmente son opciones de bajo riesgo.
+          </p>
+
+        </div>
+
+        <h2 id="pasos">Paso a paso</h2>
+
+        <div class="step-box">
+
+          <span class="step-number">1</span>
+
+          <h3>Abre Ejecutar</h3>
+
+          <p>
+            Presiona <strong>Win + R</strong> para abrir la ventana Ejecutar.
+          </p>
+
+          <div class="screenshot-placeholder">
+            <figure class="article-image">
+              <img src="../assets/images/win-r-ejecutar.png" alt="Ventana Ejecutar de Windows 11 abierta mediante el atajo Win + R" width="1536" height="1024" loading="lazy" decoding="async">
+              <figcaption>
+                Ventana <strong>Ejecutar</strong> abierta con el atajo de teclado <kbd>Win</kbd> + <kbd>R</kbd>.
+              </figcaption>
+            </figure>
+          </div>
+
+        </div>
+
+        <div class="step-box">
+
+          <span class="step-number">2</span>
+
+          <h3>Escribe el comando</h3>
+
+          <p>
+            Escribe este comando y presiona Enter:
+          </p>
+
+          <div class="command-box">
+            <code>cleanmgr</code>
+            <button class="copy-btn" data-copy="cleanmgr">Copiar</button>
+          </div>
+
+        </div>
+
+        <div class="step-box">
+
+          <span class="step-number">3</span>
+
+          <h3>Selecciona la unidad</h3>
+
+          <p>
+            Windows puede pedirte seleccionar una unidad. Normalmente será la unidad
+            <strong>C:</strong>, donde está instalado el sistema.
+          </p>
+
+          <div class="screenshot-placeholder">
+            <figure class="article-image">
+              <img height="983" width="1600" src="../assets/images/seleccionar-unidad-c.png" alt="Ventana de CHKDSK solicitando seleccionar la unidad C en Windows 11" loading="lazy" decoding="async">
+              <figcaption>
+                Selecciona la unidad del sistema. Normalmente será <strong>C:</strong>, donde está instalado
+                <strong>Windows</strong>.
+              </figcaption>
+            </figure>
+          </div>
+
+        </div>
+
+        <div class="step-box">
+
+          <span class="step-number">4</span>
+
+          <h3>Revisa los archivos para eliminar</h3>
+
+          <p>
+            Marca las categorías que quieres limpiar. Lee la descripción de cada opción antes
+            de confirmar la eliminación.
+          </p>
+
+          <div class="screenshot-placeholder">
+            <figure class="article-image">
+              <img height="1024" width="1536" src="../assets/images/revisar-archivos-eliminar.png" alt="Ventana de Limpieza de disco mostrando las categorías de archivos que pueden eliminarse en Windows 11" loading="lazy" decoding="async">
+              <figcaption>
+                Revisa las categorías disponibles y marca únicamente los archivos que deseas eliminar para liberar
+                espacio de forma segura.
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+
+        <h2>Qué opciones puedes revisar</h2>
+
+        <div class="info-box">
+          <h3>Archivos temporales</h3>
+          <p>
+            Son archivos creados por Windows o aplicaciones para tareas temporales.
+            Normalmente pueden eliminarse con bajo riesgo.
+          </p>
+        </div>
+
+        <div class="info-box">
+          <h3>Miniaturas</h3>
+          <p>
+            Son vistas previas de imágenes, videos o archivos. Windows puede volver a generarlas después.
+          </p>
+        </div>
+
+        <div class="info-box">
+          <h3>Papelera de reciclaje</h3>
+          <p>
+            Elimina archivos que ya están en la papelera. Revisa antes si hay algo que quieras recuperar.
+          </p>
+        </div>
+
+        <div class="info-box">
+          <h3>Archivos temporales de Internet</h3>
+          <p>
+            Son datos de caché que pueden ocupar espacio y normalmente pueden limpiarse sin problema.
+          </p>
+        </div>
+
+        <h2>Qué debes revisar primero</h2>
+
+        <p>
+          Antes de ejecutar la limpieza, revisa cuántos MB o GB se liberarán y qué categorías están marcadas.
+          No todas las opciones tienen el mismo impacto.
+        </p>
+
+        <p>
+          Si estás limpiando por primera vez, empieza con opciones simples como archivos temporales,
+          miniaturas y caché. Luego revisa opciones más grandes con más cuidado.
+        </p>
+
+        <div class="result-box">
+
+          <h3>✅ Resultado esperado</h3>
+
+          <p>
+            Al usar cleanmgr deberías poder liberar espacio en Windows eliminando archivos temporales
+            y elementos innecesarios sin instalar programas externos.
+          </p>
+
+        </div>
+
+        <h2>Cuándo usar este comando</h2>
+
+        <ul>
+          <li>Cuando el disco C tiene poco espacio.</li>
+          <li>Cuando Windows acumula archivos temporales.</li>
+          <li>Después de instalar o actualizar programas.</li>
+          <li>Antes de hacer mantenimiento básico del sistema.</li>
+          <li>Cuando quieres limpiar Windows sin programas externos.</li>
+        </ul>
+
+        <h2>Errores comunes</h2>
+
+        <div class="info-box">
+          <h3>Borrar la papelera sin revisar</h3>
+          <p>
+            Si marcas la papelera, los archivos eliminados desaparecerán de ahí.
+            Revisa antes si hay algo que quieras recuperar.
+          </p>
+        </div>
+
+        <div class="info-box">
+          <h3>Esperar que cleanmgr repare Windows</h3>
+          <p>
+            cleanmgr libera espacio, pero no repara errores del sistema ni elimina malware.
+          </p>
+        </div>
+
+        <div class="info-box">
+          <h3>Limpiar sin revisar las opciones</h3>
+          <p>
+            Aunque la herramienta es segura, conviene revisar qué categorías están seleccionadas
+            antes de confirmar.
+          </p>
+        </div>
+
+        <h2>Preguntas frecuentes</h2>
+
+        <div class="faq-box">
+          <h3>¿Funciona en Windows 11?</h3>
+          <p>
+            Sí. <strong>cleanmgr</strong> puede abrirse en Windows 11.
+          </p>
+        </div>
+
+        <div class="faq-box">
+          <h3>¿Funciona en Windows 10?</h3>
+          <p>
+            Sí. También funciona en Windows 10.
+          </p>
+        </div>
+
+        <div class="faq-box">
+          <h3>¿Necesito instalar programas?</h3>
+          <p>
+            No. Es una herramienta integrada de Windows.
+          </p>
+        </div>
+
+        <div class="faq-box">
+          <h3>¿cleanmgr elimina mis archivos personales?</h3>
+          <p>
+            No debería eliminar documentos personales si no marcas opciones sensibles.
+            Aun así, revisa siempre las categorías antes de confirmar.
+          </p>
+        </div>
+
+        <div class="faq-box">
+          <h3>¿Es mejor que Sensor de almacenamiento?</h3>
+          <p>
+            No necesariamente. Sensor de almacenamiento es más moderno, pero cleanmgr sigue siendo rápido
+            y útil para limpiezas manuales.
+          </p>
+        </div>
+
+        <section class="section cta-section" id="descarga">
+
+          <p class="eyebrow">Guía gratis</p>
+
+          <h2>50 Secretos de Windows que la mayoría nunca descubre</h2>
+
+          <p>
+            Descarga una guía práctica con herramientas ocultas, comandos útiles y trucos seguros
+            para Windows 10 y Windows 11.
+          </p>
+
+          <form name="guia-50-secretos" method="POST" data-netlify="true" class="email-form netlify-form" id="secretosForm" data-redirect="/recursos/gracias-50-secretos.html">
+
+            <input type="hidden" name="form-name" value="guia-50-secretos">
+
+            <input type="text" name="nombre" placeholder="Tu nombre" required="">
+
+            <input type="email" name="email" placeholder="Tu correo electrónico" required="">
+
+            <button type="submit">Descargar guía</button>
+
+          </form>
+
+        </section>
+
+        <h2>Artículos relacionados</h2>
+
+        <div class="related-grid">
+
+          <a href="/optimizacion/storage-sense.html" class="related-card">
+            <h3>Sensor de almacenamiento</h3>
+            <p>Activa la limpieza automática de archivos temporales en Windows.</p>
+          </a>
+
+          <a href="/comandos/sfc-scannow.html" class="related-card">
+            <h3>sfc /scannow</h3>
+            <p>Revisa archivos del sistema y ayuda a reparar daños básicos.</p>
+          </a>
+
+          <a href="/comandos/msconfig.html" class="related-card">
+            <h3>msconfig</h3>
+            <p>Abre configuración del sistema y opciones de arranque.</p>
+          </a>
+
+          <a href="/secretos/monitor-recursos.html" class="related-card">
+            <h3>Monitor de Recursos</h3>
+            <p>Descubre qué programa consume CPU, RAM, disco o red.</p>
+          </a>
+
+        </div>
+
+        <div class="next-box">
+
+          <h3>🚀 WinHacks Academy</h3>
+
+          <p>
+            Próximamente: cursos prácticos para dominar Windows, comandos,
+            PowerShell, seguridad, optimización y herramientas ocultas desde cero.
+          </p>
+
+          <a href="/academy/index.html" class="btn btn-primary">
+            Ver Academy
+          </a>
+
+        </div>
+
+      </div>
+
+    </article>
+
+  </main>
+
+  <footer>
+    <div id="footer-container"></div>
+  </footer>
+
+  <a href="#" class="to-top" aria-label="Volver arriba">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="18 15 12 9 6 15"></polyline>
+    </svg>
+  </a>
+
+  <script src="/js/components.js"></script>
+  <script src="/js/core/engine.js?v=20260626-03" defer=""></script>
+
+
+
+</body></html>

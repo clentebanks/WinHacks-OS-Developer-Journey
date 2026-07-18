@@ -1,0 +1,636 @@
+<!DOCTYPE html><html lang="es"><head>
+  <!-- Google Analytics -->
+  <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EL9JRMGJPS"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-EL9JRMGJPS');
+  </script>
+
+  <!-- Microsoft Clarity -->
+  <script>
+    (function (c, l, a, r, i, t, y) {
+      c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) };
+      t = l.createElement(r);
+      t.async = 1;
+      t.src = "https://www.clarity.ms/tag/" + i;
+      y = l.getElementsByTagName(r)[0];
+      y.parentNode.insertBefore(t, y);
+    })(window, document, "clarity", "script", "xey9wuiqr4");
+  </script>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>msinfo32 | Ver Información Completa del Sistema en Windows | WinHacks</title>
+
+  <meta name="description" content="Aprende a usar msinfo32 en Windows 10 y Windows 11 para ver información completa del sistema, hardware, BIOS, memoria RAM, drivers, componentes y entorno de software.">
+
+  <meta name="robots" content="index, follow, max-image-preview:large">
+
+  <link rel="canonical" href="https://winhacks.dev/comandos/msinfo32">
+
+  <link rel="icon" href="/assets/icons/favicon.ico">
+
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="WinHacks">
+  <meta property="og:title" content="msinfo32 | Ver Información Completa del Sistema en Windows">
+  <meta property="og:description" content="Usa msinfo32 para consultar hardware, BIOS, RAM, drivers, componentes y detalles técnicos completos de tu PC.">
+  <meta property="og:url" content="https://winhacks.dev/comandos/msinfo32">
+  <meta property="og:image" content="https://winhacks.dev/assets/img/og/og-msinfo32.webp">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="msinfo32 | Ver Información Completa del Sistema en Windows">
+  <meta name="twitter:description" content="Herramienta oculta de Windows para revisar toda la información técnica del sistema.">
+  <meta name="twitter:image" content="https://winhacks.dev/assets/img/og/og-msinfo32.webp">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=Montserrat:wght@800;900&amp;display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/css/style.css">
+
+  <meta property="og:locale" content="es_ES"></head>
+
+<body>
+
+  <header class="site-header">
+    <div id="navbar-container"></div>
+  </header>
+
+  <main>
+
+    <nav id="breadcrumb" class="breadcrumb" aria-label="Breadcrumb"></nav>
+
+    <article class="article">
+
+      <header class="article-hero article-hero--panel">
+
+        <p class="eyebrow">Comandos de Windows</p>
+
+        <h1>msinfo32: la herramienta oculta para ver toda la información de tu PC</h1>
+
+        <p>
+          Windows incluye una herramienta llamada <strong>msinfo32</strong> que muestra información completa
+          del sistema: modelo del equipo, BIOS, procesador, memoria RAM, placa base, componentes,
+          controladores, servicios, errores y entorno de software.
+        </p>
+
+        <div class="hero-buttons">
+          <a href="#video" class="btn btn-primary">Ver video</a>
+          <a href="#pasos" class="btn btn-outline">Ir al tutorial</a>
+        </div>
+
+      </header>
+
+      <div class="article-content">
+
+        <div class="meta-grid">
+
+          <div class="meta-card">
+            <span>Dificultad</span>
+            <strong>Fácil</strong>
+          </div>
+
+          <div class="meta-card">
+            <span>Tiempo</span>
+            <strong>1 minuto</strong>
+          </div>
+
+          <div class="meta-card">
+            <span>Compatible</span>
+            <strong>Windows 10 / 11</strong>
+          </div>
+
+          <div class="meta-card">
+            <span>Comando</span>
+            <strong>msinfo32</strong>
+          </div>
+
+        </div>
+
+        <section id="video" class="video-box">
+
+          <div class="section-header">
+
+            <p class="eyebrow">Video rápido</p>
+
+            <h2>Mira cómo abrir msinfo32</h2>
+
+            <p>
+              En este Short se muestra cómo abrir Información del sistema para revisar datos técnicos
+              completos de tu computadora.
+            </p>
+
+          </div>
+
+          <div class="youtube-short">
+            <!-- Reemplazar VIDEO_ID por el ID del Short correspondiente -->
+            <iframe src="https://www.youtube.com/embed/VIDEO_ID" title="msinfo32 | WinHacks" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="">
+            </iframe>
+          </div>
+
+        </section>
+
+        <section class="info-box">
+
+          <h3>Qué aprenderás</h3>
+
+          <ul>
+            <li>Cómo abrir msinfo32 desde Win + R.</li>
+            <li>Cómo revisar información completa del sistema.</li>
+            <li>Cómo ver datos de BIOS, procesador y memoria RAM.</li>
+            <li>Cómo revisar componentes, drivers y entorno de software.</li>
+            <li>Cómo exportar un reporte técnico completo.</li>
+          </ul>
+
+        </section>
+
+        <h2>¿Qué es msinfo32?</h2>
+
+        <p>
+          <strong>msinfo32</strong> abre la herramienta <strong>Información del sistema</strong> de Windows.
+          Es una utilidad oficial que recopila detalles técnicos sobre hardware, recursos del sistema,
+          componentes instalados y configuración de software.
+        </p>
+
+        <p>
+          Es una de las herramientas más útiles cuando necesitas diagnosticar problemas,
+          confirmar especificaciones reales del equipo, revisar compatibilidad de hardware
+          o enviar información técnica a soporte.
+        </p>
+
+        <div class="tip-box">
+
+          <h3>💡 Consejo WinHacks</h3>
+
+          <p>
+            Si compras una laptop usada o quieres confirmar las especificaciones reales de tu PC,
+            abre <strong>msinfo32</strong> antes de instalar programas externos.
+          </p>
+
+        </div>
+
+        <div class="warning-box">
+
+          <span>⚠️</span>
+
+          <h3>Importante</h3>
+
+          <p>
+            msinfo32 no modifica Windows. Solo muestra información técnica y permite guardar
+            reportes para diagnóstico.
+          </p>
+
+        </div>
+        <h2 id="pasos">Paso a paso</h2>
+
+        <div class="step-box">
+
+          <span class="step-number">1</span>
+
+          <h3>Abrir Ejecutar</h3>
+
+          <p>
+            Presiona <strong>Win + R</strong> para abrir la ventana Ejecutar.
+          </p>
+
+          <div class="screenshot-placeholder">
+            <figure class="article-image">
+              <img src="../assets/images/msinfo32-01.webp" alt="Abrir Ejecutar con Win R" loading="lazy" decoding="async">
+
+              <figcaption>
+                Usa <strong>Win + R</strong> para abrir herramientas administrativas.
+              </figcaption>
+
+            </figure>
+          </div>
+
+        </div>
+
+        <div class="step-box">
+
+          <span class="step-number">2</span>
+
+          <h3>Escribe msinfo32</h3>
+
+          <p>
+            Introduce el siguiente comando y pulsa <strong>Enter</strong>.
+          </p>
+
+          <div class="command-box">
+
+            <code>msinfo32</code>
+
+            <button class="copy-btn" data-copy="msinfo32">
+
+              Copiar
+
+            </button>
+
+          </div>
+
+          <div class="screenshot-placeholder">
+            <figure class="article-image">
+              <img src="../assets/images/msinfo32-02.webp" alt="Comando msinfo32" loading="lazy" decoding="async">
+
+              <figcaption>
+                Ejecuta <strong>msinfo32</strong>.
+              </figcaption>
+
+            </figure>
+          </div>
+
+        </div>
+
+        <div class="step-box">
+
+          <span class="step-number">3</span>
+
+          <h3>Consulta el Resumen del sistema</h3>
+
+          <p>
+            Aquí encontrarás información como fabricante, modelo del equipo, BIOS,
+            procesador, memoria RAM, versión de Windows y modo de arranque.
+          </p>
+
+          <div class="screenshot-placeholder">
+            <figure class="article-image">
+              <img src="../assets/images/msinfo32-03.webp" alt="Resumen del sistema en msinfo32" loading="lazy" decoding="async">
+
+              <figcaption>
+                Revisa las especificaciones principales del equipo.
+              </figcaption>
+
+            </figure>
+          </div>
+
+        </div>
+
+        <div class="step-box">
+
+          <span class="step-number">4</span>
+
+          <h3>Explora Componentes</h3>
+
+          <p>
+            En el menú <strong>Componentes</strong> puedes consultar información sobre
+            pantalla, almacenamiento, red, USB, audio y otros dispositivos.
+          </p>
+
+          <div class="screenshot-placeholder">
+            <figure class="article-image">
+              <img src="../assets/images/msinfo32-04.webp" alt="Componentes de hardware en msinfo32" loading="lazy" decoding="async">
+
+              <figcaption>
+                Examina todos los dispositivos instalados en el sistema.
+              </figcaption>
+
+            </figure>
+          </div>
+
+        </div>
+
+        <div class="step-box">
+
+          <span class="step-number">5</span>
+
+          <h3>Consulta el entorno de software</h3>
+
+          <p>
+            Accede a <strong>Entorno de software</strong> para revisar procesos,
+            servicios, programas al inicio, tareas y variables del sistema.
+          </p>
+
+          <div class="screenshot-placeholder">
+            <figure class="article-image">
+              <img src="../assets/images/msinfo32-05.webp" alt="Entorno de software en msinfo32" loading="lazy" decoding="async">
+
+              <figcaption>
+                Consulta información detallada sobre el software instalado.
+              </figcaption>
+
+            </figure>
+          </div>
+
+        </div>
+
+        <div class="step-box">
+
+          <span class="step-number">6</span>
+
+          <h3>Exporta un informe</h3>
+
+          <p>
+            Haz clic en <strong>Archivo → Exportar</strong> para guardar un reporte
+            completo del sistema en formato TXT.
+          </p>
+
+          <div class="screenshot-placeholder">
+            <figure class="article-image">
+              <img src="../assets/images/msinfo32-06.webp" alt="Exportar informe de msinfo32" loading="lazy" decoding="async">
+
+              <figcaption>
+                Guarda un informe técnico completo para soporte o diagnóstico.
+              </figcaption>
+
+            </figure>
+          </div>
+
+        </div>
+
+        <h2>Información que puedes consultar</h2>
+
+        <div class="info-box">
+
+          <h3>🖥️ Hardware</h3>
+
+          <p>
+            Fabricante, modelo del equipo, placa base, BIOS, procesador,
+            memoria RAM y arquitectura del sistema.
+          </p>
+
+        </div>
+
+        <div class="info-box">
+
+          <h3>🎮 Componentes</h3>
+
+          <p>
+            Tarjetas gráficas, discos, unidades ópticas, red, audio,
+            USB, dispositivos de entrada y almacenamiento.
+          </p>
+
+        </div>
+
+        <div class="info-box">
+
+          <h3>⚙️ Software</h3>
+
+          <p>
+            Procesos activos, servicios, programas de inicio,
+            variables de entorno y tareas del sistema.
+          </p>
+
+        </div>
+
+        <div class="info-box">
+
+          <h3>📋 Recursos</h3>
+
+          <p>
+            IRQ, DMA, puertos, memoria compartida y otros recursos
+            utilizados por Windows.
+          </p>
+
+        </div>
+
+        <h2>¿Cuándo utilizar msinfo32?</h2>
+
+        <ul>
+
+          <li>Ver especificaciones reales del equipo.</li>
+
+          <li>Confirmar versión de BIOS.</li>
+
+          <li>Comprobar cantidad de memoria RAM.</li>
+
+          <li>Diagnosticar problemas de hardware.</li>
+
+          <li>Enviar información a soporte técnico.</li>
+
+          <li>Comprobar compatibilidad antes de instalar programas o juegos.</li>
+
+          <li>Analizar componentes internos de Windows.</li>
+
+        </ul>
+
+        <div class="result-box">
+
+          <h3>✅ Resultado esperado</h3>
+
+          <p>
+
+            Obtendrás un informe muy completo del hardware y software instalado
+            en tu PC, ideal para diagnóstico, soporte técnico y verificación
+            de especificaciones.
+
+          </p>
+
+        </div>
+        <h2>Errores comunes</h2>
+
+        <div class="info-box">
+
+          <h3>msinfo32 tarda mucho en abrir</h3>
+
+          <p>
+            Es normal en equipos con muchos dispositivos o controladores instalados.
+            Espera unos segundos mientras Windows recopila toda la información.
+          </p>
+
+        </div>
+
+        <div class="info-box">
+
+          <h3>Algunos campos aparecen vacíos</h3>
+
+          <p>
+            Algunos fabricantes no proporcionan toda la información del hardware,
+            por lo que ciertos apartados pueden mostrarse sin datos.
+          </p>
+
+        </div>
+
+        <div class="info-box">
+
+          <h3>No encuentro mi tarjeta gráfica</h3>
+
+          <p>
+            Abre <strong>Componentes → Pantalla</strong> para consultar el modelo,
+            controlador y memoria de video instalada.
+          </p>
+
+        </div>
+
+        <div class="info-box">
+
+          <h3>¿Puedo modificar algo desde msinfo32?</h3>
+
+          <p>
+            No. Esta herramienta es únicamente informativa y no permite cambiar la
+            configuración del sistema.
+          </p>
+
+        </div>
+
+        <h2>Preguntas frecuentes</h2>
+
+        <div class="faq-box">
+
+          <h3>¿msinfo32 es seguro?</h3>
+
+          <p>
+            Sí. Es una herramienta oficial de Microsoft que únicamente consulta y
+            muestra información del sistema.
+          </p>
+
+        </div>
+
+        <div class="faq-box">
+
+          <h3>¿Funciona en Windows 11?</h3>
+
+          <p>
+            Sí. Está disponible tanto en Windows 10 como en Windows 11.
+          </p>
+
+        </div>
+
+        <div class="faq-box">
+
+          <h3>¿Necesito permisos de administrador?</h3>
+
+          <p>
+            No. Cualquier usuario puede abrir Información del sistema utilizando
+            el comando <strong>msinfo32</strong>.
+          </p>
+
+        </div>
+
+        <div class="faq-box">
+
+          <h3>¿Qué diferencia hay entre msinfo32 y dxdiag?</h3>
+
+          <p>
+            <strong>msinfo32</strong> ofrece una visión completa del hardware y del
+            software instalado, mientras que <strong>dxdiag</strong> se centra en
+            DirectX, gráficos, audio y juegos.
+          </p>
+
+        </div>
+
+        <section class="section cta-section" id="descarga">
+
+          <p class="eyebrow">Recurso gratuito</p>
+
+          <h2>Descarga la guía completa de comandos de Windows</h2>
+
+          <p>
+            Aprende más de 100 comandos de CMD, PowerShell y Ejecutar (Win + R)
+            para diagnosticar, reparar y optimizar Windows como un profesional.
+          </p>
+
+          <form name="comandos-cmd" method="POST" data-netlify="true" class="email-form netlify-form" id="comandosForm" data-redirect="/recursos/gracias-comandos.html">
+
+            <input type="hidden" name="form-name" value="comandos-cmd">
+
+            <input type="text" name="nombre" placeholder="Tu nombre" required="">
+
+            <input type="email" name="email" placeholder="Tu correo electrónico" required="">
+
+            <button type="submit">
+
+              Descargar PDF
+
+            </button>
+
+          </form>
+
+        </section>
+
+        <h2>Artículos relacionados</h2>
+
+        <div class="related-grid">
+
+          <a href="/comandos/systeminfo.html" class="related-card">
+
+            <h3>systeminfo</h3>
+
+            <p>
+              Consulta información del sistema desde CMD utilizando un único comando.
+            </p>
+
+          </a>
+
+          <a href="/comandos/dxdiag.html" class="related-card">
+
+            <h3>dxdiag</h3>
+
+            <p>
+              Analiza DirectX, tarjeta gráfica, sonido y controladores del sistema.
+            </p>
+
+          </a>
+
+          <a href="/comandos/driverquery-drivers-activos-windows.html" class="related-card">
+
+            <h3>driverquery</h3>
+
+            <p>
+              Consulta todos los controladores cargados actualmente en Windows.
+            </p>
+
+          </a>
+
+          <a href="/comandos/eventvwr-msc.html" class="related-card">
+
+            <h3>eventvwr.msc</h3>
+
+            <p>
+              Descubre errores ocultos y registros internos utilizando el Visor de Eventos.
+            </p>
+
+          </a>
+
+        </div>
+
+        <div class="next-box">
+
+          <h3>🚀 Siguiente paso recomendado</h3>
+
+          <p>
+            Ahora que conoces todo el hardware de tu PC con
+            <strong>msinfo32</strong>, utiliza
+            <strong>dxdiag</strong> para revisar la tarjeta gráfica,
+            DirectX y los controladores multimedia instalados.
+          </p>
+
+          <a href="/comandos/dxdiag.html" class="btn btn-primary">
+
+            Ver siguiente guía
+
+          </a>
+
+        </div>
+
+      </div>
+
+    </article>
+
+  </main>
+
+  <footer>
+
+    <div id="footer-container"></div>
+
+  </footer>
+
+  <a href="#" class="to-top" aria-label="Volver arriba">
+
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round">
+
+      <polyline points="18 15 12 9 6 15"></polyline>
+
+    </svg>
+
+  </a>
+
+  <script src="/js/components.js"></script>
+  <script src="/js/core/engine.js?v=20260626-03" defer=""></script>
+
+
+
+</body></html>

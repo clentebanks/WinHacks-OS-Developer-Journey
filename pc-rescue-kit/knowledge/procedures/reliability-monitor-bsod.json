@@ -1,0 +1,70 @@
+{
+  "id": "WHPRS-DIA-005",
+  "slug": "historial-confiabilidad-bsod",
+  "name": "Revisar pantallas azules en el Historial de confiabilidad",
+  "shortName": "Historial de confiabilidad",
+  "category": "Diagnóstico",
+  "subcategory": "Pantalla azul",
+  "phase": "Diagnóstico",
+  "risk": 1,
+  "estimatedTime": "5 a 10 minutos",
+  "description": "Muestra fallos críticos, reinicios inesperados, controladores y aplicaciones relacionados con pantallas azules recientes.",
+  "goal": "Identificar cuándo comenzó el fallo y qué cambio, controlador o aplicación coincide con la pantalla azul.",
+  "whenUse": [
+    "Después de una pantalla azul",
+    "Cuando el equipo se reinicia sin explicación",
+    "Cuando se necesita relacionar el error con un cambio reciente"
+  ],
+  "whenNotUse": [
+    "Cuando Windows no inicia",
+    "Cuando no existe acceso al escritorio"
+  ],
+  "requirements": [
+    "Windows 10 o Windows 11",
+    "Acceso al escritorio"
+  ],
+  "commands": [
+    {
+      "command": "perfmon /rel",
+      "requiresAdmin": false,
+      "shell": "run",
+      "purpose": "Abrir el Historial de confiabilidad."
+    }
+  ],
+  "steps": [
+    {
+      "order": 1,
+      "title": "Abrir Historial de confiabilidad",
+      "instruction": "Presiona Win + R, escribe perfmon /rel y presiona Enter."
+    },
+    {
+      "order": 2,
+      "title": "Buscar el fallo crítico",
+      "instruction": "Selecciona el día y la hora aproximada de la pantalla azul."
+    },
+    {
+      "order": 3,
+      "title": "Registrar detalles",
+      "instruction": "Anota el nombre del evento, aplicación, controlador o código mostrado."
+    }
+  ],
+  "validation": [
+    {
+      "type": "manual",
+      "expected": "Se identificó la fecha del fallo y un posible cambio, controlador o evento relacionado."
+    }
+  ],
+  "failureActions": [],
+  "nextProcedures": [],
+  "related": [
+    "visor-eventos-bsod",
+    "diagnostico-memoria",
+    "modo-seguro"
+  ],
+  "windows": [
+    "Windows 10",
+    "Windows 11"
+  ],
+  "status": "active",
+  "version": "1.0.0"
+}

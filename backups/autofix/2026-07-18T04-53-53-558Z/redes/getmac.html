@@ -1,0 +1,851 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-EL9JRMGJPS"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-EL9JRMGJPS');
+  </script>
+
+  <!-- Microsoft Clarity -->
+  <script>
+    (function (c, l, a, r, i, t, y) {
+      c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) };
+      t = l.createElement(r);
+      t.async = 1;
+      t.src = "https://www.clarity.ms/tag/" + i;
+      y = l.getElementsByTagName(r)[0];
+      y.parentNode.insertBefore(t, y);
+    })(window, document, "clarity", "script", "xey9wuiqr4");
+  </script>
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>getmac | Ver la Dirección MAC en Windows | WinHacks</title>
+
+  <meta name="description"
+    content="Aprende a utilizar el comando getmac en Windows 10 y Windows 11 para conocer la dirección MAC de todos los adaptadores de red desde CMD de forma rápida y sencilla.">
+
+  <meta name="robots" content="index, follow">
+
+  <link rel="canonical" href="https://winhacks.dev/comandos/getmac">
+
+  <!-- Favicons -->
+  <link rel="icon" href="/assets/icons/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png">
+  <link rel="apple-touch-icon" href="/assets/icons/apple-touch-icon.png">
+
+  <meta property="og:type" content="article">
+
+  <meta property="og:site_name" content="WinHacks">
+
+  <meta property="og:title" content="getmac | Ver la Dirección MAC en Windows">
+
+  <meta property="og:description"
+    content="Consulta la dirección MAC de los adaptadores de red utilizando el comando getmac en Windows.">
+
+  <meta property="og:url" content="https://winhacks.dev/comandos/getmac">
+
+  <meta property="og:image" content="https://winhacks.dev/assets/img/og/og-getmac.webp">
+
+  <meta name="twitter:card" content="summary_large_image">
+
+  <meta name="twitter:title" content="getmac | Ver la Dirección MAC en Windows">
+
+  <meta name="twitter:description" content="Comando CMD para consultar rápidamente la dirección MAC de tu computadora.">
+
+  <meta name="twitter:image" content="https://winhacks.dev/assets/img/og/og-getmac.webp">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Montserrat:wght@800;900&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="/css/style.css">
+
+</head>
+
+<body>
+
+  <header class="site-header">
+
+    <div id="navbar-container"></div>
+
+  </header>
+
+  <main>
+
+    <nav id="breadcrumb" class="breadcrumb" aria-label="Breadcrumb">
+    </nav>
+
+    <article class="article">
+
+      <header class="article-hero article-hero--panel">
+
+        <p class="eyebrow">
+
+          Comandos CMD
+
+        </p>
+
+        <h1>
+
+          getmac: descubre la dirección MAC de tu computadora
+
+        </h1>
+
+        <p>
+
+          El comando <strong>getmac</strong> permite mostrar rápidamente la
+          <strong>dirección MAC</strong> de todos los adaptadores de red instalados en
+          Windows.
+
+          Es una herramienta muy utilizada por técnicos, administradores de redes y
+          usuarios que necesitan identificar un dispositivo dentro de una red local.
+
+        </p>
+
+        <div class="hero-buttons">
+
+          <a href="#video" class="btn btn-primary">
+
+            Ver video
+
+          </a>
+
+          <a href="#pasos" class="btn btn-outline">
+
+            Ir al tutorial
+
+          </a>
+
+        </div>
+
+      </header>
+
+      <div class="article-content">
+
+        <div class="meta-grid">
+
+          <div class="meta-card">
+
+            <span>Dificultad</span>
+
+            <strong>Muy fácil</strong>
+
+          </div>
+
+          <div class="meta-card">
+
+            <span>Tiempo</span>
+
+            <strong>30 segundos</strong>
+
+          </div>
+
+          <div class="meta-card">
+
+            <span>Compatible</span>
+
+            <strong>Windows 10 / Windows 11</strong>
+
+          </div>
+
+          <div class="meta-card">
+
+            <span>Comando</span>
+
+            <strong>getmac</strong>
+
+          </div>
+
+        </div>
+
+        <section id="video" class="video-box">
+
+          <div class="section-header">
+
+            <p class="eyebrow">
+
+              Video rápido
+
+            </p>
+
+            <h2>
+
+              Aprende a usar getmac
+
+            </h2>
+
+            <p>
+
+              Con este comando podrás identificar la dirección física (MAC Address)
+              de cualquier adaptador de red instalado en Windows.
+
+            </p>
+
+          </div>
+
+          <div class="youtube-short">
+
+            <!-- Sustituye VIDEO_ID por el ID del Short -->
+
+            <iframe src="https://www.youtube.com/embed/VIDEO_ID" title="getmac | WinHacks" loading="lazy"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen>
+
+            </iframe>
+
+          </div>
+
+        </section>
+
+        <section class="info-box">
+
+          <h3>
+
+            ¿Qué aprenderás?
+
+          </h3>
+
+          <ul>
+
+            <li>Qué es una dirección MAC.</li>
+
+            <li>Cómo utilizar el comando <strong>getmac</strong>.</li>
+
+            <li>Cómo identificar adaptadores físicos y virtuales.</li>
+
+            <li>Cuándo utilizar este comando.</li>
+
+            <li>Cómo consultar información adicional del adaptador.</li>
+
+          </ul>
+
+        </section>
+
+        <h2>
+
+          ¿Qué hace el comando getmac?
+
+        </h2>
+
+        <p>
+
+          <strong>getmac</strong> muestra la dirección MAC (Media Access Control)
+          de los adaptadores de red instalados en Windows.
+
+          La dirección MAC es un identificador físico único asignado por el fabricante
+          a cada tarjeta de red Ethernet o Wi-Fi.
+
+        </p>
+
+        <p>
+
+          Este comando resulta especialmente útil para configurar filtros MAC
+          en routers, identificar equipos dentro de una red, realizar inventarios
+          o solucionar problemas de conectividad.
+
+        </p>
+
+        <div class="tip-box">
+
+          <h3>
+
+            💡 Consejo WinHacks
+
+          </h3>
+
+          <p>
+
+            Muchos routers permiten autorizar o bloquear dispositivos mediante su
+            dirección MAC. Con <strong>getmac</strong> puedes obtenerla en segundos
+            sin abrir la configuración del sistema.
+
+          </p>
+
+        </div>
+
+        <div class="warning-box">
+
+          <span>⚠️</span>
+
+          <h3>
+
+            Importante
+
+          </h3>
+
+          <p>
+
+            El comando únicamente consulta la información de los adaptadores de red.
+            No modifica ninguna configuración del sistema ni requiere permisos
+            de administrador.
+
+          </p>
+
+        </div>
+        <h2 id="pasos">Paso a paso</h2>
+
+        <div class="step-box">
+
+          <span class="step-number">1</span>
+
+          <h3>Abre el Símbolo del sistema</h3>
+
+          <p>
+            Presiona <strong>Win</strong>, escribe <strong>CMD</strong> y abre el
+            Símbolo del sistema. No es necesario ejecutarlo como administrador.
+          </p>
+
+          <div class="screenshot-placeholder">
+
+            <figure class="article-image">
+
+              <img src="../assets/images/getmac-01.webp" alt="Abrir CMD en Windows" loading="lazy" decoding="async">
+
+              <figcaption>
+                Abre el Símbolo del sistema.
+              </figcaption>
+
+            </figure>
+
+          </div>
+
+        </div>
+
+        <div class="step-box">
+
+          <span class="step-number">2</span>
+
+          <h3>Ejecuta el comando getmac</h3>
+
+          <p>
+            Escribe el siguiente comando y presiona <strong>Enter</strong>.
+          </p>
+
+          <div class="command-box">
+
+            <code>getmac</code>
+
+            <button class="copy-btn" data-copy="getmac">
+
+              Copiar
+
+            </button>
+
+          </div>
+
+          <div class="screenshot-placeholder">
+
+            <figure class="article-image">
+
+              <img src="../assets/images/getmac-02.webp" alt="Ejecutar comando getmac" loading="lazy" decoding="async">
+
+              <figcaption>
+                Ejecuta el comando <strong>getmac</strong>.
+              </figcaption>
+
+            </figure>
+
+          </div>
+
+        </div>
+
+        <div class="step-box">
+
+          <span class="step-number">3</span>
+
+          <h3>Observa la dirección MAC</h3>
+
+          <p>
+            Windows mostrará la dirección física de cada adaptador de red
+            instalado junto con su estado de funcionamiento.
+          </p>
+
+          <div class="screenshot-placeholder">
+
+            <figure class="article-image">
+
+              <img src="../assets/images/getmac-03.webp" alt="Resultado del comando getmac" loading="lazy"
+                decoding="async">
+
+              <figcaption>
+                Se muestran todas las direcciones MAC disponibles.
+              </figcaption>
+
+            </figure>
+
+          </div>
+
+        </div>
+
+        <div class="step-box">
+
+          <span class="step-number">4</span>
+
+          <h3>Obtén información más detallada</h3>
+
+          <p>
+            Puedes mostrar información adicional utilizando el parámetro
+            <strong>/v</strong>.
+          </p>
+
+          <div class="command-box">
+
+            <code>getmac /v</code>
+
+            <button class="copy-btn" data-copy="getmac /v">
+
+              Copiar
+
+            </button>
+
+          </div>
+
+          <div class="screenshot-placeholder">
+
+            <figure class="article-image">
+
+              <img src="../assets/images/getmac-04.webp" alt="Comando getmac con parámetro v" loading="lazy"
+                decoding="async">
+
+              <figcaption>
+                El parámetro <strong>/v</strong> muestra información ampliada.
+              </figcaption>
+
+            </figure>
+
+          </div>
+
+        </div>
+
+        <div class="step-box">
+
+          <span class="step-number">5</span>
+
+          <h3>Muestra el resultado como tabla</h3>
+
+          <p>
+            Para facilitar la lectura puedes utilizar el formato tabular.
+          </p>
+
+          <div class="command-box">
+
+            <code>getmac /fo table /v</code>
+
+            <button class="copy-btn" data-copy="getmac /fo table /v">
+
+              Copiar
+
+            </button>
+
+          </div>
+
+          <div class="screenshot-placeholder">
+
+            <figure class="article-image">
+
+              <img src="../assets/images/getmac-05.webp" alt="Getmac en formato tabla" loading="lazy" decoding="async">
+
+              <figcaption>
+                Visualiza la información organizada en columnas.
+              </figcaption>
+
+            </figure>
+
+          </div>
+
+        </div>
+
+        <div class="step-box">
+
+          <span class="step-number">6</span>
+
+          <h3>Consulta la configuración completa</h3>
+
+          <p>
+            Si necesitas más información sobre los adaptadores de red utiliza
+            el siguiente comando.
+          </p>
+
+          <div class="command-box">
+
+            <code>ipconfig /all</code>
+
+            <button class="copy-btn" data-copy="ipconfig /all">
+
+              Copiar
+
+            </button>
+
+          </div>
+
+          <div class="screenshot-placeholder">
+
+            <figure class="article-image">
+
+              <img src="../assets/images/getmac-06.webp" alt="Consultar información completa del adaptador"
+                loading="lazy" decoding="async">
+
+              <figcaption>
+                Obtén información avanzada del adaptador de red.
+              </figcaption>
+
+            </figure>
+
+          </div>
+
+        </div>
+
+        <h2>Comandos útiles relacionados</h2>
+
+        <div class="info-box">
+
+          <h3>Mostrar direcciones MAC</h3>
+
+          <div class="command-box">
+
+            <code>getmac</code>
+
+            <button class="copy-btn" data-copy="getmac">
+
+              Copiar
+
+            </button>
+
+          </div>
+
+        </div>
+
+        <div class="info-box">
+
+          <h3>Información detallada</h3>
+
+          <div class="command-box">
+
+            <code>getmac /v</code>
+
+            <button class="copy-btn" data-copy="getmac /v">
+
+              Copiar
+
+            </button>
+
+          </div>
+
+        </div>
+
+        <div class="info-box">
+
+          <h3>Formato tabla</h3>
+
+          <div class="command-box">
+
+            <code>getmac /fo table /v</code>
+
+            <button class="copy-btn" data-copy="getmac /fo table /v">
+
+              Copiar
+
+            </button>
+
+          </div>
+
+        </div>
+
+        <div class="info-box">
+
+          <h3>Información completa de red</h3>
+
+          <div class="command-box">
+
+            <code>ipconfig /all</code>
+
+            <button class="copy-btn" data-copy="ipconfig /all">
+
+              Copiar
+
+            </button>
+
+          </div>
+
+        </div>
+
+        <h2>¿Cuándo utilizar getmac?</h2>
+
+        <ul>
+
+          <li>Identificar un equipo dentro de la red.</li>
+
+          <li>Configurar filtros MAC en el router.</li>
+
+          <li>Administrar dispositivos Wi-Fi.</li>
+
+          <li>Realizar inventarios de hardware.</li>
+
+          <li>Diagnosticar problemas de red.</li>
+
+          <li>Obtener la dirección física de una tarjeta Ethernet o Wi-Fi.</li>
+
+          <li>Automatizar tareas mediante scripts.</li>
+
+        </ul>
+
+        <div class="result-box">
+
+          <h3>✅ Resultado esperado</h3>
+
+          <p>
+
+            Obtendrás la dirección MAC de todos los adaptadores instalados en
+            Windows, junto con información útil para administración,
+            inventario y diagnóstico de redes.
+
+          </p>
+
+        </div>
+        <h2>Errores comunes</h2>
+
+        <div class="info-box">
+
+          <h3>No aparece ninguna dirección MAC</h3>
+
+          <p>
+            Comprueba que el adaptador de red esté habilitado. Si el dispositivo
+            está desactivado o no tiene controladores instalados, Windows podría
+            no mostrar información.
+          </p>
+
+        </div>
+
+        <div class="info-box">
+
+          <h3>Aparecen varias direcciones MAC</h3>
+
+          <p>
+            Es completamente normal. Windows muestra la dirección MAC de todos los
+            adaptadores instalados, incluyendo Ethernet, Wi-Fi, Bluetooth,
+            adaptadores virtuales y máquinas virtuales.
+          </p>
+
+        </div>
+
+        <div class="info-box">
+
+          <h3>La dirección MAC cambió</h3>
+
+          <p>
+            Algunos adaptadores permiten utilizar direcciones MAC aleatorias o
+            personalizadas. También puede cambiar al utilizar determinadas VPN,
+            hipervisores o configuraciones avanzadas del controlador.
+          </p>
+
+        </div>
+
+        <div class="info-box">
+
+          <h3>El comando no se reconoce</h3>
+
+          <p>
+            Verifica que escribiste correctamente <strong>getmac</strong>. El
+            comando está disponible de forma predeterminada en Windows 10,
+            Windows 11 y Windows Server.
+          </p>
+
+        </div>
+
+        <h2>Preguntas frecuentes</h2>
+
+        <div class="faq-box">
+
+          <h3>¿Qué es una dirección MAC?</h3>
+
+          <p>
+            Es un identificador físico único asignado por el fabricante a cada
+            adaptador de red. Se utiliza para identificar dispositivos dentro de
+            una red local.
+          </p>
+
+        </div>
+
+        <div class="faq-box">
+
+          <h3>¿Es lo mismo que una dirección IP?</h3>
+
+          <p>
+            No. La dirección MAC identifica el hardware del adaptador de red,
+            mientras que la dirección IP identifica el dispositivo dentro de una
+            red y puede cambiar con el tiempo.
+          </p>
+
+        </div>
+
+        <div class="faq-box">
+
+          <h3>¿Necesito permisos de administrador?</h3>
+
+          <p>
+            No. <strong>getmac</strong> puede ejecutarse desde CMD o PowerShell
+            con una cuenta de usuario estándar.
+          </p>
+
+        </div>
+
+        <div class="faq-box">
+
+          <h3>¿Funciona en Windows 11?</h3>
+
+          <p>
+            Sí. Es compatible con Windows 10, Windows 11 y Windows Server.
+          </p>
+
+        </div>
+
+        <section class="section cta-section" id="descarga">
+
+          <p class="eyebrow">
+
+            Recurso gratuito
+
+          </p>
+
+          <h2>
+
+            Descarga la guía completa de comandos CMD
+
+          </h2>
+
+          <p>
+
+            Aprende más de 100 comandos de Windows para redes, diagnóstico,
+            seguridad y administración paso a paso.
+
+          </p>
+
+          <form name="comandos-cmd" method="POST" data-netlify="true" class="email-form netlify-form" id="comandosForm"
+            data-redirect="/recursos/gracias-comandos.html">
+
+            <input type="hidden" name="form-name" value="comandos-cmd">
+
+            <input type="text" name="nombre" placeholder="Tu nombre" required>
+
+            <input type="email" name="email" placeholder="Tu correo electrónico" required>
+
+            <button type="submit">
+
+              Descargar PDF
+
+            </button>
+
+          </form>
+
+        </section>
+
+        <h2>Artículos relacionados</h2>
+
+        <div class="related-grid">
+
+          <a href="/redes/ipconfig.html" class="related-card">
+
+            <h3>ipconfig</h3>
+
+            <p>
+              Consulta la configuración completa de los adaptadores de red.
+            </p>
+
+          </a>
+
+          <a href="/redes/hostname.html" class="related-card">
+
+            <h3>hostname</h3>
+
+            <p>
+              Descubre el nombre del equipo desde CMD.
+            </p>
+
+          </a>
+
+          <a href="/redes/arp-a.html" class="related-card">
+
+            <h3>arp -a</h3>
+
+            <p>
+              Visualiza dispositivos y direcciones MAC detectadas en la red local.
+            </p>
+
+          </a>
+
+          <a href="/comandos/systeminfo.html" class="related-card">
+
+            <h3>systeminfo</h3>
+
+            <p>
+              Obtén un informe completo del sistema operativo y hardware.
+            </p>
+
+          </a>
+
+        </div>
+
+        <div class="next-box">
+
+          <h3>🚀 Siguiente paso recomendado</h3>
+
+          <p>
+
+            Ya conoces la dirección MAC de tu equipo. Ahora utiliza
+            <strong>ipconfig /all</strong> para obtener información completa de
+            la red, incluyendo direcciones IP, DNS, puerta de enlace y detalles
+            del adaptador.
+
+          </p>
+
+          <a href="/redes/ipconfig.html" class="btn btn-primary">
+
+            Ver siguiente guía
+
+          </a>
+
+        </div>
+
+      </div>
+
+    </article>
+
+  </main>
+
+  <footer>
+
+    <div id="footer-container"></div>
+
+  </footer>
+
+  <a href="#" class="to-top" aria-label="Volver arriba">
+
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8"
+      stroke-linecap="round" stroke-linejoin="round">
+
+      <polyline points="18 15 12 9 6 15"></polyline>
+
+    </svg>
+
+  </a>
+
+  <script src="/js/components.js"></script>
+  <script src="/js/core/engine.js?v=20260626-03" defer></script>
+
+</body>
+
+</html>

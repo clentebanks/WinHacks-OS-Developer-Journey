@@ -1,0 +1,68 @@
+{
+  "id": "WHPRS-CLN-001",
+  "slug": "sensor-almacenamiento",
+  "name": "Liberar espacio con Sensor de almacenamiento",
+  "shortName": "Storage Sense",
+  "category": "Limpieza",
+  "subcategory": "Almacenamiento",
+  "phase": "Limpieza",
+  "risk": 1,
+  "estimatedTime": "5 a 15 minutos",
+  "description": "Utiliza la herramienta oficial de Windows para eliminar archivos temporales y liberar espacio de forma controlada.",
+  "goal": "Recuperar espacio libre sin usar limpiadores de terceros ni eliminar archivos personales al azar.",
+  "whenUse": [
+    "Cuando queda poco espacio libre",
+    "Cuando Windows muestra advertencias de almacenamiento",
+    "Antes de reparaciones que necesitan espacio"
+  ],
+  "whenNotUse": [
+    "Cuando no se han revisado las opciones de Papelera o Descargas",
+    "Cuando el disco presenta fallos físicos"
+  ],
+  "requirements": [
+    "Windows 10 o Windows 11",
+    "Revisar las categorías antes de confirmar"
+  ],
+  "commands": [
+    {
+      "command": "ms-settings:storagesense",
+      "requiresAdmin": false,
+      "shell": "run",
+      "purpose": "Abrir la configuración de almacenamiento."
+    }
+  ],
+  "steps": [
+    {
+      "order": 1,
+      "title": "Abrir Almacenamiento",
+      "instruction": "Abre Configuración, Sistema y Almacenamiento."
+    },
+    {
+      "order": 2,
+      "title": "Revisar archivos temporales",
+      "instruction": "Selecciona Archivos temporales y revisa cada categoría."
+    },
+    {
+      "order": 3,
+      "title": "Confirmar limpieza",
+      "instruction": "Elimina únicamente las categorías que hayas revisado."
+    }
+  ],
+  "validation": [
+    {
+      "type": "metric",
+      "expected": "El disco dispone de más espacio libre después de la limpieza."
+    }
+  ],
+  "failureActions": [],
+  "nextProcedures": [],
+  "related": [
+    "cleanmgr"
+  ],
+  "windows": [
+    "Windows 10",
+    "Windows 11"
+  ],
+  "status": "active",
+  "version": "1.0.0"
+}

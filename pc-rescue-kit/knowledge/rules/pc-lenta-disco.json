@@ -1,0 +1,31 @@
+{
+  "id": "RULE-PERF-001",
+  "name": "PC lenta con uso elevado del disco",
+  "priority": 100,
+  "conditions": [
+    {
+      "field": "evidence",
+      "operator": "contains",
+      "value": "diskUsageHigh"
+    }
+  ],
+  "actions": [
+    {
+      "type": "recommend",
+      "target": "WHPRS-DIA-001",
+      "weight": 0.75
+    },
+    {
+      "type": "recommend",
+      "target": "WHPRS-REP-003",
+      "weight": 0.9
+    },
+    {
+      "type": "validate",
+      "target": "VAL-PERF-001",
+      "weight": 1
+    }
+  ],
+  "status": "active",
+  "version": "1.0.0"
+}

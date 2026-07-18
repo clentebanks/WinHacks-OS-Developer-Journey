@@ -1,0 +1,19 @@
+{
+  "version": "1.0.0",
+  "generatedAt": "2026-07-18T05:27:50.458Z",
+  "output": "content/drafts/administrar-modulos-de-powershell",
+  "files": [
+    "README.md",
+    "academy.md",
+    "article.html",
+    "article.md",
+    "image-prompts.md",
+    "manifest.json",
+    "metadata.json",
+    "newsletter.md",
+    "pinterest.md",
+    "schema.json",
+    "short-script.md",
+    "youtube.md"
+  ]
+}

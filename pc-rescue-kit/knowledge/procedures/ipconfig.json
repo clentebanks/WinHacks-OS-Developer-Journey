@@ -1,0 +1,70 @@
+{
+  "id": "WHPRS-NET-001",
+  "slug": "ipconfig",
+  "name": "Revisar la configuración de red con ipconfig",
+  "shortName": "ipconfig",
+  "category": "Red",
+  "subcategory": "Configuración IP",
+  "phase": "Diagnóstico",
+  "risk": 1,
+  "estimatedTime": "3 minutos",
+  "description": "Muestra la dirección IP, puerta de enlace, adaptadores y configuración básica de red del equipo.",
+  "goal": "Confirmar que Windows recibió una dirección IP válida antes de aplicar reparaciones.",
+  "whenUse": [
+    "Cuando no hay acceso a Internet",
+    "Cuando aparece una dirección 169.254.x.x",
+    "Cuando se necesita identificar la puerta de enlace"
+  ],
+  "whenNotUse": [
+    "Cuando Windows no puede iniciar",
+    "Cuando el adaptador de red no aparece en el sistema"
+  ],
+  "requirements": [
+    "Windows 10 o Windows 11",
+    "CMD o PowerShell"
+  ],
+  "commands": [
+    {
+      "command": "ipconfig /all",
+      "requiresAdmin": false,
+      "shell": "cmd",
+      "purpose": "Mostrar la configuración completa de todos los adaptadores de red."
+    }
+  ],
+  "steps": [
+    {
+      "order": 1,
+      "title": "Abrir la terminal",
+      "instruction": "Abre CMD o PowerShell."
+    },
+    {
+      "order": 2,
+      "title": "Ejecutar ipconfig",
+      "instruction": "Escribe ipconfig /all y presiona Enter."
+    },
+    {
+      "order": 3,
+      "title": "Revisar los datos",
+      "instruction": "Confirma que exista una dirección IPv4 válida, una puerta de enlace y servidores DNS."
+    }
+  ],
+  "validation": [
+    {
+      "type": "manual",
+      "expected": "El adaptador activo muestra una dirección IPv4 válida y una puerta de enlace."
+    }
+  ],
+  "failureActions": [],
+  "nextProcedures": [],
+  "related": [
+    "ping",
+    "nslookup",
+    "renovar-ip"
+  ],
+  "windows": [
+    "Windows 10",
+    "Windows 11"
+  ],
+  "status": "active",
+  "version": "1.0.0"
+}

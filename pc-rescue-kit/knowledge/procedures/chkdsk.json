@@ -1,0 +1,90 @@
+{
+  "id": "WHPRS-REP-003",
+  "slug": "chkdsk",
+  "name": "Comprobación y reparación del disco con CHKDSK",
+  "shortName": "CHKDSK",
+  "category": "Reparación",
+  "subcategory": "Disco",
+  "phase": "Reparación",
+  "risk": 3,
+  "estimatedTime": "20 minutos a varias horas",
+  "description": "Comprueba el sistema de archivos y detecta errores lógicos en una unidad.",
+  "goal": "Identificar y corregir errores del sistema de archivos antes de continuar con otras reparaciones.",
+  "whenUse": [
+    "Windows informa errores del disco",
+    "El equipo se apaga de forma inesperada",
+    "Hay archivos dañados o inaccesibles",
+    "El sistema presenta bloqueos relacionados con almacenamiento"
+  ],
+  "whenNotUse": [
+    "El disco presenta ruidos o fallos físicos evidentes",
+    "No existe una copia de seguridad de datos importantes",
+    "El equipo puede quedarse sin energía durante el análisis"
+  ],
+  "requirements": [
+    "CMD o PowerShell como administrador",
+    "Copia de seguridad recomendada",
+    "No interrumpir el análisis",
+    "Reinicio posible para la unidad del sistema"
+  ],
+  "commands": [
+    {
+      "command": "chkdsk C: /scan",
+      "requiresAdmin": true,
+      "shell": "cmd",
+      "purpose": "Realizar un análisis en línea del sistema de archivos."
+    },
+    {
+      "command": "chkdsk C: /f",
+      "requiresAdmin": true,
+      "shell": "cmd",
+      "purpose": "Corregir errores lógicos del sistema de archivos."
+    }
+  ],
+  "steps": [
+    {
+      "order": 1,
+      "title": "Abrir la terminal como administrador",
+      "instruction": "Abre CMD o PowerShell con permisos de administrador."
+    },
+    {
+      "order": 2,
+      "title": "Realizar un análisis en línea",
+      "instruction": "Ejecuta chkdsk C: /scan."
+    },
+    {
+      "order": 3,
+      "title": "Programar reparación si es necesaria",
+      "instruction": "Si se detectan errores, ejecuta chkdsk C: /f."
+    },
+    {
+      "order": 4,
+      "title": "Reiniciar",
+      "instruction": "Acepta programar el análisis para el siguiente reinicio si Windows lo solicita."
+    },
+    {
+      "order": 5,
+      "title": "Validar el resultado",
+      "instruction": "Revisa el resultado de CHKDSK y comprueba si continúan los errores."
+    }
+  ],
+  "validation": [
+    {
+      "type": "output",
+      "expected": "Windows ha examinado el sistema de archivos y no encontró problemas."
+    }
+  ],
+  "failureActions": [],
+  "nextProcedures": [],
+  "related": [
+    "smart",
+    "sfc-scannow",
+    "restaurar-sistema"
+  ],
+  "windows": [
+    "Windows 10",
+    "Windows 11"
+  ],
+  "status": "active",
+  "version": "1.0.0"
+}

@@ -1,0 +1,20 @@
+{
+  "id": "SYM-PERF-001",
+  "slug": "pc-lenta",
+  "name": "PC lenta",
+  "category": "Rendimiento",
+  "severity": "medium",
+  "description": "El equipo responde con lentitud durante el inicio, al abrir programas o mientras se realizan tareas normales.",
+  "relatedCauses": [
+    "disco-al-100",
+    "ram-alta",
+    "cpu-alta",
+    "poco-espacio",
+    "archivos-sistema-danados"
+  ],
+  "questions": [
+    "Q-PERF-001"
+  ],
+  "status": "active",
+  "version": "1.0.0"
+}

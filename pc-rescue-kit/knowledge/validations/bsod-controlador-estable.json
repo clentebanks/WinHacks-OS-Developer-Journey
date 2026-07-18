@@ -1,0 +1,11 @@
+{
+  "id": "VAL-BSOD-001",
+  "name": "Validar estabilidad después de revertir el controlador",
+  "type": "restart",
+  "expected": "Windows inicia y no vuelve a mostrar la pantalla azul durante el uso normal.",
+  "failureMessage": "La pantalla azul continúa. Revisa memoria, eventos y otros cambios recientes.",
+  "successNext": "rescue-plan-complete",
+  "failureNext": "WHPRS-DIA-007",
+  "status": "active",
+  "version": "1.0.0"
+}

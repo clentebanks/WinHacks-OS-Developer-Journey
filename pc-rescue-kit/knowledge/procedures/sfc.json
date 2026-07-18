@@ -1,0 +1,86 @@
+{
+  "id": "WHPRS-REP-001",
+  "slug": "sfc-scannow",
+  "name": "Reparación de archivos del sistema con SFC",
+  "shortName": "SFC",
+  "category": "Reparación",
+  "subcategory": "Integridad del sistema",
+  "phase": "Reparación",
+  "risk": 1,
+  "estimatedTime": "15 a 40 minutos",
+  "description": "Analiza y repara archivos protegidos de Windows que estén dañados o modificados.",
+  "goal": "Restaurar la integridad de los archivos del sistema.",
+  "whenUse": [
+    "Windows presenta errores inesperados",
+    "Aplicaciones del sistema fallan",
+    "Hay sospecha de archivos dañados",
+    "DISM ya reparó la imagen de Windows"
+  ],
+  "whenNotUse": [
+    "El disco presenta fallos físicos",
+    "Windows no puede iniciar y no hay acceso al entorno de recuperación",
+    "El equipo puede apagarse durante el análisis"
+  ],
+  "requirements": [
+    "CMD o PowerShell como administrador",
+    "Windows 10 o Windows 11",
+    "No apagar el equipo durante el proceso"
+  ],
+  "commands": [
+    {
+      "command": "sfc /scannow",
+      "requiresAdmin": true,
+      "shell": "cmd",
+      "purpose": "Analizar y reparar archivos protegidos de Windows."
+    }
+  ],
+  "steps": [
+    {
+      "order": 1,
+      "title": "Abrir la terminal como administrador",
+      "instruction": "Abre CMD o PowerShell con permisos de administrador."
+    },
+    {
+      "order": 2,
+      "title": "Ejecutar SFC",
+      "instruction": "Escribe sfc /scannow y presiona Enter."
+    },
+    {
+      "order": 3,
+      "title": "Esperar el resultado",
+      "instruction": "No cierres la terminal hasta que el análisis llegue al 100 %."
+    },
+    {
+      "order": 4,
+      "title": "Reiniciar y validar",
+      "instruction": "Reinicia Windows y comprueba si el problema continúa."
+    }
+  ],
+  "validation": [
+    {
+      "type": "output",
+      "expected": "Protección de recursos de Windows no encontró ninguna infracción de integridad."
+    }
+  ],
+  "failureActions": [
+    {
+      "condition": "SFC no pudo reparar algunos archivos",
+      "nextProcedure": "WHPRS-REP-002",
+      "message": "Ejecuta DISM y luego repite SFC."
+    }
+  ],
+  "nextProcedures": [
+    "WHPRS-REP-002"
+  ],
+  "related": [
+    "dism",
+    "chkdsk",
+    "restaurar-sistema"
+  ],
+  "windows": [
+    "Windows 10",
+    "Windows 11"
+  ],
+  "status": "active",
+  "version": "1.0.0"
+}

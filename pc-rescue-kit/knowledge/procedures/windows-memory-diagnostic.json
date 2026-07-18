@@ -1,0 +1,75 @@
+{
+  "id": "WHPRS-DIA-007",
+  "slug": "diagnostico-memoria",
+  "name": "Comprobar la memoria RAM con Diagnóstico de memoria de Windows",
+  "shortName": "Diagnóstico de memoria",
+  "category": "Diagnóstico",
+  "subcategory": "Memoria RAM",
+  "phase": "Diagnóstico",
+  "risk": 2,
+  "estimatedTime": "15 a 45 minutos",
+  "description": "Reinicia el equipo y ejecuta una comprobación básica de errores en la memoria RAM.",
+  "goal": "Detectar indicios de memoria defectuosa cuando las pantallas azules son aleatorias o muestran códigos relacionados con memoria.",
+  "whenUse": [
+    "Cuando las pantallas azules son aleatorias",
+    "Cuando aparecen errores de memoria",
+    "Cuando el equipo falla bajo carga"
+  ],
+  "whenNotUse": [
+    "Cuando hay trabajo sin guardar",
+    "Cuando el equipo no puede reiniciarse de forma segura",
+    "Como sustituto definitivo de una prueba profesional de RAM"
+  ],
+  "requirements": [
+    "Guardar todo el trabajo",
+    "Equipo conectado a energía"
+  ],
+  "commands": [
+    {
+      "command": "mdsched.exe",
+      "requiresAdmin": false,
+      "shell": "run",
+      "purpose": "Abrir Diagnóstico de memoria de Windows."
+    }
+  ],
+  "steps": [
+    {
+      "order": 1,
+      "title": "Guardar el trabajo",
+      "instruction": "Guarda los documentos y cierra las aplicaciones."
+    },
+    {
+      "order": 2,
+      "title": "Abrir el diagnóstico",
+      "instruction": "Presiona Win + R, escribe mdsched.exe y presiona Enter."
+    },
+    {
+      "order": 3,
+      "title": "Reiniciar y comprobar",
+      "instruction": "Selecciona Reiniciar ahora y comprobar si existen problemas."
+    },
+    {
+      "order": 4,
+      "title": "Revisar el resultado",
+      "instruction": "Después de volver a Windows, revisa el resultado en el Visor de eventos."
+    }
+  ],
+  "validation": [
+    {
+      "type": "restart",
+      "expected": "La prueba termina y no informa errores de memoria, o identifica que la RAM requiere revisión."
+    }
+  ],
+  "failureActions": [],
+  "nextProcedures": [],
+  "related": [
+    "visor-eventos-bsod",
+    "modo-seguro"
+  ],
+  "windows": [
+    "Windows 10",
+    "Windows 11"
+  ],
+  "status": "active",
+  "version": "1.0.0"
+}

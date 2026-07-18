@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-EL9JRMGJPS"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-EL9JRMGJPS');
+  </script>
+
+  <!-- Microsoft Clarity -->
+  <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+      c[a]=c[a]||function(){c[a].q=c[a].q||[];c[a].q.push(arguments)};
+      t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+      y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "xey9wuiqr4");
+  </script>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Ver conexiones activas en Windows con netstat -ano | WinHacks</title>
+  <meta name="description" content="Aprende a usar netstat -ano en Windows 10 y Windows 11 para ver conexiones activas, puertos, direcciones IP y procesos asociados desde CMD.">
+  <meta name="robots" content="index, follow">
+
+  <link rel="canonical" href="https://winhacks.dev/seguridad/netstat-conexiones-activas">
+  <link rel="icon" href="/assets/images/favicon.ico">
+
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Ver conexiones activas en Windows con netstat -ano | WinHacks">
+  <meta property="og:description" content="Descubre qué conexiones mantiene activas tu PC usando un comando oficial de Windows.">
+  <meta property="og:url" content="https://winhacks.dev/seguridad/netstat-conexiones-activas">
+  <meta property="og:image" content="https://winhacks.dev/assets/images/og-image.jpg">
+  <meta property="og:site_name" content="WinHacks">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Ver conexiones activas en Windows con netstat -ano | WinHacks">
+  <meta name="twitter:description" content="Usa netstat -ano para revisar conexiones TCP, puertos y procesos activos en Windows.">
+  <meta name="twitter:image" content="https://winhacks.dev/assets/images/og-image.jpg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+
+  <header class="site-header">
+    <div id="navbar-container"></div>
+  </header>
+
+  <main>
+
+    <nav id="breadcrumb" class="breadcrumb" aria-label="Breadcrumb"></nav>
+
+    <article class="article">
+
+      <header class="article-hero article-hero--panel">
+
+        <p class="eyebrow">Seguridad Windows</p>
+
+        <h1>Cómo ver conexiones activas en Windows con netstat -ano</h1>
+
+        <p>
+          Tu PC puede mantener conexiones de red activas constantemente. Con el comando <strong>netstat -ano</strong> puedes revisar direcciones, puertos, estados TCP y procesos asociados desde CMD.
+        </p>
+
+        <div class="hero-buttons">
+          <a href="#pasos" class="btn btn-primary">Ver pasos</a>
+          <a href="#video" class="btn btn-outline">Ver Short</a>
+        </div>
+
+      </header>
+
+      <div class="article-content">
+
+        <div class="meta-grid">
+
+          <div class="meta-card">
+            <span>Comando</span>
+            <strong>netstat -ano</strong>
+          </div>
+
+          <div class="meta-card">
+            <span>Tiempo</span>
+            <strong>1 minuto</strong>
+          </div>
+
+          <div class="meta-card">
+            <span>Nivel</span>
+            <strong>Intermedio</strong>
+          </div>
+
+          <div class="meta-card">
+            <span>Compatible</span>
+            <strong>Windows 10/11</strong>
+          </div>
+
+        </div>
+
+        <section id="video" class="video-box">
+
+          <div class="section-header">
+
+            <p class="eyebrow">Video rápido</p>
+
+            <h2>Mira cómo ver conexiones activas</h2>
+
+            <p>
+              En este Short verás cómo usar CMD para revisar conexiones activas, puertos y procesos conectados en Windows.
+            </p>
+
+          </div>
+
+          <div class="youtube-short">
+            <iframe
+              src="https://www.youtube.com/embed/5aFCXR8bDjk"
+              title="Ver conexiones activas en Windows con netstat -ano | WinHacks"
+              loading="lazy"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen>
+            </iframe>
+          </div>
+
+        </section>
+
+        <section class="info-box">
+
+          <h2>Qué aprenderás</h2>
+
+          <ul>
+            <li>Cómo ver conexiones activas en Windows.</li>
+            <li>Qué muestra el comando <code>netstat -ano</code>.</li>
+            <li>Cómo identificar el PID de un proceso conectado.</li>
+            <li>Cómo revisar el proceso desde el Administrador de tareas.</li>
+          </ul>
+
+        </section>
+
+        <h2>Qué hace netstat -ano</h2>
+
+        <p>
+          <code>netstat</code> es una herramienta de línea de comandos incluida en Windows. Permite ver conexiones de red, direcciones locales, direcciones remotas, puertos abiertos y el estado de cada conexión.
+        </p>
+
+        <p>
+          Al usar <code>netstat -ano</code>, Windows muestra también el <strong>PID</strong>, que es el identificador del proceso asociado a cada conexión. Esto ayuda a investigar qué aplicación está usando una conexión específica.
+        </p>
+
+        <div class="tip-box">
+
+          <h3>Consejo WinHacks</h3>
+
+          <p>
+            Si ves muchas conexiones, no asumas que todas son peligrosas. Navegadores, sincronizadores, antivirus, servicios de Windows y apps en segundo plano suelen mantener conexiones legítimas.
+          </p>
+
+        </div>
+
+        <div class="warning-box">
+
+          <h3>Advertencia de seguridad</h3>
+
+          <p>
+            Este comando sirve para diagnóstico. No cierres procesos del sistema sin verificar qué hacen. Terminar procesos críticos puede causar errores, pérdida de conexión o inestabilidad.
+          </p>
+
+        </div>
+
+        <h2 id="pasos">Paso a paso para revisar conexiones activas</h2>
+
+        <div class="step-box">
+
+          <div class="step-number">1</div>
+
+          <div>
+            <h3>Abre CMD</h3>
+            <p>
+              Busca <strong>CMD</strong> en el menú Inicio. Puedes abrirlo normal o como administrador para tener mejor visibilidad del sistema.
+            </p>
+          </div>
+
+        </div>
+
+        <div class="step-box">
+
+          <div class="step-number">2</div>
+
+          <div>
+            <h3>Ejecuta netstat -ano</h3>
+            <p>
+              Copia y pega este comando:
+            </p>
+
+            <div class="command-box">
+              <code>netstat -ano</code>
+              <button class="copy-btn" data-copy="netstat -ano">Copiar</button>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="step-box">
+
+          <div class="step-number">3</div>
+
+          <div>
+            <h3>Revisa las columnas</h3>
+            <p>
+              Verás datos como protocolo, dirección local, dirección remota, estado de la conexión y PID del proceso.
+            </p>
+          </div>
+
+        </div>
+
+        <div class="step-box">
+
+          <div class="step-number">4</div>
+
+          <div>
+            <h3>Identifica el PID</h3>
+            <p>
+              El número al final de cada línea corresponde al proceso asociado. Ese PID puede buscarse en el Administrador de tareas.
+            </p>
+          </div>
+
+        </div>
+
+        <div class="step-box">
+
+          <div class="step-number">5</div>
+
+          <div>
+            <h3>Busca el proceso en Windows</h3>
+            <p>
+              Abre el Administrador de tareas, ve a <strong>Detalles</strong> y busca la columna <strong>PID</strong>. Así podrás saber qué programa está usando esa conexión.
+            </p>
+          </div>
+
+        </div>
+
+        <section class="info-box">
+
+          <h2>Estados comunes que puedes ver</h2>
+
+          <ul>
+            <li><strong>ESTABLISHED:</strong> conexión activa establecida.</li>
+            <li><strong>LISTENING:</strong> puerto esperando conexiones.</li>
+            <li><strong>TIME_WAIT:</strong> conexión cerrada recientemente.</li>
+            <li><strong>CLOSE_WAIT:</strong> conexión esperando cierre completo.</li>
+          </ul>
+
+        </section>
+
+        <section class="info-box">
+
+          <h2>Comando alternativo para buscar un PID</h2>
+
+          <p>
+            Si ya tienes un PID y quieres intentar identificarlo desde CMD, puedes usar:
+          </p>
+
+          <div class="command-box">
+            <code>tasklist /FI "PID eq 1234"</code>
+            <button class="copy-btn" data-copy='tasklist /FI "PID eq 1234"'>Copiar</button>
+          </div>
+
+          <p>
+            Cambia <strong>1234</strong> por el PID que viste en la salida de <code>netstat -ano</code>.
+          </p>
+
+        </section>
+
+        <div class="result-box">
+
+          <h2>Resultado esperado</h2>
+
+          <p>
+            Obtendrás una lista de conexiones activas y puertos utilizados por Windows y tus aplicaciones. También podrás relacionar cada conexión con un PID para investigar qué proceso la está usando.
+          </p>
+
+        </div>
+
+        <h2>Errores comunes</h2>
+
+        <div class="faq-box">
+
+          <h3>Veo muchas conexiones y no sé cuál revisar</h3>
+          <p>
+            Empieza por conexiones <strong>ESTABLISHED</strong> y por direcciones remotas que no reconozcas. Luego verifica el PID y el nombre del proceso.
+          </p>
+
+        </div>
+
+        <div class="faq-box">
+
+          <h3>No encuentro la columna PID</h3>
+          <p>
+            En el Administrador de tareas entra en la pestaña <strong>Detalles</strong>. Si no ves PID, haz clic derecho sobre las columnas y actívala.
+          </p>
+
+        </div>
+
+        <div class="faq-box">
+
+          <h3>El comando muestra demasiada información</h3>
+          <p>
+            Puedes ejecutar el comando y revisar con calma. También puedes redirigir la salida a un archivo usando <code>netstat -ano &gt; conexiones.txt</code>.
+          </p>
+
+        </div>
+
+        <h2>Preguntas frecuentes</h2>
+
+        <div class="faq-box">
+
+          <h3>¿netstat -ano detecta virus?</h3>
+          <p>
+            No directamente. Muestra conexiones y procesos asociados. Sirve como herramienta de revisión, pero no reemplaza un antivirus ni un análisis de seguridad.
+          </p>
+
+        </div>
+
+        <div class="faq-box">
+
+          <h3>¿Funciona en Windows 11?</h3>
+          <p>
+            Sí. También funciona en Windows 10 desde CMD o Terminal de Windows.
+          </p>
+
+        </div>
+
+        <div class="faq-box">
+
+          <h3>¿Debo cerrar una conexión sospechosa?</h3>
+          <p>
+            Primero identifica el proceso, revisa su ubicación y verifica si pertenece a Windows, a tu navegador, antivirus o alguna aplicación conocida.
+          </p>
+
+        </div>
+
+        <section class="section cta-section">
+
+          <div class="section-header">
+
+            <p class="eyebrow">Recurso gratis</p>
+
+            <h2>Descarga comandos útiles para Windows</h2>
+
+            <p>
+              Recibe una guía con comandos CMD para redes, seguridad básica, diagnóstico y mantenimiento de Windows.
+            </p>
+
+          </div>
+
+          <form
+            name="comandos-cmd"
+            method="POST"
+            data-netlify="true"
+            class="email-form netlify-form"
+            id="comandosForm"
+            data-redirect="/recursos/gracias-comandos.html">
+
+            <input type="hidden" name="form-name" value="comandos-cmd">
+
+            <input type="text" name="nombre" placeholder="Tu nombre" required>
+
+            <input type="email" name="email" placeholder="Tu correo electrónico" required>
+
+            <button type="submit">Descargar comandos</button>
+
+          </form>
+
+        </section>
+
+        <h2>Artículos relacionados</h2>
+
+        <div class="related-grid">
+
+          <a href="/redes/ver-clave-wifi-windows.html" class="related-card">
+            <span>Redes</span>
+            <strong>Ver claves WiFi guardadas en Windows</strong>
+          </a>
+
+          <a href="/recursos/checklist-seguridad.html" class="related-card">
+            <span>Seguridad</span>
+            <strong>Checklist de seguridad para Windows</strong>
+          </a>
+
+          <a href="/comandos/cmd.html" class="related-card">
+            <span>Comandos</span>
+            <strong>Comandos CMD útiles para Windows</strong>
+          </a>
+
+        </div>
+
+        <div class="next-box">
+
+          <h2>Siguiente paso recomendado</h2>
+
+          <p>
+            Después de revisar tus conexiones activas, identifica los procesos desconocidos y ejecuta un análisis con Seguridad de Windows si encuentras algo sospechoso.
+          </p>
+
+          <a href="/recursos/checklist-seguridad.html" class="btn btn-primary">Ver checklist</a>
+
+        </div>
+
+      </div>
+
+    </article>
+
+  </main>
+
+  <footer>
+    <div id="footer-container"></div>
+  </footer>
+
+  <a href="#" class="to-top" aria-label="Volver arriba">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8"
+      stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="18 15 12 9 6 15"></polyline>
+    </svg>
+  </a>
+
+  <script src="/js/components.js"></script>
+  <script src="/js/core/engine.js?v=20260626-03" defer></script>
+
+</body>
+</html>

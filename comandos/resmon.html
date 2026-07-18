@@ -1,0 +1,454 @@
+<!DOCTYPE html><html lang="es"><head>
+  <!-- Google tag (gtag.js) -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EL9JRMGJPS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-EL9JRMGJPS');
+</script>
+<!-- Clarity code Puedes ver grabaciones reales (anónimas) de cómo navegan los usuarios.-->
+<script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "xey9wuiqr4");
+</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>resmon: Cómo Abrir el Monitor de Recursos de Windows | WinHacks</title>
+
+  <meta name="description" content="Aprende a usar resmon para abrir el Monitor de Recursos de Windows y revisar consumo de CPU, memoria, disco y red.">
+
+  <meta name="robots" content="index, follow, max-image-preview:large">
+
+  <link rel="canonical" href="https://winhacks.dev/comandos/resmon">
+
+  <link rel="icon" href="/assets/images/favicon.ico">
+
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="WinHacks">
+  <meta property="og:title" content="resmon: Cómo Abrir el Monitor de Recursos de Windows | WinHacks">
+  <meta property="og:description" content="Usa resmon para ver qué procesos consumen CPU, RAM, disco o red en Windows 10 y Windows 11.">
+  <meta property="og:url" content="https://winhacks.dev/comandos/resmon">
+  <meta property="og:image" content="https://winhacks.dev/assets/img/og/og-resmon.webp">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="resmon: Cómo Abrir el Monitor de Recursos de Windows | WinHacks">
+  <meta name="twitter:description" content="Aprende a abrir el Monitor de Recursos de Windows usando el comando resmon.">
+  <meta name="twitter:image" content="https://winhacks.dev/assets/img/og/og-resmon.webp">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=Montserrat:wght@800;900&amp;display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/css/style.css">
+
+  <meta property="og:locale" content="es_ES"></head>
+
+<body>
+
+  <header class="site-header">
+    <div id="navbar-container"></div>
+  </header>
+
+  <main>
+
+    <nav id="breadcrumb" class="breadcrumb" aria-label="Breadcrumb"></nav>
+
+    <article class="article">
+
+      <header class="article-hero article-hero--panel">
+
+        <p class="eyebrow">Comando de Windows</p>
+
+        <h1>resmon abre el Monitor de Recursos de Windows</h1>
+
+        <p>
+          Aprende a usar el comando <strong>resmon</strong> para abrir el Monitor de Recursos
+          y descubrir qué programas consumen CPU, memoria, disco o red en Windows.
+        </p>
+
+        <div class="hero-buttons">
+          <a href="#video" class="btn btn-primary">Ver video</a>
+          <a href="#pasos" class="btn btn-outline">Ir al tutorial</a>
+        </div>
+
+      </header>
+
+      <div class="article-content">
+
+        <div class="meta-grid">
+
+          <div class="meta-card">
+            <span>Dificultad</span>
+            <strong>Fácil</strong>
+          </div>
+
+          <div class="meta-card">
+            <span>Tiempo</span>
+            <strong>2 minutos</strong>
+          </div>
+
+          <div class="meta-card">
+            <span>Compatible</span>
+            <strong>Windows 10/11</strong>
+          </div>
+
+          <div class="meta-card">
+            <span>Comando</span>
+            <strong>resmon</strong>
+          </div>
+
+        </div>
+
+        <section id="video" class="video-box">
+
+          <div class="section-header">
+
+            <p class="eyebrow">Video rápido</p>
+
+            <h2>Mira este comando en video</h2>
+
+            <p>
+              En este Short muestro cómo abrir el Monitor de Recursos y revisar qué proceso
+              está consumiendo CPU, memoria, disco o red.
+            </p>
+
+          </div>
+
+          <div class="youtube-short">
+
+            <iframe src="https://www.youtube.com/embed/lTMllT0uK8I" title="Cómo usar resmon para abrir el Monitor de Recursos de Windows | WinHacks" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen="">
+            </iframe>
+
+          </div>
+
+        </section>
+
+        <section class="info-box">
+
+          <h3>Qué aprenderás</h3>
+
+          <ul>
+            <li>Qué es el comando <strong>resmon</strong>.</li>
+            <li>Cómo abrir el Monitor de Recursos rápidamente.</li>
+            <li>Qué puedes revisar en CPU, memoria, disco y red.</li>
+            <li>Cuándo usarlo para diagnosticar una PC lenta.</li>
+          </ul>
+
+        </section>
+
+        <h2>¿Qué hace este comando?</h2>
+
+        <p>
+          El comando <strong>resmon</strong> abre el Monitor de Recursos de Windows.
+          Esta herramienta muestra en tiempo real qué procesos están usando CPU, memoria RAM,
+          disco y red.
+        </p>
+
+        <p>
+          Es más detallado que el Administrador de tareas porque permite ver actividad por proceso,
+          archivos abiertos, conexiones de red, lectura y escritura de disco.
+        </p>
+
+        <div class="tip-box">
+
+          <h3>💡 Consejo WinHacks</h3>
+
+          <p>
+            Si la PC está lenta, no cierres procesos al azar. Primero revisa qué recurso está saturado:
+            CPU, memoria, disco o red.
+          </p>
+
+        </div>
+
+        <div class="warning-box">
+
+          <span>⚠️</span>
+
+          <h3>Antes de continuar</h3>
+
+          <p>
+            No todos los procesos con nombres raros son peligrosos. Muchos pertenecen a Windows,
+            drivers o programas instalados. Revisa antes de cerrar algo.
+          </p>
+
+        </div>
+
+        <h2 id="pasos">Paso a paso</h2>
+
+        <div class="step-box">
+
+          <span class="step-number">1</span>
+
+          <h3>Abre Ejecutar</h3>
+
+          <p>
+            Presiona <strong>Win + R</strong> para abrir la ventana Ejecutar.
+          </p>
+
+          <div class="screenshot-placeholder">
+            <figure class="article-image">
+              <img height="1024" width="1536" src="../assets/images/win-r-ejecutar.png" alt="Ventana Ejecutar de Windows 11 abierta mediante el atajo Win + R" loading="lazy" decoding="async">
+              <figcaption>
+                Ventana <strong>Ejecutar</strong> abierta con el atajo de teclado <kbd>Win</kbd> + <kbd>R</kbd>.
+              </figcaption>
+            </figure>
+          </div>
+
+        </div>
+
+        <div class="step-box">
+
+          <span class="step-number">2</span>
+
+          <h3>Escribe el comando</h3>
+
+          <p>
+            Escribe este comando y presiona Enter:
+          </p>
+
+          <div class="command-box">
+            <code>resmon</code>
+            <button class="copy-btn" data-copy="resmon">Copiar</button>
+          </div>
+
+        </div>
+
+        <div class="step-box">
+
+          <span class="step-number">3</span>
+
+          <h3>Revisa Información general</h3>
+
+          <p>
+            Windows abrirá el Monitor de Recursos. En la pestaña <strong>Información general</strong>
+            verás un resumen de CPU, disco, red y memoria.
+          </p>
+
+          <div class="screenshot-placeholder">
+            Captura pendiente: Monitor de Recursos abierto en Información general.
+          </div>
+
+        </div>
+
+        <h2>Qué puedes revisar dentro</h2>
+
+        <div class="info-box">
+          <h3>CPU</h3>
+          <p>
+            Muestra procesos activos, consumo del procesador y servicios asociados.
+          </p>
+        </div>
+
+        <div class="info-box">
+          <h3>Memoria</h3>
+          <p>
+            Permite revisar qué programas consumen RAM y cómo se está usando la memoria física.
+          </p>
+        </div>
+
+        <div class="info-box">
+          <h3>Disco</h3>
+          <p>
+            Muestra qué procesos están leyendo o escribiendo archivos en el almacenamiento.
+          </p>
+        </div>
+
+        <div class="info-box">
+          <h3>Red</h3>
+          <p>
+            Permite ver conexiones activas, procesos con tráfico de red y uso de internet.
+          </p>
+        </div>
+
+        <h2>Qué debes revisar primero</h2>
+
+        <p>
+          Si tu PC está lenta, revisa primero qué sección tiene más actividad.
+          Si el disco está al 100%, entra en <strong>Disco</strong>. Si la memoria está llena,
+          revisa <strong>Memoria</strong>.
+        </p>
+
+        <p>
+          Si un proceso aparece usando muchos recursos todo el tiempo, anota su nombre antes de cerrarlo
+          o investigarlo.
+        </p>
+
+        <div class="result-box">
+
+          <h3>✅ Resultado esperado</h3>
+
+          <p>
+            Al usar resmon deberías poder identificar qué proceso está consumiendo CPU,
+            memoria, disco o red en tu PC.
+          </p>
+
+        </div>
+
+        <h2>Cuándo usar este comando</h2>
+
+        <ul>
+          <li>Cuando la PC se pone lenta sin razón.</li>
+          <li>Cuando el disco trabaja al 100%.</li>
+          <li>Cuando la memoria RAM se llena rápido.</li>
+          <li>Cuando el internet se siente lento.</li>
+          <li>Cuando un programa consume demasiado.</li>
+        </ul>
+
+        <h2>Errores comunes</h2>
+
+        <div class="info-box">
+          <h3>Cerrar procesos sin revisar</h3>
+          <p>
+            Algunos procesos son necesarios para Windows. Antes de cerrar algo, revisa el nombre,
+            la ubicación y el consumo real.
+          </p>
+        </div>
+
+        <div class="info-box">
+          <h3>Confundir actividad normal con problema</h3>
+          <p>
+            Windows puede usar disco o red por actualizaciones, antivirus, indexación o sincronización.
+            Revisa si el consumo es constante o temporal.
+          </p>
+        </div>
+
+        <div class="info-box">
+          <h3>No combinarlo con otras herramientas</h3>
+          <p>
+            Para un diagnóstico mejor, usa resmon junto con el Administrador de tareas,
+            Historial de Confiabilidad y Visor de Eventos.
+          </p>
+        </div>
+
+        <h2>Preguntas frecuentes</h2>
+
+        <div class="faq-box">
+          <h3>¿Funciona en Windows 11?</h3>
+          <p>
+            Sí. <strong>resmon</strong> funciona en Windows 11.
+          </p>
+        </div>
+
+        <div class="faq-box">
+          <h3>¿Funciona en Windows 10?</h3>
+          <p>
+            Sí. También funciona en Windows 10.
+          </p>
+        </div>
+
+        <div class="faq-box">
+          <h3>¿Necesito instalar programas?</h3>
+          <p>
+            No. Es una herramienta integrada de Windows.
+          </p>
+        </div>
+
+        <div class="faq-box">
+          <h3>¿resmon es mejor que el Administrador de tareas?</h3>
+          <p>
+            No lo reemplaza. Lo complementa porque muestra más detalle técnico.
+          </p>
+        </div>
+
+        <div class="faq-box">
+          <h3>¿Puedo cerrar procesos desde aquí?</h3>
+          <p>
+            Sí, pero debes hacerlo con cuidado. Algunos procesos son necesarios para Windows.
+          </p>
+        </div>
+
+        <section class="section cta-section" id="descarga">
+
+          <p class="eyebrow">Guía gratis</p>
+
+          <h2>50 Secretos de Windows que la mayoría nunca descubre</h2>
+
+          <p>
+            Descarga una guía práctica con herramientas ocultas, comandos útiles y trucos seguros
+            para Windows 10 y Windows 11.
+          </p>
+
+          <form name="guia-50-secretos" method="POST" data-netlify="true" class="email-form netlify-form" id="secretosForm" data-redirect="/recursos/gracias-50-secretos.html">
+
+            <input type="hidden" name="form-name" value="guia-50-secretos">
+
+            <input type="text" name="nombre" placeholder="Tu nombre" required="">
+
+            <input type="email" name="email" placeholder="Tu correo electrónico" required="">
+
+            <button type="submit">Descargar guía</button>
+
+          </form>
+
+        </section>
+
+        <h2>Artículos relacionados</h2>
+
+        <div class="related-grid">
+
+          <a href="/secretos/monitor-recursos.html" class="related-card">
+            <h3>Monitor de Recursos</h3>
+            <p>Aprende a usar esta herramienta paso a paso.</p>
+          </a>
+
+          <a href="/comandos/perfmon-rel.html" class="related-card">
+            <h3>perfmon /rel</h3>
+            <p>Abre el Historial de Confiabilidad para revisar errores ocultos.</p>
+          </a>
+
+          <a href="/secretos/visor-eventos.html" class="related-card">
+            <h3>Visor de Eventos</h3>
+            <p>Revisa registros avanzados del sistema.</p>
+          </a>
+
+          <a href="/comandos/taskmgr.html" class="related-card">
+            <h3>taskmgr</h3>
+            <p>Abre el Administrador de tareas de Windows.</p>
+          </a>
+
+        </div>
+
+        <div class="next-box">
+
+          <h3>🚀 WinHacks Academy</h3>
+
+          <p>
+            Próximamente: cursos prácticos para dominar Windows, comandos,
+            PowerShell, seguridad, optimización y herramientas ocultas desde cero.
+          </p>
+
+          <a href="/academy/index.html" class="btn btn-primary">
+            Ver Academy
+          </a>
+
+        </div>
+
+      </div>
+
+    </article>
+
+  </main>
+
+  <footer>
+    <div id="footer-container"></div>
+  </footer>
+
+  <a href="#" class="to-top" aria-label="Volver arriba">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="18 15 12 9 6 15"></polyline>
+    </svg>
+  </a>
+
+  <script src="/js/components.js"></script>
+  <script src="/js/core/engine.js?v=20260626-03" defer=""></script>
+
+
+
+</body></html>

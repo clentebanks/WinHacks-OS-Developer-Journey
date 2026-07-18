@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-EL9JRMGJPS"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-EL9JRMGJPS');
+  </script>
+
+  <!-- Clarity code Puedes ver grabaciones reales (anónimas) de cómo navegan los usuarios. -->
+  <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+      c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+      t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+      y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "xey9wuiqr4");
+  </script>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>PowerShell en Windows: Qué es y Cómo Usarlo | WinHacks</title>
+
+  <meta name="description"
+    content="Aprende qué es PowerShell en Windows, cómo abrirlo y qué comandos seguros puedes usar para diagnosticar, administrar y automatizar tareas básicas.">
+
+  <meta name="robots" content="index, follow">
+
+  <link rel="canonical" href="https://winhacks.dev/comandos/powershell">
+
+  <link rel="icon" href="/assets/images/favicon.ico">
+
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="WinHacks">
+  <meta property="og:title" content="PowerShell en Windows: Qué es y Cómo Usarlo | WinHacks">
+  <meta property="og:description"
+    content="Guía segura para entender PowerShell, abrirlo correctamente y usar comandos básicos en Windows 10 y Windows 11.">
+  <meta property="og:url" content="https://winhacks.dev/comandos/powershell">
+  <meta property="og:image" content="https://winhacks.dev/assets/img/og/og-powershell.webp">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="PowerShell en Windows: Qué es y Cómo Usarlo | WinHacks">
+  <meta name="twitter:description"
+    content="Aprende PowerShell desde cero con comandos seguros y explicados paso a paso.">
+  <meta name="twitter:image" content="https://winhacks.dev/assets/img/og/og-powershell.webp">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Montserrat:wght@800;900&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+
+  <header class="site-header">
+    <div id="navbar-container"></div>
+  </header>
+
+  <main>
+
+    <nav id="breadcrumb" class="breadcrumb" aria-label="Breadcrumb"></nav>
+
+    <article class="article">
+
+      <header class="article-hero article-hero--panel">
+
+        <p class="eyebrow">Comando de Windows</p>
+
+        <h1>PowerShell permite administrar Windows con comandos avanzados</h1>
+
+        <p>
+          Aprende qué es <strong>PowerShell</strong>, cómo abrirlo en Windows 10 y Windows 11,
+          y qué comandos básicos puedes usar para consultar información del sistema sin tocar
+          configuraciones peligrosas.
+        </p>
+
+        <div class="hero-buttons">
+          <a href="#video" class="btn btn-primary">Ver video</a>
+          <a href="#pasos" class="btn btn-outline">Ir al tutorial</a>
+        </div>
+
+      </header>
+
+      <div class="article-content">
+
+        <div class="meta-grid">
+
+          <div class="meta-card">
+            <span>Dificultad</span>
+            <strong>Fácil</strong>
+          </div>
+
+          <div class="meta-card">
+            <span>Tiempo</span>
+            <strong>3 minutos</strong>
+          </div>
+
+          <div class="meta-card">
+            <span>Compatible</span>
+            <strong>Windows 10/11</strong>
+          </div>
+
+          <div class="meta-card">
+            <span>Herramienta</span>
+            <strong>PowerShell</strong>
+          </div>
+
+        </div>
+
+        <section id="video" class="video-box">
+
+          <div class="section-header">
+
+            <p class="eyebrow">Video rápido</p>
+
+            <h2>Mira PowerShell en video</h2>
+
+            <p>
+              Cuando publique el Short específico de PowerShell, aquí irá el video oficial.
+              Por ahora, puedes ver más comandos y trucos en el canal de WinHacks.
+            </p>
+
+          </div>
+
+          <div class="video-placeholder">
+            <a
+              href="https://www.youtube.com/@WinHacksOficial"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn btn-primary">
+              Ver canal de WinHacks
+            </a>
+          </div>
+
+        </section>
+
+        <section class="info-box">
+
+          <h3>Qué aprenderás</h3>
+
+          <ul>
+            <li>Qué es <strong>PowerShell</strong> y para qué sirve.</li>
+            <li>Cómo abrir PowerShell desde Windows.</li>
+            <li>Cuándo usarlo normal y cuándo como administrador.</li>
+            <li>Comandos básicos y seguros para empezar.</li>
+            <li>Diferencias principales entre CMD y PowerShell.</li>
+          </ul>
+
+        </section>
+
+        <h2>¿Qué hace PowerShell?</h2>
+
+        <p>
+          PowerShell es una consola avanzada de Microsoft diseñada para administrar Windows
+          mediante comandos. Permite consultar información del sistema, revisar procesos,
+          listar servicios, administrar archivos y automatizar tareas.
+        </p>
+
+        <p>
+          A diferencia de CMD, PowerShell trabaja de forma más moderna y flexible. Por eso es
+          muy usado por técnicos, administradores de sistemas y usuarios avanzados.
+        </p>
+
+        <div class="tip-box">
+
+          <h3>💡 Consejo WinHacks</h3>
+
+          <p>
+            Empieza con comandos de consulta. No ejecutes scripts descargados de internet si no entiendes
+            exactamente qué hacen.
+          </p>
+
+        </div>
+
+        <div class="warning-box">
+
+          <span>⚠️</span>
+
+          <h3>Antes de continuar</h3>
+
+          <p>
+            PowerShell es potente. Algunos comandos pueden modificar servicios, permisos o configuraciones.
+            En esta guía usaremos comandos seguros para aprender sin poner en riesgo Windows.
+          </p>
+
+        </div>
+
+        <h2 id="pasos">Paso a paso</h2>
+
+        <div class="step-box">
+
+          <span class="step-number">1</span>
+
+          <h3>Abre el menú Inicio</h3>
+
+          <p>
+            Presiona la tecla <strong>Windows</strong> o haz clic en el botón de Inicio.
+          </p>
+
+          <div class="screenshot-placeholder">
+            Captura pendiente: búsqueda de PowerShell en el menú Inicio.
+          </div>
+
+        </div>
+
+        <div class="step-box">
+
+          <span class="step-number">2</span>
+
+          <h3>Busca PowerShell</h3>
+
+          <p>
+            Escribe <strong>PowerShell</strong> en la búsqueda de Windows.
+          </p>
+
+          <div class="screenshot-placeholder">
+            Captura pendiente: resultado Windows PowerShell en la búsqueda.
+          </div>
+
+        </div>
+
+        <div class="step-box">
+
+          <span class="step-number">3</span>
+
+          <h3>Ábrelo normalmente</h3>
+
+          <p>
+            Haz clic en <strong>Windows PowerShell</strong> para abrir la consola en modo normal.
+          </p>
+
+          <div class="screenshot-placeholder">
+            Captura pendiente: ventana de PowerShell abierta.
+          </div>
+
+        </div>
+
+        <div class="step-box">
+
+          <span class="step-number">4</span>
+
+          <h3>Usa administrador solo si hace falta</h3>
+
+          <p>
+            Si un comando necesita permisos elevados, haz clic derecho y selecciona
+            <strong>Ejecutar como administrador</strong>.
+          </p>
+
+          <div class="screenshot-placeholder">
+            Captura pendiente: opción Ejecutar como administrador.
+          </div>
+
+        </div>
+
+        <h2>Comandos seguros para empezar</h2>
+
+        <p>
+          Estos comandos son útiles para consultar información. No cambian configuraciones críticas
+          del sistema por sí solos.
+        </p>
+
+        <div class="command-list">
+
+          <div class="command-box">
+            <code>Get-ComputerInfo</code>
+            <button class="copy-btn" data-copy="Get-ComputerInfo">Copiar</button>
+          </div>
+
+          <div class="command-box">
+            <code>Get-Process</code>
+            <button class="copy-btn" data-copy="Get-Process">Copiar</button>
+          </div>
+
+          <div class="command-box">
+            <code>Get-Service</code>
+            <button class="copy-btn" data-copy="Get-Service">Copiar</button>
+          </div>
+
+          <div class="command-box">
+            <code>Get-ChildItem</code>
+            <button class="copy-btn" data-copy="Get-ChildItem">Copiar</button>
+          </div>
+
+          <div class="command-box">
+            <code>Get-ExecutionPolicy</code>
+            <button class="copy-btn" data-copy="Get-ExecutionPolicy">Copiar</button>
+          </div>
+
+          <div class="command-box">
+            <code>$PSVersionTable</code>
+            <button class="copy-btn" data-copy="$PSVersionTable">Copiar</button>
+          </div>
+
+        </div>
+
+        <h2>Para qué sirve cada comando</h2>
+
+        <div class="info-box">
+          <h3>Get-ComputerInfo</h3>
+          <p>
+            Muestra información general del equipo, sistema operativo, BIOS, hardware
+            y configuración básica.
+          </p>
+        </div>
+
+        <div class="info-box">
+          <h3>Get-Process</h3>
+          <p>
+            Lista procesos activos. Es útil para revisar qué aplicaciones se están ejecutando
+            en segundo plano.
+          </p>
+        </div>
+
+        <div class="info-box">
+          <h3>Get-Service</h3>
+          <p>
+            Muestra servicios de Windows y su estado. Sirve para diagnóstico, pero no conviene
+            detener servicios sin saber qué hacen.
+          </p>
+        </div>
+
+        <div class="info-box">
+          <h3>Get-ChildItem</h3>
+          <p>
+            Lista archivos y carpetas de una ubicación. Es similar a ver el contenido de una carpeta
+            desde la consola.
+          </p>
+        </div>
+
+        <div class="info-box">
+          <h3>Get-ExecutionPolicy</h3>
+          <p>
+            Consulta la política de ejecución de scripts. Este comando solo muestra información,
+            no cambia la configuración.
+          </p>
+        </div>
+
+        <div class="info-box">
+          <h3>$PSVersionTable</h3>
+          <p>
+            Muestra la versión de PowerShell instalada y otros datos del entorno.
+          </p>
+        </div>
+
+        <h2>PowerShell vs CMD</h2>
+
+        <p>
+          CMD es la consola clásica de Windows. PowerShell es más moderno y está diseñado
+          para administración, diagnóstico y automatización.
+        </p>
+
+        <div class="result-box">
+
+          <h3>✅ Diferencia rápida</h3>
+
+          <ul>
+            <li><strong>CMD:</strong> comandos clásicos y tareas simples.</li>
+            <li><strong>PowerShell:</strong> administración moderna y automatización.</li>
+            <li><strong>Windows Terminal:</strong> aplicación moderna para abrir CMD, PowerShell y más.</li>
+          </ul>
+
+        </div>
+
+        <h2>Cuándo usar PowerShell</h2>
+
+        <ul>
+          <li>Cuando necesitas consultar información detallada del sistema.</li>
+          <li>Cuando quieres listar procesos, servicios o configuraciones.</li>
+          <li>Cuando necesitas automatizar tareas repetitivas.</li>
+          <li>Cuando sigues una guía técnica confiable.</li>
+          <li>Cuando quieres aprender administración básica de Windows.</li>
+        </ul>
+
+        <h2>Errores comunes</h2>
+
+        <div class="info-box">
+          <h3>Ejecutar scripts sin revisarlos</h3>
+          <p>
+            Muchos scripts prometen optimizar Windows, pero pueden desactivar servicios importantes
+            o cambiar configuraciones sensibles.
+          </p>
+        </div>
+
+        <div class="info-box">
+          <h3>Usar administrador para todo</h3>
+          <p>
+            No siempre es necesario. Para comandos de consulta, normalmente basta abrir PowerShell
+            en modo normal.
+          </p>
+        </div>
+
+        <div class="info-box">
+          <h3>Confundir PowerShell con CMD</h3>
+          <p>
+            Algunos comandos de CMD funcionan en PowerShell, pero no todos se comportan igual.
+            Conviene aprender las diferencias básicas.
+          </p>
+        </div>
+
+        <h2>Preguntas frecuentes</h2>
+
+        <div class="faq-box">
+          <h3>¿PowerShell viene instalado en Windows?</h3>
+          <p>
+            Sí. Windows incluye Windows PowerShell de forma predeterminada.
+          </p>
+        </div>
+
+        <div class="faq-box">
+          <h3>¿PowerShell es peligroso?</h3>
+          <p>
+            No por sí mismo. El riesgo depende de los comandos o scripts que ejecutes.
+          </p>
+        </div>
+
+        <div class="faq-box">
+          <h3>¿Necesito abrirlo como administrador?</h3>
+          <p>
+            Solo cuando el comando lo requiera. Para consultar información, normalmente no hace falta.
+          </p>
+        </div>
+
+        <div class="faq-box">
+          <h3>¿PowerShell reemplaza a CMD?</h3>
+          <p>
+            No completamente. Ambos pueden convivir, pero PowerShell es más potente para administración moderna.
+          </p>
+        </div>
+
+        <div class="faq-box">
+          <h3>¿Qué es PowerShell 7?</h3>
+          <p>
+            Es una versión moderna de PowerShell que puede instalarse junto al PowerShell clásico de Windows.
+          </p>
+        </div>
+
+        <section class="section cta-section" id="descarga">
+
+          <p class="eyebrow">Guía gratis</p>
+
+          <h2>50 Secretos de Windows que la mayoría nunca descubre</h2>
+
+          <p>
+            Descarga una guía práctica con herramientas ocultas, comandos útiles y trucos seguros
+            para Windows 10 y Windows 11.
+          </p>
+
+          <form
+            name="guia-50-secretos"
+            method="POST"
+            data-netlify="true"
+            class="email-form netlify-form"
+            id="secretosForm"
+            data-redirect="/recursos/gracias-50-secretos.html">
+
+            <input type="hidden" name="form-name" value="guia-50-secretos">
+
+            <input type="text" name="nombre" placeholder="Tu nombre" required>
+
+            <input type="email" name="email" placeholder="Tu correo electrónico" required>
+
+            <button type="submit">Descargar guía</button>
+
+          </form>
+
+        </section>
+
+        <h2>Artículos relacionados</h2>
+
+        <div class="related-grid">
+
+          <a href="/comandos/actualizar-powershell-7.html" class="related-card">
+            <h3>Actualizar PowerShell 7</h3>
+            <p>Instala la versión moderna de PowerShell en Windows paso a paso.</p>
+          </a>
+
+          <a href="/comandos/winget.html" class="related-card">
+            <h3>winget</h3>
+            <p>Instala y administra aplicaciones desde la terminal de Windows.</p>
+          </a>
+
+          <a href="/comandos/services-msc.html" class="related-card">
+            <h3>services.msc</h3>
+            <p>Revisa los servicios activos del sistema de forma segura.</p>
+          </a>
+
+          <a href="/comandos/sfc-scannow.html" class="related-card">
+            <h3>sfc /scannow</h3>
+            <p>Revisa archivos protegidos del sistema y detecta daños básicos.</p>
+          </a>
+
+        </div>
+
+        <div class="next-box">
+
+          <h3>🚀 Siguiente paso recomendado</h3>
+
+          <p>
+            Después de entender PowerShell, continúa con la guía para actualizar a PowerShell 7
+            y preparar tu entorno para comandos modernos.
+          </p>
+
+          <a href="/comandos/actualizar-powershell-7.html" class="btn btn-primary">
+            Actualizar PowerShell 7
+          </a>
+
+        </div>
+
+      </div>
+
+    </article>
+
+  </main>
+
+  <footer>
+    <div id="footer-container"></div>
+  </footer>
+
+  <a href="#" class="to-top" aria-label="Volver arriba">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8"
+      stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="18 15 12 9 6 15"></polyline>
+    </svg>
+  </a>
+
+  <script src="/js/components.js"></script>
+  <script src="/js/core/engine.js?v=20260626-03" defer></script>
+
+</body>
+
+</html>

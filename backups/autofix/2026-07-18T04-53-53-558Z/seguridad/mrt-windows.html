@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-EL9JRMGJPS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-EL9JRMGJPS');
+</script>
+<!-- Clarity code Puedes ver grabaciones reales (anónimas) de cómo navegan los usuarios.-->
+<script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "xey9wuiqr4");
+</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>MRT Windows: Herramienta de Eliminación de Malware | WinHacks</title>
+
+  <meta name="description"
+    content="Aprende a usar MRT en Windows 10 y Windows 11 para ejecutar la herramienta de eliminación de software malintencionado y revisar amenazas comunes de forma segura.">
+
+  <meta name="robots" content="index, follow">
+
+  <link rel="canonical" href="https://winhacks.dev/seguridad/mrt-windows.html">
+
+  <link rel="icon" href="/assets/images/favicon.ico">
+
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="WinHacks">
+  <meta property="og:title" content="MRT Windows: Herramienta de Eliminación de Malware | WinHacks">
+  <meta property="og:description"
+    content="Usa MRT para revisar amenazas comunes en Windows con una herramienta integrada de Microsoft.">
+  <meta property="og:url" content="https://winhacks.dev/seguridad/mrt-windows.html">
+  <meta property="og:image" content="https://winhacks.dev/assets/img/og/og-mrt-windows.webp">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="MRT Windows: Herramienta de Eliminación de Malware | WinHacks">
+  <meta name="twitter:description"
+    content="Aprende a ejecutar MRT en Windows para revisar malware común de forma segura.">
+  <meta name="twitter:image" content="https://winhacks.dev/assets/img/og/og-mrt-windows.webp">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Montserrat:wght@800;900&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+
+  <header class="site-header">
+    <div id="navbar-container"></div>
+  </header>
+
+  <main>
+
+    <nav id="breadcrumb" class="breadcrumb" aria-label="Breadcrumb"></nav>
+
+    <article class="article">
+
+      <header class="article-hero article-hero--panel">
+
+        <p class="eyebrow">Seguridad de Windows</p>
+
+        <h1>MRT revisa malware común oculto en Windows</h1>
+
+        <p>
+          Aprende a usar <strong>MRT</strong>, la Herramienta de eliminación de software
+          malintencionado de Microsoft, para revisar amenazas comunes en Windows 10 y Windows 11
+          sin instalar programas externos.
+        </p>
+
+        <div class="hero-buttons">
+          <a href="#video" class="btn btn-primary">Ver video</a>
+          <a href="#pasos" class="btn btn-outline">Ir al tutorial</a>
+        </div>
+
+      </header>
+
+      <div class="article-content">
+
+        <div class="meta-grid">
+
+          <div class="meta-card">
+            <span>Dificultad</span>
+            <strong>Fácil</strong>
+          </div>
+
+          <div class="meta-card">
+            <span>Tiempo</span>
+            <strong>10 minutos</strong>
+          </div>
+
+          <div class="meta-card">
+            <span>Compatible</span>
+            <strong>Windows 10/11</strong>
+          </div>
+
+          <div class="meta-card">
+            <span>Categoría</span>
+            <strong>Seguridad</strong>
+          </div>
+
+        </div>
+
+        <section id="video" class="video-box">
+
+          <div class="section-header">
+
+            <p class="eyebrow">Video rápido</p>
+
+            <h2>Mira esta herramienta en video</h2>
+
+            <p>
+              Cuando publique el Short sobre MRT aparecerá aquí.
+              Mientras tanto puedes visitar el canal de WinHacks.
+            </p>
+
+          </div>
+
+          <div class="video-placeholder">
+            <a
+              href="https://www.youtube.com/@WinHacksOficial"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn btn-primary">
+              Ver canal de WinHacks
+            </a>
+          </div>
+
+        </section>
+
+        <section class="info-box">
+
+          <h3>Qué aprenderás</h3>
+
+          <ul>
+            <li>Qué es <strong>MRT</strong> en Windows.</li>
+            <li>Cómo abrir la herramienta desde Ejecutar.</li>
+            <li>Qué tipo de análisis puedes usar.</li>
+            <li>Cuándo conviene usar un análisis completo.</li>
+            <li>Qué hacer si MRT detecta una amenaza.</li>
+          </ul>
+
+        </section>
+
+        <h2>¿Qué es MRT?</h2>
+
+        <p>
+          <strong>MRT</strong> significa Microsoft Windows Malicious Software Removal Tool.
+          Es una herramienta integrada de Microsoft que ayuda a detectar y eliminar ciertas
+          familias de software malintencionado conocidas.
+        </p>
+
+        <p>
+          No reemplaza a <strong>Windows Defender</strong> ni a un antivirus completo,
+          pero puede servir como revisión adicional cuando sospechas que algo extraño
+          ocurre en el sistema.
+        </p>
+
+        <div class="tip-box">
+
+          <h3>💡 Consejo WinHacks</h3>
+
+          <p>
+            Si tu PC está lenta, abre ventanas extrañas o notas comportamiento raro,
+            ejecuta primero <strong>MRT</strong> y luego haz un análisis completo con
+            <strong>Seguridad de Windows</strong>.
+          </p>
+
+        </div>
+
+        <div class="warning-box">
+
+          <span>⚠️</span>
+
+          <h3>Antes de continuar</h3>
+
+          <p>
+            MRT no detecta todo tipo de malware. Úsalo como herramienta adicional,
+            no como reemplazo de Windows Defender o de una solución de seguridad activa.
+          </p>
+
+        </div>
+
+        <h2 id="pasos">Paso a paso</h2>
+
+        <div class="step-box">
+
+          <span class="step-number">1</span>
+
+          <h3>Abre Ejecutar</h3>
+
+          <p>
+            Presiona <strong>Win + R</strong> para abrir la ventana Ejecutar.
+          </p>
+
+          <div class="screenshot-placeholder">
+            Captura pendiente: ventana Ejecutar abierta.
+          </div>
+
+        </div>
+
+        <div class="step-box">
+
+          <span class="step-number">2</span>
+
+          <h3>Ejecuta MRT</h3>
+
+          <p>
+            Escribe este comando y presiona Enter:
+          </p>
+
+          <div class="command-box">
+            <code>mrt</code>
+            <button class="copy-btn" data-copy="mrt">Copiar</button>
+          </div>
+
+          <div class="screenshot-placeholder">
+            Captura pendiente: comando mrt en Ejecutar.
+          </div>
+
+        </div>
+
+        <div class="step-box">
+
+          <span class="step-number">3</span>
+
+          <h3>Acepta la pantalla inicial</h3>
+
+          <p>
+            Se abrirá la Herramienta de eliminación de software malintencionado.
+            Pulsa <strong>Siguiente</strong> para continuar.
+          </p>
+
+          <div class="screenshot-placeholder">
+            Captura pendiente: ventana inicial de MRT.
+          </div>
+
+        </div>
+
+        <div class="step-box">
+
+          <span class="step-number">4</span>
+
+          <h3>Elige el tipo de análisis</h3>
+
+          <p>
+            Puedes elegir entre <strong>Análisis rápido</strong>,
+            <strong>Análisis completo</strong> o <strong>Análisis personalizado</strong>.
+          </p>
+
+          <div class="screenshot-placeholder">
+            Captura pendiente: tipos de análisis de MRT.
+          </div>
+
+        </div>
+
+        <div class="step-box">
+
+          <span class="step-number">5</span>
+
+          <h3>Ejecuta el análisis</h3>
+
+          <p>
+            Para una revisión básica usa <strong>Análisis rápido</strong>.
+            Si sospechas infección, usa <strong>Análisis completo</strong>.
+          </p>
+
+          <div class="screenshot-placeholder">
+            Captura pendiente: análisis MRT en progreso.
+          </div>
+
+        </div>
+
+        <h2>Tipos de análisis en MRT</h2>
+
+        <div class="info-box">
+
+          <h3>Análisis rápido</h3>
+
+          <p>
+            Revisa las zonas más comunes donde puede esconderse software malintencionado.
+            Es la opción más rápida para una revisión básica.
+          </p>
+
+        </div>
+
+        <div class="info-box">
+
+          <h3>Análisis completo</h3>
+
+          <p>
+            Revisa todo el equipo. Puede tardar bastante más, pero es mejor si sospechas
+            una infección o comportamiento extraño.
+          </p>
+
+        </div>
+
+        <div class="info-box">
+
+          <h3>Análisis personalizado</h3>
+
+          <p>
+            Permite revisar una carpeta o ubicación específica que tú selecciones.
+          </p>
+
+        </div>
+
+        <h2>Comandos útiles</h2>
+
+        <div class="info-box">
+          <h3>Abrir MRT</h3>
+          <p>
+            Abre la herramienta gráfica de eliminación de software malintencionado.
+          </p>
+        </div>
+
+        <div class="command-box">
+          <code>mrt</code>
+          <button class="copy-btn" data-copy="mrt">Copiar</button>
+        </div>
+
+        <div class="info-box">
+          <h3>Abrir Seguridad de Windows</h3>
+          <p>
+            Útil para ejecutar un análisis completo con Microsoft Defender.
+          </p>
+        </div>
+
+        <div class="command-box">
+          <code>windowsdefender:</code>
+          <button class="copy-btn" data-copy="windowsdefender:">Copiar</button>
+        </div>
+
+        <h2>Qué hacer si MRT detecta una amenaza</h2>
+
+        <ul>
+          <li>Permite que MRT complete el proceso de eliminación.</li>
+          <li>Reinicia Windows si la herramienta lo solicita.</li>
+          <li>Ejecuta un análisis completo con Windows Defender.</li>
+          <li>Cambia contraseñas importantes si sospechas robo de información.</li>
+          <li>Actualiza Windows y tus navegadores.</li>
+          <li>Evita volver a abrir archivos sospechosos.</li>
+        </ul>
+
+        <h2>Cuándo usar MRT</h2>
+
+        <ul>
+          <li>Cuando tu PC tiene comportamiento extraño.</li>
+          <li>Cuando aparecen ventanas o procesos desconocidos.</li>
+          <li>Cuando el navegador abre páginas raras.</li>
+          <li>Después de descargar archivos sospechosos.</li>
+          <li>Como revisión adicional junto a Windows Defender.</li>
+        </ul>
+
+        <div class="result-box">
+
+          <h3>✅ Resultado esperado</h3>
+
+          <p>
+            Al finalizar, MRT mostrará si encontró software malintencionado conocido
+            y si pudo eliminarlo. Si no encuentra amenazas, úsalo como una señal adicional,
+            no como garantía absoluta de que el sistema está limpio.
+          </p>
+
+        </div>
+
+        <h2>Errores comunes</h2>
+
+        <div class="info-box">
+
+          <h3>Pensar que MRT reemplaza al antivirus</h3>
+
+          <p>
+            MRT es una herramienta de eliminación puntual. No ofrece protección en tiempo real
+            como Windows Defender.
+          </p>
+
+        </div>
+
+        <div class="info-box">
+
+          <h3>No actualizar Windows</h3>
+
+          <p>
+            Mantener Windows actualizado ayuda a recibir mejoras de seguridad y definiciones
+            más recientes para las herramientas integradas.
+          </p>
+
+        </div>
+
+        <div class="info-box">
+
+          <h3>Ignorar señales después de un análisis limpio</h3>
+
+          <p>
+            Si MRT no detecta nada pero el equipo sigue raro, ejecuta Windows Defender,
+            revisa programas instalados y verifica extensiones del navegador.
+          </p>
+
+        </div>
+
+        <h2>Preguntas frecuentes</h2>
+
+        <div class="faq-box">
+
+          <h3>¿MRT viene instalado en Windows?</h3>
+
+          <p>
+            Sí. En muchas instalaciones de Windows puedes abrirlo directamente con
+            <strong>Win + R</strong> y el comando <strong>mrt</strong>.
+          </p>
+
+        </div>
+
+        <div class="faq-box">
+
+          <h3>¿MRT es un antivirus?</h3>
+
+          <p>
+            No. Es una herramienta de eliminación de malware específico.
+            Para protección en tiempo real usa Windows Defender u otra solución confiable.
+          </p>
+
+        </div>
+
+        <div class="faq-box">
+
+          <h3>¿Necesito Internet para usar MRT?</h3>
+
+          <p>
+            Puedes abrir la herramienta sin Internet, pero conviene mantener Windows actualizado
+            para tener revisiones más recientes.
+          </p>
+
+        </div>
+
+        <div class="faq-box">
+
+          <h3>¿El análisis completo tarda mucho?</h3>
+
+          <p>
+            Sí, puede tardar bastante dependiendo del tamaño del disco, la cantidad de archivos
+            y el rendimiento del equipo.
+          </p>
+
+        </div>
+
+        <div class="faq-box">
+
+          <h3>¿Qué hago si MRT encuentra malware?</h3>
+
+          <p>
+            Deja que complete la eliminación, reinicia si lo pide y luego ejecuta un análisis
+            completo desde Seguridad de Windows.
+          </p>
+
+        </div>
+
+        <section class="section cta-section" id="descarga">
+
+          <p class="eyebrow">Guía gratis</p>
+
+          <h2>50 Secretos de Windows que la mayoría nunca descubre</h2>
+
+          <p>
+            Descarga una guía práctica con herramientas ocultas,
+            comandos útiles y trucos seguros para Windows.
+          </p>
+
+          <form
+            name="guia-50-secretos"
+            method="POST"
+            data-netlify="true"
+            class="email-form netlify-form"
+            id="secretosForm"
+            data-redirect="/recursos/gracias-50-secretos.html">
+
+            <input
+              type="hidden"
+              name="form-name"
+              value="guia-50-secretos">
+
+            <input
+              type="text"
+              name="nombre"
+              placeholder="Tu nombre"
+              required>
+
+            <input
+              type="email"
+              name="email"
+              placeholder="Tu correo electrónico"
+              required>
+
+            <button type="submit">
+              Descargar guía
+            </button>
+
+          </form>
+
+        </section>
+
+        <h2>Artículos relacionados</h2>
+
+        <div class="related-grid">
+
+          <a href="/seguridad/windows-defender.html" class="related-card">
+            <h3>Windows Defender</h3>
+            <p>Ejecuta análisis completos y revisa la protección en tiempo real.</p>
+          </a>
+
+          <a href="/seguridad/historial-proteccion.html" class="related-card">
+            <h3>Historial de protección</h3>
+            <p>Revisa amenazas detectadas y acciones tomadas por Seguridad de Windows.</p>
+          </a>
+
+          <a href="/seguridad/firewall-avanzado.html" class="related-card">
+            <h3>Firewall avanzado</h3>
+            <p>Controla reglas de entrada, salida y protección de red.</p>
+          </a>
+
+          <a href="/seguridad/registro-inicios-sesion.html" class="related-card">
+            <h3>Inicios de sesión</h3>
+            <p>Revisa eventos de acceso y actividad sospechosa en Windows.</p>
+          </a>
+
+        </div>
+
+        <div class="next-box">
+
+          <h3>🚀 WinHacks Academy</h3>
+
+          <p>
+            Aprende Windows desde cero con cursos completos sobre seguridad,
+            comandos, PowerShell, optimización y herramientas ocultas.
+          </p>
+
+          <a
+            href="/academy/index.html"
+            class="btn btn-primary">
+            Ver Academy
+          </a>
+
+        </div>
+
+      </div>
+
+    </article>
+
+  </main>
+
+  <footer>
+    <div id="footer-container"></div>
+  </footer>
+
+  <a href="#" class="to-top" aria-label="Volver arriba">
+
+    <svg
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="2.8"
+      stroke-linecap="round"
+      stroke-linejoin="round">
+
+      <polyline points="18 15 12 9 6 15"></polyline>
+
+    </svg>
+
+  </a>
+
+  <script src="/js/components.js"></script>
+  <script src="/js/core/engine.js?v=20260626-03" defer></script>
+
+</body>
+
+</html>

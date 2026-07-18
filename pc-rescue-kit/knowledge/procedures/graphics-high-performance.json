@@ -1,0 +1,74 @@
+{
+  "id": "WHPRS-GAM-002",
+  "slug": "gpu-alto-rendimiento",
+  "name": "Asignar la GPU de alto rendimiento a un juego",
+  "shortName": "GPU de alto rendimiento",
+  "category": "Optimización",
+  "subcategory": "Gaming",
+  "phase": "Optimización",
+  "risk": 1,
+  "estimatedTime": "5 minutos",
+  "description": "Configura Windows para que un juego utilice la GPU de alto rendimiento en equipos con gráficos integrados y dedicados.",
+  "goal": "Evitar que el juego se ejecute con la GPU integrada cuando existe una GPU dedicada disponible.",
+  "whenUse": [
+    "Cuando el juego usa la GPU integrada",
+    "Cuando el rendimiento es muy inferior al esperado",
+    "Cuando el equipo tiene dos adaptadores gráficos"
+  ],
+  "whenNotUse": [
+    "Cuando el equipo solo tiene una GPU",
+    "Cuando la GPU dedicada presenta errores o sobrecalentamiento"
+  ],
+  "requirements": [
+    "Windows 10 o Windows 11",
+    "Conocer el archivo ejecutable del juego"
+  ],
+  "commands": [
+    {
+      "command": "ms-settings:display-advancedgraphics",
+      "requiresAdmin": false,
+      "shell": "run",
+      "purpose": "Abrir la configuración de gráficos de Windows."
+    }
+  ],
+  "steps": [
+    {
+      "order": 1,
+      "title": "Abrir Configuración de gráficos",
+      "instruction": "Presiona Win + R, escribe ms-settings:display-advancedgraphics y presiona Enter."
+    },
+    {
+      "order": 2,
+      "title": "Agregar el juego",
+      "instruction": "Selecciona Examinar y agrega el ejecutable principal del juego."
+    },
+    {
+      "order": 3,
+      "title": "Elegir alto rendimiento",
+      "instruction": "Abre Opciones y selecciona Alto rendimiento."
+    },
+    {
+      "order": 4,
+      "title": "Reiniciar el juego",
+      "instruction": "Cierra completamente el juego y vuelve a abrirlo."
+    }
+  ],
+  "validation": [
+    {
+      "type": "manual",
+      "expected": "El juego utiliza la GPU de alto rendimiento y mejora su uso gráfico o FPS."
+    }
+  ],
+  "failureActions": [],
+  "nextProcedures": [],
+  "related": [
+    "dxdiag-gaming",
+    "modo-juego"
+  ],
+  "windows": [
+    "Windows 10",
+    "Windows 11"
+  ],
+  "status": "active",
+  "version": "1.0.0"
+}

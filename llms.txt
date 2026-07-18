@@ -1,0 +1,330 @@
+# WinHacks
+
+Sitio especializado en Windows.
+
+- Sobre WinHacks | Nuestra Misión
+https://winhacks.dev/about
+
+- Contacto | WinHacks
+https://winhacks.dev/contact
+
+- Aviso Legal | WinHacks
+https://winhacks.dev/disclaimer
+
+- 
+https://winhacks.dev/googleeab68580bd6fbe42
+
+- WinHacks | Optimización, Trucos y Scripts para Windows
+https://winhacks.dev/
+
+- Política de Privacidad | WinHacks
+https://winhacks.dev/privacy-policy
+
+- Términos y Condiciones | WinHacks
+https://winhacks.dev/terms
+
+- WinHacks Academy | Aprende Windows Paso a Paso
+https://winhacks.dev/academy/
+
+- Plan Básico WinHacks Academy | Windows para Usuarios Normales
+https://winhacks.dev/academy/plan-basico
+
+- Roadmap de WinHacks Academy | Ruta Completa de Aprendizaje
+https://winhacks.dev/academy/roadmap
+
+- Actualizar PowerShell 7 en Windows | WinHacks
+https://winhacks.dev/comandos/actualizar-powershell-7
+
+- Cómo Saber si tu SSD o Disco Duro Tiene Errores con CHKDSK | WinHacks
+https://winhacks.dev/comandos/chkdsk
+
+- cleanmgr: Cómo Abrir la Limpieza de Disco en Windows | WinHacks
+https://winhacks.dev/comandos/cleanmgr
+
+- CMD en Windows: Qué es y Cómo Usarlo | WinHacks
+https://winhacks.dev/comandos/cmd
+
+- Comparar Dos Archivos con PowerShell en Windows | WinHacks
+https://winhacks.dev/comandos/comparar-archivos-powershell
+
+- Crear un Código QR con curl en Windows | WinHacks
+https://winhacks.dev/comandos/crear-codigo-qr-curl-windows
+
+- Ver Historial de Comandos CMD con doskey /history | WinHacks
+https://winhacks.dev/comandos/doskey-history-cmd-windows
+
+- Ver Drivers Activos en Windows con driverquery | WinHacks
+https://winhacks.dev/comandos/driverquery-drivers-activos-windows
+
+- Comandos de Windows | WinHacks
+https://winhacks.dev/comandos/
+
+- msconfig: Cómo Abrir la Configuración del Sistema | WinHacks
+https://winhacks.dev/comandos/msconfig
+
+- perfmon /rel: Ver Errores Ocultos de Windows | WinHacks
+https://winhacks.dev/comandos/perfmon-rel
+
+- Ver Estado Real de la Batería con powercfg /batteryreport | WinHacks
+https://winhacks.dev/comandos/powercfg-batteryreport-windows
+
+- PowerShell en Windows: Qué es y Cómo Usarlo | WinHacks
+https://winhacks.dev/comandos/powershell
+
+- PSR: el comando oculto de Windows para crear tutoriales paso a paso | WinHacks
+https://winhacks.dev/comandos/psr
+
+- Cómo reiniciar directamente al BIOS o UEFI desde Windows | WinHacks
+https://winhacks.dev/comandos/reiniciar-bios-uefi
+
+- resmon: Cómo Abrir el Monitor de Recursos de Windows | WinHacks
+https://winhacks.dev/comandos/resmon
+
+- services.msc: Cómo Abrir los Servicios de Windows | WinHacks
+https://winhacks.dev/comandos/services-msc
+
+- sfc /scannow: Reparar Archivos de Windows desde CMD | WinHacks
+https://winhacks.dev/comandos/sfc-scannow
+
+- taskmgr: Administrador de tareas en Windows | WinHacks
+https://winhacks.dev/comandos/taskmgr
+
+- winget: Instalar y Actualizar Programas desde Windows | WinHacks
+https://winhacks.dev/comandos/winget
+
+- 
+https://winhacks.dev/components/footer
+
+- 
+https://winhacks.dev/components/navbar
+
+- Ajuste de Rendimiento y ClearType en Windows 11 | WinHacks
+https://winhacks.dev/optimizacion/ajuste-rendimiento-cleartype
+
+- Configurar ancho de banda reservable en Windows 11 | WinHacks
+https://winhacks.dev/optimizacion/ancho-banda-reservado-gpedit
+
+- Crear botón para apagar Windows con un clic | WinHacks
+https://winhacks.dev/optimizacion/apagar-pc-acceso-directo
+
+- Ctrl + Shift + Esc: Acelera el Inicio de Windows | WinHacks
+https://winhacks.dev/optimizacion/ctrl-shift-esc
+
+- Desactivar Indexado del Disco en Windows 11 | WinHacks
+https://winhacks.dev/optimizacion/desactivar-indexado-disco-windows
+
+- Optimización de Windows | WinHacks
+https://winhacks.dev/optimizacion/
+
+- Inicio Rápido en Windows: Cómo Revisarlo y Optimizarlo | WinHacks
+https://winhacks.dev/optimizacion/inicio-rapido
+
+- Limpieza Segura de Windows | Libera Espacio sin Riesgo | WinHacks
+https://winhacks.dev/optimizacion/limpieza-segura-windows
+
+- Configurar número de procesadores en msconfig | WinHacks
+https://winhacks.dev/optimizacion/msconfig-numero-procesadores
+
+- Optimización Gaming en Windows | Mejora Rendimiento y FPS | WinHacks
+https://winhacks.dev/optimizacion/optimizacion-gaming
+
+- Optimización SSD en Windows | Mantenimiento Seguro | WinHacks
+https://winhacks.dev/optimizacion/optimizacion-ssd
+
+- Planes de Energía en Windows | Máximo Rendimiento | WinHacks
+https://winhacks.dev/optimizacion/planes-energia
+
+- Programas de Inicio en Windows | Acelera el Arranque | WinHacks
+https://winhacks.dev/optimizacion/programas-inicio
+
+- Storage Sense en Windows | Libera Espacio Automáticamente | WinHacks
+https://winhacks.dev/optimizacion/storage-sense
+
+- Cómo Cambiar el Ícono del Disco C en Windows con Registro | WinHacks
+https://winhacks.dev/personalizacion/cambiar-icono-disco
+
+- Cambiar Icono de una USB en Windows | WinHacks
+https://winhacks.dev/personalizacion/cambiar-icono-usb
+
+- Cambiar Nombre de un Disco en Windows | WinHacks
+https://winhacks.dev/personalizacion/cambiar-nombre-disco
+
+- Escritorio hacker futurista en Windows 11 con Rainmeter | WinHacks
+https://winhacks.dev/personalizacion/escritorio-hacker-rainmeter-lively-wallpaper
+
+- Personalización de Windows | WinHacks
+https://winhacks.dev/personalizacion/
+
+- Menú Contextual Clásico en Windows 11 | WinHacks
+https://winhacks.dev/personalizacion/menu-contextual-clasico
+
+- Crear menú personalizado con clic derecho en Windows | WinHacks
+https://winhacks.dev/personalizacion/menu-secreto-clic-derecho-windows
+
+- Papelera Personalizada en Windows | WinHacks
+https://winhacks.dev/personalizacion/papelera-personalizada
+
+- Cómo Quitar las Flechas de los Accesos Directos | WinHacks
+https://winhacks.dev/personalizacion/quitar-flechas-accesos-directos
+
+- 50 Atajos de Teclado para Windows | Guía Gratuita WinHacks
+https://winhacks.dev/recursos/atajos-teclado
+
+- Checklist Gratis de Mantenimiento para Windows | WinHacks
+https://winhacks.dev/recursos/checklist-mantenimiento
+
+- Checklist de Optimización Windows | WinHacks
+https://winhacks.dev/recursos/checklist-optimizacion
+
+- Checklist de Seguridad para Windows | WinHacks
+https://winhacks.dev/recursos/checklist-seguridad
+
+- PDF Gratis: 50 Comandos CMD Explicados | WinHacks
+https://winhacks.dev/recursos/comandos-cmd
+
+- Descarga 50 Secretos de Windows | WinHacks
+https://winhacks.dev/recursos/gracias-50-secretos
+
+- Descarga 50 Atajos de Teclado | WinHacks
+https://winhacks.dev/recursos/gracias-atajos
+
+- Guía Gratis: 50 Secretos de Windows | WinHacks
+https://winhacks.dev/recursos/guia-50-secretos
+
+- Recursos Gratuitos | WinHacks
+https://winhacks.dev/recursos/
+
+- arp -a: Ver Dispositivos Conectados a tu Red en Windows | WinHacks
+https://winhacks.dev/redes/arp-a
+
+- Ver Dispositivos Conectados a tu Red con arp -a | WinHacks
+https://winhacks.dev/redes/arp-ver-dispositivos-red-windows
+
+- Desactivar Energy Efficient Ethernet en Windows | WinHacks
+https://winhacks.dev/redes/energy-efficient-ethernet-windows
+
+- Redes en Windows | WinHacks
+https://winhacks.dev/redes/
+
+- ipconfig: Ver y Solucionar Problemas de Red en Windows | WinHacks
+https://winhacks.dev/redes/ipconfig
+
+- netstat: Ver Conexiones y Puertos Abiertos en Windows | WinHacks
+https://winhacks.dev/redes/netstat
+
+- ping: Probar la Conexión de Red en Windows | WinHacks
+https://winhacks.dev/redes/ping
+
+- Seguridad Wi-Fi: Protege tu Red en Windows | WinHacks
+https://winhacks.dev/redes/seguridad-wifi
+
+- tracert: Ver la Ruta de tu Conexión en Windows | WinHacks
+https://winhacks.dev/redes/tracert
+
+- Ver claves WiFi guardadas en Windows con CMD | WinHacks
+https://winhacks.dev/redes/ver-clave-wifi-windows
+
+- Reducir Lag WiFi en Windows con Transmit Power | WinHacks
+https://winhacks.dev/redes/wifi-transmit-power-preferred-band-windows
+
+- Ver archivos recientes en Windows con Win + R | WinHacks
+https://winhacks.dev/secretos/archivos-recientes-windows
+
+- Cómo Activar God Mode en Windows | WinHacks
+https://winhacks.dev/secretos/god-mode-windows
+
+- Cómo Ver los Errores Ocultos de Windows | WinHacks
+https://winhacks.dev/secretos/historial-confiabilidad-windows
+
+- Secretos de Windows | WinHacks
+https://winhacks.dev/secretos/
+
+- Cómo Poner un Mensaje Antes de Iniciar Sesión en Windows | WinHacks
+https://winhacks.dev/secretos/mensaje-inicio-sesion
+
+- Cómo Usar el Monitor de Recursos de Windows | WinHacks
+https://winhacks.dev/secretos/monitor-recursos
+
+- Qué es la Carpeta Prefetch de Windows | WinHacks
+https://winhacks.dev/secretos/prefetch-rastros-actividad-windows
+
+- Ver el Historial de Ejecutar en Windows con RunMRU | WinHacks
+https://winhacks.dev/secretos/runmru-registro-ejecutar-windows
+
+- Ver USB Conectados en el Registro de Windows | WinHacks
+https://winhacks.dev/secretos/usb-conectados-registro-windows
+
+- Cómo Usar el Visor de Eventos de Windows | WinHacks
+https://winhacks.dev/secretos/Visor-Eventos
+
+- Comandos Avanzados de Microsoft Defender en Windows 11 | WinHacks
+https://winhacks.dev/seguridad/defender-comandos-avanzados
+
+- Examen sin Conexión de Windows Defender | WinHacks
+https://winhacks.dev/seguridad/examen-sin-conexion-windows-defender
+
+- Firewall Avanzado de Windows | Reglas de Seguridad | WinHacks
+https://winhacks.dev/seguridad/firewall-avanzado
+
+- Historial de Protección de Windows Defender | WinHacks
+https://winhacks.dev/seguridad/historial-proteccion
+
+- Seguridad de Windows | WinHacks
+https://winhacks.dev/seguridad/
+
+- MRT Windows: Herramienta de Eliminación de Malware | WinHacks
+https://winhacks.dev/seguridad/mrt-windows
+
+- Ver conexiones activas en Windows con netstat -ano | WinHacks
+https://winhacks.dev/seguridad/netstat-conexiones-activas
+
+- Procesos de Windows que no debes cerrar | WinHacks
+https://winhacks.dev/seguridad/procesos-criticos-windows
+
+- Registro de Inicios de Sesión en Windows | WinHacks
+https://winhacks.dev/seguridad/registro-inicios-sesion
+
+- Activar Restaurar Sistema en Windows 11 | WinHacks
+https://winhacks.dev/seguridad/restaurar-sistema-windows
+
+- Cerrar procesos en Windows con taskkill y PID | WinHacks
+https://winhacks.dev/seguridad/taskkill-pid-windows
+
+- Firewall Avanzado de Windows | Reglas de Seguridad | WinHacks
+https://winhacks.dev/seguridad/windows-defender
+
+- TÍTULO SEO PRINCIPAL | WinHacks
+https://winhacks.dev/templates/article-template
+
+- 
+https://winhacks.dev/templates/schema-config-template
+
+- 
+https://winhacks.dev/templates/engine/category/category-blueprint
+
+- 
+https://winhacks.dev/templates/engine/article/article-blueprint
+
+- 
+https://winhacks.dev/templates/engine/article/article-engine
+
+- 
+https://winhacks.dev/templates/engine/article/hero
+
+- 
+https://winhacks.dev/templates/engine/article/learn
+
+- 
+https://winhacks.dev/templates/engine/article/meta
+
+- 
+https://winhacks.dev/templates/engine/article/step
+
+- 
+https://winhacks.dev/templates/engine/article/video
+
+- 
+https://winhacks.dev/templates/engine/global/breadcrumb
+
+- 
+https://winhacks.dev/templates/engine/resource/resource-blueprint

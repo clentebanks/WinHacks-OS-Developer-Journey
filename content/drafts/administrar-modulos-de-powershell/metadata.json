@@ -1,0 +1,23 @@
+{
+  "status": "draft",
+  "title": "Administrar módulos de PowerShell | WinHacks",
+  "headline": "Administrar módulos de PowerShell",
+  "slug": "administrar-modulos-de-powershell",
+  "category": "comandos",
+  "canonical": "https://winhacks.dev/comandos/administrar-modulos-de-powershell.html",
+  "description": "Aprende administrar módulos de powershell en Windows 10 y 11 con pasos claros, recomendaciones de seguridad y soluciones prácticas de WinHacks.",
+  "ogImage": "/assets/img/og/og-administrar-modulos-de-powershell.webp",
+  "author": "Clent Ebanks",
+  "datePublished": "2026-07-18T05:27:50.458Z",
+  "dateModified": "2026-07-18T05:27:50.458Z",
+  "sourceIdea": {
+    "reason": "87 oportunidades de enlazado interno; 3 páginas huérfanas en el cluster; 668 menciones de entidades relacionadas"
+  },
+  "checklist": {
+    "technicalVerification": false,
+    "screenshots": false,
+    "videoId": false,
+    "internalLinks": false,
+    "finalSeoReview": false
+  }
+}

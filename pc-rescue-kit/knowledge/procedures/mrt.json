@@ -1,0 +1,69 @@
+{
+  "id": "WHPRS-SEC-005",
+  "slug": "mrt",
+  "name": "Analizar malware común con Microsoft MRT",
+  "shortName": "MRT",
+  "category": "Seguridad",
+  "subcategory": "Herramienta complementaria",
+  "phase": "Seguridad",
+  "risk": 1,
+  "estimatedTime": "10 a 60 minutos",
+  "description": "Ejecuta la Herramienta de eliminación de software malintencionado de Microsoft como comprobación complementaria.",
+  "goal": "Buscar familias conocidas de malware mediante una herramienta oficial adicional.",
+  "whenUse": [
+    "Cuando se desea una segunda comprobación oficial",
+    "Cuando Defender ya terminó y persiste la sospecha",
+    "Cuando Windows Update instaló una versión reciente de MRT"
+  ],
+  "whenNotUse": [
+    "Como sustituto de Microsoft Defender",
+    "Cuando Windows no puede iniciar"
+  ],
+  "requirements": [
+    "Windows 10 o Windows 11",
+    "Guardar el trabajo antes de un examen completo"
+  ],
+  "commands": [
+    {
+      "command": "mrt",
+      "requiresAdmin": true,
+      "shell": "run",
+      "purpose": "Abrir la Herramienta de eliminación de software malintencionado."
+    }
+  ],
+  "steps": [
+    {
+      "order": 1,
+      "title": "Abrir MRT",
+      "instruction": "Presiona Win + R, escribe mrt y presiona Enter."
+    },
+    {
+      "order": 2,
+      "title": "Seleccionar el análisis",
+      "instruction": "Elige Examen rápido o Examen completo según el nivel de sospecha."
+    },
+    {
+      "order": 3,
+      "title": "Completar el análisis",
+      "instruction": "Espera a que MRT termine y revisa el informe final."
+    }
+  ],
+  "validation": [
+    {
+      "type": "output",
+      "expected": "MRT finaliza y muestra si encontró o eliminó software malintencionado."
+    }
+  ],
+  "failureActions": [],
+  "nextProcedures": [],
+  "related": [
+    "defender-full-scan",
+    "defender-offline-scan"
+  ],
+  "windows": [
+    "Windows 10",
+    "Windows 11"
+  ],
+  "status": "active",
+  "version": "1.0.0"
+}

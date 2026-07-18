@@ -1,0 +1,98 @@
+{
+  "id": "WHPRS-REP-002",
+  "slug": "dism",
+  "name": "Reparación de la imagen de Windows con DISM",
+  "shortName": "DISM",
+  "category": "Reparación",
+  "subcategory": "Imagen de Windows",
+  "phase": "Reparación",
+  "risk": 2,
+  "estimatedTime": "10 a 60 minutos",
+  "description": "Comprueba y repara la imagen de Windows utilizada por SFC para restaurar archivos del sistema.",
+  "goal": "Reparar el almacén de componentes y permitir que SFC funcione correctamente.",
+  "whenUse": [
+    "SFC no pudo reparar algunos archivos",
+    "Windows Update presenta errores",
+    "La imagen de Windows está dañada",
+    "Existen fallos repetidos de componentes del sistema"
+  ],
+  "whenNotUse": [
+    "El disco presenta fallos físicos graves",
+    "No hay conexión estable cuando se requiere Windows Update",
+    "El equipo puede apagarse durante la reparación"
+  ],
+  "requirements": [
+    "CMD o PowerShell como administrador",
+    "Windows 10 o Windows 11",
+    "Conexión a Internet recomendada",
+    "No apagar el equipo durante el proceso"
+  ],
+  "commands": [
+    {
+      "command": "DISM /Online /Cleanup-Image /CheckHealth",
+      "requiresAdmin": true,
+      "shell": "cmd",
+      "purpose": "Comprobar rápidamente si la imagen está dañada."
+    },
+    {
+      "command": "DISM /Online /Cleanup-Image /ScanHealth",
+      "requiresAdmin": true,
+      "shell": "cmd",
+      "purpose": "Analizar en profundidad la imagen de Windows."
+    },
+    {
+      "command": "DISM /Online /Cleanup-Image /RestoreHealth",
+      "requiresAdmin": true,
+      "shell": "cmd",
+      "purpose": "Reparar la imagen de Windows."
+    }
+  ],
+  "steps": [
+    {
+      "order": 1,
+      "title": "Abrir la terminal como administrador",
+      "instruction": "Abre CMD o PowerShell con permisos de administrador."
+    },
+    {
+      "order": 2,
+      "title": "Comprobar la imagen",
+      "instruction": "Ejecuta DISM /Online /Cleanup-Image /CheckHealth."
+    },
+    {
+      "order": 3,
+      "title": "Analizar daños",
+      "instruction": "Ejecuta DISM /Online /Cleanup-Image /ScanHealth."
+    },
+    {
+      "order": 4,
+      "title": "Reparar la imagen",
+      "instruction": "Ejecuta DISM /Online /Cleanup-Image /RestoreHealth."
+    },
+    {
+      "order": 5,
+      "title": "Ejecutar SFC",
+      "instruction": "Después de DISM, ejecuta sfc /scannow."
+    }
+  ],
+  "validation": [
+    {
+      "type": "output",
+      "expected": "La operación de restauración se completó correctamente."
+    }
+  ],
+  "failureActions": [],
+  "nextProcedures": [
+    "WHPRS-REP-001"
+  ],
+  "related": [
+    "sfc-scannow",
+    "windows-update",
+    "recovery"
+  ],
+  "windows": [
+    "Windows 10",
+    "Windows 11"
+  ],
+  "status": "active",
+  "version": "1.0.0"
+}

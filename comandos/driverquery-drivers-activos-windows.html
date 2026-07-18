@@ -1,0 +1,561 @@
+<!DOCTYPE html><html lang="es"><head>
+  <!-- Google tag (gtag.js) -->
+  <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EL9JRMGJPS"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-EL9JRMGJPS');
+  </script>
+
+  <!-- Clarity code Puedes ver grabaciones reales (anónimas) de cómo navegan los usuarios.-->
+  <script type="text/javascript">
+    (function (c, l, a, r, i, t, y) {
+      c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) };
+      t = l.createElement(r); t.async = 1; t.src = "https://www.clarity.ms/tag/" + i;
+      y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
+    })(window, document, "clarity", "script", "xey9wuiqr4");
+  </script>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Ver Drivers Activos en Windows con driverquery | WinHacks</title>
+
+  <meta name="description" content="Aprende a usar driverquery en Windows 10 y Windows 11 para ver drivers cargados, detectar conflictos y exportar información avanzada desde CMD.">
+
+  <meta name="robots" content="index, follow, max-image-preview:large">
+
+  <link rel="canonical" href="https://winhacks.dev/comandos/driverquery-drivers-activos-windows">
+
+  <link rel="icon" href="/assets/icons/favicon.ico">
+
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="WinHacks">
+  <meta property="og:title" content="Ver Drivers Activos en Windows con driverquery | WinHacks">
+  <meta property="og:description" content="Usa driverquery para listar drivers cargados en Windows y revisar información técnica desde CMD.">
+  <meta property="og:url" content="https://winhacks.dev/comandos/driverquery-drivers-activos-windows">
+  <meta property="og:image" content="https://winhacks.dev/assets/img/og/og-driverquery-drivers-windows.webp">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Ver Drivers Activos en Windows con driverquery | WinHacks">
+  <meta name="twitter:description" content="Comando CMD para ver drivers activos, módulos cargados y detalles técnicos en Windows.">
+  <meta name="twitter:image" content="https://winhacks.dev/assets/img/og/og-driverquery-drivers-windows.webp">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=Montserrat:wght@800;900&amp;display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/css/style.css">
+
+  <meta property="og:locale" content="es_ES"></head>
+
+<body>
+
+  <header class="site-header">
+    <div id="navbar-container"></div>
+  </header>
+
+  <main>
+
+    <nav id="breadcrumb" class="breadcrumb" aria-label="Breadcrumb"></nav>
+
+    <article class="article">
+
+      <header class="article-hero article-hero--panel">
+
+        <p class="eyebrow">Comandos de Windows</p>
+
+        <h1>Windows puede mostrar todos los drivers activos con driverquery</h1>
+
+        <p>
+          Windows incluye una herramienta de CMD llamada <strong>driverquery</strong>.
+          Con este comando puedes listar drivers cargados en el sistema, revisar módulos,
+          detectar posibles conflictos y obtener información técnica útil para diagnóstico.
+        </p>
+
+        <div class="hero-buttons">
+          <a href="#video" class="btn btn-primary">Ver video</a>
+          <a href="#pasos" class="btn btn-outline">Ir al tutorial</a>
+        </div>
+
+      </header>
+
+      <div class="article-content">
+
+        <div class="meta-grid">
+
+          <div class="meta-card">
+            <span>Dificultad</span>
+            <strong>Intermedia</strong>
+          </div>
+
+          <div class="meta-card">
+            <span>Tiempo</span>
+            <strong>1 minuto</strong>
+          </div>
+
+          <div class="meta-card">
+            <span>Compatible</span>
+            <strong>Windows 10/11</strong>
+          </div>
+
+          <div class="meta-card">
+            <span>Comando</span>
+            <strong>driverquery</strong>
+          </div>
+
+        </div>
+
+        <section id="video" class="video-box">
+
+          <div class="section-header">
+
+            <p class="eyebrow">Video rápido</p>
+
+            <h2>Mira cómo listar drivers activos</h2>
+
+            <p>
+              En este Short te muestro cómo usar <strong>driverquery</strong> para ver drivers
+              cargados dentro de Windows desde CMD.
+            </p>
+
+          </div>
+
+          <div class="youtube-short">
+            <iframe src="https://www.youtube.com/embed/UgOQw3Vk1Rk" title="Ver drivers activos en Windows con driverquery | WinHacks" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="">
+            </iframe>
+          </div>
+
+        </section>
+
+        <section class="info-box">
+
+          <h3>Qué aprenderás</h3>
+
+          <ul>
+            <li>Cómo usar <strong>driverquery</strong> en CMD.</li>
+            <li>Cómo ver drivers cargados en Windows.</li>
+            <li>Cómo usar el modo avanzado con <strong>/v</strong>.</li>
+            <li>Cómo exportar la lista a un archivo para revisarla mejor.</li>
+          </ul>
+
+        </section>
+
+        <h2>¿Qué hace driverquery?</h2>
+
+        <p>
+          <strong>driverquery</strong> es un comando integrado de Windows que muestra información
+          sobre drivers instalados o cargados en el sistema. Es útil para técnicos, diagnóstico,
+          revisión de módulos y detección básica de conflictos.
+        </p>
+
+        <p>
+          Puede mostrar el nombre del módulo, tipo de controlador, estado, fecha de vínculo,
+          ruta y otros detalles según el formato que uses.
+        </p>
+
+        <div class="tip-box">
+
+          <h3>💡 Consejo WinHacks</h3>
+
+          <p>
+            Usa <strong>driverquery /v</strong> si quieres más detalles. Para revisar con calma,
+            exporta el resultado a un archivo TXT o CSV.
+          </p>
+
+        </div>
+
+        <div class="warning-box">
+
+          <span>🚨</span>
+
+          <h3>No elimines drivers al azar</h3>
+
+          <p>
+            Este comando es para revisar información. Si ves un driver extraño, investígalo primero.
+            Eliminar o desactivar drivers sin saber puede causar errores, pérdida de red, audio,
+            pantalla o fallos del sistema.
+          </p>
+
+        </div>
+
+        <h2 id="pasos">Paso a paso</h2>
+
+        <div class="step-box">
+
+          <span class="step-number">1</span>
+
+          <h3>Abre CMD</h3>
+
+          <p>
+            Presiona <strong>Win</strong>, escribe <strong>CMD</strong> y abre el Símbolo del sistema.
+            Para listar drivers básicos, normalmente no necesitas permisos de administrador.
+          </p>
+
+          <div class="screenshot-placeholder">
+            <figure class="article-image">
+              <img src="../assets/images/driverquery-windows-01.png" alt="CMD abierto en Windows para ejecutar driverquery" loading="lazy" decoding="async">
+              <figcaption>
+                Abre <strong>CMD</strong> para ejecutar comandos de diagnóstico.
+              </figcaption>
+            </figure>
+          </div>
+
+        </div>
+
+        <div class="step-box">
+
+          <span class="step-number">2</span>
+
+          <h3>Ejecuta driverquery</h3>
+
+          <p>
+            Escribe este comando y presiona Enter:
+          </p>
+
+          <div class="command-box">
+            <code>driverquery</code>
+            <button class="copy-btn" data-copy="driverquery">Copiar</button>
+          </div>
+
+          <div class="screenshot-placeholder">
+            <figure class="article-image">
+              <img src="../assets/images/driverquery-windows-02.png" alt="Comando driverquery ejecutado en CMD de Windows" loading="lazy" decoding="async">
+              <figcaption>
+                Ejecuta <strong>driverquery</strong> para listar drivers del sistema.
+              </figcaption>
+            </figure>
+          </div>
+
+        </div>
+
+        <div class="step-box">
+
+          <span class="step-number">3</span>
+
+          <h3>Revisa la lista de drivers</h3>
+
+          <p>
+            CMD mostrará columnas como <strong>Module Name</strong>, <strong>Display Name</strong>,
+            <strong>Driver Type</strong> y <strong>Link Date</strong>.
+          </p>
+
+          <div class="screenshot-placeholder">
+            <figure class="article-image">
+              <img src="../assets/images/driverquery-windows-03.png" alt="Lista de drivers mostrada por driverquery en Windows" loading="lazy" decoding="async">
+              <figcaption>
+                Revisa módulos, nombres visibles, tipos de controlador y fechas.
+              </figcaption>
+            </figure>
+          </div>
+
+        </div>
+
+        <div class="step-box">
+
+          <span class="step-number">4</span>
+
+          <h3>Usa el modo avanzado</h3>
+
+          <p>
+            Para ver más información técnica, ejecuta:
+          </p>
+
+          <div class="command-box">
+            <code>driverquery /v</code>
+            <button class="copy-btn" data-copy="driverquery /v">Copiar</button>
+          </div>
+
+          <div class="screenshot-placeholder">
+            <figure class="article-image">
+              <img src="../assets/images/driverquery-windows-04.png" alt="Comando driverquery v mostrando información avanzada de drivers en Windows" loading="lazy" decoding="async">
+              <figcaption>
+                Usa <strong>/v</strong> para obtener información mucho más detallada.
+              </figcaption>
+            </figure>
+          </div>
+
+        </div>
+
+        <div class="step-box">
+
+          <span class="step-number">5</span>
+
+          <h3>Exporta el resultado</h3>
+
+          <p>
+            Si la lista es muy larga, guárdala en un archivo para revisarla mejor:
+          </p>
+
+          <div class="command-box">
+            <code>driverquery /v &gt; drivers.txt</code>
+            <button class="copy-btn" data-copy="driverquery /v > drivers.txt">Copiar</button>
+          </div>
+
+          <div class="screenshot-placeholder">
+            <figure class="article-image">
+              <img src="../assets/images/driverquery-windows-05.png" alt="Resultado de driverquery exportado a drivers txt desde CMD" loading="lazy" decoding="async">
+              <figcaption>
+                Exporta la información a <strong>drivers.txt</strong> para leerla con calma.
+              </figcaption>
+            </figure>
+          </div>
+
+        </div>
+
+        <div class="step-box">
+
+          <span class="step-number">6</span>
+
+          <h3>Exporta como CSV</h3>
+
+          <p>
+            Para abrir la lista en Excel o una hoja de cálculo, usa formato CSV:
+          </p>
+
+          <div class="command-box">
+            <code>driverquery /fo csv /v &gt; drivers.csv</code>
+            <button class="copy-btn" data-copy="driverquery /fo csv /v > drivers.csv">Copiar</button>
+          </div>
+
+          <div class="screenshot-placeholder">
+            <figure class="article-image">
+              <img src="../assets/images/driverquery-windows-06.png" alt="Driverquery exportado como CSV para revisar drivers en Excel" loading="lazy" decoding="async">
+              <figcaption>
+                Usa CSV si quieres filtrar drivers en Excel o Google Sheets.
+              </figcaption>
+            </figure>
+          </div>
+
+        </div>
+
+        <h2>Comandos útiles con driverquery</h2>
+
+        <div class="info-box">
+
+          <h3>Lista básica</h3>
+
+          <div class="command-box">
+            <code>driverquery</code>
+            <button class="copy-btn" data-copy="driverquery">Copiar</button>
+          </div>
+
+        </div>
+
+        <div class="info-box">
+
+          <h3>Modo avanzado</h3>
+
+          <div class="command-box">
+            <code>driverquery /v</code>
+            <button class="copy-btn" data-copy="driverquery /v">Copiar</button>
+          </div>
+
+        </div>
+
+        <div class="info-box">
+
+          <h3>Formato tabla</h3>
+
+          <div class="command-box">
+            <code>driverquery /fo table</code>
+            <button class="copy-btn" data-copy="driverquery /fo table">Copiar</button>
+          </div>
+
+        </div>
+
+        <div class="info-box">
+
+          <h3>Formato CSV</h3>
+
+          <div class="command-box">
+            <code>driverquery /fo csv /v &gt; drivers.csv</code>
+            <button class="copy-btn" data-copy="driverquery /fo csv /v > drivers.csv">Copiar</button>
+          </div>
+
+        </div>
+
+        <div class="result-box">
+
+          <h3>✅ Resultado esperado</h3>
+
+          <p>
+            CMD mostrará una lista de drivers del sistema. Con <strong>/v</strong> verás información
+            más avanzada, y con <strong>/fo csv</strong> podrás exportarla para análisis técnico.
+          </p>
+
+        </div>
+
+        <h2>Errores comunes</h2>
+
+        <div class="info-box">
+
+          <h3>La lista es demasiado larga</h3>
+
+          <p>
+            Exporta el resultado a TXT o CSV para revisarlo mejor:
+          </p>
+
+          <div class="command-box">
+            <code>driverquery /v &gt; drivers.txt</code>
+            <button class="copy-btn" data-copy="driverquery /v > drivers.txt">Copiar</button>
+          </div>
+
+        </div>
+
+        <div class="info-box">
+
+          <h3>No entiendo los nombres</h3>
+
+          <p>
+            Muchos drivers usan nombres técnicos. No asumas que algo es peligroso solo porque no reconoces
+            el nombre. Investiga antes de tomar acción.
+          </p>
+
+        </div>
+
+        <div class="info-box">
+
+          <h3>Quiero borrar un driver sospechoso</h3>
+
+          <p>
+            No uses esta lista para eliminar cosas a ciegas. Primero identifica el fabricante,
+            el dispositivo asociado y si pertenece a Windows, GPU, red, audio o seguridad.
+          </p>
+
+        </div>
+
+        <h2>Preguntas frecuentes</h2>
+
+        <div class="faq-box">
+
+          <h3>¿driverquery modifica Windows?</h3>
+
+          <p>
+            No. Solo muestra información. Es un comando de consulta, no de reparación ni eliminación.
+          </p>
+
+        </div>
+
+        <div class="faq-box">
+
+          <h3>¿Funciona en Windows 11?</h3>
+
+          <p>
+            Sí. También funciona en Windows 10.
+          </p>
+
+        </div>
+
+        <div class="faq-box">
+
+          <h3>¿Necesito administrador?</h3>
+
+          <p>
+            Para la lista básica normalmente no. Para revisiones más completas, conviene abrir CMD
+            como administrador.
+          </p>
+
+        </div>
+
+        <div class="faq-box">
+
+          <h3>¿Esto detecta drivers malos automáticamente?</h3>
+
+          <p>
+            No. Muestra información. La detección de conflictos requiere interpretar fechas,
+            fabricantes, eventos del sistema y síntomas del equipo.
+          </p>
+
+        </div>
+
+        <section class="section cta-section" id="descarga">
+
+          <p class="eyebrow">Recurso gratuito</p>
+
+          <h2>Descarga comandos útiles para Windows</h2>
+
+          <p>
+            Aprende comandos CMD para revisar drivers, reparar Windows, diagnosticar red,
+            analizar procesos y descubrir herramientas ocultas del sistema.
+          </p>
+
+          <form name="comandos-cmd" method="POST" data-netlify="true" class="email-form netlify-form" id="comandosForm" data-redirect="/recursos/gracias-comandos.html">
+
+            <input type="hidden" name="form-name" value="comandos-cmd">
+
+            <input type="text" name="nombre" placeholder="Tu nombre" required="">
+
+            <input type="email" name="email" placeholder="Tu correo electrónico" required="">
+
+            <button type="submit">Descargar PDF</button>
+
+          </form>
+
+        </section>
+
+        <h2>Artículos relacionados</h2>
+
+        <div class="related-grid">
+
+          <a href="/comandos/sfc-scannow.html" class="related-card">
+            <h3>Reparar Windows con SFC</h3>
+            <p>Usa sfc /scannow para revisar archivos corruptos del sistema.</p>
+          </a>
+
+          <a href="/seguridad/procesos-criticos-windows.html" class="related-card">
+            <h3>Procesos críticos</h3>
+            <p>Aprende qué procesos de Windows no debes cerrar.</p>
+          </a>
+
+          <a href="/seguridad/netstat-conexiones-activas.html" class="related-card">
+            <h3>netstat -ano</h3>
+            <p>Revisa conexiones activas y procesos conectados en Windows.</p>
+          </a>
+
+          <a href="/secretos/historial-confiabilidad-windows.html" class="related-card">
+            <h3>Historial de confiabilidad</h3>
+            <p>Encuentra errores ocultos, fallos y bloqueos del sistema.</p>
+          </a>
+
+        </div>
+
+        <div class="next-box">
+
+          <h3>🚀 Siguiente paso recomendado</h3>
+
+          <p>
+            Después de revisar drivers con <strong>driverquery</strong>, usa el Historial de confiabilidad
+            para detectar errores de drivers, cierres inesperados y fallos recientes.
+          </p>
+
+          <a href="/secretos/historial-confiabilidad-windows.html" class="btn btn-primary">
+            Ver Historial de confiabilidad
+          </a>
+
+        </div>
+
+      </div>
+
+    </article>
+
+  </main>
+
+  <footer>
+    <div id="footer-container"></div>
+  </footer>
+
+  <a href="#" class="to-top" aria-label="Volver arriba">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="18 15 12 9 6 15"></polyline>
+    </svg>
+  </a>
+
+  <script src="/js/components.js"></script>
+  <script src="/js/core/engine.js?v=20260626-03" defer=""></script>
+
+
+
+</body></html>

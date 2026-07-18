@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-EL9JRMGJPS"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-EL9JRMGJPS');
+  </script>
+
+  <!-- Clarity code Puedes ver grabaciones reales (anónimas) de cómo navegan los usuarios.-->
+  <script type="text/javascript">
+    (function (c, l, a, r, i, t, y) {
+      c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) };
+      t = l.createElement(r); t.async = 1; t.src = "https://www.clarity.ms/tag/" + i;
+      y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
+    })(window, document, "clarity", "script", "xey9wuiqr4");
+  </script>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Ver USB Conectados en el Registro de Windows | WinHacks</title>
+
+  <meta name="description"
+    content="Aprende cómo Windows registra dispositivos USB conectados al sistema y cómo revisar la clave USBSTOR desde el Editor del Registro en Windows 10 y Windows 11.">
+
+  <meta name="robots" content="index, follow">
+
+  <link rel="canonical" href="https://winhacks.dev/secretos/usb-conectados-registro-windows">
+
+  <link rel="icon" href="/assets/icons/favicon.ico">
+
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="WinHacks">
+  <meta property="og:title" content="Ver USB Conectados en el Registro de Windows | WinHacks">
+  <meta property="og:description"
+    content="Windows puede guardar rastros de dispositivos USB conectados. Aprende a revisar USBSTOR de forma segura.">
+  <meta property="og:url" content="https://winhacks.dev/secretos/usb-conectados-registro-windows">
+  <meta property="og:image" content="https://winhacks.dev/assets/img/og/og-usb-conectados-registro.webp">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Ver USB Conectados en el Registro de Windows | WinHacks">
+  <meta name="twitter:description" content="Revisa registros internos de dispositivos USB conectados en Windows usando regedit.">
+  <meta name="twitter:image" content="https://winhacks.dev/assets/img/og/og-usb-conectados-registro.webp">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Montserrat:wght@800;900&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+
+  <header class="site-header">
+    <div id="navbar-container"></div>
+  </header>
+
+  <main>
+
+    <nav id="breadcrumb" class="breadcrumb" aria-label="Breadcrumb"></nav>
+
+    <article class="article">
+
+      <header class="article-hero article-hero--panel">
+
+        <p class="eyebrow">Secreto de Windows</p>
+
+        <h1>Windows recuerda dispositivos USB conectados al sistema</h1>
+
+        <p>
+          Windows puede guardar registros internos de dispositivos USB conectados, incluso si ya no están
+          conectados al equipo. Uno de los lugares más conocidos para revisar esta información es la clave
+          <strong>USBSTOR</strong> dentro del Editor del Registro.
+        </p>
+
+        <div class="hero-buttons">
+          <a href="#video" class="btn btn-primary">Ver video</a>
+          <a href="#pasos" class="btn btn-outline">Ir al tutorial</a>
+        </div>
+
+      </header>
+
+      <div class="article-content">
+
+        <div class="meta-grid">
+
+          <div class="meta-card">
+            <span>Dificultad</span>
+            <strong>Intermedia</strong>
+          </div>
+
+          <div class="meta-card">
+            <span>Tiempo</span>
+            <strong>2 minutos</strong>
+          </div>
+
+          <div class="meta-card">
+            <span>Compatible</span>
+            <strong>Windows 10/11</strong>
+          </div>
+
+          <div class="meta-card">
+            <span>Clave</span>
+            <strong>USBSTOR</strong>
+          </div>
+
+        </div>
+
+        <section id="video" class="video-box">
+
+          <div class="section-header">
+
+            <p class="eyebrow">Video rápido</p>
+
+            <h2>Mira dónde Windows guarda registros USB</h2>
+
+            <p>
+              En este Short te muestro cómo Windows puede conservar información interna
+              sobre dispositivos USB conectados al sistema.
+            </p>
+
+          </div>
+
+          <div class="youtube-short">
+            <iframe src="https://www.youtube.com/embed/nmogi0H1FW4"
+              title="Windows recuerda cada USB conectado | WinHacks" loading="lazy"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen>
+            </iframe>
+          </div>
+
+        </section>
+
+        <section class="info-box">
+
+          <h3>Qué aprenderás</h3>
+
+          <ul>
+            <li>Qué es la clave <strong>USBSTOR</strong> de Windows.</li>
+            <li>Cómo abrir el Editor del Registro con <strong>regedit</strong>.</li>
+            <li>Cómo revisar rastros de dispositivos USB conectados.</li>
+            <li>Qué precauciones debes tomar antes de tocar el Registro.</li>
+          </ul>
+
+        </section>
+
+        <h2>¿Qué es USBSTOR?</h2>
+
+        <p>
+          <strong>USBSTOR</strong> es una clave del Registro de Windows asociada a dispositivos de
+          almacenamiento USB. Ahí pueden aparecer entradas relacionadas con memorias USB, discos externos,
+          lectores de tarjetas u otros dispositivos de almacenamiento conectados anteriormente.
+        </p>
+
+        <p>
+          Esta información puede ser útil para diagnóstico, auditoría básica, privacidad digital o para
+          entender cómo Windows maneja dispositivos conectados al sistema.
+        </p>
+
+        <div class="tip-box">
+
+          <h3>💡 Consejo WinHacks</h3>
+
+          <p>
+            Usa esta revisión solo en tu propio equipo o en sistemas donde tienes autorización.
+            Estos registros pueden contener información sensible sobre dispositivos conectados.
+          </p>
+
+        </div>
+
+        <div class="warning-box">
+
+          <span>🚨</span>
+
+          <h3>No borres claves al azar</h3>
+
+          <p>
+            El Registro de Windows es delicado. Puedes revisar la información, pero no elimines claves
+            ni valores si no sabes exactamente qué efecto tendrá.
+          </p>
+
+        </div>
+
+        <h2 id="pasos">Paso a paso</h2>
+
+        <div class="step-box">
+
+          <span class="step-number">1</span>
+
+          <h3>Abre Ejecutar</h3>
+
+          <p>
+            Presiona <strong>Win + R</strong> para abrir la ventana Ejecutar.
+          </p>
+
+          <div class="screenshot-placeholder">
+            <figure class="article-image">
+              <img src="../assets/images/usb-registro-windows-01.png"
+                alt="Ventana Ejecutar de Windows abierta con Win R para abrir regedit" loading="lazy" decoding="async">
+              <figcaption>
+                Abre <strong>Ejecutar</strong> usando <kbd>Win</kbd> + <kbd>R</kbd>.
+              </figcaption>
+            </figure>
+          </div>
+
+        </div>
+
+        <div class="step-box">
+
+          <span class="step-number">2</span>
+
+          <h3>Abre el Editor del Registro</h3>
+
+          <p>
+            Escribe este comando y presiona Enter:
+          </p>
+
+          <div class="command-box">
+            <code>regedit</code>
+            <button class="copy-btn" data-copy="regedit">Copiar</button>
+          </div>
+
+          <div class="screenshot-placeholder">
+            <figure class="article-image">
+              <img src="../assets/images/usb-registro-windows-02.png"
+                alt="Comando regedit escrito en Ejecutar para abrir el Registro de Windows" loading="lazy"
+                decoding="async">
+              <figcaption>
+                Usa <strong>regedit</strong> para abrir el Editor del Registro.
+              </figcaption>
+            </figure>
+          </div>
+
+        </div>
+
+        <div class="step-box">
+
+          <span class="step-number">3</span>
+
+          <h3>Ve a la clave USBSTOR</h3>
+
+          <p>
+            En la barra superior del Registro, pega esta ruta:
+          </p>
+
+          <div class="command-box">
+            <code>HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Enum\USBSTOR</code>
+            <button class="copy-btn"
+              data-copy="HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Enum\USBSTOR">Copiar</button>
+          </div>
+
+          <div class="screenshot-placeholder">
+            <figure class="article-image">
+              <img src="../assets/images/usb-registro-windows-03.png"
+                alt="Ruta USBSTOR abierta dentro del Editor del Registro de Windows" loading="lazy" decoding="async">
+              <figcaption>
+                Abre la clave <strong>USBSTOR</strong> para revisar dispositivos de almacenamiento USB.
+              </figcaption>
+            </figure>
+          </div>
+
+        </div>
+
+        <div class="step-box">
+
+          <span class="step-number">4</span>
+
+          <h3>Revisa las carpetas detectadas</h3>
+
+          <p>
+            Dentro de <strong>USBSTOR</strong> pueden aparecer carpetas con nombres relacionados
+            con fabricantes, modelos o tipos de dispositivos USB conectados.
+          </p>
+
+          <div class="screenshot-placeholder">
+            <figure class="article-image">
+              <img src="../assets/images/usb-registro-windows-04.png"
+                alt="Entradas de dispositivos USB dentro de USBSTOR en Windows" loading="lazy" decoding="async">
+              <figcaption>
+                Cada entrada puede representar un dispositivo USB detectado por Windows.
+              </figcaption>
+            </figure>
+          </div>
+
+        </div>
+
+        <div class="step-box">
+
+          <span class="step-number">5</span>
+
+          <h3>Abre una entrada USB</h3>
+
+          <p>
+            Al expandir una entrada, puedes ver subclaves internas asociadas al dispositivo.
+            Algunas pueden incluir identificadores o información técnica del hardware.
+          </p>
+
+          <div class="screenshot-placeholder">
+            <figure class="article-image">
+              <img src="../assets/images/usb-registro-windows-05.png"
+                alt="Subclaves internas de un dispositivo USB conectado en el Registro de Windows" loading="lazy"
+                decoding="async">
+              <figcaption>
+                Expande una entrada para ver identificadores internos del dispositivo.
+              </figcaption>
+            </figure>
+          </div>
+
+        </div>
+
+        <div class="step-box">
+
+          <span class="step-number">6</span>
+
+          <h3>Revisa sin modificar</h3>
+
+          <p>
+            Observa la información, pero evita cambiar permisos, eliminar claves o modificar valores.
+            Para diagnóstico básico, solo necesitas revisar.
+          </p>
+
+          <div class="screenshot-placeholder">
+            <figure class="article-image">
+              <img src="../assets/images/usb-registro-windows-06.png"
+                alt="Revisión segura de USBSTOR sin modificar claves del Registro de Windows" loading="lazy"
+                decoding="async">
+              <figcaption>
+                Revisa los datos sin editar ni borrar claves del Registro.
+              </figcaption>
+            </figure>
+          </div>
+
+        </div>
+
+        <h2>Qué información podrías encontrar</h2>
+
+        <div class="info-box">
+
+          <h3>Nombre o tipo del dispositivo</h3>
+
+          <p>
+            Algunas entradas pueden incluir pistas sobre la marca, modelo o tipo de almacenamiento USB.
+          </p>
+
+        </div>
+
+        <div class="info-box">
+
+          <h3>Identificadores internos</h3>
+
+          <p>
+            Windows puede guardar identificadores técnicos que ayudan a reconocer un dispositivo
+            cuando vuelve a conectarse.
+          </p>
+
+        </div>
+
+        <div class="info-box">
+
+          <h3>Entradas antiguas</h3>
+
+          <p>
+            Es posible encontrar registros de dispositivos que ya no están conectados actualmente.
+          </p>
+
+        </div>
+
+        <div class="result-box">
+
+          <h3>✅ Resultado esperado</h3>
+
+          <p>
+            Al abrir <strong>USBSTOR</strong>, podrás ver entradas internas asociadas a dispositivos
+            de almacenamiento USB que Windows ha detectado en el equipo.
+          </p>
+
+        </div>
+
+        <h2>Errores comunes</h2>
+
+        <div class="info-box">
+
+          <h3>No encuentro USBSTOR</h3>
+
+          <p>
+            Verifica que pegaste la ruta completa:
+            <strong>HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Enum\USBSTOR</strong>.
+          </p>
+
+        </div>
+
+        <div class="info-box">
+
+          <h3>Windows no me deja editar</h3>
+
+          <p>
+            Es normal. Esta zona del Registro puede estar protegida. Para este tutorial no necesitas editar nada.
+          </p>
+
+        </div>
+
+        <div class="info-box">
+
+          <h3>No aparece el USB que esperaba</h3>
+
+          <p>
+            Puede depender del tipo de dispositivo, permisos, historial del sistema o si Windows lo registró
+            como almacenamiento USB.
+          </p>
+
+        </div>
+
+        <h2>Preguntas frecuentes</h2>
+
+        <div class="faq-box">
+
+          <h3>¿Esto muestra todos los USB conectados?</h3>
+
+          <p>
+            No necesariamente. <strong>USBSTOR</strong> se enfoca principalmente en dispositivos de
+            almacenamiento USB. Otros periféricos pueden quedar en claves diferentes.
+          </p>
+
+        </div>
+
+        <div class="faq-box">
+
+          <h3>¿Funciona en Windows 11?</h3>
+
+          <p>
+            Sí. También puede revisarse en Windows 10.
+          </p>
+
+        </div>
+
+        <div class="faq-box">
+
+          <h3>¿Puedo borrar estos rastros?</h3>
+
+          <p>
+            Técnicamente existen formas avanzadas, pero no es recomendable borrar claves del Registro
+            sin saber exactamente qué haces. Puedes afectar reconocimiento de dispositivos.
+          </p>
+
+        </div>
+
+        <div class="faq-box">
+
+          <h3>¿Necesito permisos de administrador?</h3>
+
+          <p>
+            Para abrir y revisar algunas zonas de <strong>HKEY_LOCAL_MACHINE</strong>, Windows puede pedir
+            permisos elevados o confirmación de UAC.
+          </p>
+
+        </div>
+
+        <section class="section cta-section" id="descarga">
+
+          <p class="eyebrow">Guía gratis</p>
+
+          <h2>50 Secretos de Windows que casi nadie revisa</h2>
+
+          <p>
+            Descarga una guía práctica con registros ocultos, herramientas internas, comandos útiles
+            y ajustes seguros para Windows 10 y Windows 11.
+          </p>
+
+          <form name="guia-50-secretos" method="POST" data-netlify="true" class="email-form netlify-form"
+            id="secretosForm" data-redirect="/recursos/gracias-50-secretos.html">
+
+            <input type="hidden" name="form-name" value="guia-50-secretos">
+
+            <input type="text" name="nombre" placeholder="Tu nombre" required>
+
+            <input type="email" name="email" placeholder="Tu correo electrónico" required>
+
+            <button type="submit">Descargar guía</button>
+
+          </form>
+
+        </section>
+
+        <h2>Artículos relacionados</h2>
+
+        <div class="related-grid">
+
+          <a href="/secretos/runmru-registro-ejecutar-windows.html" class="related-card">
+            <h3>RunMRU</h3>
+            <p>Revisa comandos usados desde Win + R en el Registro.</p>
+          </a>
+
+          <a href="/secretos/prefetch-rastros-actividad-windows.html" class="related-card">
+            <h3>Prefetch</h3>
+            <p>Conoce archivos internos que Windows genera al ejecutar programas.</p>
+          </a>
+
+          <a href="/secretos/archivos-recientes-windows.html" class="related-card">
+            <h3>Archivos recientes</h3>
+            <p>Encuentra archivos abiertos recientemente con el comando recent.</p>
+          </a>
+
+          <a href="/recursos/checklist-seguridad.html" class="related-card">
+            <h3>Checklist de seguridad</h3>
+            <p>Revisa pasos básicos para proteger y auditar tu equipo Windows.</p>
+          </a>
+
+        </div>
+
+        <div class="next-box">
+
+          <h3>🚀 Siguiente paso recomendado</h3>
+
+          <p>
+            Después de revisar dispositivos USB registrados, mira también <strong>RunMRU</strong>
+            y <strong>Prefetch</strong> para entender otros rastros internos que Windows puede conservar.
+          </p>
+
+          <a href="/secretos/runmru-registro-ejecutar-windows.html" class="btn btn-primary">
+            Ver RunMRU
+          </a>
+
+        </div>
+
+      </div>
+
+    </article>
+
+  </main>
+
+  <footer>
+    <div id="footer-container"></div>
+  </footer>
+
+  <a href="#" class="to-top" aria-label="Volver arriba">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8"
+      stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="18 15 12 9 6 15"></polyline>
+    </svg>
+  </a>
+
+  <script src="/js/components.js"></script>
+  <script src="/js/core/engine.js?v=20260626-03" defer></script>
+
+</body>
+
+</html>

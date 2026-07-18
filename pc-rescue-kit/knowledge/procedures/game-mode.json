@@ -1,0 +1,68 @@
+{
+  "id": "WHPRS-GAM-003",
+  "slug": "modo-juego",
+  "name": "Comprobar el Modo Juego de Windows",
+  "shortName": "Modo Juego",
+  "category": "Optimización",
+  "subcategory": "Gaming",
+  "phase": "Optimización",
+  "risk": 1,
+  "estimatedTime": "3 minutos",
+  "description": "Revisa la función oficial de Windows que prioriza recursos y reduce determinadas tareas en segundo plano durante el juego.",
+  "goal": "Asegurar que Windows utiliza su configuración oficial orientada a gaming.",
+  "whenUse": [
+    "Cuando hay stutter o interrupciones",
+    "Cuando Windows ejecuta tareas en segundo plano mientras se juega",
+    "Como ajuste seguro inicial"
+  ],
+  "whenNotUse": [
+    "Cuando el problema es temperatura alta",
+    "Cuando existe una falla física de GPU o RAM"
+  ],
+  "requirements": [
+    "Windows 10 o Windows 11"
+  ],
+  "commands": [
+    {
+      "command": "ms-settings:gaming-gamemode",
+      "requiresAdmin": false,
+      "shell": "run",
+      "purpose": "Abrir la configuración de Modo Juego."
+    }
+  ],
+  "steps": [
+    {
+      "order": 1,
+      "title": "Abrir Modo Juego",
+      "instruction": "Presiona Win + R, escribe ms-settings:gaming-gamemode y presiona Enter."
+    },
+    {
+      "order": 2,
+      "title": "Activar Modo Juego",
+      "instruction": "Activa Modo Juego si está deshabilitado."
+    },
+    {
+      "order": 3,
+      "title": "Probar el juego",
+      "instruction": "Reinicia el juego y compara estabilidad y FPS."
+    }
+  ],
+  "validation": [
+    {
+      "type": "manual",
+      "expected": "El juego funciona con estabilidad igual o superior después de activar Modo Juego."
+    }
+  ],
+  "failureActions": [],
+  "nextProcedures": [],
+  "related": [
+    "gpu-alto-rendimiento",
+    "programas-inicio"
+  ],
+  "windows": [
+    "Windows 10",
+    "Windows 11"
+  ],
+  "status": "active",
+  "version": "1.0.0"
+}

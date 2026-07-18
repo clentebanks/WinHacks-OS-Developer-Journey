@@ -1,0 +1,71 @@
+{
+  "id": "WHPRS-SEC-001",
+  "slug": "historial-proteccion-defender",
+  "name": "Revisar el Historial de protección de Microsoft Defender",
+  "shortName": "Historial de protección",
+  "category": "Seguridad",
+  "subcategory": "Diagnóstico de amenazas",
+  "phase": "Diagnóstico",
+  "risk": 1,
+  "estimatedTime": "3 a 5 minutos",
+  "description": "Muestra amenazas detectadas, acciones aplicadas, elementos en cuarentena y eventos recientes de Microsoft Defender.",
+  "goal": "Confirmar si Defender ya detectó una amenaza y revisar qué acción tomó antes de ejecutar nuevos análisis.",
+  "whenUse": [
+    "Cuando aparecen alertas de seguridad",
+    "Cuando se sospecha que Defender bloqueó un archivo",
+    "Antes de restaurar un elemento de cuarentena"
+  ],
+  "whenNotUse": [
+    "Cuando Windows no puede iniciar",
+    "Cuando Seguridad de Windows no abre"
+  ],
+  "requirements": [
+    "Windows 10 o Windows 11",
+    "Acceso a Seguridad de Windows"
+  ],
+  "commands": [
+    {
+      "command": "windowsdefender:",
+      "requiresAdmin": false,
+      "shell": "run",
+      "purpose": "Abrir Seguridad de Windows."
+    }
+  ],
+  "steps": [
+    {
+      "order": 1,
+      "title": "Abrir Seguridad de Windows",
+      "instruction": "Presiona Win + R, escribe windowsdefender: y presiona Enter."
+    },
+    {
+      "order": 2,
+      "title": "Abrir Historial de protección",
+      "instruction": "Entra en Protección antivirus y contra amenazas y selecciona Historial de protección."
+    },
+    {
+      "order": 3,
+      "title": "Revisar acciones recientes",
+      "instruction": "Comprueba amenazas, elementos bloqueados y acciones pendientes.",
+      "warning": "No restaures elementos en cuarentena si no conoces su origen."
+    }
+  ],
+  "validation": [
+    {
+      "type": "manual",
+      "expected": "Se identificó si existen amenazas recientes, acciones pendientes o elementos en cuarentena."
+    }
+  ],
+  "failureActions": [],
+  "nextProcedures": [],
+  "related": [
+    "defender-quick-scan",
+    "defender-full-scan",
+    "defender-offline-scan"
+  ],
+  "windows": [
+    "Windows 10",
+    "Windows 11"
+  ],
+  "status": "active",
+  "version": "1.0.0"
+}

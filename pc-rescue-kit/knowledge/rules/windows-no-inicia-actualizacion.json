@@ -1,0 +1,31 @@
+{
+  "id": "RULE-BOOT-002",
+  "name": "Fallo después de una actualización",
+  "priority": 150,
+  "conditions": [
+    {
+      "field": "evidence",
+      "operator": "contains",
+      "value": "bootFailureAfterUpdate"
+    }
+  ],
+  "actions": [
+    {
+      "type": "recommend",
+      "target": "WHPRS-REC-001",
+      "weight": 0.8
+    },
+    {
+      "type": "recommend",
+      "target": "WHPRS-REC-003",
+      "weight": 1
+    },
+    {
+      "type": "validate",
+      "target": "VAL-BOOT-002",
+      "weight": 1
+    }
+  ],
+  "status": "active",
+  "version": "1.0.0"
+}

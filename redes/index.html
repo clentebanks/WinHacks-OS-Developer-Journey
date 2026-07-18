@@ -1,0 +1,459 @@
+<!DOCTYPE html><html lang="es"><head>
+  <!-- Google tag (gtag.js) -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EL9JRMGJPS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-EL9JRMGJPS');
+</script>
+<!-- Clarity code Puedes ver grabaciones reales (anónimas) de cómo navegan los usuarios.-->
+<script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "xey9wuiqr4");
+</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Redes en Windows | WinHacks</title>
+
+  <meta name="description" content="Aprende comandos de red como ipconfig, arp -a, ping, tracert, netstat, nslookup y flushdns para diagnosticar tu conexión en Windows 10 y Windows 11.">
+
+  <meta name="robots" content="index, follow, max-image-preview:large">
+
+  <link rel="canonical" href="https://winhacks.dev/redes/">
+
+  <link rel="icon" href="/assets/images/favicon.ico">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="WinHacks">
+  <meta property="og:title" content="Redes en Windows | WinHacks">
+  <meta property="og:description" content="Biblioteca de comandos de red para Windows: ipconfig, arp -a, ping, tracert, netstat, nslookup y más.">
+  <meta property="og:url" content="https://winhacks.dev/redes/">
+  <meta property="og:image" content="https://winhacks.dev/assets/img/og/og-redes-windows.webp">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Redes en Windows | WinHacks">
+  <meta name="twitter:description" content="Aprende comandos integrados de Windows para diagnosticar red, IP, DNS, router y conexión a Internet.">
+  <meta name="twitter:image" content="https://winhacks.dev/assets/img/og/og-redes-windows.webp">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=Montserrat:wght@800;900&amp;display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/css/style.css">
+
+  <meta property="og:locale" content="es_ES"></head>
+
+<body>
+
+  <header class="site-header">
+    <div id="navbar-container"></div>
+  </header>
+
+  <main>
+
+    <nav id="breadcrumb" class="breadcrumb" aria-label="Breadcrumb"></nav>
+
+    <article class="article">
+
+      <header class="article-hero article-hero--panel">
+
+        <p class="eyebrow">Biblioteca WinHacks</p>
+
+        <h1>Redes en Windows</h1>
+
+        <p>
+          Comandos integrados de Windows para identificar tu IP, encontrar tu router,
+          revisar dispositivos conectados y diagnosticar problemas de Internet sin instalar programas externos.
+        </p>
+
+        <div class="hero-buttons">
+          <a href="#comandos-red" class="btn btn-primary">Ver comandos</a>
+          <a href="#descarga" class="btn btn-outline">Descargar checklist</a>
+        </div>
+
+      </header>
+
+      <div class="article-content">
+
+        <div class="meta-grid">
+
+          <div class="meta-card">
+            <span>Categoría</span>
+            <strong>Redes</strong>
+          </div>
+
+          <div class="meta-card">
+            <span>Comandos</span>
+            <strong>12 guías</strong>
+          </div>
+
+          <div class="meta-card">
+            <span>Compatible</span>
+            <strong>Windows 10/11</strong>
+          </div>
+
+          <div class="meta-card">
+            <span>Nivel</span>
+            <strong>Fácil</strong>
+          </div>
+
+        </div>
+
+        <section class="info-box">
+
+          <h3>Qué aprenderás en esta sección</h3>
+
+          <ul>
+            <li>Cómo identificar tu IP local y tu puerta de enlace.</li>
+            <li>Cómo comprobar si Internet responde correctamente.</li>
+            <li>Cómo revisar dispositivos detectados en tu red local.</li>
+            <li>Cómo diagnosticar DNS, caché, rutas y conexiones activas.</li>
+            <li>Cómo usar comandos seguros sin tocar configuraciones peligrosas.</li>
+          </ul>
+
+        </section>
+
+        <h2>Comandos de red para usuarios normales</h2>
+
+        <p>
+          Windows incluye herramientas de red muy útiles para diagnosticar problemas de conexión.
+          Con comandos como <strong>ipconfig</strong>, <strong>ping</strong>, <strong>tracert</strong>
+          o <strong>netstat</strong>, puedes obtener información importante sin instalar nada.
+        </p>
+
+        <p>
+          Esta biblioteca está pensada para usuarios que quieren entender su red de forma práctica:
+          saber cuál es su IP, encontrar el router, revisar DNS, detectar fallos de conexión
+          y aprender comandos que también usan técnicos.
+        </p>
+
+        <div class="tip-box">
+
+          <h3>💡 Consejo WinHacks</h3>
+
+          <p>
+            Antes de reiniciar el router o cambiar configuraciones, usa primero comandos básicos como
+            <strong>ipconfig</strong> y <strong>ping</strong>. Muchas veces el problema se puede identificar
+            en menos de un minuto.
+          </p>
+
+        </div>
+
+        <div class="warning-box">
+
+          <span>⚠️</span>
+
+          <h3>Diagnóstico seguro</h3>
+
+          <p>
+            Estos comandos sirven principalmente para revisar información. No cambies configuraciones avanzadas
+            de red si no entiendes qué hacen.
+          </p>
+
+        </div>
+
+        <h2 id="comandos-red">Comandos de red más útiles</h2>
+
+        <div class="grid">
+
+          <article class="card">
+            <span class="card-icon">🌐</span>
+            <h3>ipconfig</h3>
+            <p>Identifica tu Dirección IPv4, Puerta de Enlace Predeterminada y adaptadores de red.</p>
+            <a href="/redes/ipconfig.html">Leer guía →</a>
+          </article>
+
+          <article class="card">
+            <span class="card-icon">📡</span>
+            <h3>arp -a</h3>
+            <p>Visualiza los dispositivos detectados en tu red local.</p>
+            <a href="/redes/arp-a.html">Leer guía →</a>
+          </article>
+
+          <article class="card">
+            <span class="card-icon">📶</span>
+            <h3>ping</h3>
+            <p>Comprueba si un equipo, router o servidor responde correctamente.</p>
+            <a href="/redes/ping.html">Leer guía →</a>
+          </article>
+
+          <article class="card">
+            <span class="card-icon">🛰️</span>
+            <h3>tracert</h3>
+            <p>Descubre el recorrido que siguen los paquetes hasta llegar a Internet.</p>
+            <a href="/redes/tracert.html">Leer guía →</a>
+          </article>
+
+          <article class="card">
+            <span class="card-icon">🔌</span>
+            <h3>netstat</h3>
+            <p>Consulta conexiones activas, puertos abiertos y actividad de red.</p>
+            <a href="/redes/netstat.html">Leer guía →</a>
+          </article>
+
+          <article class="card">
+            <span class="card-icon">🔍</span>
+            <h3>nslookup</h3>
+            <p>Consulta información DNS y resolución de dominios.</p>
+            <a href="/redes/nslookup.html">Leer guía →</a>
+          </article>
+
+          <article class="card">
+            <span class="card-icon">🌍</span>
+            <h3>ipconfig /flushdns</h3>
+            <p>Vacía la caché DNS para solucionar problemas de navegación.</p>
+            <a href="/redes/flushdns.html">Leer guía →</a>
+          </article>
+
+          <article class="card">
+            <span class="card-icon">🔄</span>
+            <h3>ipconfig /release</h3>
+            <p>Libera la dirección IP asignada por el router o servidor DHCP.</p>
+            <a href="/redes/release.html">Leer guía →</a>
+          </article>
+
+          <article class="card">
+            <span class="card-icon">⚡</span>
+            <h3>ipconfig /renew</h3>
+            <p>Solicita una nueva dirección IP al servidor DHCP.</p>
+            <a href="/redes/renew.html">Leer guía →</a>
+          </article>
+
+          <article class="card">
+            <span class="card-icon">🖥️</span>
+            <h3>hostname</h3>
+            <p>Descubre el nombre de tu computadora dentro de la red.</p>
+            <a href="/redes/hostname.html">Leer guía →</a>
+          </article>
+
+          <article class="card">
+            <span class="card-icon">📋</span>
+            <h3>getmac</h3>
+            <p>Consulta rápidamente la dirección MAC de tus adaptadores de red.</p>
+            <a href="/redes/getmac.html">Leer guía →</a>
+          </article>
+
+          <article class="card">
+            <span class="card-icon">📞</span>
+            <h3>pathping</h3>
+            <p>Analiza pérdidas de paquetes y problemas en la ruta de conexión.</p>
+            <a href="/redes/pathping.html">Leer guía →</a>
+          </article>
+
+        </div>
+
+        <h2>Categorías recomendadas</h2>
+
+        <div class="info-box">
+          <h3>Diagnóstico de IP</h3>
+          <p>
+            Empieza con <strong>ipconfig</strong>, <strong>hostname</strong> y
+            <strong>getmac</strong> para conocer la información básica de tu equipo en la red.
+          </p>
+        </div>
+
+        <div class="info-box">
+          <h3>Conectividad</h3>
+          <p>
+            Usa <strong>ping</strong>, <strong>tracert</strong> y <strong>pathping</strong>
+            para revisar si existe comunicación y dónde puede estar fallando.
+          </p>
+        </div>
+
+        <div class="info-box">
+          <h3>DNS</h3>
+          <p>
+            Usa <strong>nslookup</strong> y <strong>ipconfig /flushdns</strong>
+            cuando una página no carga o un dominio no resuelve correctamente.
+          </p>
+        </div>
+
+        <div class="info-box">
+          <h3>Conexiones activas</h3>
+          <p>
+            Usa <strong>arp -a</strong> y <strong>netstat</strong> para revisar dispositivos detectados
+            y conexiones activas del sistema.
+          </p>
+        </div>
+
+        <h2>Comandos rápidos para copiar</h2>
+
+        <div class="command-list">
+
+          <div class="command-box">
+            <code>ipconfig</code>
+            <button class="copy-btn" data-copy="ipconfig">Copiar</button>
+          </div>
+
+          <div class="command-box">
+            <code>ipconfig /all</code>
+            <button class="copy-btn" data-copy="ipconfig /all">Copiar</button>
+          </div>
+
+          <div class="command-box">
+            <code>arp -a</code>
+            <button class="copy-btn" data-copy="arp -a">Copiar</button>
+          </div>
+
+          <div class="command-box">
+            <code>ping 8.8.8.8</code>
+            <button class="copy-btn" data-copy="ping 8.8.8.8">Copiar</button>
+          </div>
+
+          <div class="command-box">
+            <code>tracert google.com</code>
+            <button class="copy-btn" data-copy="tracert google.com">Copiar</button>
+          </div>
+
+          <div class="command-box">
+            <code>netstat -ano</code>
+            <button class="copy-btn" data-copy="netstat -ano">Copiar</button>
+          </div>
+
+          <div class="command-box">
+            <code>nslookup google.com</code>
+            <button class="copy-btn" data-copy="nslookup google.com">Copiar</button>
+          </div>
+
+          <div class="command-box">
+            <code>ipconfig /flushdns</code>
+            <button class="copy-btn" data-copy="ipconfig /flushdns">Copiar</button>
+          </div>
+
+        </div>
+
+        <h2>Preguntas frecuentes</h2>
+
+        <div class="faq-box">
+          <h3>¿Necesito instalar programas?</h3>
+          <p>
+            No. Todos estos comandos vienen integrados en Windows.
+          </p>
+        </div>
+
+        <div class="faq-box">
+          <h3>¿Funcionan en Windows 11?</h3>
+          <p>
+            Sí. Funcionan en Windows 11 y también en Windows 10.
+          </p>
+        </div>
+
+        <div class="faq-box">
+          <h3>¿Puedo dañar mi red usando estos comandos?</h3>
+          <p>
+            Los comandos de diagnóstico como ipconfig, ping, tracert, arp y netstat son de bajo riesgo.
+            Aun así, evita cambios avanzados si no sabes qué hacen.
+          </p>
+        </div>
+
+        <div class="faq-box">
+          <h3>¿Cuál comando debo usar primero?</h3>
+          <p>
+            Empieza con <strong>ipconfig</strong> para ver tu IP y puerta de enlace.
+            Luego usa <strong>ping</strong> para comprobar conectividad.
+          </p>
+        </div>
+
+        <div class="faq-box">
+          <h3>¿Qué comando me ayuda a encontrar el router?</h3>
+          <p>
+            <strong>ipconfig</strong> muestra la Puerta de Enlace Predeterminada.
+            Normalmente esa dirección corresponde al router.
+          </p>
+        </div>
+
+        <section class="section cta-section" id="descarga">
+
+          <p class="eyebrow">Guía gratis</p>
+
+          <h2>Checklist de Seguridad para Windows</h2>
+
+          <p>
+            Una guía práctica para revisar protección, privacidad, red y configuraciones básicas
+            de seguridad en Windows 10 y Windows 11.
+          </p>
+
+          <form name="guia-50-secretos" method="POST" data-netlify="true" class="email-form netlify-form" id="secretosForm" data-redirect="/recursos/gracias-50-secretos.html">
+
+            <input type="hidden" name="form-name" value="guia-50-secretos">
+
+            <input type="text" name="nombre" placeholder="Tu nombre" required="">
+
+            <input type="email" name="email" placeholder="Tu correo electrónico" required="">
+
+            <button type="submit">Descargar checklist</button>
+
+          </form>
+
+        </section>
+
+        <h2>Recursos relacionados</h2>
+
+        <div class="related-grid">
+
+          <a href="/comandos/index.html" class="related-card">
+            <h3>Comandos de Windows</h3>
+            <p>Aprende comandos de Win + R, CMD y PowerShell para Windows.</p>
+          </a>
+
+          <a href="/recursos/comandos-cmd.html" class="related-card">
+            <h3>50 Comandos CMD</h3>
+            <p>Descarga una guía gratuita con comandos explicados paso a paso.</p>
+          </a>
+
+          <a href="/recursos/checklist-seguridad.html" class="related-card">
+            <h3>Checklist de Seguridad</h3>
+            <p>Revisa configuraciones básicas para proteger mejor tu PC.</p>
+          </a>
+
+          <a href="/secretos/monitor-recursos.html" class="related-card">
+            <h3>Monitor de Recursos</h3>
+            <p>Revisa consumo de CPU, memoria, disco y red por proceso.</p>
+          </a>
+
+        </div>
+
+        <div class="next-box">
+
+          <h3>🌐 Siguiente paso</h3>
+
+          <p>
+            Empieza por la guía de <strong>ipconfig</strong>. Es el comando base para identificar
+            tu IP, tu router y los adaptadores de red activos en Windows.
+          </p>
+
+          <a href="/redes/ipconfig.html" class="btn btn-primary">
+            Ver guía de ipconfig
+          </a>
+
+        </div>
+
+      </div>
+
+    </article>
+
+  </main>
+
+  <footer>
+    <div id="footer-container"></div>
+  </footer>
+
+  <a href="#" class="to-top" aria-label="Volver arriba">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="18 15 12 9 6 15"></polyline>
+    </svg>
+  </a>
+
+  <script src="/js/components.js"></script>
+  <script src="/js/core/engine.js?v=20260626-03" defer=""></script>
+
+
+
+</body></html>

@@ -1,0 +1,76 @@
+{
+  "id": "WHPRS-SEC-003",
+  "slug": "defender-full-scan",
+  "name": "Ejecutar un examen completo con Microsoft Defender",
+  "shortName": "Examen completo",
+  "category": "Seguridad",
+  "subcategory": "Análisis antivirus",
+  "phase": "Seguridad",
+  "risk": 1,
+  "estimatedTime": "30 minutos a varias horas",
+  "description": "Analiza archivos, procesos y unidades del sistema con mayor profundidad que el examen rápido.",
+  "goal": "Buscar amenazas en todo el sistema cuando la sospecha persiste o el examen rápido no es suficiente.",
+  "whenUse": [
+    "Cuando el examen rápido no encuentra nada pero continúan los síntomas",
+    "Cuando se descargaron archivos sospechosos",
+    "Cuando hay redirecciones, procesos extraños o consumo inusual"
+  ],
+  "whenNotUse": [
+    "Cuando el equipo puede apagarse durante el análisis",
+    "Cuando existe una sospecha fuerte de malware que se oculta dentro de Windows"
+  ],
+  "requirements": [
+    "Microsoft Defender activo",
+    "Equipo conectado a una fuente de energía",
+    "Tiempo suficiente para completar el análisis"
+  ],
+  "commands": [
+    {
+      "command": "Start-MpScan -ScanType FullScan",
+      "requiresAdmin": true,
+      "shell": "powershell",
+      "purpose": "Iniciar un examen completo de Microsoft Defender."
+    }
+  ],
+  "steps": [
+    {
+      "order": 1,
+      "title": "Guardar el trabajo",
+      "instruction": "Guarda los documentos abiertos y conecta el equipo a una fuente de energía."
+    },
+    {
+      "order": 2,
+      "title": "Abrir PowerShell como administrador",
+      "instruction": "Abre PowerShell con permisos de administrador."
+    },
+    {
+      "order": 3,
+      "title": "Ejecutar el examen completo",
+      "instruction": "Ejecuta Start-MpScan -ScanType FullScan."
+    },
+    {
+      "order": 4,
+      "title": "Revisar las detecciones",
+      "instruction": "Abre Historial de protección y resuelve cualquier acción pendiente."
+    }
+  ],
+  "validation": [
+    {
+      "type": "manual",
+      "expected": "El examen completo finaliza y Microsoft Defender no muestra amenazas activas."
+    }
+  ],
+  "failureActions": [],
+  "nextProcedures": [],
+  "related": [
+    "defender-quick-scan",
+    "defender-offline-scan",
+    "mrt"
+  ],
+  "windows": [
+    "Windows 10",
+    "Windows 11"
+  ],
+  "status": "active",
+  "version": "1.0.0"
+}

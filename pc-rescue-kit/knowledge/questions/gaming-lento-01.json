@@ -1,0 +1,37 @@
+{
+  "id": "Q-GAM-001",
+  "text": "¿Cuál describe mejor el problema durante el juego?",
+  "type": "single",
+  "answers": [
+    {
+      "value": "wrong-gpu",
+      "label": "El juego parece usar la GPU integrada en lugar de la dedicada",
+      "addsEvidence": [
+        "gameUsesWrongGpu"
+      ]
+    },
+    {
+      "value": "low-fps",
+      "label": "Los FPS son bajos de forma constante",
+      "addsEvidence": [
+        "gameLowFps"
+      ]
+    },
+    {
+      "value": "stutter",
+      "label": "Hay tirones o stutter aunque los FPS parecen normales",
+      "addsEvidence": [
+        "gameStutter"
+      ]
+    },
+    {
+      "value": "laptop-battery",
+      "label": "El rendimiento cae especialmente en portátil o con batería",
+      "addsEvidence": [
+        "gamePowerLimited"
+      ]
+    }
+  ],
+  "status": "active",
+  "version": "1.0.0"
+}

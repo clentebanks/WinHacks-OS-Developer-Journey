@@ -1,0 +1,77 @@
+{
+  "id": "WHPRS-REC-001",
+  "slug": "reparacion-inicio",
+  "name": "Ejecutar Reparación de inicio de Windows",
+  "shortName": "Reparación de inicio",
+  "category": "Reparación",
+  "subcategory": "Arranque",
+  "phase": "Reparación",
+  "risk": 2,
+  "estimatedTime": "10 a 30 minutos",
+  "description": "Utiliza el entorno de recuperación para detectar y corregir problemas comunes que impiden iniciar Windows.",
+  "goal": "Restaurar el inicio normal sin borrar archivos personales.",
+  "whenUse": [
+    "Ciclo de reparación automática",
+    "Pantalla negra después del logotipo",
+    "Fallo tras una actualización"
+  ],
+  "whenNotUse": [
+    "El disco no aparece en BIOS o UEFI",
+    "Hay fallos físicos evidentes",
+    "No se dispone de la clave de BitLocker"
+  ],
+  "requirements": [
+    "Acceso al entorno de recuperación",
+    "Equipo conectado a energía"
+  ],
+  "commands": [
+    {
+      "command": "shutdown /r /o /t 0",
+      "requiresAdmin": true,
+      "shell": "cmd",
+      "purpose": "Abrir opciones avanzadas cuando Windows todavía responde."
+    }
+  ],
+  "steps": [
+    {
+      "order": 1,
+      "title": "Abrir Opciones avanzadas",
+      "instruction": "Entra en Solucionar problemas, Opciones avanzadas y Reparación de inicio."
+    },
+    {
+      "order": 2,
+      "title": "Seleccionar Windows",
+      "instruction": "Selecciona la instalación que deseas reparar."
+    },
+    {
+      "order": 3,
+      "title": "Esperar el diagnóstico",
+      "instruction": "Permite que Windows analice y corrija el arranque."
+    },
+    {
+      "order": 4,
+      "title": "Probar el inicio",
+      "instruction": "Reinicia y comprueba si Windows llega al escritorio."
+    }
+  ],
+  "validation": [
+    {
+      "type": "restart",
+      "expected": "Windows inicia normalmente y deja de mostrar Reparación automática."
+    }
+  ],
+  "failureActions": [],
+  "nextProcedures": [],
+  "related": [
+    "modo-seguro",
+    "desinstalar-actualizacion",
+    "restaurar-sistema"
+  ],
+  "windows": [
+    "Windows 10",
+    "Windows 11",
+    "Windows Recovery Environment"
+  ],
+  "status": "active",
+  "version": "1.0.0"
+}

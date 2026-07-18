@@ -1,0 +1,11 @@
+{
+  "id": "VAL-PERF-004",
+  "name": "Confirmar el recurso que causa la lentitud",
+  "type": "manual",
+  "expected": "Se identificó si el consumo elevado corresponde a CPU, memoria o disco.",
+  "failureMessage": "Todavía no se identificó el cuello de botella. Mantén el Monitor de recursos abierto durante la lentitud.",
+  "successNext": "repeat-diagnosis",
+  "failureNext": "WHPRS-DIA-003",
+  "status": "active",
+  "version": "1.0.0"
+}

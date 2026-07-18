@@ -1,0 +1,564 @@
+<!DOCTYPE html><html lang="es"><head>
+  <!-- Google tag (gtag.js) -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EL9JRMGJPS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-EL9JRMGJPS');
+</script>
+<!-- Clarity code Puedes ver grabaciones reales (anónimas) de cómo navegan los usuarios.-->
+<script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "xey9wuiqr4");
+</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Cambiar Icono de una USB en Windows | WinHacks</title>
+
+  <meta name="description" content="Aprende a cambiar el icono de una memoria USB en Windows usando un archivo .ico y autorun.inf de forma sencilla y segura.">
+
+  <meta name="robots" content="index, follow, max-image-preview:large">
+
+  <link rel="canonical" href="https://winhacks.dev/personalizacion/cambiar-icono-usb.html">
+
+  <link rel="icon" href="/assets/images/favicon.ico">
+
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="WinHacks">
+  <meta property="og:title" content="Cambiar Icono de una USB en Windows | WinHacks">
+  <meta property="og:description" content="Personaliza tu memoria USB con un icono propio usando un archivo .ico y autorun.inf en Windows.">
+  <meta property="og:url" content="https://winhacks.dev/personalizacion/cambiar-icono-usb.html">
+  <meta property="og:image" content="https://winhacks.dev/assets/img/og/og-cambiar-icono-usb.webp">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Cambiar Icono de una USB en Windows | WinHacks">
+  <meta name="twitter:description" content="Aprende a personalizar el icono de una USB en Windows paso a paso.">
+  <meta name="twitter:image" content="https://winhacks.dev/assets/img/og/og-cambiar-icono-usb.webp">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=Montserrat:wght@800;900&amp;display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/css/style.css">
+
+  <meta property="og:locale" content="es_ES"></head>
+
+<body>
+
+  <header class="site-header">
+    <div id="navbar-container"></div>
+  </header>
+
+  <main>
+
+    <nav id="breadcrumb" class="breadcrumb" aria-label="Breadcrumb"></nav>
+
+    <article class="article">
+
+      <header class="article-hero article-hero--panel">
+
+        <p class="eyebrow">Personalización de Windows</p>
+
+        <h1>Cambia el icono de tu USB en Windows</h1>
+
+        <p>
+          Aprende a personalizar una memoria USB en Windows usando un archivo
+          <strong>.ico</strong> y un archivo <strong>autorun.inf</strong> para que aparezca
+          con un icono propio en el Explorador de archivos.
+        </p>
+
+        <div class="hero-buttons">
+          <a href="#video" class="btn btn-primary">Ver video</a>
+          <a href="#pasos" class="btn btn-outline">Ir al tutorial</a>
+        </div>
+
+      </header>
+
+      <div class="article-content">
+
+        <div class="meta-grid">
+
+          <div class="meta-card">
+            <span>Dificultad</span>
+            <strong>Fácil</strong>
+          </div>
+
+          <div class="meta-card">
+            <span>Tiempo</span>
+            <strong>5 minutos</strong>
+          </div>
+
+          <div class="meta-card">
+            <span>Compatible</span>
+            <strong>Windows 10/11</strong>
+          </div>
+
+          <div class="meta-card">
+            <span>Categoría</span>
+            <strong>Personalización</strong>
+          </div>
+
+        </div>
+
+        <section id="video" class="video-box">
+
+          <div class="section-header">
+
+            <p class="eyebrow">Video rápido</p>
+
+            <h2>Mira este truco en video</h2>
+
+            <p>
+              Cuando publique el Short específico de este truco, aquí irá el video oficial.
+              Por ahora, puedes ver más trucos y comandos en el canal de WinHacks.
+            </p>
+
+          </div>
+
+          <div class="video-placeholder">
+            <a href="https://www.youtube.com/@WinHacksOficial" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+              Ver canal de WinHacks
+            </a>
+          </div>
+
+        </section>
+
+        <section class="info-box">
+
+          <h3>Qué aprenderás</h3>
+
+          <ul>
+            <li>Qué archivo necesitas para cambiar el icono de una USB.</li>
+            <li>Cómo preparar un archivo <strong>.ico</strong>.</li>
+            <li>Cómo crear el archivo <strong>autorun.inf</strong>.</li>
+            <li>Cómo ocultar los archivos de personalización.</li>
+            <li>Qué hacer si el icono no aparece de inmediato.</li>
+          </ul>
+
+        </section>
+
+        <h2>¿Qué hace este truco?</h2>
+
+        <p>
+          Este método permite que una memoria USB aparezca con un icono personalizado
+          en el Explorador de archivos de Windows. Para lograrlo se usa un archivo
+          de icono con extensión <strong>.ico</strong> y un pequeño archivo llamado
+          <strong>autorun.inf</strong>.
+        </p>
+
+        <p>
+          No cambia el funcionamiento de la USB. Solo modifica la forma en que Windows
+          muestra la unidad cuando está conectada.
+        </p>
+
+        <div class="tip-box">
+
+          <h3>💡 Consejo WinHacks</h3>
+
+          <p>
+            Usa un icono cuadrado en formato <strong>.ico</strong> para que se vea mejor.
+            Lo ideal es usar tamaños como 256x256 o 128x128.
+          </p>
+
+        </div>
+
+        <div class="warning-box">
+
+          <span>⚠️</span>
+
+          <h3>Antes de continuar</h3>
+
+          <p>
+            No descargues archivos <strong>autorun.inf</strong> de sitios desconocidos.
+            En este tutorial lo crearás tú mismo, solo con instrucciones visuales para el icono.
+          </p>
+
+        </div>
+
+        <h2 id="pasos">Paso a paso</h2>
+
+        <div class="step-box">
+
+          <span class="step-number">1</span>
+
+          <h3>Conecta tu memoria USB</h3>
+
+          <p>
+            Inserta la USB en tu computadora y abre el <strong>Explorador de archivos</strong>.
+            Entra directamente a la unidad USB.
+          </p>
+
+          <div class="screenshot-placeholder">
+            Captura pendiente: memoria USB abierta en el Explorador.
+          </div>
+
+        </div>
+
+        <div class="step-box">
+
+          <span class="step-number">2</span>
+
+          <h3>Copia tu icono a la USB</h3>
+
+          <p>
+            Copia dentro de la USB un archivo de icono con extensión <strong>.ico</strong>.
+            Para este ejemplo usaremos el nombre:
+          </p>
+
+          <div class="command-box">
+            <code>icono.ico</code>
+            <button class="copy-btn" data-copy="icono.ico">Copiar</button>
+          </div>
+
+          <div class="screenshot-placeholder">
+            Captura pendiente: archivo icono.ico dentro de la USB.
+          </div>
+
+        </div>
+
+        <div class="step-box">
+
+          <span class="step-number">3</span>
+
+          <h3>Crea un archivo de texto</h3>
+
+          <p>
+            Dentro de la USB, haz clic derecho en un espacio vacío, selecciona
+            <strong>Nuevo</strong> y luego <strong>Documento de texto</strong>.
+          </p>
+
+          <div class="screenshot-placeholder">
+            Captura pendiente: crear documento de texto en la USB.
+          </div>
+
+        </div>
+
+        <div class="step-box">
+
+          <span class="step-number">4</span>
+
+          <h3>Escribe la configuración del icono</h3>
+
+          <p>
+            Abre el documento de texto y pega este contenido:
+          </p>
+
+          <div class="command-box">
+            <code>[Autorun]
+Icon=icono.ico</code>
+            <button class="copy-btn" data-copy="[Autorun]
+Icon=icono.ico">Copiar</button>
+          </div>
+
+          <p>
+            Guarda los cambios antes de cerrar el Bloc de notas.
+          </p>
+
+        </div>
+
+        <div class="step-box">
+
+          <span class="step-number">5</span>
+
+          <h3>Cambia el nombre del archivo</h3>
+
+          <p>
+            Renombra el documento de texto y cámbiale el nombre completo a:
+          </p>
+
+          <div class="command-box">
+            <code>autorun.inf</code>
+            <button class="copy-btn" data-copy="autorun.inf">Copiar</button>
+          </div>
+
+          <p>
+            Si Windows pregunta si quieres cambiar la extensión, confirma con
+            <strong>Sí</strong>.
+          </p>
+
+          <div class="screenshot-placeholder">
+            Captura pendiente: archivo autorun.inf creado.
+          </div>
+
+        </div>
+
+        <div class="step-box">
+
+          <span class="step-number">6</span>
+
+          <h3>Expulsa y conecta otra vez la USB</h3>
+
+          <p>
+            Expulsa la memoria USB de forma segura y vuelve a conectarla.
+            Windows debería mostrar el nuevo icono en el Explorador.
+          </p>
+
+          <div class="screenshot-placeholder">
+            Captura pendiente: USB con icono personalizado visible.
+          </div>
+
+        </div>
+
+        <h2>Código completo para autorun.inf</h2>
+
+        <div class="info-box">
+          <h3>Configuración básica</h3>
+          <p>
+            Este es el contenido mínimo para mostrar un icono personalizado en la unidad USB.
+          </p>
+        </div>
+
+        <div class="command-box">
+          <code>[Autorun]
+Icon=icono.ico</code>
+          <button class="copy-btn" data-copy="[Autorun]
+Icon=icono.ico">Copiar</button>
+        </div>
+
+        <div class="info-box">
+          <h3>Configuración con nombre de unidad</h3>
+          <p>
+            También puedes agregar una etiqueta para que Windows muestre un nombre personalizado.
+          </p>
+        </div>
+
+        <div class="command-box">
+          <code>[Autorun]
+Icon=icono.ico
+Label=WinHacks USB</code>
+          <button class="copy-btn" data-copy="[Autorun]
+Icon=icono.ico
+Label=WinHacks USB">Copiar</button>
+        </div>
+
+        <h2>Opcional: ocultar los archivos</h2>
+
+        <p>
+          Para que <strong>autorun.inf</strong> e <strong>icono.ico</strong> no se vean
+          fácilmente dentro de la USB, puedes ocultarlos desde las propiedades del archivo.
+        </p>
+
+        <p>
+          Selecciona ambos archivos, haz clic derecho, entra en <strong>Propiedades</strong>,
+          marca <strong>Oculto</strong> y aplica los cambios.
+        </p>
+
+        <div class="screenshot-placeholder">
+          Captura pendiente: opción Oculto en propiedades del archivo.
+        </div>
+
+        <div class="result-box">
+
+          <h3>✅ Resultado esperado</h3>
+
+          <p>
+            Al terminar, tu memoria USB debería aparecer con un icono personalizado
+            y, si agregaste <strong>Label</strong>, también con un nombre propio.
+          </p>
+
+        </div>
+
+        <h2>Cuándo usar este truco</h2>
+
+        <ul>
+          <li>Cuando quieres identificar rápidamente tu USB.</li>
+          <li>Cuando usas varias memorias externas.</li>
+          <li>Cuando preparas una USB para trabajo o estudio.</li>
+          <li>Cuando quieres darle estilo visual a una unidad.</li>
+          <li>Cuando creas una USB de herramientas técnicas.</li>
+        </ul>
+
+        <h2>Errores comunes</h2>
+
+        <div class="info-box">
+
+          <h3>Guardar el archivo como autorun.inf.txt</h3>
+
+          <p>
+            Este es el error más común. Debe llamarse exactamente
+            <strong>autorun.inf</strong>, no <strong>autorun.inf.txt</strong>.
+          </p>
+
+        </div>
+
+        <div class="info-box">
+
+          <h3>Usar una imagen PNG o JPG</h3>
+
+          <p>
+            Windows espera un archivo de icono real. Usa formato <strong>.ico</strong>,
+            no solo una imagen renombrada.
+          </p>
+
+        </div>
+
+        <div class="info-box">
+
+          <h3>No expulsar la USB</h3>
+
+          <p>
+            A veces el icono no aparece hasta que expulsas la unidad y la conectas otra vez.
+          </p>
+
+        </div>
+
+        <h2>Preguntas frecuentes</h2>
+
+        <div class="faq-box">
+
+          <h3>¿Esto funciona en Windows 10 y Windows 11?</h3>
+
+          <p>
+            Sí. Este método puede funcionar en Windows 10 y Windows 11 usando una unidad USB,
+            un archivo <strong>.ico</strong> y <strong>autorun.inf</strong>.
+          </p>
+
+        </div>
+
+        <div class="faq-box">
+
+          <h3>¿Es peligroso usar autorun.inf?</h3>
+
+          <p>
+            El archivo puede ser riesgoso si viene de fuentes desconocidas. En este caso
+            lo estás creando tú mismo solo para indicar el icono de la unidad.
+          </p>
+
+        </div>
+
+        <div class="faq-box">
+
+          <h3>¿Puedo usar cualquier imagen?</h3>
+
+          <p>
+            No directamente. Lo recomendable es convertir la imagen a formato
+            <strong>.ico</strong> antes de usarla.
+          </p>
+
+        </div>
+
+        <div class="faq-box">
+
+          <h3>¿Por qué no aparece el icono?</h3>
+
+          <p>
+            Revisa que el archivo se llame exactamente <strong>autorun.inf</strong>,
+            que el icono exista dentro de la USB y que el nombre coincida con
+            <strong>Icon=icono.ico</strong>.
+          </p>
+
+        </div>
+
+        <div class="faq-box">
+
+          <h3>¿Puedo cambiar también el nombre de la USB?</h3>
+
+          <p>
+            Sí. Puedes usar la línea <strong>Label=Nombre de tu USB</strong>
+            dentro del archivo <strong>autorun.inf</strong>.
+          </p>
+
+        </div>
+
+        <section class="section cta-section" id="descarga">
+
+          <p class="eyebrow">Guía gratis</p>
+
+          <h2>50 Secretos de Windows que la mayoría nunca descubre</h2>
+
+          <p>
+            Descarga una guía práctica con herramientas ocultas,
+            comandos útiles y trucos seguros para Windows 10 y Windows 11.
+          </p>
+
+          <form name="guia-50-secretos" method="POST" data-netlify="true" class="email-form netlify-form" id="secretosForm" data-redirect="/recursos/gracias-50-secretos.html">
+
+            <input type="hidden" name="form-name" value="guia-50-secretos">
+
+            <input type="text" name="nombre" placeholder="Tu nombre" required="">
+
+            <input type="email" name="email" placeholder="Tu correo electrónico" required="">
+
+            <button type="submit">
+              Descargar guía
+            </button>
+
+          </form>
+
+        </section>
+
+        <h2>Artículos relacionados</h2>
+
+        <div class="related-grid">
+
+          <a href="/personalizacion/cambiar-icono-carpeta.html" class="related-card">
+            <h3>Cambiar icono de carpeta</h3>
+            <p>Personaliza carpetas de Windows con iconos propios.</p>
+          </a>
+
+          <a href="/personalizacion/modo-oscuro.html" class="related-card">
+            <h3>Modo oscuro</h3>
+            <p>Activa una apariencia más cómoda y moderna en Windows.</p>
+          </a>
+
+          <a href="/redes/ipconfig.html" class="related-card">
+            <h3>ipconfig</h3>
+            <p>Revisa tu IP, puerta de enlace y datos principales de red.</p>
+          </a>
+
+          <a href="/comandos/cmd.html" class="related-card">
+            <h3>CMD</h3>
+            <p>Aprende comandos básicos del Símbolo del sistema.</p>
+          </a>
+
+        </div>
+
+        <div class="next-box">
+
+          <h3>🚀 WinHacks Academy</h3>
+
+          <p>
+            Próximamente aprenderás Windows desde cero con cursos prácticos sobre
+            comandos, PowerShell, optimización, seguridad, personalización y herramientas ocultas.
+          </p>
+
+          <a href="/academy/index.html" class="btn btn-primary">
+            Ver Academy
+          </a>
+
+        </div>
+
+      </div>
+
+    </article>
+
+  </main>
+
+  <footer>
+    <div id="footer-container"></div>
+  </footer>
+
+  <a href="#" class="to-top" aria-label="Volver arriba">
+
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round">
+
+      <polyline points="18 15 12 9 6 15"></polyline>
+
+    </svg>
+
+  </a>
+
+  <script src="/js/components.js"></script>
+
+  <script src="/js/core/engine.js?v=20260626-03" defer=""></script>
+
+
+
+</body></html>

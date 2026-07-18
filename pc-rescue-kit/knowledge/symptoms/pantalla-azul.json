@@ -1,0 +1,19 @@
+{
+  "id": "SYM-BSOD-001",
+  "slug": "pantalla-azul",
+  "name": "Pantalla azul",
+  "category": "Sistema",
+  "severity": "critical",
+  "description": "Windows muestra un error crítico, se reinicia o registra fallos relacionados con controladores, memoria o cambios recientes.",
+  "relatedCauses": [
+    "controlador-reciente",
+    "error-memoria",
+    "fallo-aleatorio",
+    "cambio-reciente"
+  ],
+  "questions": [
+    "Q-BSOD-001"
+  ],
+  "status": "active",
+  "version": "1.0.0"
+}

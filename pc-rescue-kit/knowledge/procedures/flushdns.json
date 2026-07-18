@@ -1,0 +1,69 @@
+{
+  "id": "WHPRS-NET-004",
+  "slug": "flushdns",
+  "name": "Limpiar la caché DNS de Windows",
+  "shortName": "Flush DNS",
+  "category": "Red",
+  "subcategory": "DNS",
+  "phase": "Red",
+  "risk": 1,
+  "estimatedTime": "2 minutos",
+  "description": "Elimina entradas DNS almacenadas localmente para que Windows solicite información actualizada.",
+  "goal": "Corregir errores de resolución provocados por entradas DNS antiguas o dañadas.",
+  "whenUse": [
+    "Cuando nslookup funciona de forma inconsistente",
+    "Cuando un sitio cambió de servidor y no abre",
+    "Cuando Windows muestra errores de DNS"
+  ],
+  "whenNotUse": [
+    "Cuando no existe conectividad IP",
+    "Cuando el problema afecta a todos los dispositivos de la red"
+  ],
+  "requirements": [
+    "CMD o PowerShell como administrador",
+    "Windows 10 o Windows 11"
+  ],
+  "commands": [
+    {
+      "command": "ipconfig /flushdns",
+      "requiresAdmin": true,
+      "shell": "cmd",
+      "purpose": "Vaciar la caché del solucionador DNS."
+    }
+  ],
+  "steps": [
+    {
+      "order": 1,
+      "title": "Abrir la terminal como administrador",
+      "instruction": "Abre CMD o PowerShell con permisos de administrador."
+    },
+    {
+      "order": 2,
+      "title": "Vaciar la caché DNS",
+      "instruction": "Ejecuta ipconfig /flushdns."
+    },
+    {
+      "order": 3,
+      "title": "Probar nuevamente",
+      "instruction": "Cierra y abre el navegador, y vuelve a cargar el sitio."
+    }
+  ],
+  "validation": [
+    {
+      "type": "output",
+      "expected": "Windows confirma que la caché del solucionador DNS se vació correctamente."
+    }
+  ],
+  "failureActions": [],
+  "nextProcedures": [],
+  "related": [
+    "nslookup",
+    "renovar-ip"
+  ],
+  "windows": [
+    "Windows 10",
+    "Windows 11"
+  ],
+  "status": "active",
+  "version": "1.0.0"
+}

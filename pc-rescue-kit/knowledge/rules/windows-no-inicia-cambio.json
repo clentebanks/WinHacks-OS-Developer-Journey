@@ -1,0 +1,31 @@
+{
+  "id": "RULE-BOOT-003",
+  "name": "Fallo después de software o controlador",
+  "priority": 150,
+  "conditions": [
+    {
+      "field": "evidence",
+      "operator": "contains",
+      "value": "bootFailureAfterChange"
+    }
+  ],
+  "actions": [
+    {
+      "type": "recommend",
+      "target": "WHPRS-REC-002",
+      "weight": 0.9
+    },
+    {
+      "type": "recommend",
+      "target": "WHPRS-REC-004",
+      "weight": 1
+    },
+    {
+      "type": "validate",
+      "target": "VAL-BOOT-003",
+      "weight": 1
+    }
+  ],
+  "status": "active",
+  "version": "1.0.0"
+}

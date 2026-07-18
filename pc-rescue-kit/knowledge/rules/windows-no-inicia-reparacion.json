@@ -1,0 +1,31 @@
+{
+  "id": "RULE-BOOT-001",
+  "name": "Windows entra en Reparación automática",
+  "priority": 150,
+  "conditions": [
+    {
+      "field": "evidence",
+      "operator": "contains",
+      "value": "automaticRepairLoop"
+    }
+  ],
+  "actions": [
+    {
+      "type": "recommend",
+      "target": "WHPRS-REC-001",
+      "weight": 1
+    },
+    {
+      "type": "recommend",
+      "target": "WHPRS-REC-002",
+      "weight": 0.85
+    },
+    {
+      "type": "validate",
+      "target": "VAL-BOOT-001",
+      "weight": 1
+    }
+  ],
+  "status": "active",
+  "version": "1.0.0"
+}

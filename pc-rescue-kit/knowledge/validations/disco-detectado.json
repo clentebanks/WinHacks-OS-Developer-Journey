@@ -1,0 +1,11 @@
+{
+  "id": "VAL-BOOT-004",
+  "name": "Validar que la unidad de Windows está detectada",
+  "type": "manual",
+  "expected": "La unidad aparece en BIOS, UEFI o DiskPart.",
+  "failureMessage": "La unidad no aparece. Detén las reparaciones de software y revisa hardware.",
+  "successNext": "rescue-plan-complete",
+  "failureNext": "technical-escalation",
+  "status": "active",
+  "version": "1.0.0"
+}

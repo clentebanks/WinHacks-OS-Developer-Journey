@@ -1,0 +1,19 @@
+{
+  "id": "SYM-BOOT-001",
+  "slug": "windows-no-inicia",
+  "name": "Windows no inicia",
+  "category": "Sistema",
+  "severity": "critical",
+  "description": "Windows no llega al escritorio, entra en reparación automática o no encuentra la unidad de arranque.",
+  "relatedCauses": [
+    "reparacion-automatica",
+    "actualizacion-fallida",
+    "cambio-reciente",
+    "disco-no-detectado"
+  ],
+  "questions": [
+    "Q-BOOT-001"
+  ],
+  "status": "active",
+  "version": "1.0.0"
+}

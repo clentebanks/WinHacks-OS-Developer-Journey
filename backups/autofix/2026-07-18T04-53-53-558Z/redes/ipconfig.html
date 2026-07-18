@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-EL9JRMGJPS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-EL9JRMGJPS');
+</script>
+<!-- Clarity code Puedes ver grabaciones reales (anónimas) de cómo navegan los usuarios.-->
+<script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "xey9wuiqr4");
+</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>ipconfig: Ver y Solucionar Problemas de Red en Windows | WinHacks</title>
+
+  <meta name="description"
+    content="Aprende a usar ipconfig para ver tu dirección IP, renovar la conexión, limpiar la caché DNS y diagnosticar problemas de red en Windows 10 y Windows 11.">
+
+  <meta name="robots" content="index, follow">
+
+  <link rel="canonical" href="https://winhacks.dev/redes/ipconfig.html">
+
+  <link rel="icon" href="/assets/images/favicon.ico">
+
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="WinHacks">
+  <meta property="og:title" content="ipconfig: Ver y Solucionar Problemas de Red en Windows | WinHacks">
+  <meta property="og:description"
+    content="Usa ipconfig para revisar tu IP, puerta de enlace, DNS y reparar problemas comunes de conexión en Windows.">
+  <meta property="og:url" content="https://winhacks.dev/redes/ipconfig.html">
+  <meta property="og:image" content="https://winhacks.dev/assets/img/og/og-ipconfig.webp">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="ipconfig: Ver y Solucionar Problemas de Red en Windows | WinHacks">
+  <meta name="twitter:description"
+    content="Aprende a usar ipconfig para diagnosticar y reparar problemas de red en Windows.">
+  <meta name="twitter:image" content="https://winhacks.dev/assets/img/og/og-ipconfig.webp">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Montserrat:wght@800;900&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+
+  <header class="site-header">
+    <div id="navbar-container"></div>
+  </header>
+
+  <main>
+
+    <nav id="breadcrumb" class="breadcrumb" aria-label="Breadcrumb"></nav>
+
+    <article class="article">
+
+      <header class="article-hero article-hero--panel">
+
+        <p class="eyebrow">Comando de red</p>
+
+        <h1>ipconfig muestra y repara información de red en Windows</h1>
+
+        <p>
+          Aprende a usar <strong>ipconfig</strong> para ver tu dirección IP,
+          revisar tu puerta de enlace, limpiar la caché DNS y solucionar fallos
+          comunes de Internet en Windows 10 y Windows 11.
+        </p>
+
+        <div class="hero-buttons">
+          <a href="#video" class="btn btn-primary">Ver video</a>
+          <a href="#pasos" class="btn btn-outline">Ir al tutorial</a>
+        </div>
+
+      </header>
+
+      <div class="article-content">
+
+        <div class="meta-grid">
+
+          <div class="meta-card">
+            <span>Dificultad</span>
+            <strong>Fácil</strong>
+          </div>
+
+          <div class="meta-card">
+            <span>Tiempo</span>
+            <strong>5 minutos</strong>
+          </div>
+
+          <div class="meta-card">
+            <span>Compatible</span>
+            <strong>Windows 10/11</strong>
+          </div>
+
+          <div class="meta-card">
+            <span>Categoría</span>
+            <strong>Redes</strong>
+          </div>
+
+        </div>
+
+        <section id="video" class="video-box">
+
+          <div class="section-header">
+
+            <p class="eyebrow">Video rápido</p>
+
+            <h2>Mira este comando en video</h2>
+
+            <p>
+              Cuando publique el Short específico de ipconfig, aquí irá el video oficial.
+              Por ahora, puedes ver más comandos y trucos en el canal de WinHacks.
+            </p>
+
+          </div>
+
+          <div class="video-placeholder">
+            <a
+              href="https://www.youtube.com/@WinHacksOficial"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn btn-primary">
+              Ver canal de WinHacks
+            </a>
+          </div>
+
+        </section>
+
+        <section class="info-box">
+
+          <h3>Qué aprenderás</h3>
+
+          <ul>
+            <li>Qué es <strong>ipconfig</strong> en Windows.</li>
+            <li>Cómo ver tu dirección IPv4.</li>
+            <li>Cómo identificar tu puerta de enlace.</li>
+            <li>Cómo renovar la conexión de red.</li>
+            <li>Cómo limpiar la caché DNS.</li>
+          </ul>
+
+        </section>
+
+        <h2>¿Qué hace este comando?</h2>
+
+        <p>
+          <strong>ipconfig</strong> es un comando de Windows que muestra información
+          de la configuración de red del equipo. Permite ver datos como la dirección IP,
+          la máscara de subred, la puerta de enlace predeterminada y los servidores DNS.
+        </p>
+
+        <p>
+          También puede ayudarte a resolver problemas de conexión usando opciones como
+          <strong>/release</strong>, <strong>/renew</strong> y <strong>/flushdns</strong>.
+        </p>
+
+        <div class="tip-box">
+
+          <h3>💡 Consejo WinHacks</h3>
+
+          <p>
+            Si una página no carga, pero tu Internet parece funcionar, prueba primero
+            <strong>ipconfig /flushdns</strong>. Muchas veces el problema está en la caché DNS.
+          </p>
+
+        </div>
+
+        <div class="warning-box">
+
+          <span>⚠️</span>
+
+          <h3>Antes de continuar</h3>
+
+          <p>
+            Los comandos <strong>ipconfig /release</strong> y <strong>ipconfig /renew</strong>
+            pueden desconectar temporalmente tu red mientras Windows obtiene una nueva dirección IP.
+          </p>
+
+        </div>
+
+        <h2 id="pasos">Paso a paso</h2>
+
+        <div class="step-box">
+
+          <span class="step-number">1</span>
+
+          <h3>Abre Windows Terminal o PowerShell</h3>
+
+          <p>
+            Haz clic derecho en el botón de Inicio y abre <strong>Terminal</strong>,
+            <strong>PowerShell</strong> o <strong>Símbolo del sistema</strong>.
+          </p>
+
+          <div class="screenshot-placeholder">
+            Captura pendiente: Windows Terminal abierto.
+          </div>
+
+        </div>
+
+        <div class="step-box">
+
+          <span class="step-number">2</span>
+
+          <h3>Ejecuta ipconfig</h3>
+
+          <p>
+            Escribe este comando y presiona Enter:
+          </p>
+
+          <div class="command-box">
+            <code>ipconfig</code>
+            <button class="copy-btn" data-copy="ipconfig">Copiar</button>
+          </div>
+
+          <div class="screenshot-placeholder">
+            Captura pendiente: resultado del comando ipconfig.
+          </div>
+
+        </div>
+
+        <div class="step-box">
+
+          <span class="step-number">3</span>
+
+          <h3>Busca tu dirección IPv4</h3>
+
+          <p>
+            En el resultado, localiza la línea llamada <strong>Dirección IPv4</strong>.
+            Esa es la IP local que tu router asignó a tu equipo.
+          </p>
+
+          <div class="screenshot-placeholder">
+            Captura pendiente: Dirección IPv4 resaltada.
+          </div>
+
+        </div>
+
+        <div class="step-box">
+
+          <span class="step-number">4</span>
+
+          <h3>Revisa la puerta de enlace</h3>
+
+          <p>
+            La <strong>Puerta de enlace predeterminada</strong> normalmente es la dirección
+            de tu router. Suele verse como <strong>192.168.1.1</strong> o similar.
+          </p>
+
+          <div class="screenshot-placeholder">
+            Captura pendiente: puerta de enlace resaltada.
+          </div>
+
+        </div>
+
+        <div class="step-box">
+
+          <span class="step-number">5</span>
+
+          <h3>Usa la información completa</h3>
+
+          <p>
+            Para ver más detalles de red, ejecuta:
+          </p>
+
+          <div class="command-box">
+            <code>ipconfig /all</code>
+            <button class="copy-btn" data-copy="ipconfig /all">Copiar</button>
+          </div>
+
+          <p>
+            Este comando muestra información avanzada como DNS, DHCP, dirección física
+            y configuración completa de los adaptadores de red.
+          </p>
+
+        </div>
+
+        <h2>Comandos básicos de ipconfig</h2>
+
+        <div class="info-box">
+          <h3>Ver información básica</h3>
+          <p>
+            Usa <strong>ipconfig</strong> para ver tu IP, máscara de subred y puerta de enlace.
+          </p>
+        </div>
+
+        <div class="command-box">
+          <code>ipconfig</code>
+          <button class="copy-btn" data-copy="ipconfig">Copiar</button>
+        </div>
+
+        <div class="info-box">
+          <h3>Ver información completa</h3>
+          <p>
+            Usa <strong>ipconfig /all</strong> para ver todos los detalles de tus adaptadores de red.
+          </p>
+        </div>
+
+        <div class="command-box">
+          <code>ipconfig /all</code>
+          <button class="copy-btn" data-copy="ipconfig /all">Copiar</button>
+        </div>
+
+        <div class="info-box">
+          <h3>Liberar la dirección IP</h3>
+          <p>
+            Usa <strong>ipconfig /release</strong> para liberar la IP actual asignada por el router.
+          </p>
+        </div>
+
+        <div class="command-box">
+          <code>ipconfig /release</code>
+          <button class="copy-btn" data-copy="ipconfig /release">Copiar</button>
+        </div>
+
+        <div class="info-box">
+          <h3>Renovar la dirección IP</h3>
+          <p>
+            Usa <strong>ipconfig /renew</strong> para solicitar una nueva dirección IP al router.
+          </p>
+        </div>
+
+        <div class="command-box">
+          <code>ipconfig /renew</code>
+          <button class="copy-btn" data-copy="ipconfig /renew">Copiar</button>
+        </div>
+
+        <div class="info-box">
+          <h3>Limpiar la caché DNS</h3>
+          <p>
+            Usa <strong>ipconfig /flushdns</strong> cuando una página no carga correctamente
+            o Windows guarda una dirección DNS antigua.
+          </p>
+        </div>
+
+        <div class="command-box">
+          <code>ipconfig /flushdns</code>
+          <button class="copy-btn" data-copy="ipconfig /flushdns">Copiar</button>
+        </div>
+
+        <div class="info-box">
+          <h3>Mostrar la caché DNS</h3>
+          <p>
+            Usa <strong>ipconfig /displaydns</strong> para ver entradas DNS almacenadas por Windows.
+          </p>
+        </div>
+
+        <div class="command-box">
+          <code>ipconfig /displaydns</code>
+          <button class="copy-btn" data-copy="ipconfig /displaydns">Copiar</button>
+        </div>
+
+        <h2>Qué debes revisar primero</h2>
+
+        <p>
+          Cuando tengas problemas de Internet, revisa primero la
+          <strong>Dirección IPv4</strong>, la <strong>Puerta de enlace predeterminada</strong>
+          y los <strong>servidores DNS</strong>.
+        </p>
+
+        <p>
+          Si no aparece una puerta de enlace o tu dirección IP empieza con
+          <strong>169.254</strong>, Windows probablemente no recibió una IP válida del router.
+        </p>
+
+        <div class="result-box">
+
+          <h3>✅ Resultado esperado</h3>
+
+          <p>
+            Al usar ipconfig correctamente podrás identificar tu IP local, comprobar si Windows
+            está conectado al router y aplicar reparaciones básicas sin reiniciar el equipo.
+          </p>
+
+        </div>
+
+        <h2>Cuándo usar ipconfig</h2>
+
+        <ul>
+          <li>Cuando tu Internet falla de forma repentina.</li>
+          <li>Cuando necesitas saber la IP de tu computadora.</li>
+          <li>Cuando quieres entrar a la configuración del router.</li>
+          <li>Cuando una página no carga, pero otras sí.</li>
+          <li>Cuando cambiaste DNS y quieres limpiar la caché.</li>
+          <li>Cuando Windows muestra conexión limitada.</li>
+        </ul>
+
+        <h2>Errores comunes</h2>
+
+        <div class="info-box">
+
+          <h3>No encontrar la IPv4 correcta</h3>
+
+          <p>
+            Si tienes varios adaptadores, como Wi-Fi, Ethernet o VPN, revisa el adaptador
+            que realmente estás usando para conectarte a Internet.
+          </p>
+
+        </div>
+
+        <div class="info-box">
+
+          <h3>Usar release sin renew</h3>
+
+          <p>
+            Si ejecutas <strong>ipconfig /release</strong>, luego debes usar
+            <strong>ipconfig /renew</strong> para pedir una nueva IP.
+          </p>
+
+        </div>
+
+        <div class="info-box">
+
+          <h3>Confundir IP local con IP pública</h3>
+
+          <p>
+            ipconfig muestra tu IP local dentro de la red. No muestra directamente
+            la IP pública que ve Internet.
+          </p>
+
+        </div>
+
+        <h2>Preguntas frecuentes</h2>
+
+        <div class="faq-box">
+
+          <h3>¿Qué hace ipconfig?</h3>
+
+          <p>
+            Muestra la configuración de red de Windows, incluyendo dirección IP,
+            puerta de enlace, máscara de subred y datos de los adaptadores.
+          </p>
+
+        </div>
+
+        <div class="faq-box">
+
+          <h3>¿Ipconfig es seguro?</h3>
+
+          <p>
+            Sí. Ver la configuración de red es seguro. Solo debes tener cuidado con
+            <strong>/release</strong> y <strong>/renew</strong>, porque reinician temporalmente
+            la asignación de IP.
+          </p>
+
+        </div>
+
+        <div class="faq-box">
+
+          <h3>¿Necesito permisos de administrador?</h3>
+
+          <p>
+            Para ver información básica normalmente no. Para algunas reparaciones de red,
+            puede ser mejor abrir la terminal como administrador.
+          </p>
+
+        </div>
+
+        <div class="faq-box">
+
+          <h3>¿Qué diferencia hay entre ipconfig e ipconfig /all?</h3>
+
+          <p>
+            <strong>ipconfig</strong> muestra información básica. <strong>ipconfig /all</strong>
+            muestra detalles avanzados como DNS, DHCP, dirección física y configuración completa.
+          </p>
+
+        </div>
+
+        <div class="faq-box">
+
+          <h3>¿Qué hace ipconfig /flushdns?</h3>
+
+          <p>
+            Limpia la caché DNS de Windows. Puede ayudar cuando una web no carga bien,
+            cambiaste DNS o el sistema conserva una dirección antigua.
+          </p>
+
+        </div>
+
+        <div class="faq-box">
+
+          <h3>¿Qué hago si mi IP empieza con 169.254?</h3>
+
+          <p>
+            Esa dirección suele indicar que Windows no recibió una IP válida del router.
+            Puedes probar reiniciar el router, revisar el cable o usar
+            <strong>ipconfig /release</strong> y luego <strong>ipconfig /renew</strong>.
+          </p>
+
+        </div>
+
+        <section class="section cta-section" id="descarga">
+
+          <p class="eyebrow">Guía gratis</p>
+
+          <h2>50 Secretos de Windows que la mayoría nunca descubre</h2>
+
+          <p>
+            Descarga una guía práctica con herramientas ocultas,
+            comandos útiles y trucos seguros para Windows 10 y Windows 11.
+          </p>
+
+          <form
+            name="guia-50-secretos"
+            method="POST"
+            data-netlify="true"
+            class="email-form netlify-form"
+            id="secretosForm"
+            data-redirect="/recursos/gracias-50-secretos.html">
+
+            <input
+              type="hidden"
+              name="form-name"
+              value="guia-50-secretos">
+
+            <input
+              type="text"
+              name="nombre"
+              placeholder="Tu nombre"
+              required>
+
+            <input
+              type="email"
+              name="email"
+              placeholder="Tu correo electrónico"
+              required>
+
+            <button type="submit">
+              Descargar guía
+            </button>
+
+          </form>
+
+        </section>
+
+        <h2>Artículos relacionados</h2>
+
+        <div class="related-grid">
+
+          <a href="/redes/arp-a.html" class="related-card">
+            <h3>arp -a</h3>
+            <p>Descubre qué dispositivos aparecen en la red local usando la tabla ARP.</p>
+          </a>
+
+          <a href="/redes/ping.html" class="related-card">
+            <h3>ping</h3>
+            <p>Comprueba si tu equipo puede comunicarse con un sitio, router o servidor.</p>
+          </a>
+
+          <a href="/redes/tracert.html" class="related-card">
+            <h3>tracert</h3>
+            <p>Analiza la ruta que siguen tus paquetes hasta llegar a un destino.</p>
+          </a>
+
+          <a href="/redes/netstat.html" class="related-card">
+            <h3>netstat</h3>
+            <p>Revisa conexiones activas, puertos abiertos y actividad de red en Windows.</p>
+          </a>
+
+        </div>
+
+        <div class="next-box">
+
+          <h3>🚀 WinHacks Academy</h3>
+
+          <p>
+            Próximamente aprenderás Windows desde cero con cursos prácticos sobre
+            comandos, PowerShell, optimización, seguridad, redes y herramientas ocultas.
+          </p>
+
+          <a
+            href="/academy/index.html"
+            class="btn btn-primary">
+            Ver Academy
+          </a>
+
+        </div>
+
+      </div>
+
+    </article>
+
+  </main>
+
+  <footer>
+    <div id="footer-container"></div>
+  </footer>
+
+  <a href="#" class="to-top" aria-label="Volver arriba">
+
+    <svg
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="2.8"
+      stroke-linecap="round"
+      stroke-linejoin="round">
+
+      <polyline points="18 15 12 9 6 15"></polyline>
+
+    </svg>
+
+  </a>
+
+  <script src="/js/components.js"></script>
+
+  <script src="/js/core/engine.js?v=20260626-03" defer></script>
+
+</body>
+
+</html>

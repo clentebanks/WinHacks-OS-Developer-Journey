@@ -1,0 +1,654 @@
+{
+  "summary": {
+    "generatedAt": "2026-07-16T06:17:08.538Z",
+    "total": 92,
+    "valid": 92,
+    "invalid": 0
+  },
+  "results": [
+    {
+      "file": "knowledge\\procedures\\chkdsk.json",
+      "type": "procedures",
+      "id": "WHPRS-REP-003",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "file": "knowledge\\procedures\\comprobar-disco-arranque.json",
+      "type": "procedures",
+      "id": "WHPRS-DIA-004",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "file": "knowledge\\procedures\\defender-full-scan.json",
+      "type": "procedures",
+      "id": "WHPRS-SEC-003",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "file": "knowledge\\procedures\\defender-offline-scan.json",
+      "type": "procedures",
+      "id": "WHPRS-SEC-004",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "file": "knowledge\\procedures\\defender-protection-history.json",
+      "type": "procedures",
+      "id": "WHPRS-SEC-001",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "file": "knowledge\\procedures\\defender-quick-scan.json",
+      "type": "procedures",
+      "id": "WHPRS-SEC-002",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "file": "knowledge\\procedures\\desinstalar-actualizacion.json",
+      "type": "procedures",
+      "id": "WHPRS-REC-003",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "file": "knowledge\\procedures\\dism.json",
+      "type": "procedures",
+      "id": "WHPRS-REP-002",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "file": "knowledge\\procedures\\driver-rollback-bsod.json",
+      "type": "procedures",
+      "id": "WHPRS-REP-005",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "file": "knowledge\\procedures\\dxdiag-gaming.json",
+      "type": "procedures",
+      "id": "WHPRS-GAM-001",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "file": "knowledge\\procedures\\event-viewer-bsod.json",
+      "type": "procedures",
+      "id": "WHPRS-DIA-006",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "file": "knowledge\\procedures\\flushdns.json",
+      "type": "procedures",
+      "id": "WHPRS-NET-004",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "file": "knowledge\\procedures\\game-mode.json",
+      "type": "procedures",
+      "id": "WHPRS-GAM-003",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "file": "knowledge\\procedures\\graphics-high-performance.json",
+      "type": "procedures",
+      "id": "WHPRS-GAM-002",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "file": "knowledge\\procedures\\ipconfig.json",
+      "type": "procedures",
+      "id": "WHPRS-NET-001",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "file": "knowledge\\procedures\\modo-seguro.json",
+      "type": "procedures",
+      "id": "WHPRS-REC-002",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "file": "knowledge\\procedures\\mrt.json",
+      "type": "procedures",
+      "id": "WHPRS-SEC-005",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "file": "knowledge\\procedures\\nslookup.json",
+      "type": "procedures",
+      "id": "WHPRS-NET-003",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "file": "knowledge\\procedures\\pathping.json",
+      "type": "procedures",
+      "id": "WHPRS-NET-006",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "file": "knowledge\\procedures\\ping.json",
+      "type": "procedures",
+      "id": "WHPRS-NET-002",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "file": "knowledge\\procedures\\power-mode-gaming.json",
+      "type": "procedures",
+      "id": "WHPRS-GAM-004",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "file": "knowledge\\procedures\\reliability-monitor-bsod.json",
+      "type": "procedures",
+      "id": "WHPRS-DIA-005",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "file": "knowledge\\procedures\\renew-ip.json",
+      "type": "procedures",
+      "id": "WHPRS-NET-005",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "file": "knowledge\\procedures\\reparacion-inicio.json",
+      "type": "procedures",
+      "id": "WHPRS-REC-001",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "file": "knowledge\\procedures\\resource-monitor.json",
+      "type": "procedures",
+      "id": "WHPRS-DIA-003",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "file": "knowledge\\procedures\\restaurar-sistema-recovery.json",
+      "type": "procedures",
+      "id": "WHPRS-REC-004",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "file": "knowledge\\procedures\\sfc.json",
+      "type": "procedures",
+      "id": "WHPRS-REP-001",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "file": "knowledge\\procedures\\startup-apps.json",
+      "type": "procedures",
+      "id": "WHPRS-OPT-001",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "file": "knowledge\\procedures\\storage-sense.json",
+      "type": "procedures",
+      "id": "WHPRS-CLN-001",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "file": "knowledge\\procedures\\systeminfo.json",
+      "type": "procedures",
+      "id": "WHPRS-DIA-001",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "file": "knowledge\\procedures\\task-manager.json",
+      "type": "procedures",
+      "id": "WHPRS-DIA-002",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "file": "knowledge\\procedures\\windows-memory-diagnostic.json",
+      "type": "procedures",
+      "id": "WHPRS-DIA-007",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "file": "knowledge\\symptoms\\gaming-lento.json",
+      "type": "symptoms",
+      "id": "SYM-GAM-001",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "file": "knowledge\\symptoms\\pantalla-azul.json",
+      "type": "symptoms",
+      "id": "SYM-BSOD-001",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "file": "knowledge\\symptoms\\pc-lenta.json",
+      "type": "symptoms",
+      "id": "SYM-PERF-001",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "file": "knowledge\\symptoms\\sin-internet.json",
+      "type": "symptoms",
+      "id": "SYM-NET-001",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "file": "knowledge\\symptoms\\virus-malware.json",
+      "type": "symptoms",
+      "id": "SYM-SEC-001",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "file": "knowledge\\symptoms\\windows-no-inicia.json",
+      "type": "symptoms",
+      "id": "SYM-BOOT-001",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "file": "knowledge\\questions\\gaming-lento-01.json",
+      "type": "questions",
+      "id": "Q-GAM-001",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "file": "knowledge\\questions\\pantalla-azul-01.json",
+      "type": "questions",
+      "id": "Q-BSOD-001",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "file": "knowledge\\questions\\pc-lenta-01.json",
+      "type": "questions",
+      "id": "Q-PERF-001",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "file": "knowledge\\questions\\sin-internet-01.json",
+      "type": "questions",
+      "id": "Q-NET-001",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "file": "knowledge\\questions\\virus-malware-01.json",
+      "type": "questions",
+      "id": "Q-SEC-001",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "file": "knowledge\\questions\\windows-no-inicia-01.json",
+      "type": "questions",
+      "id": "Q-BOOT-001",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "file": "knowledge\\rules\\bsod-aleatorio.json",
+      "type": "rules",
+      "id": "RULE-BSOD-002",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "file": "knowledge\\rules\\bsod-cambio.json",
+      "type": "rules",
+      "id": "RULE-BSOD-004",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "file": "knowledge\\rules\\bsod-carga.json",
+      "type": "rules",
+      "id": "RULE-BSOD-003",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "file": "knowledge\\rules\\bsod-controlador.json",
+      "type": "rules",
+      "id": "RULE-BSOD-001",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "file": "knowledge\\rules\\gaming-energia.json",
+      "type": "rules",
+      "id": "RULE-GAM-004",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "file": "knowledge\\rules\\gaming-fps.json",
+      "type": "rules",
+      "id": "RULE-GAM-002",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "file": "knowledge\\rules\\gaming-gpu.json",
+      "type": "rules",
+      "id": "RULE-GAM-001",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "file": "knowledge\\rules\\gaming-stutter.json",
+      "type": "rules",
+      "id": "RULE-GAM-003",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "file": "knowledge\\rules\\pc-lenta-cpu.json",
+      "type": "rules",
+      "id": "RULE-PERF-003",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "file": "knowledge\\rules\\pc-lenta-desconocido.json",
+      "type": "rules",
+      "id": "RULE-PERF-004",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "file": "knowledge\\rules\\pc-lenta-disco.json",
+      "type": "rules",
+      "id": "RULE-PERF-001",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "file": "knowledge\\rules\\pc-lenta-ram.json",
+      "type": "rules",
+      "id": "RULE-PERF-002",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "file": "knowledge\\rules\\sin-internet-conectado.json",
+      "type": "rules",
+      "id": "RULE-NET-003",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "file": "knowledge\\rules\\sin-internet-dns.json",
+      "type": "rules",
+      "id": "RULE-NET-002",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "file": "knowledge\\rules\\sin-internet-intermitente.json",
+      "type": "rules",
+      "id": "RULE-NET-004",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "file": "knowledge\\rules\\sin-internet-local.json",
+      "type": "rules",
+      "id": "RULE-NET-001",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "file": "knowledge\\rules\\virus-alerta-defender.json",
+      "type": "rules",
+      "id": "RULE-SEC-001",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "file": "knowledge\\rules\\virus-amenaza-persistente.json",
+      "type": "rules",
+      "id": "RULE-SEC-004",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "file": "knowledge\\rules\\virus-archivo-sospechoso.json",
+      "type": "rules",
+      "id": "RULE-SEC-002",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "file": "knowledge\\rules\\virus-sintomas-sin-deteccion.json",
+      "type": "rules",
+      "id": "RULE-SEC-003",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "file": "knowledge\\rules\\windows-no-inicia-actualizacion.json",
+      "type": "rules",
+      "id": "RULE-BOOT-002",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "file": "knowledge\\rules\\windows-no-inicia-cambio.json",
+      "type": "rules",
+      "id": "RULE-BOOT-003",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "file": "knowledge\\rules\\windows-no-inicia-disco.json",
+      "type": "rules",
+      "id": "RULE-BOOT-004",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "file": "knowledge\\rules\\windows-no-inicia-reparacion.json",
+      "type": "rules",
+      "id": "RULE-BOOT-001",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "file": "knowledge\\validations\\acceso-internet.json",
+      "type": "validations",
+      "id": "VAL-NET-003",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "file": "knowledge\\validations\\actualizacion-revertida.json",
+      "type": "validations",
+      "id": "VAL-BOOT-002",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "file": "knowledge\\validations\\amenaza-persistente-eliminada.json",
+      "type": "validations",
+      "id": "VAL-SEC-004",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "file": "knowledge\\validations\\archivo-sospechoso-controlado.json",
+      "type": "validations",
+      "id": "VAL-SEC-002",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "file": "knowledge\\validations\\arranque-restaurado.json",
+      "type": "validations",
+      "id": "VAL-BOOT-001",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "file": "knowledge\\validations\\bsod-cambio-revertido.json",
+      "type": "validations",
+      "id": "VAL-BSOD-004",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "file": "knowledge\\validations\\bsod-carga-estable.json",
+      "type": "validations",
+      "id": "VAL-BSOD-003",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "file": "knowledge\\validations\\bsod-controlador-estable.json",
+      "type": "validations",
+      "id": "VAL-BSOD-001",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "file": "knowledge\\validations\\bsod-memoria.json",
+      "type": "validations",
+      "id": "VAL-BSOD-002",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "file": "knowledge\\validations\\cambio-revertido.json",
+      "type": "validations",
+      "id": "VAL-BOOT-003",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "file": "knowledge\\validations\\conectividad-restaurada.json",
+      "type": "validations",
+      "id": "VAL-NET-001",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "file": "knowledge\\validations\\cpu-uso.json",
+      "type": "validations",
+      "id": "VAL-PERF-003",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "file": "knowledge\\validations\\defender-sin-amenazas-activas.json",
+      "type": "validations",
+      "id": "VAL-SEC-001",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "file": "knowledge\\validations\\disco-detectado.json",
+      "type": "validations",
+      "id": "VAL-BOOT-004",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "file": "knowledge\\validations\\disco-uso.json",
+      "type": "validations",
+      "id": "VAL-PERF-001",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "file": "knowledge\\validations\\dns-restaurado.json",
+      "type": "validations",
+      "id": "VAL-NET-002",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "file": "knowledge\\validations\\estabilidad-red.json",
+      "type": "validations",
+      "id": "VAL-NET-004",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "file": "knowledge\\validations\\gaming-energia-estable.json",
+      "type": "validations",
+      "id": "VAL-GAM-004",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "file": "knowledge\\validations\\gaming-fps-estables.json",
+      "type": "validations",
+      "id": "VAL-GAM-002",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "file": "knowledge\\validations\\gaming-gpu-correcta.json",
+      "type": "validations",
+      "id": "VAL-GAM-001",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "file": "knowledge\\validations\\gaming-stutter-reducido.json",
+      "type": "validations",
+      "id": "VAL-GAM-003",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "file": "knowledge\\validations\\ram-uso.json",
+      "type": "validations",
+      "id": "VAL-PERF-002",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "file": "knowledge\\validations\\recurso-identificado.json",
+      "type": "validations",
+      "id": "VAL-PERF-004",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "file": "knowledge\\validations\\sintomas-malware-resueltos.json",
+      "type": "validations",
+      "id": "VAL-SEC-003",
+      "valid": true,
+      "errors": []
+    }
+  ]
+}

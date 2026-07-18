@@ -1,0 +1,31 @@
+{
+  "id": "RULE-BSOD-001",
+  "name": "Pantalla azul después de actualizar un controlador",
+  "priority": 155,
+  "conditions": [
+    {
+      "field": "evidence",
+      "operator": "contains",
+      "value": "bsodAfterDriverUpdate"
+    }
+  ],
+  "actions": [
+    {
+      "type": "recommend",
+      "target": "WHPRS-DIA-005",
+      "weight": 0.9
+    },
+    {
+      "type": "recommend",
+      "target": "WHPRS-REP-005",
+      "weight": 1
+    },
+    {
+      "type": "validate",
+      "target": "VAL-BSOD-001",
+      "weight": 1
+    }
+  ],
+  "status": "active",
+  "version": "1.0.0"
+}
