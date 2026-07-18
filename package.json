@@ -1,13 +1,34 @@
 {
   "name": "winhacks-os-developer-journey",
-  "version": "0.1.0",
+  "version": "0.4.0",
   "private": true,
-  "description": "Learning modern full-stack development by building WinHacks OS from a real legacy engine.",
-  "scripts": {
-    "check": "node scripts/project-check.js",
-    "journey:status": "node scripts/journey-status.js"
-  },
+  "description": "Build WinHacks OS while documenting a complete Full Stack engineering journey.",
+  "type": "module",
   "engines": {
-    "node": ">=22"
-  }
+    "node": ">=22.0.0",
+    "npm": ">=10.0.0"
+  },
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "check": "node scripts/check-repository.mjs",
+    "doctor": "node scripts/doctor.mjs",
+    "dev:cli": "node packages/cli/src/index.js",
+    "build": "npm run check",
+    "test": "node --test",
+    "legacy:inventory": "node scripts/inventory-legacy.mjs"
+  },
+  "keywords": [
+    "winhacks",
+    "nodejs",
+    "typescript",
+    "learning",
+    "developer-tools",
+    "seo",
+    "geo"
+  ],
+  "author": "Clent Ebanks",
+  "license": "MIT"
 }

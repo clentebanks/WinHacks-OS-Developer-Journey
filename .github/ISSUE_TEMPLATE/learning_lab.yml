@@ -1,0 +1,21 @@
+name: Learning lab
+description: Plan a guided learning task tied to WinHacks OS.
+title: "lab: "
+labels: ["learning", "documentation"]
+body:
+  - type: input
+    id: outcome
+    attributes:
+      label: Observable outcome
+    validations:
+      required: true
+  - type: textarea
+    id: concepts
+    attributes:
+      label: Concepts required
+  - type: textarea
+    id: deliverables
+    attributes:
+      label: Files or behavior to produce
+    validations:
+      required: true

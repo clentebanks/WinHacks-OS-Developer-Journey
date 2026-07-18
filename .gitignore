@@ -1,4 +1,34 @@
+# Dependencies
 node_modules/
+
+# Build output
+dist/
+build/
+.next/
+coverage/
+
+# Generated reports and runtime data
 reports/
 logs/
+tmp/
+.cache/
+
+# Environment and secrets
 .env
+.env.*
+!.env.example
+
+# Editors and operating systems
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+.idea/
+.DS_Store
+Thumbs.db
+
+# Archives and backups
+*.zip
+*.7z
+*.tar
+*.gz
+backups/
