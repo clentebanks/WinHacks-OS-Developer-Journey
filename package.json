@@ -1,43 +1,13 @@
 {
-  "name": "winhacks-engine",
-  "version": "4.4.0",
-  "description": "WinHacks Static Engine",
+  "name": "winhacks-os-developer-journey",
+  "version": "0.1.0",
   "private": true,
+  "description": "Learning modern full-stack development by building WinHacks OS from a real legacy engine.",
   "scripts": {
-    "toolkit": "node toolkit/index.js",
-    "build": "node scripts/build.js",
-    "rss": "node scripts/generate-rss.js",
-    "sitemap": "node scripts/generate-sitemap.js",
-    "seo": "node tools/seo/index.js && node tools/seo/dashboard-report.js",
-    "seo:raw": "node tools/seo/index.js",
-    "seo:dashboard": "node tools/seo/dashboard-report.js",
-    "image-dimensions": "node scripts/add-image-dimensions.js",
-    "knowledge:validate": "node pc-rescue-kit/scripts/validate-knowledge.js",
-    "knowledge:index": "node pc-rescue-kit/scripts/build-index.js",
-    "knowledge:test": "node pc-rescue-kit/scripts/test-knowledge-engine.js",
-    "decision:test": "node pc-rescue-kit/scripts/test-decision-engine.js",
-    "session:test": "node pc-rescue-kit/scripts/test-session-engine.js",
-    "app:test": "node pc-rescue-kit/scripts/test-browser-app.js",
-    "qa": "node pc-rescue-kit/qa/audit.js",
-    "release:check": "npm run knowledge:validate && npm run knowledge:index && npm run app:test && npm run qa",
-    "geo": "node tools/geo/index.js",
-    "performance": "node tools/performance/index.js",
-    "autofix": "node tools/autofix/index.js",
-    "autofix:apply": "node tools/autofix/index.js --apply",
-    "knowledge": "node tools/knowledge/index.js",
-    "ai:plan": "node tools/ai/index.js",
-    "content": "node tools/content/index.js",
-    "draft": "node tools/cms/draft.js",
-    "cms:status": "node tools/cms/status.js",
-    "publish": "node tools/cms/publish.js",
-    "release": "node tools/cms/release.js"
+    "check": "node scripts/project-check.js",
+    "journey:status": "node scripts/journey-status.js"
   },
-  "dependencies": {
-    "ajv": "^8.20.0",
-    "ajv-formats": "^3.0.1",
-    "cheerio": "^1.2.0",
-    "fast-glob": "^3.3.3",
-    "fs-extra": "^11.3.6",
-    "image-size": "^2.0.2"
+  "engines": {
+    "node": ">=22"
   }
 }
