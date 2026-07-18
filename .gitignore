@@ -1,38 +1,4 @@
-# Dependencies
 node_modules/
-
-# Build output
-.next/
-dist/
-build/
-coverage/
-
-# Generated WinHacks data
 reports/
 logs/
-backups/
-*.log
-
-# Environment and secrets
 .env
-.env.*
-!.env.example
-
-# Editors and operating systems
-.vscode/*
-!.vscode/extensions.json
-!.vscode/settings.json
-.idea/
-.DS_Store
-Thumbs.db
-
-# Local databases
-*.db
-*.db-journal
-*.sqlite
-*.sqlite3
-
-# Temporary files
-.tmp/
-tmp/
-*.zip
